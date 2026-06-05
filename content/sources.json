@@ -1,0 +1,82 @@
+[
+  {
+    "id": "openai-news",
+    "name": "OpenAI News",
+    "category": "model",
+    "type": "official",
+    "url": "https://openai.com/news/",
+    "feedUrl": "",
+    "trustScore": 95,
+    "enabled": true
+  },
+  {
+    "id": "anthropic-news",
+    "name": "Anthropic News",
+    "category": "model",
+    "type": "official",
+    "url": "https://www.anthropic.com/news",
+    "feedUrl": "",
+    "trustScore": 95,
+    "enabled": true
+  },
+  {
+    "id": "google-ai-blog",
+    "name": "Google AI Blog",
+    "category": "research",
+    "type": "official",
+    "url": "https://ai.googleblog.com/",
+    "feedUrl": "",
+    "trustScore": 90,
+    "enabled": true
+  },
+  {
+    "id": "arxiv-cs-ai",
+    "name": "arXiv cs.AI",
+    "category": "research",
+    "type": "paper",
+    "url": "https://arxiv.org/list/cs.AI/recent",
+    "feedUrl": "",
+    "trustScore": 85,
+    "enabled": true
+  },
+  {
+    "id": "github-trending",
+    "name": "GitHub Trending",
+    "category": "opensource",
+    "type": "community",
+    "url": "https://github.com/trending",
+    "feedUrl": "",
+    "trustScore": 75,
+    "enabled": true
+  },
+  {
+    "id": "huggingface-papers",
+    "name": "Hugging Face Papers",
+    "category": "research",
+    "type": "community",
+    "url": "https://huggingface.co/papers",
+    "feedUrl": "",
+    "trustScore": 75,
+    "enabled": true
+  },
+  {
+    "id": "hacker-news",
+    "name": "Hacker News",
+    "category": "product",
+    "type": "community",
+    "url": "https://news.ycombinator.com/",
+    "feedUrl": "https://news.ycombinator.com/rss",
+    "trustScore": 70,
+    "enabled": true
+  },
+  {
+    "id": "jiqizhixin",
+    "name": "机器之心",
+    "category": "business",
+    "type": "media",
+    "url": "https://www.jiqizhixin.com/",
+    "feedUrl": "",
+    "trustScore": 65,
+    "enabled": true
+  }
+]
