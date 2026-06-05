@@ -61,6 +61,7 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#ffffff" />
         <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
+        <link rel="alternate" type="application/feed+json" href="/feed.json" />
       </head>
       <body className={`${inter.className} text-neutral-950 antialiased`}>
         <SiteHeader />

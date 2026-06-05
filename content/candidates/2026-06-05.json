@@ -1,0 +1,639 @@
+{
+  "date": "2026-06-05",
+  "generatedAt": "2026-06-05T09:43:57.539Z",
+  "sourceCount": 8,
+  "itemCount": 37,
+  "items": [
+    {
+      "id": "anthropic-news-66ce64718960",
+      "date": "2026-06-05",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "press@anthropic.com",
+      "url": "mailto:press@anthropic.com",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:31.189Z",
+      "score": 77,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "anthropic-news-5768b174d7d8",
+      "date": "2026-06-05",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Download press kit",
+      "url": "https://anthropic.com/press-kit",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:31.190Z",
+      "score": 74,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "anthropic-news-9bb1495d09dd",
+      "date": "2026-06-05",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Economic Futures",
+      "url": "https://www.anthropic.com/economic-futures",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:31.189Z",
+      "score": 74,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "anthropic-news-49f44c80e766",
+      "date": "2026-06-05",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network",
+      "url": "https://www.anthropic.com/news/services-track-partner-hub",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:31.190Z",
+      "score": 74,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "anthropic-news-cfba69041703",
+      "date": "2026-06-05",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Skip to main content",
+      "url": "https://www.anthropic.com/news",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:31.186Z",
+      "score": 74,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "anthropic-news-8701e897618b",
+      "date": "2026-06-05",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Try Claude",
+      "url": "https://claude.ai/",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:31.189Z",
+      "score": 74,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "google-ai-blog-a6775e6f5f1c",
+      "date": "2026-06-05",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Algorithms & theory",
+      "url": "https://ai.googleblog.com/research-areas/algorithms-and-theory/",
+      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:53.609Z",
+      "score": 72,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "google-ai-blog-0411ae880693",
+      "date": "2026-06-05",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Explore all research areas",
+      "url": "https://ai.googleblog.com/research-areas/",
+      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:53.608Z",
+      "score": 72,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "google-ai-blog-0cb9f1ae373b",
+      "date": "2026-06-05",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Information retrieval",
+      "url": "https://ai.googleblog.com/research-areas/information-retrieval/",
+      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:53.609Z",
+      "score": 72,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "google-ai-blog-ed516a49a286",
+      "date": "2026-06-05",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Science AI",
+      "url": "https://ai.googleblog.com/research-areas/science-ai/",
+      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:53.608Z",
+      "score": 72,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "google-ai-blog-fc993854efe9",
+      "date": "2026-06-05",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Skip to main content",
+      "url": "https://ai.googleblog.com/",
+      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:53.608Z",
+      "score": 72,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "google-ai-blog-71da9d7e984a",
+      "date": "2026-06-05",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Sustainability & crisis resilience",
+      "url": "https://ai.googleblog.com/research-areas/sustainability-crisis-resilience/",
+      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:53.609Z",
+      "score": 72,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-8a39dfc647f1",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Advanced Search",
+      "url": "https://arxiv.org/search/advanced",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:54.121Z",
+      "score": 67,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-c5445d5b37e4",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Fri, 5 Jun 2026",
+      "url": "https://arxiv.org/list/cs.AI/recent?skip=0&amp%3Bshow=50",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:54.122Z",
+      "score": 67,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-34044e3eb27e",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Skip to main content",
+      "url": "https://arxiv.org/list/cs.AI/recent",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:54.120Z",
+      "score": 67,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-306fdf3a594e",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Thu, 4 Jun 2026",
+      "url": "https://arxiv.org/list/cs.AI/recent?skip=280&amp%3Bshow=50",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:54.122Z",
+      "score": 67,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-e0dccf6dd737",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Tue, 2 Jun 2026",
+      "url": "https://arxiv.org/list/cs.AI/recent?skip=770&amp%3Bshow=50",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:54.122Z",
+      "score": 67,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-3f459aee100f",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Wed, 3 Jun 2026",
+      "url": "https://arxiv.org/list/cs.AI/recent?skip=487&amp%3Bshow=50",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:42:54.122Z",
+      "score": 67,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "github-trending-bfd759f74855",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "GitHub Copilot app Direct agents from issue to merge",
+      "url": "https://github.com/features/ai/github-app",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:16.871Z",
+      "score": 60,
+      "tags": [
+        "Agent",
+        "开源",
+        "产品"
+      ]
+    },
+    {
+      "id": "hacker-news-dff690337553",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "Fine-tuning an LLM to write docs like it&#x27;s 1995",
+      "url": "https://passo.uno/fine-tuning-docs-llm/",
+      "summary": "Comments",
+      "publishedAt": "2026-06-05T05:46:06.000Z",
+      "fetchedAt": "2026-06-05T09:43:57.245Z",
+      "score": 58,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "github-trending-4ddabece9791",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "Actions Automate any workflow",
+      "url": "https://github.com/features/actions",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:16.872Z",
+      "score": 57,
+      "tags": [
+        "Agent"
+      ]
+    },
+    {
+      "id": "huggingface-papers-2e72f14bcf6a",
+      "date": "2026-06-05",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "community",
+      "category": "research",
+      "title": "Buckets new",
+      "url": "https://huggingface.co/storage",
+      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:37.550Z",
+      "score": 57,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "github-trending-5040154ab153",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "Codespaces Instant dev environments",
+      "url": "https://github.com/features/codespaces",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:16.872Z",
+      "score": 57,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "huggingface-papers-a170bd60d3f6",
+      "date": "2026-06-05",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "community",
+      "category": "research",
+      "title": "Collections",
+      "url": "https://huggingface.co/collections",
+      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:37.551Z",
+      "score": 57,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "huggingface-papers-a73f5f23f802",
+      "date": "2026-06-05",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "community",
+      "category": "research",
+      "title": "Enterprise",
+      "url": "https://huggingface.co/enterprise",
+      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:37.550Z",
+      "score": 57,
+      "tags": [
+        "商业化"
+      ]
+    },
+    {
+      "id": "github-trending-ec57d26d0bcb",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "GitHub Copilot Write better code with AI",
+      "url": "https://github.com/features/copilot",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:16.871Z",
+      "score": 57,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "huggingface-papers-6e80418a8460",
+      "date": "2026-06-05",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "community",
+      "category": "research",
+      "title": "Hugging Face",
+      "url": "https://huggingface.co/",
+      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:37.550Z",
+      "score": 57,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "huggingface-papers-4168daa2916f",
+      "date": "2026-06-05",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "community",
+      "category": "research",
+      "title": "HuggingChat",
+      "url": "https://huggingface.co/chat",
+      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:37.551Z",
+      "score": 57,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "github-trending-d76f6f19ec2c",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "MCP Registry New Integrate external tools",
+      "url": "https://github.com/mcp",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:16.872Z",
+      "score": 57,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "huggingface-papers-e22dcf2c591f",
+      "date": "2026-06-05",
+      "sourceId": "huggingface-papers",
+      "sourceName": "Hugging Face Papers",
+      "sourceType": "community",
+      "category": "research",
+      "title": "Organizations",
+      "url": "https://huggingface.co/organizations",
+      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:37.551Z",
+      "score": 57,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "github-trending-587f03113c25",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "Skip to content",
+      "url": "https://github.com/trending",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:16.871Z",
+      "score": 57,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "hacker-news-5d8162c9fb06",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "C++: The Documentary",
+      "url": "https://herbsutter.com/2026/06/04/c-the-documentary-released-today/",
+      "summary": "Comments",
+      "publishedAt": "2026-06-05T04:37:01.000Z",
+      "fetchedAt": "2026-06-05T09:43:57.245Z",
+      "score": 55,
+      "tags": [
+        "产品"
+      ]
+    },
+    {
+      "id": "hacker-news-5722efcb0a05",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "Changing How We Develop Ladybird",
+      "url": "https://ladybird.org/posts/changing-how-we-develop-ladybird/",
+      "summary": "Comments",
+      "publishedAt": "2026-06-05T07:26:33.000Z",
+      "fetchedAt": "2026-06-05T09:43:57.244Z",
+      "score": 55,
+      "tags": [
+        "产品"
+      ]
+    },
+    {
+      "id": "hacker-news-a00af7d1956f",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "Entanglement Builds Space-Time. Now \"Magic\" Gives It Gravity",
+      "url": "https://www.quantamagazine.org/entanglement-builds-space-time-now-magic-gives-it-gravity-20260603/",
+      "summary": "Comments",
+      "publishedAt": "2026-06-05T08:33:37.000Z",
+      "fetchedAt": "2026-06-05T09:43:57.245Z",
+      "score": 55,
+      "tags": [
+        "产品"
+      ]
+    },
+    {
+      "id": "hacker-news-44e4f5e34a5d",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "Meta enables ADB on deprecated Portal devices [video]",
+      "url": "https://fb.watch/HxPu0fSyeH/",
+      "summary": "Comments",
+      "publishedAt": "2026-06-05T00:44:38.000Z",
+      "fetchedAt": "2026-06-05T09:43:57.245Z",
+      "score": 55,
+      "tags": [
+        "多模态"
+      ]
+    },
+    {
+      "id": "hacker-news-6b231597b753",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "The IsUpMap lets you check the status of over 100 major sites at once",
+      "url": "https://isupmap.com/",
+      "summary": "Comments",
+      "publishedAt": "2026-06-05T04:44:48.000Z",
+      "fetchedAt": "2026-06-05T09:43:57.245Z",
+      "score": 55,
+      "tags": [
+        "产品"
+      ]
+    },
+    {
+      "id": "jiqizhixin-bd628d7c2535",
+      "date": "2026-06-05",
+      "sourceId": "jiqizhixin",
+      "sourceName": "机器之心",
+      "sourceType": "media",
+      "category": "business",
+      "title": "zhaoyunfeng@jiqizhixin.com",
+      "url": "mailto:zhaoyunfeng@jiqizhixin.com",
+      "summary": "机器之心 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T09:43:57.522Z",
+      "score": 50,
+      "tags": [
+        "商业"
+      ]
+    }
+  ]
+}

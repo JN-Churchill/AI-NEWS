@@ -10,9 +10,21 @@ export function SiteFooter() {
           <p className="text-sm font-semibold text-neutral-950">{SITE_NAME}</p>
           <p className="mt-1 max-w-2xl text-sm leading-6 text-neutral-600">{SITE_DESCRIPTION}</p>
         </div>
-        <div className="flex gap-4 text-sm font-medium text-neutral-600">
+        <div className="flex flex-wrap gap-4 text-sm font-medium text-neutral-600">
           <Link href="/rss.xml" className="hover:text-neutral-950">
             RSS
+          </Link>
+          <Link href="/feed.json" className="hover:text-neutral-950">
+            JSON Feed
+          </Link>
+          <Link href="/sources" className="hover:text-neutral-950">
+            Sources
+          </Link>
+          <Link href="/editorial" className="hover:text-neutral-950">
+            Editorial
+          </Link>
+          <Link href="/contact" className="hover:text-neutral-950">
+            Contact
           </Link>
           <Link href="/sitemap.xml" className="hover:text-neutral-950">
             Sitemap

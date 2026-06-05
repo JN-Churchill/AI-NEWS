@@ -1,144 +1,202 @@
 {
   "date": "2026-06-05",
   "issueNo": "2026.06.05",
-  "status": "demo",
+  "status": "draft",
   "title": "AI 信号指数日报",
-  "summary": "这是用于验证站点结构的示例日报。正式运营时，每条信号都应该保留原始来源、发布时间、评分拆解和人工复核记录。",
-  "totalScore": 78.4,
-  "candidateCount": 126,
-  "selectedCount": 5,
-  "readingMinutes": 6,
+  "summary": "本期从 37 条候选信号中筛出 8 条，覆盖 模型、论文 等方向，等待人工复核后发布。",
+  "totalScore": 73.9,
+  "candidateCount": 37,
+  "selectedCount": 8,
+  "readingMinutes": 10,
   "categories": [
     {
       "slug": "model",
       "name": "模型",
-      "score": 84,
-      "count": 1
-    },
-    {
-      "slug": "product",
-      "name": "产品",
-      "score": 80,
-      "count": 1
-    },
-    {
-      "slug": "opensource",
-      "name": "开源",
-      "score": 72,
-      "count": 1
+      "score": 75,
+      "count": 6
     },
     {
       "slug": "research",
       "name": "论文",
-      "score": 76,
-      "count": 1
-    },
-    {
-      "slug": "business",
-      "name": "商业",
-      "score": 69,
-      "count": 1
+      "score": 72,
+      "count": 2
     }
   ],
   "items": [
     {
       "rank": 1,
-      "title": "低延迟多模态能力进入产品部署窗口",
-      "summary": "多模态输入、实时语音和工具调用正在被整合到更短链路的产品体验里，端侧助手、客服和知识工作流会最先受益。",
-      "whyItMatters": "如果延迟和成本继续下降，AI 应用会从异步助手转向实时协同界面，产品设计的重点也会从输入框转向场景化工作台。",
+      "title": "press@anthropic.com",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
       "category": "model",
-      "tags": ["多模态", "低延迟", "产品化"],
-      "source": "官方博客 / 技术公告",
-      "sourceUrl": "",
-      "publishedAt": "2026-06-05T09:00:00+08:00",
-      "score": 88,
+      "tags": [
+        "模型"
+      ],
+      "source": "Anthropic News",
+      "sourceUrl": "mailto:press@anthropic.com",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "score": 77,
       "metrics": {
-        "utility": 28,
-        "novelty": 18,
-        "impact": 18,
-        "credibility": 14,
+        "utility": 23,
+        "novelty": 15,
+        "impact": 15,
+        "credibility": 12,
         "audience": 8,
-        "freshness": 2
+        "freshness": 4
       }
     },
     {
       "rank": 2,
-      "title": "Agent 工具链开始从演示走向团队协作",
-      "summary": "任务编排、权限隔离、审计日志和失败回放成为 Agent 产品的新重点，市场关注点正在从单点能力转向可治理工作流。",
-      "whyItMatters": "企业用户真正购买的是可控流程，而不是一次漂亮的自动化演示。能解释、能回放、能接管的 Agent 更接近真实采购需求。",
-      "category": "product",
-      "tags": ["Agent", "协作", "工作流"],
-      "source": "产品更新 / 开发者文档",
-      "sourceUrl": "",
-      "publishedAt": "2026-06-05T11:20:00+08:00",
-      "score": 84,
+      "title": "Download press kit",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
+      "category": "model",
+      "tags": [
+        "模型"
+      ],
+      "source": "Anthropic News",
+      "sourceUrl": "https://anthropic.com/press-kit",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "score": 74,
       "metrics": {
-        "utility": 26,
-        "novelty": 16,
-        "impact": 18,
-        "credibility": 14,
+        "utility": 22,
+        "novelty": 15,
+        "impact": 15,
+        "credibility": 11,
         "audience": 7,
-        "freshness": 3
+        "freshness": 4
       }
     },
     {
       "rank": 3,
-      "title": "小模型在私有部署场景继续升温",
-      "summary": "更轻量的模型和推理框架让企业可以在本地环境处理敏感任务，隐私、成本和离线可用性正在成为新的选型维度。",
-      "whyItMatters": "私有化 AI 会成为金融、制造、政企等行业的长期基础设施选项，也会推动模型压缩、推理优化和本地评测工具发展。",
-      "category": "opensource",
-      "tags": ["小模型", "私有化", "推理"],
-      "source": "GitHub / 社区发布",
-      "sourceUrl": "",
-      "publishedAt": "2026-06-05T13:10:00+08:00",
-      "score": 79,
+      "title": "Economic Futures",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
+      "category": "model",
+      "tags": [
+        "模型"
+      ],
+      "source": "Anthropic News",
+      "sourceUrl": "https://www.anthropic.com/economic-futures",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "score": 74,
       "metrics": {
-        "utility": 25,
-        "novelty": 14,
-        "impact": 16,
-        "credibility": 14,
+        "utility": 22,
+        "novelty": 15,
+        "impact": 15,
+        "credibility": 11,
         "audience": 7,
-        "freshness": 3
+        "freshness": 4
       }
     },
     {
       "rank": 4,
-      "title": "检索增强生成进入评测精细化阶段",
-      "summary": "RAG 系统开始重视引用准确率、答案可追溯、检索覆盖率和业务指标之间的关系，而不只是追求问答效果。",
-      "whyItMatters": "这会影响企业知识库、客服系统和内部搜索产品的验收标准，后续项目会更关注可解释结果和端到端指标。",
-      "category": "research",
-      "tags": ["RAG", "评测", "知识库"],
-      "source": "论文 / 技术报告",
-      "sourceUrl": "",
-      "publishedAt": "2026-06-05T15:30:00+08:00",
-      "score": 76,
+      "title": "Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
+      "category": "model",
+      "tags": [
+        "模型"
+      ],
+      "source": "Anthropic News",
+      "sourceUrl": "https://www.anthropic.com/news/services-track-partner-hub",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "score": 74,
       "metrics": {
         "utility": 22,
-        "novelty": 16,
+        "novelty": 15,
         "impact": 15,
-        "credibility": 15,
-        "audience": 5,
-        "freshness": 3
+        "credibility": 11,
+        "audience": 7,
+        "freshness": 4
       }
     },
     {
       "rank": 5,
-      "title": "AI 应用商业化从流量转向留存",
-      "summary": "更多产品开始披露团队协作、专业工作流和付费转化相关信号，单纯依赖尝鲜流量的模式正在变弱。",
-      "whyItMatters": "判断 AI 产品价值时，留存、嵌入深度和切换成本比下载量更关键，垂直场景和团队协作会成为下一轮分化点。",
-      "category": "business",
-      "tags": ["商业化", "订阅", "留存"],
-      "source": "公司动态 / 市场观察",
-      "sourceUrl": "",
-      "publishedAt": "2026-06-05T16:45:00+08:00",
-      "score": 71,
+      "title": "Skip to main content",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
+      "category": "model",
+      "tags": [
+        "模型"
+      ],
+      "source": "Anthropic News",
+      "sourceUrl": "https://www.anthropic.com/news",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "score": 74,
       "metrics": {
-        "utility": 20,
-        "novelty": 13,
+        "utility": 22,
+        "novelty": 15,
         "impact": 15,
-        "credibility": 14,
-        "audience": 6,
-        "freshness": 3
+        "credibility": 11,
+        "audience": 7,
+        "freshness": 4
+      }
+    },
+    {
+      "rank": 6,
+      "title": "Try Claude",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
+      "category": "model",
+      "tags": [
+        "模型"
+      ],
+      "source": "Anthropic News",
+      "sourceUrl": "https://claude.ai/",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "score": 74,
+      "metrics": {
+        "utility": 22,
+        "novelty": 15,
+        "impact": 15,
+        "credibility": 11,
+        "audience": 7,
+        "freshness": 4
+      }
+    },
+    {
+      "rank": 7,
+      "title": "Algorithms & theory",
+      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
+      "whyItMatters": "研究信号有助于判断技术路线和评测标准的变化，需要关注是否能落到工程实践。",
+      "category": "research",
+      "tags": [
+        "论文"
+      ],
+      "source": "Google AI Blog",
+      "sourceUrl": "https://ai.googleblog.com/research-areas/algorithms-and-theory/",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "score": 72,
+      "metrics": {
+        "utility": 22,
+        "novelty": 14,
+        "impact": 14,
+        "credibility": 11,
+        "audience": 7,
+        "freshness": 4
+      }
+    },
+    {
+      "rank": 8,
+      "title": "Explore all research areas",
+      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
+      "whyItMatters": "研究信号有助于判断技术路线和评测标准的变化，需要关注是否能落到工程实践。",
+      "category": "research",
+      "tags": [
+        "论文"
+      ],
+      "source": "Google AI Blog",
+      "sourceUrl": "https://ai.googleblog.com/research-areas/",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "score": 72,
+      "metrics": {
+        "utility": 22,
+        "novelty": 14,
+        "impact": 14,
+        "credibility": 11,
+        "audience": 7,
+        "freshness": 4
       }
     }
   ]

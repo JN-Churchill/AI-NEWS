@@ -15,6 +15,11 @@
       #f7f8f6;
     background-size: 32px 32px;
   }
+
+  ::selection {
+    background: #111827;
+    color: #ffffff;
+  }
 }
 
 @layer utilities {

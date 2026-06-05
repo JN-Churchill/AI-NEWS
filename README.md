@@ -20,6 +20,24 @@ npm run dev
 
 ## 内容生产
 
+从来源池抓取候选内容：
+
+```bash
+npm run ingest -- --date 2026-06-06 --limit 8
+```
+
+只抓某个来源：
+
+```bash
+npm run ingest -- --date 2026-06-06 --source hacker-news
+```
+
+从候选池生成日报草稿：
+
+```bash
+npm run issue:from-candidates -- --date 2026-06-06 --limit 8
+```
+
 生成某一天的日报草稿：
 
 ```bash
@@ -41,6 +59,8 @@ npm run issue:validate -- 2026-06-05
 推荐发布前顺序：
 
 ```bash
+npm run ingest -- --date 2026-06-06
+npm run issue:from-candidates -- --date 2026-06-06
 npm run issue:validate
 npm run lint
 npm run build
@@ -52,7 +72,14 @@ npm run build
 - `/daily/[date]` 每日详情
 - `/archive` 历史归档
 - `/about` 评分方法
+- `/topics` 主题索引
+- `/topics/[slug]` 主题详情
+- `/sources` 来源池
+- `/search` 静态搜索
+- `/editorial` 编辑政策
+- `/contact` 联系与投稿
 - `/rss.xml` RSS
+- `/feed.json` JSON Feed
 - `/sitemap.xml` sitemap
 
 ## 技术栈

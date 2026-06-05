@@ -1,10 +1,12 @@
 import fs from "fs";
 import path from "path";
 import { ZodError } from "zod";
+import { candidatePoolSchema } from "../src/lib/candidate-schema";
 import { dailyIssueSchema } from "../src/lib/issue-schema";
 import { sourceConfigListSchema } from "../src/lib/source-schema";
 
 const issuesDirectory = path.join(process.cwd(), "content", "issues");
+const candidatesDirectory = path.join(process.cwd(), "content", "candidates");
 const sourcesPath = path.join(process.cwd(), "content", "sources.json");
 const targetDate = process.argv[2];
 
@@ -20,7 +22,20 @@ function getIssueFiles() {
     .map((fileName) => path.join(issuesDirectory, fileName));
 }
 
+function getCandidateFiles() {
+  if (!fs.existsSync(candidatesDirectory)) {
+    return [];
+  }
+
+  return fs
+    .readdirSync(candidatesDirectory)
+    .filter((fileName) => fileName.endsWith(".json"))
+    .filter((fileName) => !targetDate || fileName === `${targetDate}.json`)
+    .map((fileName) => path.join(candidatesDirectory, fileName));
+}
+
 const files = getIssueFiles();
+const candidateFiles = getCandidateFiles();
 
 if (files.length === 0) {
   console.error(targetDate ? `No issue found for ${targetDate}.` : "No issue files found.");
@@ -49,6 +64,24 @@ for (const file of files) {
   try {
     const issue = dailyIssueSchema.parse(JSON.parse(fs.readFileSync(file, "utf8")));
     console.log(`OK ${issue.date} ${issue.items.length} items`);
+  } catch (error) {
+    failed = true;
+    console.error(`FAILED ${path.relative(process.cwd(), file)}`);
+
+    if (error instanceof ZodError) {
+      error.issues.forEach((issue) => {
+        console.error(`- ${issue.path.join(".") || "root"}: ${issue.message}`);
+      });
+    } else {
+      console.error(error);
+    }
+  }
+}
+
+for (const file of candidateFiles) {
+  try {
+    const pool = candidatePoolSchema.parse(JSON.parse(fs.readFileSync(file, "utf8")));
+    console.log(`OK candidates ${pool.date} ${pool.items.length} items`);
   } catch (error) {
     failed = true;
     console.error(`FAILED ${path.relative(process.cwd(), file)}`);

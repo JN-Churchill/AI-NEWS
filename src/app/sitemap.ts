@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
+import { getAllTopicSlugs } from "@/lib/catalog";
 import { getAllIssues } from "@/lib/issues";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/archive", "/about"].map((route) => ({
+  const staticRoutes = ["", "/archive", "/about", "/topics", "/sources", "/search", "/editorial", "/contact"].map((route) => ({
     url: `${SITE_URL}${route}`,
     lastModified: new Date(),
   }));
@@ -13,5 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(`${issue.date}T08:00:00+08:00`),
   }));
 
-  return [...staticRoutes, ...issueRoutes];
+  const topicRoutes = getAllTopicSlugs().map((slug) => ({
+    url: `${SITE_URL}/topics/${slug}`,
+    lastModified: new Date(),
+  }));
+
+  return [...staticRoutes, ...issueRoutes, ...topicRoutes];
 }

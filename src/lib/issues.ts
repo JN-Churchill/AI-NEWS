@@ -1,19 +1,10 @@
 import fs from "fs";
 import path from "path";
 import type { DailyIssue, SignalItem } from "@/interfaces/issue";
+import { categoryNames } from "@/lib/categories";
 import { dailyIssueSchema } from "@/lib/issue-schema";
 
 const issuesDirectory = path.join(process.cwd(), "content", "issues");
-
-export const categoryNames: Record<string, string> = {
-  all: "全部",
-  model: "模型",
-  product: "产品",
-  research: "论文",
-  opensource: "开源",
-  business: "商业",
-  infra: "基础设施",
-};
 
 export function getIssueDates() {
   if (!fs.existsSync(issuesDirectory)) {

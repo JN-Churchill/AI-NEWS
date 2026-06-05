@@ -1,0 +1,63 @@
+import Link from "next/link";
+import { Container } from "@/app/_components/container";
+import { PageHero } from "@/app/_components/page-hero";
+import { ScoreMeter } from "@/app/_components/score-meter";
+import { getAllIssues, getCategoryName } from "@/lib/issues";
+
+export const metadata = {
+  title: "主题",
+};
+
+export default function TopicsPage() {
+  const categories = new Map<string, { count: number; scoreTotal: number }>();
+
+  getAllIssues().forEach((issue) => {
+    issue.categories.forEach((category) => {
+      const current = categories.get(category.slug) ?? { count: 0, scoreTotal: 0 };
+      categories.set(category.slug, {
+        count: current.count + category.count,
+        scoreTotal: current.scoreTotal + category.score,
+      });
+    });
+  });
+
+  const topics = Array.from(categories.entries()).map(([slug, value]) => ({
+    slug,
+    name: getCategoryName(slug),
+    count: value.count,
+    score: Math.round(value.scoreTotal / Math.max(1, value.count)),
+  }));
+
+  return (
+    <main>
+      <PageHero
+        eyebrow="Topics"
+        title="主题索引"
+        description="按模型、产品、论文、开源和商业方向归档每日信号，方便持续追踪同一类变化。"
+        aside={<p className="text-sm leading-6 text-neutral-300">主题页会随着日报内容自动生成，是后续 SEO 和长期检索的核心入口。</p>}
+      />
+
+      <Container className="grid gap-4 py-6 md:grid-cols-2 xl:grid-cols-3">
+        {topics.map((topic) => (
+          <Link
+            key={topic.slug}
+            href={`/topics/${topic.slug}`}
+            className="rounded-md border border-neutral-200 bg-white p-5 shadow-sm transition hover:border-neutral-400 hover:shadow-md"
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">{topic.slug}</p>
+                <h2 className="mt-2 text-2xl font-semibold text-neutral-950">{topic.name}</h2>
+              </div>
+              <span className="rounded-md bg-neutral-950 px-3 py-2 text-xl font-semibold text-white">{topic.count}</span>
+            </div>
+            <div className="mt-5">
+              <ScoreMeter score={topic.score} />
+            </div>
+            <p className="mt-4 text-sm text-neutral-500">平均热度 {topic.score}</p>
+          </Link>
+        ))}
+      </Container>
+    </main>
+  );
+}
