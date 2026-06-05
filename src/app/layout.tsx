@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { SiteFooter } from "@/app/_components/site-footer";
 import { SiteHeader } from "@/app/_components/site-header";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/constants";
 
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -63,7 +60,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
         <link rel="alternate" type="application/feed+json" href="/feed.json" />
       </head>
-      <body className={`${inter.className} text-neutral-950 antialiased`}>
+      <body className="text-neutral-950 antialiased">
         <SiteHeader />
         <div className="min-h-screen">{children}</div>
         <SiteFooter />

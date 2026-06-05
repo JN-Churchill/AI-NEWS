@@ -9,6 +9,11 @@
 
   body {
     min-width: 320px;
+    font-family:
+      Arial,
+      "PingFang SC",
+      "Microsoft YaHei",
+      sans-serif;
     background:
       linear-gradient(rgba(23, 23, 23, 0.035) 1px, transparent 1px),
       linear-gradient(90deg, rgba(23, 23, 23, 0.035) 1px, transparent 1px),
