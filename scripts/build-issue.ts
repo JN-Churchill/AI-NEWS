@@ -44,14 +44,51 @@ if (!dryRun && fs.existsSync(issuePath) && !force) {
 function cleanSummary(candidate: CandidateItem) {
   const summary = candidate.summary.trim();
 
-  if (summary.length >= 30) {
+  if (summary.length >= 30 && !/页面抓取候选|等待人工复核/.test(summary)) {
     return summary;
   }
 
-  return `来自 ${candidate.sourceName} 的候选信号，标题为「${candidate.title}」，等待人工补充摘要和上下文。`;
+  return `来自 ${candidate.sourceName} 的信号：「${candidate.title}」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。`;
 }
 
 function whyItMatters(candidate: CandidateItem) {
+  const haystack = `${candidate.title} ${candidate.summary} ${candidate.tags.join(" ")}`.toLowerCase();
+  const reasons = [
+    {
+      keywords: ["agent", "agents", "tool use", "workflow", "automation", "copilot"],
+      text: "它可能改变 AI 应用从问答走向可执行工作流的边界，适合产品和工程团队优先复核。",
+    },
+    {
+      keywords: ["benchmark", "eval", "sota", "state-of-the-art", "dataset"],
+      text: "它涉及评测或基准变化，可能影响模型选型、技术判断和后续实验设计。",
+    },
+    {
+      keywords: ["api", "sdk", "pricing", "launch", "release", "preview", "beta"],
+      text: "它已经接近可用产品或开发者入口，可能直接影响团队的集成成本和路线选择。",
+    },
+    {
+      keywords: ["funding", "series", "valuation", "s-1", "acquisition", "revenue"],
+      text: "它反映资本、收入或公司阶段变化，可能影响行业竞争格局和企业采购预期。",
+    },
+    {
+      keywords: ["open source", "github", "local", "self-hosted", "llama", "mistral", "qwen"],
+      text: "它可能降低自部署或二次开发门槛，值得观察社区采用速度和维护质量。",
+    },
+    {
+      keywords: ["inference", "serving", "gpu", "latency", "throughput", "quantization"],
+      text: "它触及推理成本、性能或部署可靠性，适合进入工程基础设施视野。",
+    },
+    {
+      keywords: ["safety", "security", "privacy", "policy", "regulation", "alignment"],
+      text: "它关系到安全、合规或信任边界，可能影响上线节奏和企业采购判断。",
+    },
+  ];
+  const matched = reasons.find((reason) => reason.keywords.some((keyword) => haystack.includes(keyword)));
+
+  if (matched) {
+    return matched.text;
+  }
+
   const categoryReason: Record<string, string> = {
     model: "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
     product: "产品更新可以反映真实用户需求和商业化方向，适合纳入今日产品观察。",
@@ -116,10 +153,46 @@ function average(values: number[]) {
 }
 
 const pool = candidatePoolSchema.parse(JSON.parse(fs.readFileSync(candidatesPath, "utf8")));
-const selected = pool.items
+const ranked = pool.items
   .filter((item) => item.title && item.url)
-  .sort((a, b) => b.score - a.score || new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
-  .slice(0, limit);
+  .sort((a, b) => b.score - a.score || new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+
+function selectDiverseCandidates(candidates: CandidateItem[]) {
+  const selected: CandidateItem[] = [];
+  const sourceCounts = new Map<string, number>();
+  const categoryCounts = new Map<string, number>();
+
+  for (const candidate of candidates) {
+    const sourceCount = sourceCounts.get(candidate.sourceId) ?? 0;
+    const categoryCount = categoryCounts.get(candidate.category) ?? 0;
+
+    if (sourceCount >= 2 || categoryCount >= Math.max(3, Math.ceil(limit * 0.5))) {
+      continue;
+    }
+
+    selected.push(candidate);
+    sourceCounts.set(candidate.sourceId, sourceCount + 1);
+    categoryCounts.set(candidate.category, categoryCount + 1);
+
+    if (selected.length >= limit) {
+      return selected;
+    }
+  }
+
+  for (const candidate of candidates) {
+    if (!selected.some((item) => item.id === candidate.id)) {
+      selected.push(candidate);
+    }
+
+    if (selected.length >= limit) {
+      break;
+    }
+  }
+
+  return selected;
+}
+
+const selected = selectDiverseCandidates(ranked);
 
 if (selected.length === 0) {
   console.error("No candidates available to build an issue.");

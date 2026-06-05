@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/app/_components/container";
 import { PageHero } from "@/app/_components/page-hero";
-import { getEnabledSources } from "@/lib/sources";
+import { getAllSources, getEnabledSources } from "@/lib/sources";
 import { getCategoryName } from "@/lib/issues";
 
 export const metadata = {
@@ -9,7 +9,8 @@ export const metadata = {
 };
 
 export default function SourcesPage() {
-  const sources = getEnabledSources();
+  const sources = getAllSources();
+  const enabledSources = getEnabledSources();
 
   return (
     <main>
@@ -17,27 +18,64 @@ export default function SourcesPage() {
         eyebrow="Sources"
         title="来源池"
         description="这里列出当前采集和复核使用的公开来源。来源权重只影响候选排序，不替代人工判断。"
-        aside={<p className="text-sm leading-6 text-neutral-300">当前启用 {sources.length} 个来源，覆盖官方、论文、社区和媒体。</p>}
+        aside={<p className="text-sm leading-6 text-neutral-300">当前启用 {enabledSources.length} / {sources.length} 个来源，覆盖官方、论文、社区和媒体。</p>}
       />
 
       <Container className="grid gap-4 py-6 md:grid-cols-2 xl:grid-cols-3">
         {sources.map((source) => (
-          <article key={source.id} className="rounded-md border border-neutral-200 bg-white p-5 shadow-sm">
+          <article
+            key={source.id}
+            className={`rounded-md border bg-white p-5 shadow-sm ${
+              source.enabled ? "border-neutral-200" : "border-dashed border-neutral-300 opacity-75"
+            }`}
+          >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">{source.type}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                  {source.type} · {source.fetchMode}
+                </p>
                 <h2 className="mt-2 text-xl font-semibold text-neutral-950">{source.name}</h2>
               </div>
-              <span className="rounded-md bg-neutral-950 px-2.5 py-1 text-sm font-semibold text-white">{source.trustScore}</span>
+              <span className={`rounded-md px-2.5 py-1 text-sm font-semibold ${source.enabled ? "bg-neutral-950 text-white" : "bg-neutral-100 text-neutral-500"}`}>
+                {source.enabled ? source.trustScore : "待接入"}
+              </span>
             </div>
-            <p className="mt-4 text-sm leading-6 text-neutral-600">默认分类：{getCategoryName(source.category)}</p>
-            <Link
-              href={source.url}
-              target="_blank"
-              className="mt-5 inline-flex h-9 items-center rounded-md border border-neutral-200 px-3 text-sm font-semibold text-neutral-700 hover:border-neutral-400"
-            >
-              打开来源
-            </Link>
+            <div className="mt-4 grid grid-cols-2 gap-2 text-sm">
+              <div className="rounded-md bg-neutral-50 p-3">
+                <p className="text-neutral-500">默认分类</p>
+                <p className="mt-1 font-semibold text-neutral-950">{getCategoryName(source.category)}</p>
+              </div>
+              <div className="rounded-md bg-neutral-50 p-3">
+                <p className="text-neutral-500">解析器</p>
+                <p className="mt-1 font-semibold text-neutral-950">{source.parser}</p>
+              </div>
+            </div>
+            <p className="mt-4 min-h-12 text-sm leading-6 text-neutral-600">{source.notes}</p>
+            <div className="mt-5 flex flex-wrap gap-2">
+              <Link
+                href={source.url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-9 items-center rounded-md border border-neutral-200 px-3 text-sm font-semibold text-neutral-700 hover:border-neutral-400"
+              >
+                打开来源
+              </Link>
+              {source.feedUrl ? (
+                <Link
+                  href={source.feedUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex h-9 items-center rounded-md bg-neutral-950 px-3 text-sm font-semibold text-white hover:bg-neutral-800"
+                >
+                  Feed
+                </Link>
+              ) : null}
+              {source.requiresAuth ? (
+                <span className="inline-flex h-9 items-center rounded-md border border-amber-200 bg-amber-50 px-3 text-sm font-semibold text-amber-900">
+                  {source.authEnv || "需授权"}
+                </span>
+              ) : null}
+            </div>
           </article>
         ))}
       </Container>

@@ -7,12 +7,25 @@ import { ScoreMeter } from "@/app/_components/score-meter";
 import { SignalCard } from "@/app/_components/signal-card";
 import { getFilteredItems, getLatestIssue, getTopTags } from "@/lib/issues";
 import { getEnabledSources } from "@/lib/sources";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/constants";
 
 type HomeProps = {
   searchParams: Promise<{
     category?: string;
+    tag?: string;
   }>;
 };
+
+function parseCategories(value?: string) {
+  return (value ?? "")
+    .split(",")
+    .map((item) => item.trim())
+    .filter(Boolean);
+}
+
+function safeJson(value: unknown) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
+}
 
 export default async function Index({ searchParams }: HomeProps) {
   const params = await searchParams;
@@ -29,13 +42,27 @@ export default async function Index({ searchParams }: HomeProps) {
     );
   }
 
-  const activeCategory = params.category ?? "all";
-  const items = getFilteredItems(issue, activeCategory);
+  const activeCategories = parseCategories(params.category);
+  const activeTag = params.tag?.trim();
+  const items = getFilteredItems(issue, activeCategories, activeTag);
   const topTags = getTopTags(issue.items);
   const selectedSourceCount = new Set(issue.items.map((item) => item.source)).size;
+  const homeJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    description: SITE_DESCRIPTION,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
 
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJson(homeJsonLd) }} />
       <IssuePanel issue={issue} />
 
       <Container className="grid gap-6 py-6 lg:grid-cols-[260px_1fr_320px]">
@@ -98,14 +125,30 @@ export default async function Index({ searchParams }: HomeProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">Selected Signals</p>
               <h2 className="mt-2 text-2xl font-semibold text-neutral-950">今日入选信号</h2>
             </div>
-            <p className="text-sm text-neutral-500">从 {issue.candidateCount} 条候选中筛出 {items.length} 条</p>
+            <p className="text-sm text-neutral-500">
+              从 {issue.candidateCount} 条候选中筛出 {items.length} 条
+              {activeTag ? ` · 标签 ${activeTag}` : ""}
+            </p>
           </div>
-          <CategoryFilter categories={issue.categories} activeCategory={activeCategory} />
+          <CategoryFilter categories={issue.categories} activeCategories={activeCategories} activeTag={activeTag} />
+          {activeTag ? (
+            <div className="mt-3 flex items-center justify-between rounded-md border border-emerald-200 bg-emerald-50 px-3 py-2 text-sm text-emerald-900">
+              <span>正在查看标签：{activeTag}</span>
+              <Link href={activeCategories.length > 0 ? `/?category=${activeCategories.join(",")}` : "/"} className="font-semibold">
+                清除
+              </Link>
+            </div>
+          ) : null}
           <div className="mt-5 space-y-4">
             {items.map((item) => (
-              <SignalCard key={item.rank} item={item} />
+              <SignalCard key={item.rank} item={item} issueDate={issue.date} />
             ))}
           </div>
+          {items.length === 0 ? (
+            <div className="mt-5 rounded-md border border-dashed border-neutral-300 bg-white p-8 text-center text-sm text-neutral-500">
+              当前筛选条件下暂无信号，换一个分类或标签试试。
+            </div>
+          ) : null}
         </section>
 
         <aside className="space-y-4 lg:sticky lg:top-20 lg:self-start">

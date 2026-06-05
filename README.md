@@ -1,6 +1,6 @@
 # AI 信号指数
 
-一个基于 Next.js 的 AI 日报/指数站底座，用本地 JSON 内容源渲染首页、每日详情、历史归档、评分方法、RSS 和 sitemap。
+一个基于 Next.js 的 AI 日报/指数站底座，用本地 JSON 内容源渲染首页、每日详情、历史归档、主题、来源池、搜索、RSS、JSON Feed、OG 图片和 sitemap。
 
 ## 本地运行
 
@@ -16,20 +16,26 @@ npm run dev
 
 当前数据是示例期，用来承载页面结构。正式运营时可以把采集脚本、CMS 或数据库接到 `src/lib/issues.ts`。
 
-来源池放在 `content/sources.json`，后续采集脚本可以从这里读取启用的来源。
+来源池放在 `content/sources.json`。每个来源可声明 `fetchMode`、`parser`、`feedUrl`、`requiresAuth`、`authEnv` 和 `notes`，用于区分稳定 RSS/Atom、HTML 候选、API 待接入和人工来源。
 
 ## 内容生产
 
 从来源池抓取候选内容：
 
 ```bash
-npm run ingest -- --date 2026-06-06 --limit 8
+npm run ingest -- --date 2026-06-06 --limit 8 --concurrency 4 --retries 2
 ```
 
 只抓某个来源：
 
 ```bash
 npm run ingest -- --date 2026-06-06 --source hacker-news
+```
+
+试跑但不写文件：
+
+```bash
+npm run ingest -- --date 2026-06-06 --dry-run
 ```
 
 从候选池生成日报草稿：
@@ -56,14 +62,42 @@ npm run issue:validate
 npm run issue:validate -- 2026-06-05
 ```
 
+运行内容契约测试：
+
+```bash
+npm test
+```
+
 推荐发布前顺序：
 
 ```bash
 npm run ingest -- --date 2026-06-06
 npm run issue:from-candidates -- --date 2026-06-06
 npm run issue:validate
+npm test
 npm run lint
 npm run build
+```
+
+## 自动化
+
+- `.github/workflows/ci.yml` 在 push/PR 时运行内容校验、测试、lint 和 build。
+- `.github/workflows/daily-draft.yml` 支持定时或手动生成候选池和日报草稿，并上传 artifact；默认不自动提交到仓库。
+- 需要认证的来源先在 `content/sources.json` 中通过 `requiresAuth` 和 `authEnv` 预留，例如 `X_BEARER_TOKEN`、`WECHAT_SOURCE_TOKEN`。
+
+## 部署
+
+Vercel 部署前建议配置：
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-domain.example
+```
+
+如果使用 Vercel CLI，本机需要先登录：
+
+```bash
+npx vercel login
+npx vercel deploy --prod --yes
 ```
 
 ## 页面

@@ -9,15 +9,20 @@ export function GET() {
     feed_url: `${SITE_URL}/feed.json`,
     description: SITE_DESCRIPTION,
     language: "zh-CN",
-    items: getAllIssues().map((issue) => ({
-      id: `${SITE_URL}/daily/${issue.date}`,
-      url: `${SITE_URL}/daily/${issue.date}`,
-      title: `${issue.date} ${issue.title}`,
-      summary: issue.summary,
-      content_text: issue.items.map((item) => `${item.rank}. ${item.title} - ${item.summary}`).join("\n"),
-      date_published: new Date(`${issue.date}T08:00:00+08:00`).toISOString(),
-      tags: issue.categories.map((category) => category.name),
-    })),
+    items: getAllIssues().flatMap((issue) =>
+      issue.items.map((item) => ({
+        id: `${SITE_URL}/daily/${issue.date}#signal-${item.rank}`,
+        url: `${SITE_URL}/daily/${issue.date}#signal-${item.rank}`,
+        external_url: item.sourceUrl || undefined,
+        title: `${issue.date} #${item.rank} ${item.title}`,
+        summary: item.summary,
+        content_text: [item.summary, item.whyItMatters, item.sourceUrl ? `原文：${item.sourceUrl}` : ""]
+          .filter(Boolean)
+          .join("\n\n"),
+        date_published: item.publishedAt,
+        tags: [...item.tags, issue.title, item.source],
+      })),
+    ),
   };
 
   return Response.json(feed);

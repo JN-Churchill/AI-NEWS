@@ -4,7 +4,7 @@ import { Container } from "@/app/_components/container";
 import { EntryListCard } from "@/app/_components/entry-list-card";
 import { PageHero } from "@/app/_components/page-hero";
 import { getAllTopicSlugs, getTopicEntries } from "@/lib/catalog";
-import { SITE_NAME } from "@/lib/constants";
+import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { getCategoryName } from "@/lib/issues";
 
 type TopicPageProps = {
@@ -21,14 +21,15 @@ export default async function TopicPage({ params }: TopicPageProps) {
     notFound();
   }
 
-  const title = `${getCategoryName(slug)}信号`;
+  const name = getCategoryName(slug);
+  const title = `${name}信号`;
 
   return (
     <main>
       <PageHero
         eyebrow="Topic"
         title={title}
-        description={`这里汇总所有归入「${getCategoryName(slug)}」方向的日报信号，用于观察长期趋势和重点来源。`}
+        description={`这里汇总所有归入「${name}」方向的日报信号，用于观察长期趋势和重点来源。`}
         aside={<p className="text-sm leading-6 text-neutral-300">共 {entries.length} 条信号，按日报时间和原始排序展示。</p>}
       />
       <Container className="grid gap-4 py-6 lg:grid-cols-2">
@@ -47,6 +48,9 @@ export async function generateMetadata({ params }: TopicPageProps): Promise<Meta
   return {
     title: `${name}信号`,
     description: `${SITE_NAME} 中归入 ${name} 方向的 AI 新闻和行业信号。`,
+    alternates: {
+      canonical: `${SITE_URL}/topics/${slug}`,
+    },
   };
 }
 

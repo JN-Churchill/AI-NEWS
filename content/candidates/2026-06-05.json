@@ -1,39 +1,345 @@
 {
   "date": "2026-06-05",
-  "generatedAt": "2026-06-05T09:43:57.539Z",
-  "sourceCount": 8,
-  "itemCount": 37,
+  "generatedAt": "2026-06-05T10:27:07.382Z",
+  "sourceCount": 11,
+  "itemCount": 81,
+  "sourceResults": [
+    {
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "status": "ok",
+      "itemCount": 8,
+      "fetchedAt": "2026-06-05T10:26:28.017Z"
+    },
+    {
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "status": "ok",
+      "itemCount": 8,
+      "fetchedAt": "2026-06-05T10:26:28.068Z"
+    },
+    {
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "status": "ok",
+      "itemCount": 8,
+      "fetchedAt": "2026-06-05T10:26:28.069Z"
+    },
+    {
+      "sourceId": "deepmind-blog",
+      "sourceName": "Google DeepMind Blog",
+      "status": "ok",
+      "itemCount": 8,
+      "fetchedAt": "2026-06-05T10:26:28.069Z"
+    },
+    {
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "status": "ok",
+      "itemCount": 8,
+      "fetchedAt": "2026-06-05T10:26:28.902Z"
+    },
+    {
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "status": "ok",
+      "itemCount": 8,
+      "fetchedAt": "2026-06-05T10:26:29.632Z"
+    },
+    {
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "status": "ok",
+      "itemCount": 8,
+      "fetchedAt": "2026-06-05T10:26:29.759Z"
+    },
+    {
+      "sourceId": "local-llama-reddit",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "status": "ok",
+      "itemCount": 8,
+      "fetchedAt": "2026-06-05T10:26:32.259Z"
+    },
+    {
+      "sourceId": "machine-learning-reddit",
+      "sourceName": "Reddit r/MachineLearning",
+      "status": "ok",
+      "itemCount": 8,
+      "fetchedAt": "2026-06-05T10:26:32.303Z"
+    },
+    {
+      "sourceId": "nvidia-genai-blog",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "status": "ok",
+      "itemCount": 8,
+      "fetchedAt": "2026-06-05T10:27:02.371Z"
+    },
+    {
+      "sourceId": "jiqizhixin",
+      "sourceName": "机器之心",
+      "status": "ok",
+      "itemCount": 1,
+      "fetchedAt": "2026-06-05T10:27:03.683Z"
+    }
+  ],
   "items": [
     {
-      "id": "anthropic-news-66ce64718960",
+      "id": "anthropic-news-a3d8c6fadccf",
       "date": "2026-06-05",
       "sourceId": "anthropic-news",
       "sourceName": "Anthropic News",
       "sourceType": "official",
       "category": "model",
-      "title": "press@anthropic.com",
-      "url": "mailto:press@anthropic.com",
+      "title": "May 28, 2026 Announcements Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "url": "https://www.anthropic.com/news/series-h",
       "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
       "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:31.189Z",
+      "fetchedAt": "2026-06-05T10:26:32.258Z",
+      "score": 81,
+      "tags": [
+        "商业化"
+      ]
+    },
+    {
+      "id": "machine-learning-reddit-68ebb24c8dc4",
+      "date": "2026-06-05",
+      "sourceId": "machine-learning-reddit",
+      "sourceName": "Reddit r/MachineLearning",
+      "sourceType": "community",
+      "category": "research",
+      "title": "Is it allowed to use OpenAI API outputs to create a silver code dataset or benchmark for a specific Python library? [d]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1txc6qd/is_it_allowed_to_use_openai_api_outputs_to_create/",
+      "summary": "Hello everyone, Is it allowed to use OpenAI API outputs to create a silver code dataset or benchmark for a specific Python library? I am working on a project idea related to library-specific code generation. The concrete case is a specific Python library used...",
+      "publishedAt": "2026-06-05T05:52:32.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.274Z",
+      "score": 79,
+      "tags": [
+        "论文",
+        "产品",
+        "推理"
+      ]
+    },
+    {
+      "id": "anthropic-news-49f44c80e766",
+      "date": "2026-06-05",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network",
+      "url": "https://www.anthropic.com/news/services-track-partner-hub",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:32.258Z",
       "score": 77,
       "tags": [
         "模型"
       ]
     },
     {
-      "id": "anthropic-news-5768b174d7d8",
+      "id": "openai-news-607d4bdd3317",
+      "date": "2026-06-05",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Dreaming: Better memory for a more helpful ChatGPT Research Jun 4, 2026",
+      "url": "https://openai.com/index/chatgpt-memory-dreaming/",
+      "summary": "OpenAI News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:28.901Z",
+      "score": 76,
+      "tags": [
+        "模型",
+        "论文"
+      ]
+    },
+    {
+      "id": "anthropic-news-ea58427a703f",
       "date": "2026-06-05",
       "sourceId": "anthropic-news",
       "sourceName": "Anthropic News",
       "sourceType": "official",
       "category": "model",
-      "title": "Download press kit",
-      "url": "https://anthropic.com/press-kit",
+      "title": "Jun 1, 2026 Announcements Anthropic confidentially submits draft S-1 to the SEC",
+      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
       "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
       "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:31.190Z",
+      "fetchedAt": "2026-06-05T10:26:32.258Z",
+      "score": 76,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "anthropic-news-efcb57008e76",
+      "date": "2026-06-05",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Jun 3, 2026 Policy What we learned mapping a year’s worth of AI-enabled cyber threats",
+      "url": "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:32.258Z",
+      "score": 76,
+      "tags": [
+        "产品",
+        "安全"
+      ]
+    },
+    {
+      "id": "deepmind-blog-cf9e5a542f53",
+      "date": "2026-06-05",
+      "sourceId": "deepmind-blog",
+      "sourceName": "Google DeepMind Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "We’re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks",
+      "url": "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
+      "summary": "",
+      "publishedAt": "2026-05-21T19:46:42.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.758Z",
+      "score": 76,
+      "tags": [
+        "产品"
+      ]
+    },
+    {
+      "id": "openai-news-fea1b8c67212",
+      "date": "2026-06-05",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Introducing new capabilities to GPT-Rosalind Product Jun 3, 2026",
+      "url": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/",
+      "summary": "OpenAI News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:28.902Z",
+      "score": 75,
+      "tags": [
+        "模型",
+        "产品"
+      ]
+    },
+    {
+      "id": "anthropic-news-67b62c8d9d32",
+      "date": "2026-06-05",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Jun 2, 2026 Announcements Expanding Project Glasswing",
+      "url": "https://www.anthropic.com/news/expanding-project-glasswing",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:32.258Z",
+      "score": 75,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "anthropic-news-918121c45d59",
+      "date": "2026-06-05",
+      "sourceId": "anthropic-news",
+      "sourceName": "Anthropic News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "May 28, 2026 Product Introducing Claude Opus 4.8",
+      "url": "https://www.anthropic.com/news/claude-opus-4-8",
+      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:32.258Z",
+      "score": 75,
+      "tags": [
+        "模型",
+        "产品"
+      ]
+    },
+    {
+      "id": "deepmind-blog-143dff8f750b",
+      "date": "2026-06-05",
+      "sourceId": "deepmind-blog",
+      "sourceName": "Google DeepMind Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Strengthening Singapore’s AI Future: A New National Partnership",
+      "url": "https://deepmind.google/blog/strengthening-singapores-ai-future-a-new-national-partnership/",
+      "summary": "Google DeepMind and Singapore partner to apply frontier AI to address complex challenges across health, education, and sustainability and more.",
+      "publishedAt": "2026-05-16T09:13:34.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.758Z",
+      "score": 75,
+      "tags": [
+        "产品"
+      ]
+    },
+    {
+      "id": "openai-news-47f7ae0da079",
+      "date": "2026-06-05",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Foundation (opens in a new window)",
+      "url": "https://openaifoundation.org/",
+      "summary": "OpenAI News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:28.901Z",
       "score": 74,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "openai-news-8e5f728a9828",
+      "date": "2026-06-05",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Try ChatGPT (opens in a new window)",
+      "url": "https://chatgpt.com/",
+      "summary": "OpenAI News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:28.901Z",
+      "score": 74,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "openai-news-fe6a8b154652",
+      "date": "2026-06-05",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "AI Adoption",
+      "url": "https://openai.com/news/ai-adoption/",
+      "summary": "OpenAI News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:28.901Z",
+      "score": 73,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "openai-news-f13459d36534",
+      "date": "2026-06-05",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Developers",
+      "url": "https://openai.com/api/",
+      "summary": "OpenAI News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:28.901Z",
+      "score": 73,
       "tags": [
         "模型"
       ]
@@ -49,263 +355,373 @@
       "url": "https://www.anthropic.com/economic-futures",
       "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
       "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:31.189Z",
-      "score": 74,
+      "fetchedAt": "2026-06-05T10:26:32.258Z",
+      "score": 73,
       "tags": [
         "模型"
       ]
     },
     {
-      "id": "anthropic-news-49f44c80e766",
+      "id": "openai-news-ec864e860c11",
+      "date": "2026-06-05",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Engineering",
+      "url": "https://openai.com/news/engineering/",
+      "summary": "OpenAI News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:28.901Z",
+      "score": 73,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "openai-news-d95279cee96d",
+      "date": "2026-06-05",
+      "sourceId": "openai-news",
+      "sourceName": "OpenAI News",
+      "sourceType": "official",
+      "category": "model",
+      "title": "Global Affairs",
+      "url": "https://openai.com/news/global-affairs/",
+      "summary": "OpenAI News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:28.901Z",
+      "score": 73,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "anthropic-news-92688d9cad7c",
       "date": "2026-06-05",
       "sourceId": "anthropic-news",
       "sourceName": "Anthropic News",
       "sourceType": "official",
       "category": "model",
-      "title": "Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network",
-      "url": "https://www.anthropic.com/news/services-track-partner-hub",
+      "title": "How to get support",
+      "url": "https://support.claude.com/en/articles/9015913-how-to-get-support",
       "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
       "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:31.190Z",
-      "score": 74,
+      "fetchedAt": "2026-06-05T10:26:32.258Z",
+      "score": 73,
       "tags": [
         "模型"
       ]
     },
     {
-      "id": "anthropic-news-cfba69041703",
+      "id": "google-ai-blog-4e4360776d53",
       "date": "2026-06-05",
-      "sourceId": "anthropic-news",
-      "sourceName": "Anthropic News",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
       "sourceType": "official",
-      "category": "model",
-      "title": "Skip to main content",
-      "url": "https://www.anthropic.com/news",
-      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:31.186Z",
-      "score": 74,
+      "category": "research",
+      "title": "How we used Gemini to build Google I/O 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-google-ai/",
+      "summary": "Learn how Googlers used AI to produce Google I/O 2026.",
+      "publishedAt": "2026-06-01T16:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:02.370Z",
+      "score": 71,
       "tags": [
         "模型"
       ]
     },
     {
-      "id": "anthropic-news-8701e897618b",
+      "id": "nvidia-genai-blog-041bd0289a3a",
       "date": "2026-06-05",
-      "sourceId": "anthropic-news",
-      "sourceName": "Anthropic News",
+      "sourceId": "nvidia-genai-blog",
+      "sourceName": "NVIDIA Generative AI Blog",
       "sourceType": "official",
-      "category": "model",
-      "title": "Try Claude",
-      "url": "https://claude.ai/",
-      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:31.189Z",
-      "score": 74,
+      "category": "infra",
+      "title": "NVIDIA Nemotron 3 Ultra Powers Faster, More Efficient Reasoning for Long-Running Agents",
+      "url": "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/",
+      "summary": "Single-turn chatbots are evolving into long-running agents that can reason, maintain context, use tools, and run efficiently across many turns to complete...",
+      "publishedAt": "2026-06-04T13:02:49.000Z",
+      "fetchedAt": "2026-06-05T10:27:06.933Z",
+      "score": 71,
+      "tags": [
+        "Agent"
+      ]
+    },
+    {
+      "id": "deepmind-blog-548bdf100a67",
+      "date": "2026-06-05",
+      "sourceId": "deepmind-blog",
+      "sourceName": "Google DeepMind Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Gemini for Science: AI experiments and tools for a new era of discovery",
+      "url": "https://deepmind.google/blog/gemini-for-science-ai-experiments-and-tools-for-a-new-era-of-discovery/",
+      "summary": "A collection of science tools and experiments to expand the scale and precision of scientific exploration.",
+      "publishedAt": "2026-05-17T13:50:34.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.758Z",
+      "score": 70,
       "tags": [
         "模型"
       ]
     },
     {
-      "id": "google-ai-blog-a6775e6f5f1c",
+      "id": "google-ai-blog-76912b853c1d",
       "date": "2026-06-05",
       "sourceId": "google-ai-blog",
       "sourceName": "Google AI Blog",
       "sourceType": "official",
       "category": "research",
-      "title": "Algorithms & theory",
-      "url": "https://ai.googleblog.com/research-areas/algorithms-and-theory/",
-      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:53.609Z",
-      "score": 72,
+      "title": "5 ways Google Search can level up your thrift and vintage shopping",
+      "url": "https://blog.google/products-and-platforms/products/search/thrifting-tips/",
+      "summary": "Uncover second-hand scores with AI tools in Google Search and Shopping.",
+      "publishedAt": "2026-06-03T13:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:02.370Z",
+      "score": 69,
       "tags": [
         "论文"
       ]
     },
     {
-      "id": "google-ai-blog-0411ae880693",
+      "id": "google-ai-blog-bf7abda633b2",
       "date": "2026-06-05",
       "sourceId": "google-ai-blog",
       "sourceName": "Google AI Blog",
       "sourceType": "official",
       "category": "research",
-      "title": "Explore all research areas",
-      "url": "https://ai.googleblog.com/research-areas/",
-      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:53.608Z",
-      "score": 72,
+      "title": "9 demos of Gemini Omni and Gemini 3.5 in action",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-omni-3-5-videos/",
+      "summary": "Watch 9 videos showing the capabilities of Gemini Omni and Gemini 3.5, announced at Google I/O 2026.",
+      "publishedAt": "2026-05-29T17:30:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:02.370Z",
+      "score": 69,
       "tags": [
-        "论文"
+        "模型",
+        "多模态"
       ]
     },
     {
-      "id": "google-ai-blog-0cb9f1ae373b",
+      "id": "google-ai-blog-52646498064e",
       "date": "2026-06-05",
       "sourceId": "google-ai-blog",
       "sourceName": "Google AI Blog",
       "sourceType": "official",
       "category": "research",
-      "title": "Information retrieval",
-      "url": "https://ai.googleblog.com/research-areas/information-retrieval/",
-      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:53.609Z",
-      "score": 72,
+      "title": "Catch up on 12 major I/O 2026 moments",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-keynote-moment-videos/",
+      "summary": "Here are 12 of the biggest Google I/O 2026 keynote moments, including news about Gemini Omni, Gemini 3.5 Flash and more.",
+      "publishedAt": "2026-05-28T15:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:02.370Z",
+      "score": 68,
       "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "nvidia-genai-blog-519494b2121e",
+      "date": "2026-06-05",
+      "sourceId": "nvidia-genai-blog",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "sourceType": "official",
+      "category": "infra",
+      "title": "Deploy Self-Evolving Agents for Faster, More Secure Research with a Hermes Agent and NVIDIA NemoClaw",
+      "url": "https://developer.nvidia.com/blog/deploy-self-evolving-agents-for-faster-more-secure-research-with-a-hermes-agent-and-nvidia-nemoclaw/",
+      "summary": "AI agents are a powerful tool for synthesizing data to accelerate research, summarize information, and help teams make decisions faster. But combining internal...",
+      "publishedAt": "2026-06-02T16:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:06.933Z",
+      "score": 68,
+      "tags": [
+        "Agent",
         "论文"
       ]
     },
     {
-      "id": "google-ai-blog-ed516a49a286",
+      "id": "deepmind-blog-6ff85c3103b9",
+      "date": "2026-06-05",
+      "sourceId": "deepmind-blog",
+      "sourceName": "Google DeepMind Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Introducing Gemini Omni",
+      "url": "https://deepmind.google/blog/introducing-gemini-omni/",
+      "summary": "",
+      "publishedAt": "2026-05-17T19:50:57.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.758Z",
+      "score": 68,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "nvidia-genai-blog-fc876ff793ce",
+      "date": "2026-06-05",
+      "sourceId": "nvidia-genai-blog",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "sourceType": "official",
+      "category": "infra",
+      "title": "Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA",
+      "url": "https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia/",
+      "summary": "AI agents are changing how you interact with your PC. Creators, developers, and AI enthusiasts are already using these agents extensively to assist with...",
+      "publishedAt": "2026-06-02T19:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:06.933Z",
+      "score": 67,
+      "tags": [
+        "Agent"
+      ]
+    },
+    {
+      "id": "local-llama-reddit-258efd89918d",
+      "date": "2026-06-05",
+      "sourceId": "local-llama-reddit",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "KVarN: new KV-cache quant from Huawei. 3–5× KV cache compression with actual speed-up instead of slow-down, and unlike TurboQuant it holds up on reasoning (Apache 2.0, vLLM single flag)",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1twptw2/kvarn_new_kvcache_quant_from_huawei_35_kv_cache/",
+      "summary": "The KV-cache quant race just got more interesting. Huawei just open-sourced KVarN , a KV-cache quantization method under Apache 2.0, drops into vLLM with one flag. Posting because the tradeoff it's claiming is genuinely different from what's already in the st...",
+      "publishedAt": "2026-06-04T14:47:10.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.372Z",
+      "score": 67,
+      "tags": [
+        "模型",
+        "推理"
+      ]
+    },
+    {
+      "id": "nvidia-genai-blog-89a283b7d612",
+      "date": "2026-06-05",
+      "sourceId": "nvidia-genai-blog",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "sourceType": "official",
+      "category": "infra",
+      "title": "NVIDIA Vera CPU Sets a New Standard for Agentic Workloads in AI Factories",
+      "url": "https://developer.nvidia.com/blog/nvidia-vera-cpu-sets-a-new-standard-for-agentic-workloads-in-ai-factories/",
+      "summary": "Each wave of AI has created a new scaling law. Pretraining scaled intelligence through larger datasets, more parameters, and massively parallel GPU systems....",
+      "publishedAt": "2026-06-01T03:59:15.000Z",
+      "fetchedAt": "2026-06-05T10:27:06.933Z",
+      "score": 67,
+      "tags": [
+        "Agent",
+        "论文",
+        "推理"
+      ]
+    },
+    {
+      "id": "nvidia-genai-blog-30d1dae4fb2d",
+      "date": "2026-06-05",
+      "sourceId": "nvidia-genai-blog",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "sourceType": "official",
+      "category": "infra",
+      "title": "Run Local AI Agents with Faster Models and Multi-Node Clustering on NVIDIA DGX Spark",
+      "url": "https://developer.nvidia.com/blog/run-local-ai-agents-with-faster-models-and-multi-node-clustering-on-nvidia-dgx-spark/",
+      "summary": "The rise of autonomous, long-running AI agents has introduced a new class of compute demand, namely tasks that maintain large context windows, spawn concurrent...",
+      "publishedAt": "2026-06-01T22:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:06.933Z",
+      "score": 65,
+      "tags": [
+        "Agent",
+        "模型",
+        "开源"
+      ]
+    },
+    {
+      "id": "nvidia-genai-blog-6e8a904c4576",
+      "date": "2026-06-05",
+      "sourceId": "nvidia-genai-blog",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "sourceType": "official",
+      "category": "infra",
+      "title": "Advancing AI Infrastructure for Agentic AI with NVIDIA DOCA In-Silicon Security",
+      "url": "https://developer.nvidia.com/blog/advancing-ai-infrastructure-for-agentic-ai-with-nvidia-doca-in-silicon-security/",
+      "summary": "The AI era is driving a new class of infrastructure: AI factories that transform data into intelligence for autonomous AI agents operating at unprecedented...",
+      "publishedAt": "2026-06-01T04:21:42.000Z",
+      "fetchedAt": "2026-06-05T10:27:06.933Z",
+      "score": 64,
+      "tags": [
+        "Agent",
+        "安全"
+      ]
+    },
+    {
+      "id": "nvidia-genai-blog-56a3a8e476bc",
+      "date": "2026-06-05",
+      "sourceId": "nvidia-genai-blog",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "sourceType": "official",
+      "category": "infra",
+      "title": "Develop Physical AI Reasoning, World, and Action Models with NVIDIA Cosmos 3",
+      "url": "https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/",
+      "summary": "Physical AI systems must understand the real world before they can act within it. Robots, autonomous vehicles, and smart spaces need to understand what's...",
+      "publishedAt": "2026-06-01T04:43:58.000Z",
+      "fetchedAt": "2026-06-05T10:27:06.933Z",
+      "score": 64,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "hacker-news-a3c6a12af86b",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "Anthropic's open-source framework for AI-powered vulnerability discovery",
+      "url": "https://github.com/anthropics/defending-code-reference-harness",
+      "summary": "Comments",
+      "publishedAt": "2026-06-04T20:11:20.000Z",
+      "fetchedAt": "2026-06-05T10:27:03.682Z",
+      "score": 63,
+      "tags": [
+        "产品"
+      ]
+    },
+    {
+      "id": "google-ai-blog-3405d5d5834d",
       "date": "2026-06-05",
       "sourceId": "google-ai-blog",
       "sourceName": "Google AI Blog",
       "sourceType": "official",
       "category": "research",
-      "title": "Science AI",
-      "url": "https://ai.googleblog.com/research-areas/science-ai/",
-      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:53.608Z",
-      "score": 72,
+      "title": "Catch up on the Dialogues stage at Google I/O 2026.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-dialogues-recap/",
+      "summary": "A recap of the 2026 I/O Dialogues, where leaders discuss the future of AI, quantum computing, robotics and creativity.",
+      "publishedAt": "2026-05-22T18:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:02.370Z",
+      "score": 61,
       "tags": [
         "论文"
       ]
     },
     {
-      "id": "google-ai-blog-fc993854efe9",
+      "id": "google-ai-blog-daac52c1ca42",
       "date": "2026-06-05",
       "sourceId": "google-ai-blog",
       "sourceName": "Google AI Blog",
       "sourceType": "official",
       "category": "research",
-      "title": "Skip to main content",
-      "url": "https://ai.googleblog.com/",
-      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:53.608Z",
-      "score": 72,
+      "title": "Check out real-life AI prototypes from the Futures Lab.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/university-waterloo-labs/",
+      "summary": "University of Waterloo students develop AI prototypes like sign language tutors to reshape the future of education and work.",
+      "publishedAt": "2026-05-29T12:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:02.370Z",
+      "score": 61,
       "tags": [
         "论文"
       ]
     },
     {
-      "id": "google-ai-blog-71da9d7e984a",
+      "id": "deepmind-blog-2758b59a9d96",
       "date": "2026-06-05",
-      "sourceId": "google-ai-blog",
-      "sourceName": "Google AI Blog",
+      "sourceId": "deepmind-blog",
+      "sourceName": "Google DeepMind Blog",
       "sourceType": "official",
       "category": "research",
-      "title": "Sustainability & crisis resilience",
-      "url": "https://ai.googleblog.com/research-areas/sustainability-crisis-resilience/",
-      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:53.609Z",
-      "score": 72,
-      "tags": [
-        "论文"
-      ]
-    },
-    {
-      "id": "arxiv-cs-ai-8a39dfc647f1",
-      "date": "2026-06-05",
-      "sourceId": "arxiv-cs-ai",
-      "sourceName": "arXiv cs.AI",
-      "sourceType": "paper",
-      "category": "research",
-      "title": "Advanced Search",
-      "url": "https://arxiv.org/search/advanced",
-      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:54.121Z",
-      "score": 67,
-      "tags": [
-        "论文"
-      ]
-    },
-    {
-      "id": "arxiv-cs-ai-c5445d5b37e4",
-      "date": "2026-06-05",
-      "sourceId": "arxiv-cs-ai",
-      "sourceName": "arXiv cs.AI",
-      "sourceType": "paper",
-      "category": "research",
-      "title": "Fri, 5 Jun 2026",
-      "url": "https://arxiv.org/list/cs.AI/recent?skip=0&amp%3Bshow=50",
-      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:54.122Z",
-      "score": 67,
-      "tags": [
-        "论文"
-      ]
-    },
-    {
-      "id": "arxiv-cs-ai-34044e3eb27e",
-      "date": "2026-06-05",
-      "sourceId": "arxiv-cs-ai",
-      "sourceName": "arXiv cs.AI",
-      "sourceType": "paper",
-      "category": "research",
-      "title": "Skip to main content",
-      "url": "https://arxiv.org/list/cs.AI/recent",
-      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:54.120Z",
-      "score": 67,
-      "tags": [
-        "论文"
-      ]
-    },
-    {
-      "id": "arxiv-cs-ai-306fdf3a594e",
-      "date": "2026-06-05",
-      "sourceId": "arxiv-cs-ai",
-      "sourceName": "arXiv cs.AI",
-      "sourceType": "paper",
-      "category": "research",
-      "title": "Thu, 4 Jun 2026",
-      "url": "https://arxiv.org/list/cs.AI/recent?skip=280&amp%3Bshow=50",
-      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:54.122Z",
-      "score": 67,
-      "tags": [
-        "论文"
-      ]
-    },
-    {
-      "id": "arxiv-cs-ai-e0dccf6dd737",
-      "date": "2026-06-05",
-      "sourceId": "arxiv-cs-ai",
-      "sourceName": "arXiv cs.AI",
-      "sourceType": "paper",
-      "category": "research",
-      "title": "Tue, 2 Jun 2026",
-      "url": "https://arxiv.org/list/cs.AI/recent?skip=770&amp%3Bshow=50",
-      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:54.122Z",
-      "score": 67,
-      "tags": [
-        "论文"
-      ]
-    },
-    {
-      "id": "arxiv-cs-ai-3f459aee100f",
-      "date": "2026-06-05",
-      "sourceId": "arxiv-cs-ai",
-      "sourceName": "arXiv cs.AI",
-      "sourceType": "paper",
-      "category": "research",
-      "title": "Wed, 3 Jun 2026",
-      "url": "https://arxiv.org/list/cs.AI/recent?skip=487&amp%3Bshow=50",
-      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:42:54.122Z",
-      "score": 67,
+      "title": "Fast-tracking genetic leads to reverse cellular aging",
+      "url": "https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/",
+      "summary": "Biologists use Co-Scientist to find novel factors that successfully rejuvenate human cells.",
+      "publishedAt": "2026-05-18T18:21:39.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.758Z",
+      "score": 61,
       "tags": [
         "论文"
       ]
@@ -321,8 +737,8 @@
       "url": "https://github.com/features/ai/github-app",
       "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
       "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:16.871Z",
-      "score": 60,
+      "fetchedAt": "2026-06-05T10:26:32.303Z",
+      "score": 61,
       "tags": [
         "Agent",
         "开源",
@@ -330,19 +746,88 @@
       ]
     },
     {
-      "id": "hacker-news-dff690337553",
+      "id": "deepmind-blog-ce11f0ad142d",
       "date": "2026-06-05",
-      "sourceId": "hacker-news",
-      "sourceName": "Hacker News",
-      "sourceType": "community",
-      "category": "product",
-      "title": "Fine-tuning an LLM to write docs like it&#x27;s 1995",
-      "url": "https://passo.uno/fine-tuning-docs-llm/",
-      "summary": "Comments",
-      "publishedAt": "2026-06-05T05:46:06.000Z",
-      "fetchedAt": "2026-06-05T09:43:57.245Z",
-      "score": 58,
+      "sourceId": "deepmind-blog",
+      "sourceName": "Google DeepMind Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Making it easier to understand how content was created and edited",
+      "url": "https://deepmind.google/blog/making-it-easier-to-understand-how-content-was-created-and-edited/",
+      "summary": "We're expanding our tools to help you understand how content was created and edited across the web.",
+      "publishedAt": "2026-05-17T13:43:50.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.758Z",
+      "score": 61,
       "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "deepmind-blog-c120575d799b",
+      "date": "2026-06-05",
+      "sourceId": "deepmind-blog",
+      "sourceName": "Google DeepMind Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view/",
+      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+      "publishedAt": "2026-05-17T19:53:18.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.758Z",
+      "score": 61,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "google-ai-blog-944dd86b3cac",
+      "date": "2026-06-05",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Take our I/O 2026 quiz, vibe coded in Google AI Studio.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/io-2026-vibe-coded-quiz/",
+      "summary": "We used Google AI Studio to vibe code a quiz about our top I/O 2026 announcements.",
+      "publishedAt": "2026-05-29T19:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:02.370Z",
+      "score": 61,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "google-ai-blog-ed67995bed7d",
+      "date": "2026-06-05",
+      "sourceId": "google-ai-blog",
+      "sourceName": "Google AI Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "We’re announcing new community investments in Missouri.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/missouri-programs/",
+      "summary": "We’re helping build the state’s next-generation workforce and investing in energy programs.",
+      "publishedAt": "2026-05-20T20:40:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:02.370Z",
+      "score": 61,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "local-llama-reddit-048addc1abcf",
+      "date": "2026-06-05",
+      "sourceId": "local-llama-reddit",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "You guys were right - Qwen 3.6 35B IS good...and KV Cache DOES matter.",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1twyoqe/you_guys_were_right_qwen_36_35b_is_goodand_kv/",
+      "summary": "WARNING: I'm speed typing this, no time to organizea/format, so if short paragraph chunks bother you, just keep it moving. CONTEXT UPDATE: (for those interested, otherwise skip) For those interested in the data points, the task was building an agentic workflo...",
+      "publishedAt": "2026-06-04T19:57:06.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.372Z",
+      "score": 61,
+      "tags": [
+        "Agent",
         "模型"
       ]
     },
@@ -357,212 +842,248 @@
       "url": "https://github.com/features/actions",
       "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
       "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:16.872Z",
-      "score": 57,
+      "fetchedAt": "2026-06-05T10:26:32.303Z",
+      "score": 60,
       "tags": [
         "Agent"
       ]
     },
     {
-      "id": "huggingface-papers-2e72f14bcf6a",
+      "id": "arxiv-cs-ai-8a39dfc647f1",
       "date": "2026-06-05",
-      "sourceId": "huggingface-papers",
-      "sourceName": "Hugging Face Papers",
-      "sourceType": "community",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
       "category": "research",
-      "title": "Buckets new",
-      "url": "https://huggingface.co/storage",
-      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
+      "title": "Advanced Search",
+      "url": "https://arxiv.org/search/advanced",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
       "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:37.550Z",
-      "score": 57,
+      "fetchedAt": "2026-06-05T10:26:29.631Z",
+      "score": 60,
       "tags": [
         "论文"
       ]
     },
     {
-      "id": "github-trending-5040154ab153",
+      "id": "arxiv-cs-ai-d8c6ae3a8bfc",
       "date": "2026-06-05",
-      "sourceId": "github-trending",
-      "sourceName": "GitHub Trending",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Fri, 5 Jun 2026",
+      "url": "https://arxiv.org/list/cs.AI/recent?skip=0&show=50",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.631Z",
+      "score": 60,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-16d37a512499",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Help Pages",
+      "url": "https://info.arxiv.org/help",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.631Z",
+      "score": 60,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "deepmind-blog-c24549cf8179",
+      "date": "2026-06-05",
+      "sourceId": "deepmind-blog",
+      "sourceName": "Google DeepMind Blog",
+      "sourceType": "official",
+      "category": "research",
+      "title": "Introducing Google Antigravity 2.0",
+      "url": "https://deepmind.google/blog/introducing-google-antigravity-2-0/",
+      "summary": "",
+      "publishedAt": "2026-05-17T19:43:45.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.758Z",
+      "score": 60,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-5c360dfa2f3d",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "member institutions",
+      "url": "https://info.arxiv.org/about/ourmembers.html",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.630Z",
+      "score": 60,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-ac4559c129c1",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Mon, 1 Jun 2026",
+      "url": "https://arxiv.org/list/cs.AI/recent?skip=1347&show=50",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.632Z",
+      "score": 60,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-b0c98f8119ca",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Thu, 4 Jun 2026",
+      "url": "https://arxiv.org/list/cs.AI/recent?skip=280&show=50",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.631Z",
+      "score": 60,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-871f254996e1",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Tue, 2 Jun 2026",
+      "url": "https://arxiv.org/list/cs.AI/recent?skip=770&show=50",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.632Z",
+      "score": 60,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "arxiv-cs-ai-f608d0ac9417",
+      "date": "2026-06-05",
+      "sourceId": "arxiv-cs-ai",
+      "sourceName": "arXiv cs.AI",
+      "sourceType": "paper",
+      "category": "research",
+      "title": "Wed, 3 Jun 2026",
+      "url": "https://arxiv.org/list/cs.AI/recent?skip=487&show=50",
+      "summary": "arXiv cs.AI 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:29.632Z",
+      "score": 60,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "nvidia-genai-blog-bcfa6b2e5481",
+      "date": "2026-06-05",
+      "sourceId": "nvidia-genai-blog",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "sourceType": "official",
+      "category": "infra",
+      "title": "DynoSim: Simulating the Pareto Frontier",
+      "url": "https://developer.nvidia.com/blog/dynosim-simulating-the-pareto-frontier/",
+      "summary": "Modern LLM serving is hard to tune because each deployment is a stack of interacting choices: model backend, tensor-parallel shape, prefill/decode split, worker...",
+      "publishedAt": "2026-05-29T22:31:03.000Z",
+      "fetchedAt": "2026-06-05T10:27:06.933Z",
+      "score": 59,
+      "tags": [
+        "模型",
+        "推理"
+      ]
+    },
+    {
+      "id": "local-llama-reddit-9da9bba82f02",
+      "date": "2026-06-05",
+      "sourceId": "local-llama-reddit",
+      "sourceName": "Reddit r/LocalLLaMA",
       "sourceType": "community",
       "category": "opensource",
-      "title": "Codespaces Instant dev environments",
-      "url": "https://github.com/features/codespaces",
-      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:16.872Z",
-      "score": 57,
+      "title": "Nvidia's been paying shills on LinkedIn",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1twrvts/nvidias_been_paying_shills_on_linkedin/",
+      "summary": "3 different accounts, some even with LinkedIn Gold, made the above posts all on the same day. And clearly all of them followed the marketing team's pointers without even understanding how locally hosted AI works, no way a $249 8GB machine can replace frontier...",
+      "publishedAt": "2026-06-04T15:59:37.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.372Z",
+      "score": 58,
       "tags": [
         "开源"
       ]
     },
     {
-      "id": "huggingface-papers-a170bd60d3f6",
+      "id": "machine-learning-reddit-f6e7d11908fb",
       "date": "2026-06-05",
-      "sourceId": "huggingface-papers",
-      "sourceName": "Hugging Face Papers",
+      "sourceId": "machine-learning-reddit",
+      "sourceName": "Reddit r/MachineLearning",
       "sourceType": "community",
       "category": "research",
-      "title": "Collections",
-      "url": "https://huggingface.co/collections",
-      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:37.551Z",
+      "title": "On-policy distillation: one of the hottest terms on PapersWithCode [R]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1twmhud/onpolicy_distillation_one_of_the_hottest_terms_on/",
+      "summary": "Hi, Niels here from the open-source team at Hugging Face. At paperswithcode.co I am trying to make it easier for people to learn about the newest techniques used across AI papers. One of the hottest terms in AI research that I've recently added is On-policy d...",
+      "publishedAt": "2026-06-04T12:40:48.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.274Z",
       "score": 57,
       "tags": [
-        "论文"
+        "论文",
+        "安全"
       ]
     },
     {
-      "id": "huggingface-papers-a73f5f23f802",
+      "id": "machine-learning-reddit-031d5910e353",
       "date": "2026-06-05",
-      "sourceId": "huggingface-papers",
-      "sourceName": "Hugging Face Papers",
+      "sourceId": "machine-learning-reddit",
+      "sourceName": "Reddit r/MachineLearning",
       "sourceType": "community",
       "category": "research",
-      "title": "Enterprise",
-      "url": "https://huggingface.co/enterprise",
-      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:37.550Z",
-      "score": 57,
+      "title": "KVarN: Variance-Normalized KV-Cache Quantization [R]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1twnj5r/kvarn_variancenormalized_kvcache_quantization_r/",
+      "summary": "Excited to share some of my own work here :) KVarN is our new KV-Cache quantization method. In very brief, we combine Hadamard rotations with variance-normalization on both axes of the K and V matrices, then round to nearest. Simple, but works very well, espe...",
+      "publishedAt": "2026-06-04T13:21:59.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.274Z",
+      "score": 56,
       "tags": [
-        "商业化"
+        "推理"
       ]
     },
     {
-      "id": "github-trending-ec57d26d0bcb",
+      "id": "machine-learning-reddit-9344ae987088",
       "date": "2026-06-05",
-      "sourceId": "github-trending",
-      "sourceName": "GitHub Trending",
-      "sourceType": "community",
-      "category": "opensource",
-      "title": "GitHub Copilot Write better code with AI",
-      "url": "https://github.com/features/copilot",
-      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:16.871Z",
-      "score": 57,
-      "tags": [
-        "开源"
-      ]
-    },
-    {
-      "id": "huggingface-papers-6e80418a8460",
-      "date": "2026-06-05",
-      "sourceId": "huggingface-papers",
-      "sourceName": "Hugging Face Papers",
+      "sourceId": "machine-learning-reddit",
+      "sourceName": "Reddit r/MachineLearning",
       "sourceType": "community",
       "category": "research",
-      "title": "Hugging Face",
-      "url": "https://huggingface.co/",
-      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:37.550Z",
-      "score": 57,
-      "tags": [
-        "论文"
-      ]
-    },
-    {
-      "id": "huggingface-papers-4168daa2916f",
-      "date": "2026-06-05",
-      "sourceId": "huggingface-papers",
-      "sourceName": "Hugging Face Papers",
-      "sourceType": "community",
-      "category": "research",
-      "title": "HuggingChat",
-      "url": "https://huggingface.co/chat",
-      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:37.551Z",
-      "score": 57,
-      "tags": [
-        "论文"
-      ]
-    },
-    {
-      "id": "github-trending-d76f6f19ec2c",
-      "date": "2026-06-05",
-      "sourceId": "github-trending",
-      "sourceName": "GitHub Trending",
-      "sourceType": "community",
-      "category": "opensource",
-      "title": "MCP Registry New Integrate external tools",
-      "url": "https://github.com/mcp",
-      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:16.872Z",
-      "score": 57,
-      "tags": [
-        "开源"
-      ]
-    },
-    {
-      "id": "huggingface-papers-e22dcf2c591f",
-      "date": "2026-06-05",
-      "sourceId": "huggingface-papers",
-      "sourceName": "Hugging Face Papers",
-      "sourceType": "community",
-      "category": "research",
-      "title": "Organizations",
-      "url": "https://huggingface.co/organizations",
-      "summary": "Hugging Face Papers 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:37.551Z",
-      "score": 57,
-      "tags": [
-        "论文"
-      ]
-    },
-    {
-      "id": "github-trending-587f03113c25",
-      "date": "2026-06-05",
-      "sourceId": "github-trending",
-      "sourceName": "GitHub Trending",
-      "sourceType": "community",
-      "category": "opensource",
-      "title": "Skip to content",
-      "url": "https://github.com/trending",
-      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:16.871Z",
-      "score": 57,
-      "tags": [
-        "开源"
-      ]
-    },
-    {
-      "id": "hacker-news-5d8162c9fb06",
-      "date": "2026-06-05",
-      "sourceId": "hacker-news",
-      "sourceName": "Hacker News",
-      "sourceType": "community",
-      "category": "product",
-      "title": "C++: The Documentary",
-      "url": "https://herbsutter.com/2026/06/04/c-the-documentary-released-today/",
-      "summary": "Comments",
-      "publishedAt": "2026-06-05T04:37:01.000Z",
-      "fetchedAt": "2026-06-05T09:43:57.245Z",
-      "score": 55,
-      "tags": [
-        "产品"
-      ]
-    },
-    {
-      "id": "hacker-news-5722efcb0a05",
-      "date": "2026-06-05",
-      "sourceId": "hacker-news",
-      "sourceName": "Hacker News",
-      "sourceType": "community",
-      "category": "product",
-      "title": "Changing How We Develop Ladybird",
-      "url": "https://ladybird.org/posts/changing-how-we-develop-ladybird/",
-      "summary": "Comments",
-      "publishedAt": "2026-06-05T07:26:33.000Z",
-      "fetchedAt": "2026-06-05T09:43:57.244Z",
-      "score": 55,
+      "title": "Would you say capture-time semantic annotation for robot trajectories is a solved problem? [R]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1txf4gg/would_you_say_capturetime_semantic_annotation_for/",
+      "summary": "It seems raw teleoperation data (RGB + joint states) structurally lacks affordance, contact intent, and embodiment-specific kinematic context. (information that can't be reliably recovered post-hoc once the demonstration is recorded) Most current approaches e...",
+      "publishedAt": "2026-06-05T08:42:07.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.274Z",
+      "score": 56,
       "tags": [
         "产品"
       ]
@@ -578,10 +1099,44 @@
       "url": "https://www.quantamagazine.org/entanglement-builds-space-time-now-magic-gives-it-gravity-20260603/",
       "summary": "Comments",
       "publishedAt": "2026-06-05T08:33:37.000Z",
-      "fetchedAt": "2026-06-05T09:43:57.245Z",
+      "fetchedAt": "2026-06-05T10:27:03.682Z",
       "score": 55,
       "tags": [
         "产品"
+      ]
+    },
+    {
+      "id": "local-llama-reddit-aeb2d7d2a408",
+      "date": "2026-06-05",
+      "sourceId": "local-llama-reddit",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "Finally finished my LLM server: EPYC 9575F, 4× RTX 3090 (96GB VRAM), 768GB ECC RAM",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tx9tf2/finally_finished_my_llm_server_epyc_9575f_4_rtx/",
+      "summary": "Took a while, but Nalthis is finally up and assembled. Specs: Supermicro H13SSL-N AMD EPYC 9575F (64C/128T Zen 5) 768GB DDR5-5600 ECC RDIMM 4× RTX 3090 (96GB VRAM total) 1× 2TB NVMe OS 2× 3.94TB NVMe data 2050W ATX 3.1 PSU Corsair 9000D Planned use: vLLM - hi...",
+      "publishedAt": "2026-06-05T03:49:25.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.372Z",
+      "score": 55,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "hacker-news-dff690337553",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "Fine-tuning an LLM to write docs like it's 1995",
+      "url": "https://passo.uno/fine-tuning-docs-llm/",
+      "summary": "Comments",
+      "publishedAt": "2026-06-05T05:46:06.000Z",
+      "fetchedAt": "2026-06-05T10:27:03.682Z",
+      "score": 55,
+      "tags": [
+        "模型"
       ]
     },
     {
@@ -595,42 +1150,336 @@
       "url": "https://fb.watch/HxPu0fSyeH/",
       "summary": "Comments",
       "publishedAt": "2026-06-05T00:44:38.000Z",
-      "fetchedAt": "2026-06-05T09:43:57.245Z",
+      "fetchedAt": "2026-06-05T10:27:03.682Z",
       "score": 55,
       "tags": [
         "多模态"
       ]
     },
     {
-      "id": "hacker-news-6b231597b753",
+      "id": "hacker-news-5b7ef307fa83",
       "date": "2026-06-05",
       "sourceId": "hacker-news",
       "sourceName": "Hacker News",
       "sourceType": "community",
       "category": "product",
-      "title": "The IsUpMap lets you check the status of over 100 major sites at once",
-      "url": "https://isupmap.com/",
+      "title": "Tracing a powerful GNSS interference source over Europe",
+      "url": "https://arxiv.org/abs/2606.03673",
       "summary": "Comments",
-      "publishedAt": "2026-06-05T04:44:48.000Z",
-      "fetchedAt": "2026-06-05T09:43:57.245Z",
+      "publishedAt": "2026-06-05T08:32:16.000Z",
+      "fetchedAt": "2026-06-05T10:27:03.682Z",
       "score": 55,
       "tags": [
         "产品"
       ]
     },
     {
-      "id": "jiqizhixin-bd628d7c2535",
+      "id": "machine-learning-reddit-c2940ba4061e",
+      "date": "2026-06-05",
+      "sourceId": "machine-learning-reddit",
+      "sourceName": "Reddit r/MachineLearning",
+      "sourceType": "community",
+      "category": "research",
+      "title": "Are We Underestimating Small Edge AI Models?[D]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1txgeu0/are_we_underestimating_small_edge_ai_modelsd/",
+      "summary": "A lot of recent discussion around Edge AI focuses on running increasingly larger local LLMs. Meanwhile modern smartphones already have enough compute for many practical computer vision tasks that don't require massive models at all. I recently built and relea...",
+      "publishedAt": "2026-06-05T09:55:39.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.274Z",
+      "score": 54,
+      "tags": [
+        "模型",
+        "多模态",
+        "开源"
+      ]
+    },
+    {
+      "id": "hacker-news-5722efcb0a05",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "Changing How We Develop Ladybird",
+      "url": "https://ladybird.org/posts/changing-how-we-develop-ladybird/",
+      "summary": "Comments",
+      "publishedAt": "2026-06-05T07:26:33.000Z",
+      "fetchedAt": "2026-06-05T10:27:03.682Z",
+      "score": 54,
+      "tags": [
+        "产品"
+      ]
+    },
+    {
+      "id": "github-trending-83d93753060e",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "GitHub Advanced Security Find and fix vulnerabilities",
+      "url": "https://github.com/security/advanced-security",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:32.303Z",
+      "score": 54,
+      "tags": [
+        "开源",
+        "安全"
+      ]
+    },
+    {
+      "id": "local-llama-reddit-b8d1681f7672",
+      "date": "2026-06-05",
+      "sourceId": "local-llama-reddit",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "hello there! i made a tool to explore kokoro.",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1txal7z/hello_there_i_made_a_tool_to_explore_kokoro/",
+      "summary": "i built this on top of my own stack but the code is MIT for everything related. kokoro was pretty fun to explore, i'll likely build something similar for other models. if you have a particular preference, let me know and i'll take a look at it. the specific k...",
+      "publishedAt": "2026-06-05T04:28:23.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.372Z",
+      "score": 54,
+      "tags": [
+        "模型"
+      ]
+    },
+    {
+      "id": "machine-learning-reddit-5326490ab22a",
+      "date": "2026-06-05",
+      "sourceId": "machine-learning-reddit",
+      "sourceName": "Reddit r/MachineLearning",
+      "sourceType": "community",
+      "category": "research",
+      "title": "How do ML researchers actually use AI tools to improve their writing? [D]",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1twtpmb/how_do_ml_researchers_actually_use_ai_tools_to/",
+      "summary": "As an ML researcher, how do you use AI tools in your daily work? Do you mostly use them to clean up grammar and wording, or also to rewrite, structure, or draft technical text? &#32; submitted by &#32; /u/Hope999991 [link] &#32; [comments]",
+      "publishedAt": "2026-06-04T17:02:53.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.275Z",
+      "score": 54,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "hacker-news-5d8162c9fb06",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "C++: The Documentary",
+      "url": "https://herbsutter.com/2026/06/04/c-the-documentary-released-today/",
+      "summary": "Comments",
+      "publishedAt": "2026-06-05T04:37:01.000Z",
+      "fetchedAt": "2026-06-05T10:27:03.682Z",
+      "score": 53,
+      "tags": [
+        "产品"
+      ]
+    },
+    {
+      "id": "github-trending-f9a0309864ad",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "Code Review Manage code changes",
+      "url": "https://github.com/features/code-review",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:32.303Z",
+      "score": 53,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "github-trending-5040154ab153",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "Codespaces Instant dev environments",
+      "url": "https://github.com/features/codespaces",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:32.303Z",
+      "score": 53,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "local-llama-reddit-821bcecab84f",
+      "date": "2026-06-05",
+      "sourceId": "local-llama-reddit",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "Gemma 4 12B is my new main squeeze",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1txdcj9/gemma_4_12b_is_my_new_main_squeeze/",
+      "summary": "The Unsloth Q5_K_XL is officially my main squeeze for local coding. I started out with the Q4_K_XL, but found myself fixing syntax errors a little too often. It wasn't terrible, but I had one file where I had to make 23 edits just for syntax. With the Q4 I wa...",
+      "publishedAt": "2026-06-05T06:57:14.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.372Z",
+      "score": 53,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "github-trending-ec57d26d0bcb",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "GitHub Copilot Write better code with AI",
+      "url": "https://github.com/features/copilot",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:32.303Z",
+      "score": 53,
+      "tags": [
+        "Agent",
+        "开源"
+      ]
+    },
+    {
+      "id": "github-trending-af8b2fd3c8ca",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "Issues Plan and track work",
+      "url": "https://github.com/features/issues",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:32.303Z",
+      "score": 53,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "github-trending-d76f6f19ec2c",
+      "date": "2026-06-05",
+      "sourceId": "github-trending",
+      "sourceName": "GitHub Trending",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "MCP Registry New Integrate external tools",
+      "url": "https://github.com/mcp",
+      "summary": "GitHub Trending 页面抓取候选，等待人工复核摘要和来源细节。",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "fetchedAt": "2026-06-05T10:26:32.303Z",
+      "score": 53,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "local-llama-reddit-b1b34012fef4",
+      "date": "2026-06-05",
+      "sourceId": "local-llama-reddit",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "RTX Pro 4500 Blackwell Performance Numbers",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1txfiws/rtx_pro_4500_blackwell_performance_numbers/",
+      "summary": "RTX Pro 4500 Blackwell About one month ago I asked the fine people of Reddit for some upgrade advice, on where to take the following AI server next. AMD Ryzen 7 7700 CPU ​Corsair Vengeance RGB DDR5 5600MHz 32GB (2x16) ​RTX 5060 Ti 16GB At first I was consider...",
+      "publishedAt": "2026-06-05T09:05:00.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.372Z",
+      "score": 53,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "machine-learning-reddit-15bad2f9ee7e",
+      "date": "2026-06-05",
+      "sourceId": "machine-learning-reddit",
+      "sourceName": "Reddit r/MachineLearning",
+      "sourceType": "community",
+      "category": "research",
+      "title": "[D] Self-Promotion Thread",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1tudeio/d_selfpromotion_thread/",
+      "summary": "Please post your personal projects, startups, product placements, collaboration needs, blogs etc. Please mention the payment and pricing requirements for products and services. Please do not post link shorteners, link aggregator websites , or auto-subscribe l...",
+      "publishedAt": "2026-06-02T02:15:14.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.274Z",
+      "score": 52,
+      "tags": [
+        "产品",
+        "商业化"
+      ]
+    },
+    {
+      "id": "local-llama-reddit-cfa99c6779a3",
+      "date": "2026-06-05",
+      "sourceId": "local-llama-reddit",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "sourceType": "community",
+      "category": "opensource",
+      "title": "finally",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1tx4yjo/finally/",
+      "summary": "&#32; submitted by &#32; /u/KvAk_AKPlaysYT [link] &#32; [comments]",
+      "publishedAt": "2026-06-05T00:05:11.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.372Z",
+      "score": 52,
+      "tags": [
+        "开源"
+      ]
+    },
+    {
+      "id": "hacker-news-5f317dc1978c",
+      "date": "2026-06-05",
+      "sourceId": "hacker-news",
+      "sourceName": "Hacker News",
+      "sourceType": "community",
+      "category": "product",
+      "title": "databow: a Rust CLI to query any database with an ADBC driver",
+      "url": "https://columnar.tech/blog/introducing-databow//",
+      "summary": "Comments",
+      "publishedAt": "2026-06-02T23:11:13.000Z",
+      "fetchedAt": "2026-06-05T10:27:03.682Z",
+      "score": 51,
+      "tags": [
+        "产品"
+      ]
+    },
+    {
+      "id": "machine-learning-reddit-abe18b8bdff2",
+      "date": "2026-06-05",
+      "sourceId": "machine-learning-reddit",
+      "sourceName": "Reddit r/MachineLearning",
+      "sourceType": "community",
+      "category": "research",
+      "title": "[D] Monthly Who's Hiring and Who wants to be Hired?",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1tsipvv/d_monthly_whos_hiring_and_who_wants_to_be_hired/",
+      "summary": "For Job Postings please use this template Hiring: [Location], Salary:[], [Remote | Relocation], [Full Time | Contract | Part Time] and [Brief overview, what you're looking for] For Those looking for jobs please use this template Want to be Hired: [Location],...",
+      "publishedAt": "2026-05-31T02:30:27.000Z",
+      "fetchedAt": "2026-06-05T10:27:07.274Z",
+      "score": 44,
+      "tags": [
+        "论文"
+      ]
+    },
+    {
+      "id": "jiqizhixin-d9f6ade430f8",
       "date": "2026-06-05",
       "sourceId": "jiqizhixin",
       "sourceName": "机器之心",
       "sourceType": "media",
       "category": "business",
-      "title": "zhaoyunfeng@jiqizhixin.com",
-      "url": "mailto:zhaoyunfeng@jiqizhixin.com",
-      "summary": "机器之心 页面抓取候选，等待人工复核摘要和来源细节。",
+      "title": "机器之心·数据服务",
+      "url": "https://www.jiqizhixin.com/",
+      "summary": "机器之心 页面标题候选，等待人工复核摘要和来源细节。",
       "publishedAt": "2026-06-05T01:00:00.000Z",
-      "fetchedAt": "2026-06-05T09:43:57.522Z",
-      "score": 50,
+      "fetchedAt": "2026-06-05T10:27:03.769Z",
+      "score": 39,
       "tags": [
         "商业"
       ]

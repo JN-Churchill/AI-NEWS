@@ -15,7 +15,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
+    url: SITE_URL,
     type: "website",
+    images: ["/opengraph-image"],
+    locale: "zh_CN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    images: ["/opengraph-image"],
   },
 };
 
@@ -60,7 +69,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
         <link rel="alternate" type="application/feed+json" href="/feed.json" />
       </head>
-      <body className="text-neutral-950 antialiased">
+      <body className="news-surface text-neutral-950 antialiased">
         <SiteHeader />
         <div className="min-h-screen">{children}</div>
         <SiteFooter />

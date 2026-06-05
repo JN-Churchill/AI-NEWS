@@ -3,17 +3,44 @@ import type { IssueCategory } from "@/interfaces/issue";
 
 type CategoryFilterProps = {
   categories: IssueCategory[];
-  activeCategory: string;
+  activeCategory?: string;
+  activeCategories?: string[];
+  activeTag?: string;
 };
 
-export function CategoryFilter({ categories, activeCategory }: CategoryFilterProps) {
+function buildHref(slug: string, activeCategories: string[], activeTag?: string) {
+  const params = new URLSearchParams();
+  const current = new Set(activeCategories);
+
+  if (slug === "all") {
+    current.clear();
+  } else if (current.has(slug)) {
+    current.delete(slug);
+  } else {
+    current.add(slug);
+  }
+
+  if (current.size > 0) {
+    params.set("category", Array.from(current).join(","));
+  }
+
+  if (activeTag) {
+    params.set("tag", activeTag);
+  }
+
+  const query = params.toString();
+  return query ? `/?${query}` : "/";
+}
+
+export function CategoryFilter({ categories, activeCategory, activeCategories, activeTag }: CategoryFilterProps) {
+  const selected = activeCategories ?? (activeCategory && activeCategory !== "all" ? [activeCategory] : []);
   const items = [{ slug: "all", name: "全部", count: 0, score: 0 }, ...categories];
 
   return (
     <div className="flex gap-1 overflow-x-auto rounded-md border border-neutral-200 bg-white p-1 shadow-sm">
       {items.map((category) => {
-        const active = activeCategory === category.slug;
-        const href = category.slug === "all" ? "/" : `/?category=${category.slug}`;
+        const active = category.slug === "all" ? selected.length === 0 : selected.includes(category.slug);
+        const href = buildHref(category.slug, selected, activeTag);
 
         return (
           <Link

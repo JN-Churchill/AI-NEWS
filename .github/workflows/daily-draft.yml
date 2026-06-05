@@ -1,0 +1,52 @@
+name: Daily Draft
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Issue date, for example 2026-06-05. Defaults to today in UTC."
+        required: false
+  schedule:
+    - cron: "15 0 * * *"
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Resolve date
+        id: issue-date
+        run: |
+          if [ -n "${{ github.event.inputs.date }}" ]; then
+            echo "date=${{ github.event.inputs.date }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate candidate pool
+        run: npm run ingest -- --date "${{ steps.issue-date.outputs.date }}" --limit 8 --concurrency 4 --retries 2 --force
+
+      - name: Generate issue draft
+        run: npm run issue:from-candidates -- --date "${{ steps.issue-date.outputs.date }}" --limit 8 --force
+
+      - name: Validate draft
+        run: npm run issue:validate -- "${{ steps.issue-date.outputs.date }}"
+
+      - name: Upload draft artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ai-news-draft-${{ steps.issue-date.outputs.date }}
+          path: |
+            content/candidates/${{ steps.issue-date.outputs.date }}.json
+            content/issues/${{ steps.issue-date.outputs.date }}.json

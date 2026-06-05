@@ -4,7 +4,7 @@ import { Container } from "@/app/_components/container";
 import { IssuePanel } from "@/app/_components/issue-panel";
 import { ScoreMeter } from "@/app/_components/score-meter";
 import { SignalCard } from "@/app/_components/signal-card";
-import { SITE_NAME } from "@/lib/constants";
+import { SITE_NAME, SITE_URL } from "@/lib/constants";
 import { getAllIssues, getIssueByDate } from "@/lib/issues";
 
 type DailyPageProps = {
@@ -14,13 +14,17 @@ type DailyPageProps = {
 };
 
 const metricLabels = [
-  ["utility", "可操作"],
+  ["utility", "实用"],
   ["novelty", "增量"],
   ["impact", "影响"],
   ["credibility", "可信"],
   ["audience", "契合"],
   ["freshness", "新鲜"],
 ] as const;
+
+function safeJson(value: unknown) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
+}
 
 export default async function DailyPage({ params }: DailyPageProps) {
   const { date } = await params;
@@ -30,13 +34,45 @@ export default async function DailyPage({ params }: DailyPageProps) {
     notFound();
   }
 
+  const issueUrl = `${SITE_URL}/daily/${issue.date}`;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: `${issue.date} ${issue.title}`,
+    description: issue.summary,
+    datePublished: new Date(`${issue.date}T08:00:00+08:00`).toISOString(),
+    dateModified: new Date(`${issue.date}T08:00:00+08:00`).toISOString(),
+    inLanguage: "zh-CN",
+    mainEntityOfPage: issueUrl,
+    articleSection: issue.categories.map((category) => category.name),
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+    },
+    hasPart: issue.items.map((item) => ({
+      "@type": "NewsArticle",
+      headline: item.title,
+      description: item.summary,
+      url: `${issueUrl}#signal-${item.rank}`,
+      datePublished: item.publishedAt,
+      isBasedOn: item.sourceUrl || undefined,
+      position: item.rank,
+      keywords: item.tags.join(", "),
+    })),
+  };
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJson(jsonLd) }} />
       <IssuePanel issue={issue} />
       <Container className="grid gap-6 py-6 lg:grid-cols-[1fr_360px]">
         <section className="space-y-4">
           {issue.items.map((item) => (
-            <SignalCard key={item.rank} item={item} />
+            <SignalCard key={item.rank} item={item} issueDate={issue.date} />
           ))}
         </section>
 
@@ -46,7 +82,7 @@ export default async function DailyPage({ params }: DailyPageProps) {
             <h2 className="mt-2 text-lg font-semibold text-neutral-950">入选排行</h2>
             <div className="mt-5 space-y-4">
               {issue.items.map((item) => (
-                <div key={item.rank}>
+                <a key={item.rank} href={`#signal-${item.rank}`} className="block rounded-md p-1 transition hover:bg-neutral-50">
                   <div className="mb-2 flex items-center justify-between gap-3 text-sm">
                     <span className="truncate font-semibold text-neutral-800">
                       #{item.rank} {item.title}
@@ -54,7 +90,7 @@ export default async function DailyPage({ params }: DailyPageProps) {
                     <span className="text-neutral-500">{item.score}</span>
                   </div>
                   <ScoreMeter score={item.score} />
-                </div>
+                </a>
               ))}
             </div>
           </section>
@@ -90,12 +126,20 @@ export async function generateMetadata({ params }: DailyPageProps): Promise<Meta
     return {};
   }
 
+  const url = `${SITE_URL}/daily/${issue.date}`;
+
   return {
     title: `${date} ${issue.title}`,
     description: issue.summary,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: `${date} ${issue.title} | ${SITE_NAME}`,
       description: issue.summary,
+      url,
+      type: "article",
+      images: ["/opengraph-image"],
     },
   };
 }

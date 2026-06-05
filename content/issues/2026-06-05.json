@@ -3,37 +3,89 @@
   "issueNo": "2026.06.05",
   "status": "draft",
   "title": "AI 信号指数日报",
-  "summary": "本期从 37 条候选信号中筛出 8 条，覆盖 模型、论文 等方向，等待人工复核后发布。",
-  "totalScore": 73.9,
-  "candidateCount": 37,
+  "summary": "本期从 81 条候选信号中筛出 8 条，覆盖 模型、论文、基础设施 等方向，等待人工复核后发布。",
+  "totalScore": 76.3,
+  "candidateCount": 81,
   "selectedCount": 8,
   "readingMinutes": 10,
   "categories": [
     {
       "slug": "model",
       "name": "模型",
-      "score": 75,
-      "count": 6
+      "score": 77,
+      "count": 4
     },
     {
       "slug": "research",
       "name": "论文",
-      "score": 72,
-      "count": 2
+      "score": 77,
+      "count": 3
+    },
+    {
+      "slug": "infra",
+      "name": "基础设施",
+      "score": 71,
+      "count": 1
     }
   ],
   "items": [
     {
       "rank": 1,
-      "title": "press@anthropic.com",
-      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "title": "May 28, 2026 Announcements Anthropic raises $65B in Series H funding at $965B post-money valuation",
+      "summary": "来自 Anthropic News 的信号：「May 28, 2026 Announcements Anthropic raises $65B in Series H funding at $965B post-money valuation」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。",
+      "whyItMatters": "它反映资本、收入或公司阶段变化，可能影响行业竞争格局和企业采购预期。",
+      "category": "model",
+      "tags": [
+        "商业化"
+      ],
+      "source": "Anthropic News",
+      "sourceUrl": "https://www.anthropic.com/news/series-h",
+      "publishedAt": "2026-06-05T01:00:00.000Z",
+      "score": 81,
+      "metrics": {
+        "utility": 25,
+        "novelty": 16,
+        "impact": 16,
+        "credibility": 12,
+        "audience": 8,
+        "freshness": 4
+      }
+    },
+    {
+      "rank": 2,
+      "title": "Is it allowed to use OpenAI API outputs to create a silver code dataset or benchmark for a specific Python library? [d]",
+      "summary": "Hello everyone, Is it allowed to use OpenAI API outputs to create a silver code dataset or benchmark for a specific Python library? I am working on a project idea related to library-specific code generation. The concrete case is a specific Python library used...",
+      "whyItMatters": "它涉及评测或基准变化，可能影响模型选型、技术判断和后续实验设计。",
+      "category": "research",
+      "tags": [
+        "论文",
+        "产品",
+        "推理"
+      ],
+      "source": "Reddit r/MachineLearning",
+      "sourceUrl": "https://www.reddit.com/r/MachineLearning/comments/1txc6qd/is_it_allowed_to_use_openai_api_outputs_to_create/",
+      "publishedAt": "2026-06-05T05:52:32.000Z",
+      "score": 79,
+      "metrics": {
+        "utility": 23,
+        "novelty": 16,
+        "impact": 16,
+        "credibility": 12,
+        "audience": 8,
+        "freshness": 4
+      }
+    },
+    {
+      "rank": 3,
+      "title": "Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network",
+      "summary": "来自 Anthropic News 的信号：「Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。",
       "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
       "category": "model",
       "tags": [
         "模型"
       ],
       "source": "Anthropic News",
-      "sourceUrl": "mailto:press@anthropic.com",
+      "sourceUrl": "https://www.anthropic.com/news/services-track-partner-hub",
       "publishedAt": "2026-06-05T01:00:00.000Z",
       "score": 77,
       "metrics": {
@@ -46,152 +98,110 @@
       }
     },
     {
-      "rank": 2,
-      "title": "Download press kit",
-      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
-      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
-      "category": "model",
-      "tags": [
-        "模型"
-      ],
-      "source": "Anthropic News",
-      "sourceUrl": "https://anthropic.com/press-kit",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "score": 74,
-      "metrics": {
-        "utility": 22,
-        "novelty": 15,
-        "impact": 15,
-        "credibility": 11,
-        "audience": 7,
-        "freshness": 4
-      }
-    },
-    {
-      "rank": 3,
-      "title": "Economic Futures",
-      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
-      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
-      "category": "model",
-      "tags": [
-        "模型"
-      ],
-      "source": "Anthropic News",
-      "sourceUrl": "https://www.anthropic.com/economic-futures",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "score": 74,
-      "metrics": {
-        "utility": 22,
-        "novelty": 15,
-        "impact": 15,
-        "credibility": 11,
-        "audience": 7,
-        "freshness": 4
-      }
-    },
-    {
       "rank": 4,
-      "title": "Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network",
-      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "title": "Dreaming: Better memory for a more helpful ChatGPT Research Jun 4, 2026",
+      "summary": "来自 OpenAI News 的信号：「Dreaming: Better memory for a more helpful ChatGPT Research Jun 4, 2026」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。",
       "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
       "category": "model",
       "tags": [
-        "模型"
+        "模型",
+        "论文"
       ],
-      "source": "Anthropic News",
-      "sourceUrl": "https://www.anthropic.com/news/services-track-partner-hub",
+      "source": "OpenAI News",
+      "sourceUrl": "https://openai.com/index/chatgpt-memory-dreaming/",
       "publishedAt": "2026-06-05T01:00:00.000Z",
-      "score": 74,
+      "score": 76,
       "metrics": {
-        "utility": 22,
+        "utility": 23,
         "novelty": 15,
         "impact": 15,
         "credibility": 11,
-        "audience": 7,
+        "audience": 8,
         "freshness": 4
       }
     },
     {
       "rank": 5,
-      "title": "Skip to main content",
-      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
-      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
-      "category": "model",
+      "title": "We’re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks",
+      "summary": "来自 Google DeepMind Blog 的信号：「We’re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。",
+      "whyItMatters": "它已经接近可用产品或开发者入口，可能直接影响团队的集成成本和路线选择。",
+      "category": "research",
       "tags": [
-        "模型"
+        "产品"
       ],
-      "source": "Anthropic News",
-      "sourceUrl": "https://www.anthropic.com/news",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "score": 74,
+      "source": "Google DeepMind Blog",
+      "sourceUrl": "https://deepmind.google/blog/were-launching-the-google-deepmind-accelerator-program-in-asia-pacific-to-tackle-environmental-risks/",
+      "publishedAt": "2026-05-21T19:46:42.000Z",
+      "score": 76,
       "metrics": {
-        "utility": 22,
+        "utility": 23,
         "novelty": 15,
         "impact": 15,
         "credibility": 11,
-        "audience": 7,
+        "audience": 8,
         "freshness": 4
       }
     },
     {
       "rank": 6,
-      "title": "Try Claude",
-      "summary": "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。",
+      "title": "Introducing new capabilities to GPT-Rosalind Product Jun 3, 2026",
+      "summary": "来自 OpenAI News 的信号：「Introducing new capabilities to GPT-Rosalind Product Jun 3, 2026」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。",
       "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
       "category": "model",
       "tags": [
-        "模型"
+        "模型",
+        "产品"
       ],
-      "source": "Anthropic News",
-      "sourceUrl": "https://claude.ai/",
+      "source": "OpenAI News",
+      "sourceUrl": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/",
       "publishedAt": "2026-06-05T01:00:00.000Z",
-      "score": 74,
+      "score": 75,
       "metrics": {
         "utility": 22,
         "novelty": 15,
         "impact": 15,
         "credibility": 11,
-        "audience": 7,
+        "audience": 8,
         "freshness": 4
       }
     },
     {
       "rank": 7,
-      "title": "Algorithms & theory",
-      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
+      "title": "Strengthening Singapore’s AI Future: A New National Partnership",
+      "summary": "Google DeepMind and Singapore partner to apply frontier AI to address complex challenges across health, education, and sustainability and more.",
       "whyItMatters": "研究信号有助于判断技术路线和评测标准的变化，需要关注是否能落到工程实践。",
       "category": "research",
       "tags": [
-        "论文"
+        "产品"
       ],
-      "source": "Google AI Blog",
-      "sourceUrl": "https://ai.googleblog.com/research-areas/algorithms-and-theory/",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "score": 72,
+      "source": "Google DeepMind Blog",
+      "sourceUrl": "https://deepmind.google/blog/strengthening-singapores-ai-future-a-new-national-partnership/",
+      "publishedAt": "2026-05-16T09:13:34.000Z",
+      "score": 75,
       "metrics": {
         "utility": 22,
-        "novelty": 14,
-        "impact": 14,
+        "novelty": 15,
+        "impact": 15,
         "credibility": 11,
-        "audience": 7,
+        "audience": 8,
         "freshness": 4
       }
     },
     {
       "rank": 8,
-      "title": "Explore all research areas",
-      "summary": "Google AI Blog 页面抓取候选，等待人工复核摘要和来源细节。",
-      "whyItMatters": "研究信号有助于判断技术路线和评测标准的变化，需要关注是否能落到工程实践。",
-      "category": "research",
+      "title": "NVIDIA Nemotron 3 Ultra Powers Faster, More Efficient Reasoning for Long-Running Agents",
+      "summary": "Single-turn chatbots are evolving into long-running agents that can reason, maintain context, use tools, and run efficiently across many turns to complete...",
+      "whyItMatters": "它可能改变 AI 应用从问答走向可执行工作流的边界，适合产品和工程团队优先复核。",
+      "category": "infra",
       "tags": [
-        "论文"
+        "Agent"
       ],
-      "source": "Google AI Blog",
-      "sourceUrl": "https://ai.googleblog.com/research-areas/",
-      "publishedAt": "2026-06-05T01:00:00.000Z",
-      "score": 72,
+      "source": "NVIDIA Generative AI Blog",
+      "sourceUrl": "https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/",
+      "publishedAt": "2026-06-04T13:02:49.000Z",
+      "score": 71,
       "metrics": {
-        "utility": 22,
+        "utility": 21,
         "novelty": 14,
         "impact": 14,
         "credibility": 11,

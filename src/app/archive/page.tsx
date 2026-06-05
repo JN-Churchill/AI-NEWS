@@ -7,8 +7,21 @@ export const metadata = {
   title: "历史归档",
 };
 
-export default function ArchivePage() {
+type ArchivePageProps = {
+  searchParams: Promise<{
+    page?: string;
+  }>;
+};
+
+const pageSize = 12;
+
+export default async function ArchivePage({ searchParams }: ArchivePageProps) {
+  const params = await searchParams;
   const issues = getAllIssues();
+  const pageCount = Math.max(1, Math.ceil(issues.length / pageSize));
+  const requestedPage = Number(params.page ?? "1");
+  const currentPage = Math.min(pageCount, Math.max(1, Number.isFinite(requestedPage) ? requestedPage : 1));
+  const visibleIssues = issues.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   return (
     <main>
@@ -19,7 +32,7 @@ export default function ArchivePage() {
             <div>
               <h1 className="text-4xl font-semibold leading-tight">历史归档</h1>
               <p className="mt-3 max-w-2xl text-base leading-7 text-neutral-300">
-                每一期日报都是一个可回溯的 AI 行业快照，后续可以按月份、主题和来源继续扩展。
+                每一期日报都是一个可回溯的 AI 行业快照，可按页浏览长期沉淀的每日信号。
               </p>
             </div>
             <div className="border-l border-white/15 pl-5">
@@ -31,8 +44,35 @@ export default function ArchivePage() {
       </section>
 
       <Container className="py-6">
+        <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-neutral-500">
+            第 {currentPage} / {pageCount} 页，每页最多 {pageSize} 期
+          </p>
+          <div className="flex gap-2">
+            <Link
+              href={currentPage <= 1 ? "/archive" : `/archive?page=${currentPage - 1}`}
+              className={`flex h-9 items-center rounded-md border px-3 text-sm font-semibold ${
+                currentPage <= 1
+                  ? "pointer-events-none border-neutral-200 text-neutral-300"
+                  : "border-neutral-200 bg-white text-neutral-700 hover:border-neutral-400"
+              }`}
+            >
+              上一页
+            </Link>
+            <Link
+              href={`/archive?page=${currentPage + 1}`}
+              className={`flex h-9 items-center rounded-md border px-3 text-sm font-semibold ${
+                currentPage >= pageCount
+                  ? "pointer-events-none border-neutral-200 text-neutral-300"
+                  : "border-neutral-200 bg-white text-neutral-700 hover:border-neutral-400"
+              }`}
+            >
+              下一页
+            </Link>
+          </div>
+        </div>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {issues.map((issue) => (
+          {visibleIssues.map((issue) => (
             <Link
               key={issue.date}
               href={`/daily/${issue.date}`}

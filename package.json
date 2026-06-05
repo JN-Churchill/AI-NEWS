@@ -11,7 +11,8 @@
     "ingest": "tsx scripts/ingest-candidates.ts",
     "issue:from-candidates": "tsx scripts/build-issue.ts",
     "issue:new": "tsx scripts/new-issue.ts",
-    "issue:validate": "tsx scripts/validate-issue.ts"
+    "issue:validate": "tsx scripts/validate-issue.ts",
+    "test": "tsx --test tests/content-contracts.test.ts"
   },
   "dependencies": {
     "fast-xml-parser": "^5.8.0",

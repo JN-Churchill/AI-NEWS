@@ -1,10 +1,13 @@
 import Link from "next/link";
 import type { SignalItem } from "@/interfaces/issue";
+import { ShareLinkButton } from "@/app/_components/share-link-button";
 import { ScoreMeter } from "@/app/_components/score-meter";
+import { SITE_URL } from "@/lib/constants";
 import { getCategoryName } from "@/lib/issues";
 
 type SignalCardProps = {
   item: SignalItem;
+  issueDate?: string;
 };
 
 const metricLabels = [
@@ -16,9 +19,15 @@ const metricLabels = [
   ["freshness", "新鲜"],
 ] as const;
 
-export function SignalCard({ item }: SignalCardProps) {
+export function SignalCard({ item, issueDate }: SignalCardProps) {
+  const anchorId = `signal-${item.rank}`;
+  const canonicalUrl = issueDate ? `${SITE_URL}/daily/${issueDate}#${anchorId}` : `#${anchorId}`;
+
   return (
-    <article className="group rounded-md border border-neutral-200 bg-white shadow-sm transition hover:border-neutral-400 hover:shadow-md">
+    <article
+      id={anchorId}
+      className="group scroll-mt-24 overflow-hidden rounded-md border border-neutral-200 bg-white shadow-sm transition hover:border-neutral-400 hover:shadow-md"
+    >
       <div className="grid gap-px bg-neutral-200 lg:grid-cols-[88px_1fr_160px]">
         <div className="bg-white p-4">
           <span className="grid h-12 w-12 place-items-center rounded-md bg-neutral-950 text-sm font-semibold text-white">
@@ -43,9 +52,13 @@ export function SignalCard({ item }: SignalCardProps) {
 
           <div className="mt-4 flex flex-wrap gap-2">
             {item.tags.map((tag) => (
-              <span key={tag} className="rounded-md bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-700">
+              <Link
+                key={tag}
+                href={`/?tag=${encodeURIComponent(tag)}`}
+                className="rounded-md bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-700 transition hover:bg-neutral-200"
+              >
                 {tag}
-              </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -66,16 +79,28 @@ export function SignalCard({ item }: SignalCardProps) {
               </div>
             ))}
           </div>
+          <div className="mt-4 grid grid-cols-2 gap-2">
+            <ShareLinkButton url={canonicalUrl} />
+            {issueDate ? (
+              <Link
+                href={`/daily/${issueDate}#${anchorId}`}
+                className="flex h-9 items-center justify-center rounded-md border border-neutral-200 bg-white text-sm font-semibold text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50"
+              >
+                定位
+              </Link>
+            ) : null}
+          </div>
           {item.sourceUrl ? (
             <Link
               href={item.sourceUrl}
-              className="mt-4 flex h-9 items-center justify-center rounded-md bg-neutral-950 text-sm font-semibold text-white transition hover:bg-neutral-800"
+              className="mt-2 flex h-9 items-center justify-center rounded-md bg-neutral-950 text-sm font-semibold text-white transition hover:bg-neutral-800"
               target="_blank"
+              rel="noreferrer"
             >
               原文
             </Link>
           ) : (
-            <span className="mt-4 flex h-9 items-center justify-center rounded-md border border-neutral-200 bg-white text-sm font-semibold text-neutral-400">
+            <span className="mt-2 flex h-9 items-center justify-center rounded-md border border-neutral-200 bg-white text-sm font-semibold text-neutral-400">
               来源待接入
             </span>
           )}
