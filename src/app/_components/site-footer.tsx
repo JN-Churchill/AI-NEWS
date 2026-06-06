@@ -5,31 +5,21 @@ import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/constants";
 export function SiteFooter() {
   return (
     <footer className="border-t border-neutral-200 bg-white">
-      <Container className="flex flex-col gap-4 py-8 sm:flex-row sm:items-center sm:justify-between">
+      <Container className="flex flex-col gap-4 py-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <p className="text-sm font-semibold text-neutral-950">{SITE_NAME}</p>
-          <p className="mt-1 max-w-2xl text-sm leading-6 text-neutral-600">{SITE_DESCRIPTION}</p>
+          <p className="mt-1 max-w-md text-xs leading-5 text-neutral-500">
+            {SITE_DESCRIPTION}
+          </p>
         </div>
-        <div className="flex flex-wrap gap-4 text-sm font-medium text-neutral-600">
-          <Link href="/rss.xml" className="hover:text-neutral-950">
+        <div className="flex flex-wrap gap-4 text-xs font-medium text-neutral-500">
+          <Link href="/rss.xml" className="hover:text-neutral-950 transition">
             RSS
           </Link>
-          <Link href="/feed.json" className="hover:text-neutral-950">
-            JSON Feed
-          </Link>
-          <Link href="/sources" className="hover:text-neutral-950">
-            Sources
-          </Link>
-          <Link href="/editorial" className="hover:text-neutral-950">
-            Editorial
-          </Link>
-          <Link href="/contact" className="hover:text-neutral-950">
-            Contact
-          </Link>
-          <Link href="/sitemap.xml" className="hover:text-neutral-950">
+          <Link href="/sitemap.xml" className="hover:text-neutral-950 transition">
             Sitemap
           </Link>
-          <Link href="/about" className="hover:text-neutral-950">
+          <Link href="/about" className="hover:text-neutral-950 transition">
             Method
           </Link>
         </div>
