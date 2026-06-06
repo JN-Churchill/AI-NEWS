@@ -24,6 +24,9 @@ export function SignalCard({ item, issueDate, variant = "compact" }: SignalCardP
   const isDetailed = variant === "detailed";
   const anchorId = `signal-${item.rank}`;
   const shareUrl = issueDate ? `${SITE_URL}/daily/${issueDate}#${anchorId}` : `#${anchorId}`;
+  const correctionUrl = issueDate
+    ? `/contact?type=correction&date=${encodeURIComponent(issueDate)}&signal=${item.rank}&title=${encodeURIComponent(item.title)}`
+    : "/contact";
   const time = new Date(item.publishedAt).toLocaleString("zh-CN", {
     month: "2-digit",
     day: "2-digit",
@@ -136,6 +139,12 @@ export function SignalCard({ item, issueDate, variant = "compact" }: SignalCardP
           <div className="mt-2">
             <ShareLinkButton url={shareUrl} />
           </div>
+          <Link
+            href={correctionUrl}
+            className="mt-2 flex h-10 items-center justify-center rounded-md border border-neutral-200 bg-white text-sm font-semibold text-neutral-700 transition hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-800"
+          >
+            纠错
+          </Link>
         </div>
       </div>
     </article>

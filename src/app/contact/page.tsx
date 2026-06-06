@@ -13,6 +13,42 @@ export const metadata = {
 const repoIssueUrl = "https://github.com/JN-Churchill/AI-NEWS/issues/new";
 const contactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL;
 
+type ContactPageProps = {
+  searchParams: Promise<{
+    type?: string;
+    date?: string;
+    signal?: string;
+    title?: string;
+  }>;
+};
+
+function buildIssueUrl(title: string, body: string) {
+  const params = new URLSearchParams({
+    title,
+    body,
+  });
+
+  return `${repoIssueUrl}?${params.toString()}`;
+}
+
+function getCorrectionContext(params: Awaited<ContactPageProps["searchParams"]>) {
+  if (params.type !== "correction" || !params.date || !params.signal) {
+    return null;
+  }
+
+  const title = params.title?.trim() || "未提供标题";
+
+  return {
+    date: params.date,
+    signal: params.signal,
+    title,
+    issueUrl: buildIssueUrl(
+      `纠错：${params.date} #${params.signal}`,
+      [`日期：${params.date}`, `条目：#${params.signal}`, `标题：${title}`, "", "问题描述：", "", "建议修正："].join("\n"),
+    ),
+  };
+}
+
 const contactCards = [
   {
     eyebrow: "Source",
@@ -37,7 +73,15 @@ const contactCards = [
   },
 ];
 
-export default function ContactPage() {
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const params = await searchParams;
+  const correctionContext = getCorrectionContext(params);
+  const cards = contactCards.map((card) =>
+    card.eyebrow === "Correction" && correctionContext
+      ? { ...card, action: "提交这条纠错", href: correctionContext.issueUrl }
+      : card,
+  );
+
   return (
     <main>
       <PageHero
@@ -54,8 +98,26 @@ export default function ContactPage() {
 
       <section className="editorial-shell">
         <Container className="grid gap-6 py-8 lg:grid-cols-[minmax(0,1fr)_320px]">
+          {correctionContext ? (
+            <section className="editorial-card rounded-md p-5 lg:col-span-2">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">Correction Context</p>
+              <h2 className="mt-3 text-xl font-semibold tracking-tight text-neutral-950">
+                {correctionContext.date} #{correctionContext.signal}
+              </h2>
+              <p className="mt-2 text-sm leading-6 text-neutral-600">{correctionContext.title}</p>
+              <Link
+                href={correctionContext.issueUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 inline-flex h-10 w-fit items-center rounded-md bg-neutral-950 px-4 text-sm font-semibold text-white transition hover:bg-emerald-800"
+              >
+                打开预填纠错
+              </Link>
+            </section>
+          ) : null}
+
           <div className="grid gap-4 md:grid-cols-3">
-            {contactCards.map((card) => (
+            {cards.map((card) => (
               <article key={card.title} className="editorial-card flex min-h-64 flex-col rounded-md p-5">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">{card.eyebrow}</p>
                 <h2 className="mt-3 text-2xl font-semibold tracking-tight text-neutral-950">{card.title}</h2>
