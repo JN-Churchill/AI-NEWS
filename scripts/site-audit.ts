@@ -61,6 +61,10 @@ if (production) {
   if (!process.env.NEXT_PUBLIC_CONTACT_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL.endsWith("@example.com")) {
     warnings.push("NEXT_PUBLIC_CONTACT_EMAIL is not configured for production.");
   }
+
+  if (!process.env.NEXT_PUBLIC_NEWSLETTER_URL) {
+    warnings.push("NEXT_PUBLIC_NEWSLETTER_URL is not configured; /subscribe will fall back to contact flow.");
+  }
 }
 
 console.log(`Site URL: ${SITE_URL}`);

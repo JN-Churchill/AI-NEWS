@@ -13,6 +13,9 @@ export function SiteFooter() {
           </p>
         </div>
         <div className="flex flex-wrap gap-2 text-xs font-semibold text-neutral-500">
+          <Link href="/subscribe" className="hover:text-neutral-950 transition">
+            Subscribe
+          </Link>
           <Link href="/rss.xml" className="hover:text-neutral-950 transition">
             RSS
           </Link>

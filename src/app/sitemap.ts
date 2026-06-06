@@ -6,7 +6,7 @@ import { getAllIssues } from "@/lib/issues";
 export default function sitemap(): MetadataRoute.Sitemap {
   const issues = getAllIssues();
   const latestModified = issues[0]?.date ? new Date(`${issues[0].date}T08:00:00+08:00`) : new Date();
-  const staticRoutes = ["", "/archive", "/about", "/topics", "/sources", "/search", "/editorial", "/contact"].map((route) => ({
+  const staticRoutes = ["", "/archive", "/about", "/topics", "/sources", "/search", "/subscribe", "/editorial", "/contact"].map((route) => ({
     url: `${SITE_URL}${route}`,
     lastModified: latestModified,
     changeFrequency: "daily" as const,

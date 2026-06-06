@@ -95,6 +95,7 @@ describe("content contracts", () => {
     assert.ok(jsonFeed.items.length > 0);
     assert.match(rss, /<rss version="2.0"/);
     assert.match(rss, /<atom:link/);
+    assert.ok(sitemapEntries.some((entry) => entry.url.endsWith("/subscribe")));
     assert.ok(sitemapEntries.some((entry) => entry.url.endsWith(`/daily/${health.latestIssueDate}`)));
   });
 });

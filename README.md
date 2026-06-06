@@ -121,10 +121,11 @@ Vercel 部署前建议配置：
 ```bash
 NEXT_PUBLIC_SITE_URL=https://your-domain.example
 NEXT_PUBLIC_CONTACT_EMAIL=editor@example.com
+NEXT_PUBLIC_NEWSLETTER_URL=https://newsletter.example.com
 PUBLIC_ISSUE_MAX_AGE_DAYS=7
 ```
 
-本地可参考 `.env.example` 配置站点 URL、联系邮箱、公开日报最大允许过期天数和后续来源接入所需的环境变量。不要把真实 token 提交到仓库。
+本地可参考 `.env.example` 配置站点 URL、联系邮箱、Newsletter URL、公开日报最大允许过期天数和后续来源接入所需的环境变量。不要把真实 token 提交到仓库。
 
 如果使用 Vercel CLI，本机需要先登录：
 
@@ -143,6 +144,7 @@ npx vercel deploy --prod --yes
 - `/topics/[slug]` 主题详情
 - `/sources` 来源池
 - `/search` 静态搜索
+- `/subscribe` 订阅入口
 - `/editorial` 编辑政策
 - `/contact` 联系与投稿
 - `/rss.xml` RSS
