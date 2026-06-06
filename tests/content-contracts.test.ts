@@ -34,6 +34,13 @@ describe("content contracts", () => {
     assert.ok(stats.size < 250_000);
   });
 
+  it("does not render raw error messages in the public error boundary", () => {
+    const errorBoundary = fs.readFileSync(path.join(root, "src/app/error.tsx"), "utf8");
+
+    assert.equal(errorBoundary.includes("error.message"), false);
+    assert.match(errorBoundary, /error\.digest/);
+  });
+
   it("parses the source catalog and keeps ids unique", () => {
     const sources = sourceConfigListSchema.parse(readJson("content/sources.json"));
     const ids = new Set(sources.map((source) => source.id));
