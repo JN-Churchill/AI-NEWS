@@ -65,7 +65,7 @@ export default function SubscribePage() {
                   <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">
                     {card.eyebrow}
                   </p>
-                  <h2 className="mt-3 text-2xl font-semibold tracking-tight text-neutral-950">{card.title}</h2>
+                  <h2 className="mt-3 text-2xl font-semibold text-neutral-950">{card.title}</h2>
                   <p className="mt-3 flex-1 text-sm leading-6 text-neutral-600">{card.description}</p>
                   <Link
                     href={card.href}
@@ -82,7 +82,7 @@ export default function SubscribePage() {
 
           <aside className="editorial-card rounded-md p-5">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Feed URLs</p>
-            <h2 className="mt-3 text-xl font-semibold tracking-tight text-neutral-950">公开订阅地址</h2>
+            <h2 className="mt-3 text-xl font-semibold text-neutral-950">公开订阅地址</h2>
             <div className="mt-5 space-y-4 text-sm leading-6 text-neutral-600">
               <div>
                 <p className="font-semibold text-neutral-950">RSS</p>

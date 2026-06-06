@@ -96,7 +96,7 @@ export default async function ArchivePage({ searchParams }: ArchivePageProps) {
                   </div>
 
                   <div className="min-w-0">
-                    <h2 className="text-2xl font-semibold tracking-tight text-neutral-950 group-hover:text-emerald-800">
+                    <h2 className="text-2xl font-semibold text-neutral-950 group-hover:text-emerald-800">
                       {issue.title}
                     </h2>
                     <p className="mt-2 line-clamp-2 text-sm leading-6 text-neutral-600">{issue.summary}</p>

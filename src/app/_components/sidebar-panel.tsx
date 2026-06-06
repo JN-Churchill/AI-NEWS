@@ -17,7 +17,7 @@ export function SidebarPanel({ issue }: SidebarPanelProps) {
         <div className="mt-3 flex items-end justify-between gap-3">
           <div>
             <p className="text-sm font-semibold text-neutral-700">值得读指数</p>
-            <p className="mt-2 text-5xl font-semibold leading-none tracking-tight text-neutral-950">{issue.totalScore}</p>
+            <p className="mt-2 text-5xl font-semibold leading-none text-neutral-950">{issue.totalScore}</p>
           </div>
           <p className="pb-1 text-right text-xs leading-5 text-neutral-400">
             {issue.selectedCount} 条入选

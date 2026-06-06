@@ -18,7 +18,7 @@ export function EntryListCard({ item }: EntryListCardProps) {
         </Link>
         <span className="rounded-md bg-neutral-100 px-2 py-1 text-neutral-600">{item.source}</span>
       </div>
-      <h2 className="mt-4 text-xl font-semibold leading-8 tracking-tight text-neutral-950">
+      <h2 className="mt-4 text-xl font-semibold leading-8 text-neutral-950">
         <Link href={`/daily/${item.issueDate}#signal-${item.rank}`} className="transition group-hover:text-emerald-800">
           {item.title}
         </Link>

@@ -7,14 +7,14 @@ export function SiteFooter() {
     <footer className="border-t border-neutral-200/80 bg-white/80">
       <Container className="flex flex-col gap-5 py-8 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="text-sm font-semibold tracking-tight text-neutral-950">{SITE_NAME}</p>
+          <p className="text-sm font-semibold text-neutral-950">{SITE_NAME}</p>
           <p className="mt-1 max-w-md text-xs leading-5 text-neutral-500">
             {SITE_DESCRIPTION}
           </p>
         </div>
         <div className="flex flex-wrap gap-2 text-xs font-semibold text-neutral-500">
           <Link href="/subscribe" className="hover:text-neutral-950 transition">
-            Subscribe
+            订阅
           </Link>
           <Link href="/rss.xml" className="hover:text-neutral-950 transition">
             RSS
@@ -23,16 +23,16 @@ export function SiteFooter() {
             JSON Feed
           </Link>
           <Link href="/sources" className="hover:text-neutral-950 transition">
-            Sources
+            来源
           </Link>
           <Link href="/topics" className="hover:text-neutral-950 transition">
-            Topics
+            主题
           </Link>
           <Link href="/sitemap.xml" className="hover:text-neutral-950 transition">
-            Sitemap
+            站点地图
           </Link>
           <Link href="/about" className="hover:text-neutral-950 transition">
-            Method
+            方法
           </Link>
         </div>
       </Container>

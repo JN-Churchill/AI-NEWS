@@ -38,7 +38,7 @@ export default function SourcesPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-400">
                   {source.type} · {source.fetchMode}
                 </p>
-                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-950">{source.name}</h2>
+                <h2 className="mt-2 text-2xl font-semibold text-neutral-950">{source.name}</h2>
               </div>
               <span className={`rounded-md px-2.5 py-1 text-sm font-semibold ${source.enabled ? "bg-emerald-700 text-white" : "bg-neutral-100 text-neutral-500"}`}>
                 {source.enabled ? source.trustScore : "待接入"}

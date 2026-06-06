@@ -13,7 +13,7 @@ export function PageHero({ eyebrow, title, description, aside }: PageHeroProps) 
       <Container className="grid gap-6 py-9 lg:grid-cols-[minmax(0,1fr)_360px]">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.26em] text-emerald-300">{eyebrow}</p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">{title}</h1>
+          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight sm:text-5xl">{title}</h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-neutral-300">{description}</p>
         </div>
         {aside ? (

@@ -46,7 +46,7 @@ export default function EditorialPage() {
             <div className="flex items-end justify-between gap-4">
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">Principles</p>
-                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-950">公开内容原则</h2>
+                <h2 className="mt-2 text-2xl font-semibold text-neutral-950">公开内容原则</h2>
               </div>
             </div>
             <div className="mt-4 grid gap-4 md:grid-cols-2">
@@ -62,7 +62,7 @@ export default function EditorialPage() {
           <aside className="space-y-4">
             <section className="editorial-card rounded-md p-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Workflow</p>
-              <h2 className="mt-3 text-xl font-semibold tracking-tight text-neutral-950">日报发布流程</h2>
+              <h2 className="mt-3 text-xl font-semibold text-neutral-950">日报发布流程</h2>
               <div className="mt-5 space-y-5">
                 {workflow.map(([step, title, description]) => (
                   <div key={step} className="flex gap-4">
@@ -80,7 +80,7 @@ export default function EditorialPage() {
 
             <section className="rounded-md border border-emerald-900 bg-neutral-950 p-5 text-white shadow-sm">
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-300">Quality Gate</p>
-              <h2 className="mt-3 text-xl font-semibold tracking-tight">发布前门禁</h2>
+              <h2 className="mt-3 text-xl font-semibold">发布前门禁</h2>
               <p className="mt-3 text-sm leading-6 text-neutral-300">
                 公开日报必须通过结构校验、来源链接校验、内部草稿话术检查、内容契约测试和生产构建检查。
               </p>

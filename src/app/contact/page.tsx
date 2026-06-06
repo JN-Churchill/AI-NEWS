@@ -101,7 +101,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           {correctionContext ? (
             <section className="editorial-card rounded-md p-5 lg:col-span-2">
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">Correction Context</p>
-              <h2 className="mt-3 text-xl font-semibold tracking-tight text-neutral-950">
+              <h2 className="mt-3 text-xl font-semibold text-neutral-950">
                 {correctionContext.date} #{correctionContext.signal}
               </h2>
               <p className="mt-2 text-sm leading-6 text-neutral-600">{correctionContext.title}</p>
@@ -120,7 +120,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             {cards.map((card) => (
               <article key={card.title} className="editorial-card flex min-h-64 flex-col rounded-md p-5">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">{card.eyebrow}</p>
-                <h2 className="mt-3 text-2xl font-semibold tracking-tight text-neutral-950">{card.title}</h2>
+                <h2 className="mt-3 text-2xl font-semibold text-neutral-950">{card.title}</h2>
                 <p className="mt-3 flex-1 text-sm leading-6 text-neutral-600">{card.description}</p>
                 <Link
                   href={card.href}
@@ -136,7 +136,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
 
           <aside className="editorial-card rounded-md p-5">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Submission Format</p>
-            <h2 className="mt-3 text-xl font-semibold tracking-tight text-neutral-950">建议提交格式</h2>
+            <h2 className="mt-3 text-xl font-semibold text-neutral-950">建议提交格式</h2>
             <div className="mt-5 space-y-4 text-sm leading-6 text-neutral-600">
               <p>
                 <span className="font-semibold text-neutral-950">来源链接：</span>

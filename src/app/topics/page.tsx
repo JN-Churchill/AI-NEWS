@@ -51,7 +51,7 @@ export default function TopicsPage() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-400">{topic.slug}</p>
-                <h2 className="mt-2 text-3xl font-semibold tracking-tight text-neutral-950 group-hover:text-emerald-800">{topic.name}</h2>
+                <h2 className="mt-2 text-3xl font-semibold text-neutral-950 group-hover:text-emerald-800">{topic.name}</h2>
               </div>
               <span className="rounded-md bg-neutral-950 px-3 py-2 text-xl font-semibold text-white">{topic.count}</span>
             </div>
