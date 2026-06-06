@@ -1,7 +1,9 @@
+import Link from "next/link";
 import { Container } from "@/app/_components/container";
 import { EntryListCard } from "@/app/_components/entry-list-card";
 import { PageHero } from "@/app/_components/page-hero";
 import { searchSignalEntries } from "@/lib/catalog";
+import { paginateItems } from "@/lib/pagination";
 
 export const metadata = {
   title: "搜索",
@@ -13,14 +15,34 @@ export const metadata = {
 
 type SearchPageProps = {
   searchParams: Promise<{
+    page?: string;
     q?: string;
   }>;
 };
+
+const pageSize = 12;
+
+function getSearchPageHref(query: string, page: number) {
+  const params = new URLSearchParams();
+  const normalizedQuery = query.trim();
+
+  if (normalizedQuery) {
+    params.set("q", normalizedQuery);
+  }
+
+  if (page > 1) {
+    params.set("page", String(page));
+  }
+
+  const nextQuery = params.toString();
+  return nextQuery ? `/search?${nextQuery}` : "/search";
+}
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {
   const params = await searchParams;
   const query = params.q ?? "";
   const results = searchSignalEntries(query);
+  const pagination = paginateItems(results, params.page, pageSize);
 
   return (
     <main>
@@ -51,9 +73,46 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         </form>
 
         <div className="mt-6">
-          <p className="mb-4 text-sm text-neutral-500">
-            {query ? `找到 ${results.length} 条结果` : "输入关键词开始搜索"}
-          </p>
+          <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm text-neutral-500">
+              {query && results.length > 0
+                ? `找到 ${results.length} 条结果，当前显示 ${pagination.startIndex}-${pagination.endIndex}`
+                : query
+                  ? "找到 0 条结果"
+                  : "输入关键词开始搜索"}
+            </p>
+            {query && results.length > pageSize ? (
+              <div className="flex gap-2">
+                <Link
+                  href={pagination.hasPreviousPage ? getSearchPageHref(query, pagination.currentPage - 1) : getSearchPageHref(query, pagination.currentPage)}
+                  aria-disabled={!pagination.hasPreviousPage}
+                  tabIndex={pagination.hasPreviousPage ? undefined : -1}
+                  className={`flex h-9 items-center rounded-md border px-3 text-sm font-semibold ${
+                    !pagination.hasPreviousPage
+                      ? "pointer-events-none border-neutral-200 text-neutral-300"
+                      : "border-neutral-200 bg-white text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50"
+                  }`}
+                >
+                  上一页
+                </Link>
+                <span className="flex h-9 items-center rounded-md border border-neutral-200 bg-white/75 px-3 text-sm font-semibold text-neutral-500">
+                  {pagination.currentPage}/{pagination.pageCount}
+                </span>
+                <Link
+                  href={pagination.hasNextPage ? getSearchPageHref(query, pagination.currentPage + 1) : getSearchPageHref(query, pagination.currentPage)}
+                  aria-disabled={!pagination.hasNextPage}
+                  tabIndex={pagination.hasNextPage ? undefined : -1}
+                  className={`flex h-9 items-center rounded-md border px-3 text-sm font-semibold ${
+                    !pagination.hasNextPage
+                      ? "pointer-events-none border-neutral-200 text-neutral-300"
+                      : "border-neutral-200 bg-white text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50"
+                  }`}
+                >
+                  下一页
+                </Link>
+              </div>
+            ) : null}
+          </div>
           {query && results.length === 0 ? (
             <div className="rounded-md border border-dashed border-neutral-300 bg-white/70 p-10 text-center">
               <h2 className="text-lg font-semibold text-neutral-950">没有找到匹配信号</h2>
@@ -68,7 +127,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
             </div>
           ) : (
             <div className="grid gap-4 lg:grid-cols-2">
-              {results.map((item) => (
+              {pagination.items.map((item) => (
                 <EntryListCard key={`${item.issueDate}-${item.rank}`} item={item} />
               ))}
             </div>

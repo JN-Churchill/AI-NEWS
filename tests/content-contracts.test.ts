@@ -11,6 +11,7 @@ import { GET as getRss } from "../src/app/rss.xml/route";
 import sitemap from "../src/app/sitemap";
 import { searchSignalEntries } from "../src/lib/catalog";
 import { getPublicIssueQualityErrors } from "../scripts/issue-quality";
+import { paginateItems } from "../src/lib/pagination";
 
 const root = process.cwd();
 
@@ -79,6 +80,25 @@ describe("content contracts", () => {
     };
 
     assert.ok(getPublicIssueQualityErrors(issueWithTemplateSummary).some((error) => error.includes("generic generated summary")));
+  });
+
+  it("paginates long lists with clamped page boundaries", () => {
+    const items = Array.from({ length: 25 }, (_, index) => index + 1);
+    const lastPage = paginateItems(items, "9", 10);
+    const invalidPage = paginateItems(items, "abc", 10);
+    const emptyPage = paginateItems([], "2", 10);
+
+    assert.deepEqual(lastPage.items, [21, 22, 23, 24, 25]);
+    assert.equal(lastPage.currentPage, 3);
+    assert.equal(lastPage.pageCount, 3);
+    assert.equal(lastPage.startIndex, 21);
+    assert.equal(lastPage.endIndex, 25);
+    assert.equal(lastPage.hasNextPage, false);
+    assert.equal(invalidPage.currentPage, 1);
+    assert.equal(emptyPage.currentPage, 1);
+    assert.equal(emptyPage.pageCount, 1);
+    assert.equal(emptyPage.startIndex, 0);
+    assert.deepEqual(emptyPage.items, []);
   });
 
   it("parses candidate pools when present", () => {
