@@ -30,7 +30,7 @@ export default async function DailyPage({ params }: DailyPageProps) {
   const { date } = await params;
   const issue = getIssueByDate(date);
 
-  if (!issue || issue.status === "draft") {
+  if (!issue || issue.status !== "published") {
     notFound();
   }
 
@@ -123,7 +123,7 @@ export async function generateMetadata({ params }: DailyPageProps): Promise<Meta
   const { date } = await params;
   const issue = getIssueByDate(date);
 
-  if (!issue || issue.status === "draft") {
+  if (!issue || issue.status !== "published") {
     return {};
   }
 

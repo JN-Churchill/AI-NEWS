@@ -48,7 +48,7 @@ describe("content contracts", () => {
       assert.deepEqual(ranks, [...ranks].sort((a, b) => a - b));
       assert.equal(issue.items.length, issue.selectedCount);
 
-      if (issue.status !== "draft") {
+      if (issue.status === "published") {
         publicIssueCount += 1;
         assert.deepEqual(getPublicIssueQualityErrors(issue), []);
       }

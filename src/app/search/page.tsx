@@ -24,7 +24,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         eyebrow="Search"
         title="搜索日报信号"
         description="按标题、摘要、标签、来源和分类检索已发布日报内容。"
-        aside={<p className="text-sm leading-6 text-neutral-300">当前是静态检索，后续内容增长后可替换为 Meilisearch 或数据库全文搜索。</p>}
+        aside={<p className="text-sm leading-6 text-neutral-300">覆盖标题、摘要、标签、来源和分类，结果会直接定位到对应日报条目。</p>}
       />
 
       <Container className="py-8">

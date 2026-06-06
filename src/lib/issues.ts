@@ -57,7 +57,7 @@ export function getAllIssues(options: GetAllIssuesOptions = {}) {
   return getIssueDates()
     .map((date) => getIssueByDate(date))
     .filter((issue): issue is DailyIssue => issue !== null)
-    .filter((issue) => options.includeDrafts || issue.status !== "draft");
+    .filter((issue) => options.includeDrafts || issue.status === "published");
 }
 
 export function getLatestIssue() {

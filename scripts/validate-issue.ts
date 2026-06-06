@@ -67,7 +67,7 @@ for (const file of files) {
     const issue = dailyIssueSchema.parse(JSON.parse(fs.readFileSync(file, "utf8")));
     console.log(`OK ${issue.date} ${issue.status} ${issue.items.length} items`);
 
-    if (issue.status !== "draft") {
+    if (issue.status === "published") {
       publicIssueCount += 1;
       const qualityErrors = getPublicIssueQualityErrors(issue);
 

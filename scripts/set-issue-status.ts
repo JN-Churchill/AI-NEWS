@@ -45,7 +45,7 @@ const nextIssue: DailyIssue = dailyIssueSchema.parse({
   status,
 });
 
-if (status !== "draft") {
+if (status === "published") {
   const qualityErrors = getPublicIssueQualityErrors(nextIssue);
 
   if (qualityErrors.length > 0) {
