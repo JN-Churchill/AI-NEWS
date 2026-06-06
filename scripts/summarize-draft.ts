@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { candidatePoolSchema } from "../src/lib/candidate-schema";
 import { dailyIssueSchema } from "../src/lib/issue-schema";
+import { getPublicIssueQualityErrors } from "./issue-quality";
 
 const args = process.argv.slice(2);
 
@@ -40,6 +41,7 @@ if (!fs.existsSync(issuePath)) {
 
 const pool = candidatePoolSchema.parse(JSON.parse(fs.readFileSync(candidatesPath, "utf8")));
 const issue = dailyIssueSchema.parse(JSON.parse(fs.readFileSync(issuePath, "utf8")));
+const publicQualityErrors = getPublicIssueQualityErrors(issue);
 const sourceCounts = pool.sourceResults.reduce(
   (counts, result) => {
     counts[result.status] += 1;
@@ -65,6 +67,7 @@ const report = [
   `- 来源覆盖：${sourceCounts.ok} 成功 / ${sourceCounts.failed} 失败 / ${sourceCounts.skipped} 跳过`,
   `- 阅读时长：${issue.readingMinutes} 分钟`,
   `- 值得读指数：${issue.totalScore}`,
+  `- 公开发布门禁：${publicQualityErrors.length === 0 ? "通过" : `${publicQualityErrors.length} 项阻塞`}`,
   "",
   "## 分类分布",
   "",
@@ -89,6 +92,12 @@ const report = [
   failedSources.length > 0
     ? failedSources.map((source) => `- ${source.sourceName}: ${source.status}${source.message ? ` - ${source.message}` : ""}`).join("\n")
     : "- 无",
+  "",
+  "## 公开发布门禁",
+  "",
+  publicQualityErrors.length > 0
+    ? publicQualityErrors.map((error) => `- ${error}`).join("\n")
+    : "- 无阻塞项，可进入发布流程。",
   "",
   "## 发布前检查",
   "",
