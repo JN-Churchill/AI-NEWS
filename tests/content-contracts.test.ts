@@ -9,6 +9,7 @@ import { GET as getHealth } from "../src/app/api/health/route";
 import { GET as getJsonFeed } from "../src/app/feed.json/route";
 import { GET as getRss } from "../src/app/rss.xml/route";
 import sitemap from "../src/app/sitemap";
+import { searchSignalEntries } from "../src/lib/catalog";
 import { getPublicIssueQualityErrors } from "../scripts/issue-quality";
 
 const root = process.cwd();
@@ -71,6 +72,16 @@ describe("content contracts", () => {
 
         assert.equal(pool.items.length, pool.itemCount);
       });
+  });
+
+  it("searches published signals with multiple weighted terms", () => {
+    const openAiModelResults = searchSignalEntries("OpenAI 模型");
+    const nvidiaAgentResults = searchSignalEntries("NVIDIA Agent");
+
+    assert.ok(openAiModelResults.length > 0);
+    assert.equal(openAiModelResults[0]?.source, "OpenAI News");
+    assert.ok(openAiModelResults[0]?.tags.includes("模型"));
+    assert.equal(nvidiaAgentResults[0]?.source, "NVIDIA Generative AI Blog");
   });
 
   it("exposes deployable feed, sitemap, and health outputs", async () => {
