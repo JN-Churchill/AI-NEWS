@@ -11,6 +11,7 @@ import {
   type CandidateSourceResult,
 } from "../src/lib/candidate-schema";
 import { getCandidateSummaryPenalty } from "../src/lib/candidate-quality";
+import { extractHtmlDiscoveryEntries } from "../src/lib/html-discovery";
 import { sourceConfigListSchema, type SourceConfig } from "../src/lib/source-schema";
 
 const sourcesPath = path.join(process.cwd(), "content", "sources.json");
@@ -357,22 +358,21 @@ function parseHtmlLinks(html: string, source: SourceConfig): CandidateItem[] {
   const candidates: CandidateItem[] = [];
   const sourceHost = new URL(source.url).hostname.replace(/^www\./, "");
 
-  for (const match of linkMatches) {
-    const href = hrefFromAnchor(match[1]);
-    const title = cleanText(match[2]);
-    const url = normalizeUrl(toAbsoluteUrl(href, source.url));
+  function addHtmlCandidate(rawUrl: string, rawTitle: string, rawSummary: string, rawPublishedAt: string) {
+    const title = cleanText(rawTitle);
+    const url = normalizeUrl(toAbsoluteUrl(rawUrl, source.url));
     const normalizedTitle = title.toLowerCase();
 
     if (!url || !/^https?:\/\//i.test(url) || seen.has(url) || title.length < 10 || title.length > 180) {
-      continue;
+      return false;
     }
 
     if (/^(skip to|sign in|log in|subscribe|careers|privacy|terms|contact|download press kit|try claude)/i.test(normalizedTitle)) {
-      continue;
+      return false;
     }
 
     if (/\.(png|jpg|jpeg|gif|svg|webp|pdf|zip)$/i.test(new URL(url).pathname)) {
-      continue;
+      return false;
     }
 
     const targetHost = new URL(url).hostname.replace(/^www\./, "");
@@ -382,12 +382,13 @@ function parseHtmlLinks(html: string, source: SourceConfig): CandidateItem[] {
     );
 
     if (!sameHost && !looksRelevant) {
-      continue;
+      return false;
     }
 
     seen.add(url);
-    const publishedAt = new Date(`${date}T09:00:00+08:00`).toISOString();
-    const summary = `${source.name} 页面抓取候选，等待人工复核摘要和来源细节。`;
+    const publishedAt = parseDate(rawPublishedAt, date);
+    const summary =
+      truncate(cleanText(rawSummary), 260) || `${source.name} 页面抓取候选，等待人工复核摘要和来源细节。`;
     candidates.push({
       id: candidateId(source.id, url),
       date,
@@ -401,8 +402,24 @@ function parseHtmlLinks(html: string, source: SourceConfig): CandidateItem[] {
       publishedAt,
       fetchedAt: new Date().toISOString(),
       score: scoreCandidate(title, summary, source, publishedAt),
-      tags: inferTags(title, source.category),
+      tags: inferTags(`${title} ${summary}`, source.category),
     });
+
+    return true;
+  }
+
+  for (const entry of extractHtmlDiscoveryEntries(html)) {
+    addHtmlCandidate(entry.url, entry.title, entry.summary, entry.publishedAt);
+
+    if (candidates.length >= limitPerSource) {
+      return candidates;
+    }
+  }
+
+  for (const match of linkMatches) {
+    const href = hrefFromAnchor(match[1]);
+
+    addHtmlCandidate(href, match[2], "", new Date(`${date}T09:00:00+08:00`).toISOString());
 
     if (candidates.length >= limitPerSource) {
       break;

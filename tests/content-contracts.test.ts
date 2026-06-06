@@ -16,6 +16,7 @@ import {
   getCandidateSummaryPenalty,
   hasUsableCandidateSummary,
 } from "../src/lib/candidate-quality";
+import { extractHtmlDiscoveryEntries } from "../src/lib/html-discovery";
 import { getPublicIssueQualityErrors } from "../scripts/issue-quality";
 import { paginateItems } from "../src/lib/pagination";
 
@@ -121,6 +122,37 @@ describe("content contracts", () => {
     assert.equal(getCandidateSummaryPenalty(""), 20);
     assert.equal(getCandidateSummaryPenalty("Comments"), 18);
     assert.equal(getCandidateEditorialScore({ score: 82, summary: "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。" }), 64);
+  });
+
+  it("discovers article candidates from JSON-LD before link scraping", () => {
+    const html = `
+      <html>
+        <head>
+          <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": ["Thing", "NewsArticle"],
+                  "headline": "OpenAI 发布新的多模态模型能力",
+                  "description": "新能力改善实时语音、视觉理解和开发者 API 体验。",
+                  "mainEntityOfPage": { "@id": "https://example.com/news/multimodal-model" },
+                  "datePublished": "2026-06-07T08:00:00+08:00"
+                }
+              ]
+            }
+          </script>
+        </head>
+      </html>
+    `;
+
+    const entries = extractHtmlDiscoveryEntries(html);
+
+    assert.equal(entries.length, 1);
+    assert.equal(entries[0]?.title, "OpenAI 发布新的多模态模型能力");
+    assert.equal(entries[0]?.url, "https://example.com/news/multimodal-model");
+    assert.match(entries[0]?.summary ?? "", /实时语音/);
+    assert.equal(entries[0]?.publishedAt, "2026-06-07T08:00:00+08:00");
   });
 
   it("rejects placeholder production deployment settings", () => {
