@@ -119,7 +119,7 @@ npm run build
 ## 自动化
 
 - `.github/workflows/ci.yml` 在 push/PR 时运行内容校验、测试、lint 和 build。
-- `.github/workflows/daily-draft.yml` 支持定时或手动生成候选池、日报草稿和 Markdown 运营摘要，并上传 artifact；报告会列出公开发布门禁阻塞项，默认不自动提交到仓库。
+- `.github/workflows/daily-draft.yml` 支持定时或手动生成候选池、日报草稿和 Markdown 运营摘要，报告会直接显示在 Actions Job Summary，并上传 artifact；报告会列出公开发布门禁阻塞项，默认不自动提交到仓库。
 - 需要认证的来源先在 `content/sources.json` 中通过 `requiresAuth` 和 `authEnv` 预留，例如 `X_BEARER_TOKEN`、`WECHAT_SOURCE_TOKEN`。
 
 ## 部署

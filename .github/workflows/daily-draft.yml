@@ -9,6 +9,13 @@ on:
   schedule:
     - cron: "15 0 * * *"
 
+permissions:
+  contents: read
+
+concurrency:
+  group: daily-draft
+  cancel-in-progress: false
+
 jobs:
   draft:
     runs-on: ubuntu-latest
@@ -45,6 +52,14 @@ jobs:
 
       - name: Generate draft report
         run: npm run draft:summary -- --date "${{ steps.issue-date.outputs.date }}"
+
+      - name: Add report to job summary
+        run: |
+          {
+            echo "## AI News Draft ${{ steps.issue-date.outputs.date }}"
+            echo
+            cat "content/reports/${{ steps.issue-date.outputs.date }}.md"
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload draft artifact
         uses: actions/upload-artifact@v4
