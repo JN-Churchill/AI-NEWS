@@ -123,6 +123,7 @@ npx vercel deploy --prod --yes
 - `/rss.xml` RSS
 - `/feed.json` JSON Feed
 - `/sitemap.xml` sitemap
+- `/api/health` 部署健康检查，返回公开日报数量、最新日期和启用来源数
 
 ## 技术栈
 

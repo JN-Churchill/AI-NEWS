@@ -9,6 +9,14 @@ export function GET() {
     feed_url: `${SITE_URL}/feed.json`,
     description: SITE_DESCRIPTION,
     language: "zh-CN",
+    icon: `${SITE_URL}/favicon/android-chrome-512x512.png`,
+    favicon: `${SITE_URL}/favicon/favicon-32x32.png`,
+    authors: [
+      {
+        name: SITE_NAME,
+        url: SITE_URL,
+      },
+    ],
     items: getAllIssues().flatMap((issue) =>
       issue.items.map((item) => ({
         id: `${SITE_URL}/daily/${issue.date}#signal-${item.rank}`,
@@ -20,6 +28,13 @@ export function GET() {
           .filter(Boolean)
           .join("\n\n"),
         date_published: item.publishedAt,
+        date_modified: new Date(`${issue.date}T08:00:00+08:00`).toISOString(),
+        authors: [
+          {
+            name: SITE_NAME,
+            url: SITE_URL,
+          },
+        ],
         tags: [...item.tags, issue.title, item.source],
       })),
     ),

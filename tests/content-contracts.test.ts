@@ -5,6 +5,10 @@ import { describe, it } from "node:test";
 import { candidatePoolSchema } from "../src/lib/candidate-schema";
 import { dailyIssueSchema } from "../src/lib/issue-schema";
 import { sourceConfigListSchema } from "../src/lib/source-schema";
+import { GET as getHealth } from "../src/app/api/health/route";
+import { GET as getJsonFeed } from "../src/app/feed.json/route";
+import { GET as getRss } from "../src/app/rss.xml/route";
+import sitemap from "../src/app/sitemap";
 
 const root = process.cwd();
 
@@ -69,5 +73,19 @@ describe("content contracts", () => {
 
         assert.equal(pool.items.length, pool.itemCount);
       });
+  });
+
+  it("exposes deployable feed, sitemap, and health outputs", async () => {
+    const health = (await getHealth().json()) as { ok: boolean; publicIssueCount: number };
+    const jsonFeed = (await getJsonFeed().json()) as { items: unknown[] };
+    const rss = await getRss().text();
+    const sitemapEntries = sitemap();
+
+    assert.equal(health.ok, true);
+    assert.ok(health.publicIssueCount > 0);
+    assert.ok(jsonFeed.items.length > 0);
+    assert.match(rss, /<rss version="2.0"/);
+    assert.match(rss, /<atom:link/);
+    assert.ok(sitemapEntries.some((entry) => entry.url.endsWith("/daily/2026-06-05")));
   });
 });

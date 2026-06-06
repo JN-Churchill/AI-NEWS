@@ -10,8 +10,13 @@ function escapeXml(value: string) {
     .replace(/'/g, "&apos;");
 }
 
+function cdata(value: string) {
+  return `<![CDATA[${value.replaceAll("]]>", "]]]]><![CDATA[>")}]]>`;
+}
+
 export function GET() {
-  const items = getAllIssues()
+  const issues = getAllIssues();
+  const items = issues
     .flatMap((issue) =>
       issue.items.map((item) => {
         const url = `${SITE_URL}/daily/${issue.date}#signal-${item.rank}`;
@@ -26,10 +31,10 @@ export function GET() {
 
         return `
         <item>
-          <title><![CDATA[${title}]]></title>
+          <title>${cdata(title)}</title>
           <link>${escapeXml(url)}</link>
           <guid>${escapeXml(url)}</guid>
-          <description><![CDATA[${description}]]></description>
+          <description>${cdata(description)}</description>
           <pubDate>${new Date(item.publishedAt).toUTCString()}</pubDate>
           <source url="${escapeXml(`${SITE_URL}/daily/${issue.date}`)}">${escapeXml(issue.title)}</source>
           ${item.tags.map((tag) => `<category>${escapeXml(tag)}</category>`).join("")}
@@ -39,11 +44,13 @@ export function GET() {
     .join("");
 
   const body = `<?xml version="1.0" encoding="UTF-8" ?>
-    <rss version="2.0">
+    <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
       <channel>
         <title>${escapeXml(SITE_NAME)}</title>
         <link>${escapeXml(SITE_URL)}</link>
+        <atom:link href="${escapeXml(`${SITE_URL}/rss.xml`)}" rel="self" type="application/rss+xml" />
         <description>${escapeXml(SITE_DESCRIPTION)}</description>
+        <lastBuildDate>${new Date(issues[0]?.date ? `${issues[0].date}T08:00:00+08:00` : Date.now()).toUTCString()}</lastBuildDate>
         ${items}
       </channel>
     </rss>`;
