@@ -63,24 +63,52 @@ export default async function Index({ searchParams }: HomeProps) {
 
       <Container className="grid gap-6 py-8 lg:grid-cols-[minmax(0,1fr)_330px]">
         <section className="min-w-0">
-          <div className="mb-5 flex flex-col gap-4 rounded-md border border-neutral-200 bg-white/75 p-4 shadow-sm sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Selected Signals</p>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-950">今日入选信号</h2>
-              <p className="mt-1 text-sm text-neutral-500">
-                从 {issue.candidateCount} 条候选中筛出 {items.length} 条{activeTag ? `，当前标签：${activeTag}` : ""}。
-              </p>
+          <div className="mb-5 overflow-hidden rounded-md border border-neutral-200 bg-white/85 shadow-sm">
+            <div className="fine-rule h-px w-full" />
+            <div className="grid gap-4 p-4 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-end">
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-center gap-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Selected Signals</p>
+                  <span className="rounded bg-neutral-100 px-2 py-1 text-[11px] font-semibold text-neutral-500">
+                    {items.length}/{issue.candidateCount}
+                  </span>
+                  {activeCategories.length > 0 ? (
+                    <span className="rounded bg-emerald-50 px-2 py-1 text-[11px] font-semibold text-emerald-800">
+                      {activeCategories.length} 个分类
+                    </span>
+                  ) : null}
+                  {activeTag ? (
+                    <span className="rounded bg-neutral-950 px-2 py-1 text-[11px] font-semibold text-white">#{activeTag}</span>
+                  ) : null}
+                </div>
+                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-950">今日入选信号</h2>
+                <p className="mt-1 max-w-2xl text-sm leading-6 text-neutral-500">
+                  从候选池、来源可信度和主题价值里筛出今日队列，优先呈现对产品、研发和商业判断有影响的变化。
+                </p>
+                {activeCategories.length > 0 || activeTag ? (
+                  <Link
+                    href="/"
+                    className="mt-3 inline-flex text-sm font-semibold text-emerald-700 transition hover:text-emerald-900"
+                  >
+                    清除筛选
+                  </Link>
+                ) : null}
+              </div>
+              <form action="/search" className="flex min-w-0 gap-2">
+                <label htmlFor="home-search" className="sr-only">
+                  搜索信号
+                </label>
+                <input
+                  id="home-search"
+                  className="h-10 min-w-0 flex-1 rounded-md border border-neutral-200 bg-white px-3 text-sm outline-none transition focus:border-neutral-950"
+                  name="q"
+                  placeholder="Agent / 模型 / 开源"
+                />
+                <button className="h-10 shrink-0 rounded-md bg-neutral-950 px-4 text-sm font-semibold text-white transition hover:bg-emerald-800" type="submit">
+                  搜索
+                </button>
+              </form>
             </div>
-            <form action="/search" className="flex w-full max-w-md gap-2">
-              <input
-                className="h-10 min-w-0 flex-1 rounded-md border border-neutral-200 bg-white px-3 text-sm outline-none transition focus:border-neutral-950"
-                name="q"
-                placeholder="搜索 Agent / 模型 / 开源"
-              />
-              <button className="h-10 rounded-md bg-neutral-950 px-4 text-sm font-semibold text-white transition hover:bg-emerald-800" type="submit">
-                搜索
-              </button>
-            </form>
           </div>
 
           <CategoryFilter categories={issue.categories} activeCategories={activeCategories} activeTag={activeTag} />

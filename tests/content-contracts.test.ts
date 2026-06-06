@@ -58,6 +58,29 @@ describe("content contracts", () => {
     assert.ok(publicIssueCount > 0);
   });
 
+  it("rejects generated public summary templates", () => {
+    const issueFiles = fs.readdirSync(path.join(root, "content/issues")).filter((fileName) => fileName.endsWith(".json"));
+    const publicIssue = issueFiles
+      .map((fileName) => dailyIssueSchema.parse(readJson(path.join("content/issues", fileName))))
+      .find((issue) => issue.status === "published");
+
+    assert.ok(publicIssue);
+
+    const issueWithTemplateSummary = {
+      ...publicIssue,
+      items: publicIssue.items.map((item, index) =>
+        index === 0
+          ? {
+              ...item,
+              summary: `来自 ${item.source} 的公开信号，核心内容指向「${item.title}」。这条内容值得结合原文继续查看其具体细节、适用场景和后续影响。`,
+            }
+          : item,
+      ),
+    };
+
+    assert.ok(getPublicIssueQualityErrors(issueWithTemplateSummary).some((error) => error.includes("generic generated summary")));
+  });
+
   it("parses candidate pools when present", () => {
     const candidatesPath = path.join(root, "content/candidates");
 

@@ -1,6 +1,8 @@
 import type { DailyIssue } from "../src/lib/issue-schema";
 
 const internalWordingPattern = /发布前|等待人工|待人工|页面抓取候选|待补充|草稿|复核后发布|placeholder|todo/i;
+const publicTemplateWordingPattern =
+  /来自 .+ 的公开信号|核心内容指向|这条内容值得结合原文|继续查看其具体细节|适用场景和后续影响/;
 
 function isHttpUrl(value: string) {
   try {
@@ -64,6 +66,10 @@ export function getPublicIssueQualityErrors(issue: DailyIssue) {
   getTextFields(issue).forEach(([field, value]) => {
     if (internalWordingPattern.test(value)) {
       errors.push(`${field} contains internal draft/review wording.`);
+    }
+
+    if (publicTemplateWordingPattern.test(value)) {
+      errors.push(`${field} contains generic generated summary wording.`);
     }
   });
 

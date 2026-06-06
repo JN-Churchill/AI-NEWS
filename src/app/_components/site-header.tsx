@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { SITE_NAME } from "@/lib/constants";
 
 const navItems = [
@@ -12,6 +15,8 @@ const navItems = [
 ];
 
 export function SiteHeader() {
+  const pathname = usePathname();
+
   return (
     <header className="sticky top-0 z-40 border-b border-neutral-200/80 bg-[#f4f6f3]/90 backdrop-blur-xl">
       <div className="mx-auto flex min-h-16 w-full max-w-[1440px] flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
@@ -29,15 +34,22 @@ export function SiteHeader() {
 
         <div className="flex min-w-0 items-center gap-2">
           <nav className="flex min-w-0 items-center overflow-x-auto rounded-md border border-neutral-200/80 bg-white/75 p-1 shadow-sm">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="shrink-0 rounded px-3 py-1.5 text-sm font-semibold text-neutral-600 transition hover:bg-neutral-950 hover:text-white"
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) => {
+              const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-current={active ? "page" : undefined}
+                  className={`shrink-0 rounded px-3 py-1.5 text-sm font-semibold transition ${
+                    active ? "bg-neutral-950 text-white shadow-sm" : "text-neutral-600 hover:bg-neutral-950 hover:text-white"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
           <Link
             href="/rss.xml"
