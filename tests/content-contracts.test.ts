@@ -131,6 +131,22 @@ describe("content contracts", () => {
     assert.equal(getProductionContactEmailProblem("editor@ai-signal-index.com"), null);
   });
 
+  it("keeps Vercel deploys behind the same validation gates", () => {
+    const vercelConfig = readJson<{
+      framework?: string;
+      installCommand?: string;
+      buildCommand?: string;
+    }>("vercel.json");
+
+    assert.equal(vercelConfig.framework, "nextjs");
+    assert.equal(vercelConfig.installCommand, "npm ci");
+    assert.match(vercelConfig.buildCommand ?? "", /npm run issue:validate/);
+    assert.match(vercelConfig.buildCommand ?? "", /npm run site:audit/);
+    assert.match(vercelConfig.buildCommand ?? "", /npm test/);
+    assert.match(vercelConfig.buildCommand ?? "", /npm run lint/);
+    assert.match(vercelConfig.buildCommand ?? "", /npm run build/);
+  });
+
   it("parses candidate pools when present", () => {
     const candidatesPath = path.join(root, "content/candidates");
 
@@ -166,8 +182,10 @@ describe("content contracts", () => {
       contentAgeDays: number | null;
       maxPublicIssueAgeDays: number;
     };
-    const jsonFeed = (await getJsonFeed().json()) as { items: unknown[] };
-    const rss = await getRss().text();
+    const jsonFeedResponse = getJsonFeed();
+    const rssResponse = getRss();
+    const jsonFeed = (await jsonFeedResponse.json()) as { items: unknown[] };
+    const rss = await rssResponse.text();
     const sitemapEntries = sitemap();
 
     assert.equal(health.ok, true);
@@ -177,8 +195,10 @@ describe("content contracts", () => {
     assert.ok(health.publicIssueCount > 0);
     assert.equal(typeof health.latestIssueDate, "string");
     assert.ok(jsonFeed.items.length > 0);
+    assert.match(jsonFeedResponse.headers.get("Cache-Control") ?? "", /s-maxage=900/);
     assert.match(rss, /<rss version="2.0"/);
     assert.match(rss, /<atom:link/);
+    assert.match(rssResponse.headers.get("Cache-Control") ?? "", /s-maxage=900/);
     assert.ok(sitemapEntries.some((entry) => entry.url.endsWith("/subscribe")));
     assert.ok(sitemapEntries.some((entry) => entry.url.endsWith(`/daily/${health.latestIssueDate}`)));
   });

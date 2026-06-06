@@ -40,5 +40,9 @@ export function GET() {
     ),
   };
 
-  return Response.json(feed);
+  return Response.json(feed, {
+    headers: {
+      "Cache-Control": "public, max-age=300, s-maxage=900, stale-while-revalidate=3600",
+    },
+  });
 }

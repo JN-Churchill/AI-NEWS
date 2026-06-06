@@ -58,6 +58,7 @@ export function GET() {
   return new Response(body, {
     headers: {
       "Content-Type": "application/rss+xml; charset=utf-8",
+      "Cache-Control": "public, max-age=300, s-maxage=900, stale-while-revalidate=3600",
     },
   });
 }
