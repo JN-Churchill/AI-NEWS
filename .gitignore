@@ -14,6 +14,9 @@
 # testing
 /coverage
 
+# generated editorial artifacts
+/content/reports/
+
 # next.js
 /.next/
 /out/
