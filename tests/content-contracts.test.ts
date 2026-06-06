@@ -77,6 +77,7 @@ describe("content contracts", () => {
     const health = (await getHealth().json()) as {
       ok: boolean;
       publicIssueCount: number;
+      latestIssueDate: string | null;
       contentFresh: boolean;
       contentAgeDays: number | null;
       maxPublicIssueAgeDays: number;
@@ -90,9 +91,10 @@ describe("content contracts", () => {
     assert.equal(typeof health.maxPublicIssueAgeDays, "number");
     assert.ok(health.contentAgeDays === null || health.contentAgeDays >= 0);
     assert.ok(health.publicIssueCount > 0);
+    assert.equal(typeof health.latestIssueDate, "string");
     assert.ok(jsonFeed.items.length > 0);
     assert.match(rss, /<rss version="2.0"/);
     assert.match(rss, /<atom:link/);
-    assert.ok(sitemapEntries.some((entry) => entry.url.endsWith("/daily/2026-06-05")));
+    assert.ok(sitemapEntries.some((entry) => entry.url.endsWith(`/daily/${health.latestIssueDate}`)));
   });
 });

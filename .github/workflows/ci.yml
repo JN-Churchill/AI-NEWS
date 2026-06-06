@@ -24,6 +24,9 @@ jobs:
       - name: Validate content
         run: npm run issue:validate
 
+      - name: Audit site readiness
+        run: npm run site:audit
+
       - name: Test
         run: npm test
 

@@ -95,7 +95,7 @@ for (const file of files) {
 
 if (!targetDate && publicIssueCount === 0) {
   failed = true;
-  console.error("FAILED content/issues: at least one non-draft issue is required for public deployment.");
+  console.error("FAILED content/issues: at least one published issue is required for public deployment.");
 }
 
 for (const file of candidateFiles) {
