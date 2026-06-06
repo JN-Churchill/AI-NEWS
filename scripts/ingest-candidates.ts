@@ -229,7 +229,7 @@ async function fetchTextWithFetch(url: string) {
     redirect: "follow",
     signal: AbortSignal.timeout(20000),
     headers: {
-      "User-Agent": "AI-News-Index/0.2 (+https://example.com)",
+      "User-Agent": "AI-News-Index/0.2 (+https://github.com/JN-Churchill/AI-NEWS)",
       Accept: "application/rss+xml, application/atom+xml, application/xml, text/xml, text/html, */*",
     },
   });

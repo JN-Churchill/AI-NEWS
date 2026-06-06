@@ -49,10 +49,15 @@ export function getIssueByDate(date: string): DailyIssue | null {
   return sortedIssue;
 }
 
-export function getAllIssues() {
+type GetAllIssuesOptions = {
+  includeDrafts?: boolean;
+};
+
+export function getAllIssues(options: GetAllIssuesOptions = {}) {
   return getIssueDates()
     .map((date) => getIssueByDate(date))
-    .filter((issue): issue is DailyIssue => issue !== null);
+    .filter((issue): issue is DailyIssue => issue !== null)
+    .filter((issue) => options.includeDrafts || issue.status !== "draft");
 }
 
 export function getLatestIssue() {

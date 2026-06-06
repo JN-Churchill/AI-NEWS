@@ -37,24 +37,24 @@ export default function TopicsPage() {
         aside={<p className="text-sm leading-6 text-neutral-300">主题页会随着日报内容自动生成，是后续 SEO 和长期检索的核心入口。</p>}
       />
 
-      <Container className="grid gap-4 py-6 md:grid-cols-2 xl:grid-cols-3">
+      <Container className="grid gap-4 py-8 md:grid-cols-2 xl:grid-cols-3">
         {topics.map((topic) => (
           <Link
             key={topic.slug}
             href={`/topics/${topic.slug}`}
-            className="rounded-md border border-neutral-200 bg-white p-5 shadow-sm transition hover:border-neutral-400 hover:shadow-md"
+            className="editorial-card group rounded-md p-5 transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-[0_20px_48px_rgba(38,38,38,0.08)]"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">{topic.slug}</p>
-                <h2 className="mt-2 text-2xl font-semibold text-neutral-950">{topic.name}</h2>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-400">{topic.slug}</p>
+                <h2 className="mt-2 text-3xl font-semibold tracking-tight text-neutral-950 group-hover:text-emerald-800">{topic.name}</h2>
               </div>
               <span className="rounded-md bg-neutral-950 px-3 py-2 text-xl font-semibold text-white">{topic.count}</span>
             </div>
             <div className="mt-5">
               <ScoreMeter score={topic.score} />
             </div>
-            <p className="mt-4 text-sm text-neutral-500">平均热度 {topic.score}</p>
+            <p className="mt-4 text-sm text-neutral-500">平均热度 {topic.score}，点击查看该主题全部信号。</p>
           </Link>
         ))}
       </Container>

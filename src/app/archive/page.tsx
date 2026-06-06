@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/app/_components/container";
+import { PageHero } from "@/app/_components/page-hero";
 import { ScoreMeter } from "@/app/_components/score-meter";
 import { getAllIssues } from "@/lib/issues";
 
@@ -7,85 +8,114 @@ export const metadata = {
   title: "历史归档",
 };
 
-export default function ArchivePage() {
+type ArchivePageProps = {
+  searchParams: Promise<{
+    page?: string;
+  }>;
+};
+
+const pageSize = 12;
+
+export default async function ArchivePage({ searchParams }: ArchivePageProps) {
+  const params = await searchParams;
   const issues = getAllIssues();
+  const pageCount = Math.max(1, Math.ceil(issues.length / pageSize));
+  const requestedPage = Number(params.page ?? "1");
+  const currentPage = Math.min(pageCount, Math.max(1, Number.isFinite(requestedPage) ? requestedPage : 1));
+  const visibleIssues = issues.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
   return (
     <main>
-      {/* Header */}
-      <section className="border-b border-neutral-200 bg-white">
-        <Container className="py-10">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-400">
-            Archive
-          </p>
-          <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <h1 className="text-3xl font-semibold leading-tight text-neutral-950">
-                历史归档
-              </h1>
-              <p className="mt-2 max-w-lg text-sm leading-6 text-neutral-500">
-                每一期日报都是一个可回溯的 AI 行业快照，可按日期浏览长期沉淀的每日信号。
-              </p>
-            </div>
-            <div className="text-right">
-              <p className="text-xs text-neutral-400">已收录期数</p>
-              <p className="mt-1 text-3xl font-semibold text-neutral-950">{issues.length}</p>
-            </div>
+      <PageHero
+        eyebrow="Archive"
+        title="历史归档"
+        description="每一期日报都是一个可回溯的 AI 行业快照，可按日期浏览长期沉淀的每日信号。"
+        aside={
+          <div>
+            <p className="text-sm text-neutral-400">已收录期数</p>
+            <p className="mt-2 text-5xl font-semibold leading-none text-white">{issues.length}</p>
           </div>
-        </Container>
-      </section>
+        }
+      />
 
-      {/* Issue cards */}
       <Container className="py-8">
         {issues.length === 0 ? (
-          <p className="py-12 text-center text-sm text-neutral-400">暂无归档</p>
+          <div className="rounded-md border border-dashed border-neutral-300 bg-white/70 p-10 text-center text-sm text-neutral-500">
+            暂无归档
+          </div>
         ) : (
-          <div className="divide-y divide-neutral-200">
-            {issues.map((issue) => (
+          <>
+            <div className="mb-5 flex flex-col gap-3 rounded-md border border-neutral-200 bg-white/75 p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-neutral-500">
+                第 {currentPage} / {pageCount} 页，每页最多 {pageSize} 期
+              </p>
+              <div className="flex gap-2">
+                <Link
+                  href={currentPage <= 1 ? "/archive" : `/archive?page=${currentPage - 1}`}
+                  className={`flex h-9 items-center rounded-md border px-3 text-sm font-semibold ${
+                    currentPage <= 1
+                      ? "pointer-events-none border-neutral-200 text-neutral-300"
+                      : "border-neutral-200 bg-white text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50"
+                  }`}
+                >
+                  上一页
+                </Link>
+                <Link
+                  href={`/archive?page=${currentPage + 1}`}
+                  className={`flex h-9 items-center rounded-md border px-3 text-sm font-semibold ${
+                    currentPage >= pageCount
+                      ? "pointer-events-none border-neutral-200 text-neutral-300"
+                      : "border-neutral-200 bg-white text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50"
+                  }`}
+                >
+                  下一页
+                </Link>
+              </div>
+            </div>
+            <div className="space-y-4">
+            {visibleIssues.map((issue) => (
               <Link
                 key={issue.date}
                 href={`/daily/${issue.date}`}
-                className="group flex items-start justify-between gap-6 py-5 transition hover:bg-neutral-50 -mx-4 px-4 rounded"
+                className="editorial-card group grid gap-4 rounded-md p-5 transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-[0_20px_48px_rgba(38,38,38,0.08)] md:grid-cols-[150px_minmax(0,1fr)_160px]"
               >
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-400">Issue</p>
+                  <p className="mt-2 text-xl font-semibold text-neutral-950">{issue.date}</p>
+                  <p className="mt-1 text-xs text-neutral-400">第 {issue.issueNo} 期</p>
+                </div>
+
                 <div className="min-w-0">
-                  <p className="text-xs font-medium text-neutral-400">{issue.date}</p>
-                  <h2 className="mt-1.5 text-lg font-semibold text-neutral-950 group-hover:text-neutral-600 transition">
+                  <h2 className="text-2xl font-semibold tracking-tight text-neutral-950 group-hover:text-emerald-800">
                     {issue.title}
                   </h2>
-                  <p className="mt-2 text-sm leading-6 text-neutral-500 line-clamp-2">
-                    {issue.summary}
-                  </p>
-                  {/* Tags */}
-                  <div className="mt-3 flex flex-wrap gap-1.5">
+                  <p className="mt-2 line-clamp-2 text-sm leading-6 text-neutral-600">{issue.summary}</p>
+                  <div className="mt-4 flex flex-wrap gap-2">
                     {issue.categories.map((cat) => (
                       <span
                         key={cat.slug}
-                        className="rounded-sm bg-neutral-100 px-2 py-0.5 text-xs font-medium text-neutral-500"
+                        className="rounded-md border border-neutral-200 bg-neutral-50 px-2.5 py-1 text-xs font-semibold text-neutral-600"
                       >
-                        {cat.name}
+                        {cat.name} · {cat.count}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {/* Score + stats */}
-                <div className="shrink-0 text-right">
-                  <p className="text-2xl font-semibold text-neutral-950">{issue.totalScore}</p>
-                  <div className="mt-2 w-20">
+                <div className="md:text-right">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Worth</p>
+                  <p className="mt-2 text-4xl font-semibold leading-none text-neutral-950">{issue.totalScore}</p>
+                  <div className="mt-4 md:ml-auto md:w-28">
                     <ScoreMeter score={issue.totalScore} />
                   </div>
-                  <div className="mt-3 flex gap-3 text-xs text-neutral-400">
-                    <span>
-                      <span className="font-medium text-neutral-600">{issue.candidateCount}</span> 候选
-                    </span>
-                    <span>
-                      <span className="font-medium text-neutral-600">{issue.selectedCount}</span> 入选
-                    </span>
-                  </div>
+                  <p className="mt-3 text-xs text-neutral-400">
+                    {issue.candidateCount} 候选 · {issue.selectedCount} 入选
+                  </p>
                 </div>
               </Link>
             ))}
-          </div>
+            </div>
+          </>
         )}
       </Container>
     </main>

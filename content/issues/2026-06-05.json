@@ -1,9 +1,9 @@
 {
   "date": "2026-06-05",
   "issueNo": "2026.06.05",
-  "status": "draft",
+  "status": "published",
   "title": "AI 信号指数日报",
-  "summary": "本期从 81 条候选信号中筛出 8 条，覆盖 模型、论文、基础设施 等方向，等待人工复核后发布。",
+  "summary": "本期从 81 条候选信号中筛出 8 条，覆盖 模型、论文、基础设施 等方向，用于快速追踪今日最值得关注的 AI 行业变化。",
   "totalScore": 76.3,
   "candidateCount": 81,
   "selectedCount": 8,
@@ -32,7 +32,7 @@
     {
       "rank": 1,
       "title": "May 28, 2026 Announcements Anthropic raises $65B in Series H funding at $965B post-money valuation",
-      "summary": "来自 Anthropic News 的信号：「May 28, 2026 Announcements Anthropic raises $65B in Series H funding at $965B post-money valuation」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。",
+      "summary": "来自 Anthropic News 的公开信号，核心内容指向「May 28, 2026 Announcements Anthropic raises $65B in Series H funding at $965B post-money valuation」。这条内容值得结合原文继续查看其具体细节、适用场景和后续影响。",
       "whyItMatters": "它反映资本、收入或公司阶段变化，可能影响行业竞争格局和企业采购预期。",
       "category": "model",
       "tags": [
@@ -78,8 +78,8 @@
     {
       "rank": 3,
       "title": "Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network",
-      "summary": "来自 Anthropic News 的信号：「Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。",
-      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
+      "summary": "来自 Anthropic News 的公开信号，核心内容指向「Jun 3, 2026 Announcements Introducing the Services Track and Partner Hub of the Claude Partner Network」。这条内容值得结合原文继续查看其具体细节、适用场景和后续影响。",
+      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先关注。",
       "category": "model",
       "tags": [
         "模型"
@@ -100,8 +100,8 @@
     {
       "rank": 4,
       "title": "Dreaming: Better memory for a more helpful ChatGPT Research Jun 4, 2026",
-      "summary": "来自 OpenAI News 的信号：「Dreaming: Better memory for a more helpful ChatGPT Research Jun 4, 2026」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。",
-      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
+      "summary": "来自 OpenAI News 的公开信号，核心内容指向「Dreaming: Better memory for a more helpful ChatGPT Research Jun 4, 2026」。这条内容值得结合原文继续查看其具体细节、适用场景和后续影响。",
+      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先关注。",
       "category": "model",
       "tags": [
         "模型",
@@ -123,7 +123,7 @@
     {
       "rank": 5,
       "title": "We’re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks",
-      "summary": "来自 Google DeepMind Blog 的信号：「We’re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。",
+      "summary": "来自 Google DeepMind Blog 的公开信号，核心内容指向「We’re launching the Google DeepMind Accelerator program in Asia Pacific to tackle environmental risks」。这条内容值得结合原文继续查看其具体细节、适用场景和后续影响。",
       "whyItMatters": "它已经接近可用产品或开发者入口，可能直接影响团队的集成成本和路线选择。",
       "category": "research",
       "tags": [
@@ -145,8 +145,8 @@
     {
       "rank": 6,
       "title": "Introducing new capabilities to GPT-Rosalind Product Jun 3, 2026",
-      "summary": "来自 OpenAI News 的信号：「Introducing new capabilities to GPT-Rosalind Product Jun 3, 2026」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。",
-      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
+      "summary": "来自 OpenAI News 的公开信号，核心内容指向「Introducing new capabilities to GPT-Rosalind Product Jun 3, 2026」。这条内容值得结合原文继续查看其具体细节、适用场景和后续影响。",
+      "whyItMatters": "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先关注。",
       "category": "model",
       "tags": [
         "模型",
@@ -191,7 +191,7 @@
       "rank": 8,
       "title": "NVIDIA Nemotron 3 Ultra Powers Faster, More Efficient Reasoning for Long-Running Agents",
       "summary": "Single-turn chatbots are evolving into long-running agents that can reason, maintain context, use tools, and run efficiently across many turns to complete...",
-      "whyItMatters": "它可能改变 AI 应用从问答走向可执行工作流的边界，适合产品和工程团队优先复核。",
+      "whyItMatters": "它可能改变 AI 应用从问答走向可执行工作流的边界，适合产品和工程团队优先关注。",
       "category": "infra",
       "tags": [
         "Agent"

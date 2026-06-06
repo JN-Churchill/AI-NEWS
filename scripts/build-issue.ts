@@ -21,9 +21,10 @@ const date = getArg("--date", args.find((arg) => /^\d{4}-\d{2}-\d{2}$/.test(arg)
 const limit = Number(getArg("--limit", "8"));
 const dryRun = args.includes("--dry-run");
 const force = args.includes("--force");
+const publish = args.includes("--publish");
 
 if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-  console.error("Usage: npm run issue:from-candidates -- --date YYYY-MM-DD [--limit 8] [--dry-run] [--force]");
+  console.error("Usage: npm run issue:from-candidates -- --date YYYY-MM-DD [--limit 8] [--dry-run] [--force] [--publish]");
   process.exit(1);
 }
 
@@ -48,7 +49,7 @@ function cleanSummary(candidate: CandidateItem) {
     return summary;
   }
 
-  return `来自 ${candidate.sourceName} 的信号：「${candidate.title}」。该条目已经保留原始来源，发布前建议补充更完整的事实摘要和上下文。`;
+  return `来自 ${candidate.sourceName} 的公开信号，核心内容指向「${candidate.title}」。这条内容值得结合原文继续查看其具体细节、适用场景和后续影响。`;
 }
 
 function whyItMatters(candidate: CandidateItem) {
@@ -56,7 +57,7 @@ function whyItMatters(candidate: CandidateItem) {
   const reasons = [
     {
       keywords: ["agent", "agents", "tool use", "workflow", "automation", "copilot"],
-      text: "它可能改变 AI 应用从问答走向可执行工作流的边界，适合产品和工程团队优先复核。",
+      text: "它可能改变 AI 应用从问答走向可执行工作流的边界，适合产品和工程团队优先关注。",
     },
     {
       keywords: ["benchmark", "eval", "sota", "state-of-the-art", "dataset"],
@@ -90,7 +91,7 @@ function whyItMatters(candidate: CandidateItem) {
   }
 
   const categoryReason: Record<string, string> = {
-    model: "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先复核。",
+    model: "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先关注。",
     product: "产品更新可以反映真实用户需求和商业化方向，适合纳入今日产品观察。",
     research: "研究信号有助于判断技术路线和评测标准的变化，需要关注是否能落到工程实践。",
     opensource: "开源项目可能降低开发门槛或改变工具链生态，适合跟踪社区采用速度。",
@@ -98,7 +99,7 @@ function whyItMatters(candidate: CandidateItem) {
     infra: "基础设施变化会影响部署、推理成本和系统可靠性，适合进入工程团队视野。",
   };
 
-  return categoryReason[candidate.category] ?? "这条内容可能影响 AI 从业者的产品、研发或业务判断，建议人工复核后决定是否发布。";
+  return categoryReason[candidate.category] ?? "这条内容可能影响 AI 从业者的产品、研发或业务判断，值得结合原文继续跟踪。";
 }
 
 function allocateMetrics(score: number): SignalMetrics {
@@ -213,9 +214,9 @@ const categories = Array.from(new Set(selected.map((item) => item.category))).ma
 const issue: DailyIssue = dailyIssueSchema.parse({
   date,
   issueNo: date.replaceAll("-", "."),
-  status: "draft",
+  status: publish ? "published" : "draft",
   title: "AI 信号指数日报",
-  summary: `本期从 ${pool.itemCount} 条候选信号中筛出 ${selected.length} 条，覆盖 ${categories.map((category) => category.name).join("、")} 等方向，等待人工复核后发布。`,
+  summary: `本期从 ${pool.itemCount} 条候选信号中筛出 ${selected.length} 条，覆盖 ${categories.map((category) => category.name).join("、")} 等方向，用于快速追踪今日最值得关注的 AI 行业变化。`,
   totalScore: average(selected.map((item) => item.score)),
   candidateCount: pool.itemCount,
   selectedCount: selected.length,

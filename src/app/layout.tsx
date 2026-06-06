@@ -69,7 +69,7 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
         <link rel="alternate" type="application/feed+json" href="/feed.json" />
       </head>
-      <body className="news-surface text-neutral-950 antialiased">
+      <body className="editorial-shell text-neutral-950 antialiased">
         <SiteHeader />
         <div className="min-h-screen">{children}</div>
         <SiteFooter />

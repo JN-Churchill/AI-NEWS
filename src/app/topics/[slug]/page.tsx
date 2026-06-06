@@ -22,17 +22,16 @@ export default async function TopicPage({ params }: TopicPageProps) {
   }
 
   const name = getCategoryName(slug);
-  const title = `${name}信号`;
 
   return (
     <main>
       <PageHero
         eyebrow="Topic"
-        title={title}
+        title={`${name}信号`}
         description={`这里汇总所有归入「${name}」方向的日报信号，用于观察长期趋势和重点来源。`}
-        aside={<p className="text-sm leading-6 text-neutral-300">共 {entries.length} 条信号，按日报时间和原始排序展示。</p>}
+        aside={<p className="text-sm leading-6">共 {entries.length} 条信号，按日报时间和原始排序展示。</p>}
       />
-      <Container className="grid gap-4 py-6 lg:grid-cols-2">
+      <Container className="grid gap-4 py-8 lg:grid-cols-2">
         {entries.map((item) => (
           <EntryListCard key={`${item.issueDate}-${item.rank}`} item={item} />
         ))}

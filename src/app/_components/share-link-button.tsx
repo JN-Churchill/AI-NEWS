@@ -21,7 +21,7 @@ export function ShareLinkButton({ url }: ShareLinkButtonProps) {
 
   return (
     <button
-      className="h-9 rounded-md border border-neutral-200 bg-white px-3 text-sm font-semibold text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50"
+      className="h-9 w-full rounded-md border border-neutral-200 bg-white px-3 text-sm font-semibold text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50"
       type="button"
       onClick={copyLink}
       aria-label="复制这条信号的分享链接"

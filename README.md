@@ -14,7 +14,7 @@ npm run dev
 
 每日一期内容放在 `content/issues/YYYY-MM-DD.json`。
 
-当前数据是示例期，用来承载页面结构。正式运营时可以把采集脚本、CMS 或数据库接到 `src/lib/issues.ts`。
+当前数据已经按公开日报结构发布。`status: "draft"` 的日报不会出现在公开首页、归档、搜索、RSS 或 sitemap 中；确认可发布后再改为 `published`，或使用生成脚本的 `--publish` 参数。
 
 来源池放在 `content/sources.json`。每个来源可声明 `fetchMode`、`parser`、`feedUrl`、`requiresAuth`、`authEnv` 和 `notes`，用于区分稳定 RSS/Atom、HTML 候选、API 待接入和人工来源。
 
@@ -42,6 +42,12 @@ npm run ingest -- --date 2026-06-06 --dry-run
 
 ```bash
 npm run issue:from-candidates -- --date 2026-06-06 --limit 8
+```
+
+从候选池生成可公开发布的日报：
+
+```bash
+npm run issue:from-candidates -- --date 2026-06-06 --limit 8 --publish
 ```
 
 生成某一天的日报草稿：
@@ -72,7 +78,7 @@ npm test
 
 ```bash
 npm run ingest -- --date 2026-06-06
-npm run issue:from-candidates -- --date 2026-06-06
+npm run issue:from-candidates -- --date 2026-06-06 --publish
 npm run issue:validate
 npm test
 npm run lint
@@ -92,6 +98,8 @@ Vercel 部署前建议配置：
 ```bash
 NEXT_PUBLIC_SITE_URL=https://your-domain.example
 ```
+
+本地可参考 `.env.example` 配置站点 URL 和后续来源接入所需的环境变量。不要把真实 token 提交到仓库。
 
 如果使用 Vercel CLI，本机需要先登录：
 

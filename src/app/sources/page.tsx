@@ -21,31 +21,31 @@ export default function SourcesPage() {
         aside={<p className="text-sm leading-6 text-neutral-300">当前启用 {enabledSources.length} / {sources.length} 个来源，覆盖官方、论文、社区和媒体。</p>}
       />
 
-      <Container className="grid gap-4 py-6 md:grid-cols-2 xl:grid-cols-3">
+      <Container className="grid gap-4 py-8 md:grid-cols-2 xl:grid-cols-3">
         {sources.map((source) => (
           <article
             key={source.id}
-            className={`rounded-md border bg-white p-5 shadow-sm ${
-              source.enabled ? "border-neutral-200" : "border-dashed border-neutral-300 opacity-75"
+            className={`editorial-card rounded-md p-5 transition hover:-translate-y-0.5 hover:border-neutral-300 ${
+              source.enabled ? "" : "opacity-75"
             }`}
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-neutral-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-400">
                   {source.type} · {source.fetchMode}
                 </p>
-                <h2 className="mt-2 text-xl font-semibold text-neutral-950">{source.name}</h2>
+                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-950">{source.name}</h2>
               </div>
-              <span className={`rounded-md px-2.5 py-1 text-sm font-semibold ${source.enabled ? "bg-neutral-950 text-white" : "bg-neutral-100 text-neutral-500"}`}>
+              <span className={`rounded-md px-2.5 py-1 text-sm font-semibold ${source.enabled ? "bg-emerald-700 text-white" : "bg-neutral-100 text-neutral-500"}`}>
                 {source.enabled ? source.trustScore : "待接入"}
               </span>
             </div>
             <div className="mt-4 grid grid-cols-2 gap-2 text-sm">
-              <div className="rounded-md bg-neutral-50 p-3">
+              <div className="rounded-md border border-neutral-200 bg-neutral-50/80 p-3">
                 <p className="text-neutral-500">默认分类</p>
                 <p className="mt-1 font-semibold text-neutral-950">{getCategoryName(source.category)}</p>
               </div>
-              <div className="rounded-md bg-neutral-50 p-3">
+              <div className="rounded-md border border-neutral-200 bg-neutral-50/80 p-3">
                 <p className="text-neutral-500">解析器</p>
                 <p className="mt-1 font-semibold text-neutral-950">{source.parser}</p>
               </div>
@@ -56,7 +56,7 @@ export default function SourcesPage() {
                 href={source.url}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-9 items-center rounded-md border border-neutral-200 px-3 text-sm font-semibold text-neutral-700 hover:border-neutral-400"
+                className="inline-flex h-9 items-center rounded-md border border-neutral-200 bg-white px-3 text-sm font-semibold text-neutral-700 transition hover:border-neutral-400 hover:bg-neutral-50"
               >
                 打开来源
               </Link>
@@ -65,7 +65,7 @@ export default function SourcesPage() {
                   href={source.feedUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex h-9 items-center rounded-md bg-neutral-950 px-3 text-sm font-semibold text-white hover:bg-neutral-800"
+                  className="inline-flex h-9 items-center rounded-md bg-neutral-950 px-3 text-sm font-semibold text-white transition hover:bg-emerald-800"
                 >
                   Feed
                 </Link>

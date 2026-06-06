@@ -37,7 +37,7 @@ export function CategoryFilter({ categories, activeCategory, activeCategories, a
   const items = [{ slug: "all", name: "全部", count: 0, score: 0 }, ...categories];
 
   return (
-    <nav className="flex items-center gap-1 border-b border-neutral-200 pb-0">
+    <nav className="flex items-center gap-2 overflow-x-auto rounded-md border border-neutral-200 bg-white/80 p-1 shadow-sm">
       {items.map((category) => {
         const active = category.slug === "all" ? selected.length === 0 : selected.includes(category.slug);
         const href = buildHref(category.slug, selected, activeTag);
@@ -46,15 +46,15 @@ export function CategoryFilter({ categories, activeCategory, activeCategories, a
           <Link
             key={category.slug}
             href={href}
-            className={`shrink-0 border-b-2 px-3 pb-2 pt-1 text-sm font-medium transition ${
+            className={`flex h-10 shrink-0 items-center rounded px-3 text-sm font-semibold transition ${
               active
-                ? "border-neutral-950 text-neutral-950"
-                : "border-transparent text-neutral-500 hover:border-neutral-300 hover:text-neutral-800"
+                ? "bg-neutral-950 text-white shadow-sm"
+                : "text-neutral-500 hover:bg-neutral-100 hover:text-neutral-900"
             }`}
           >
             {category.name}
             {category.count > 0 && (
-              <span className="ml-1 text-xs text-neutral-400">{category.count}</span>
+              <span className={`ml-2 text-xs ${active ? "text-white/65" : "text-neutral-400"}`}>{category.count}</span>
             )}
           </Link>
         );
