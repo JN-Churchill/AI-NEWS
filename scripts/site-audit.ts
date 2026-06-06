@@ -1,5 +1,6 @@
 import { getPublicIssueQualityErrors } from "./issue-quality";
 import { SITE_URL } from "../src/lib/constants";
+import { getProductionContactEmailProblem, getProductionSiteUrlProblem } from "../src/lib/deployment-readiness";
 import { getAllIssues } from "../src/lib/issues";
 import { getSiteHealth } from "../src/lib/site-health";
 import { getAllSources, getEnabledSources } from "../src/lib/sources";
@@ -9,15 +10,6 @@ const production = args.includes("--production");
 const allowStale = args.includes("--allow-stale");
 const problems: string[] = [];
 const warnings: string[] = [];
-
-function isLocalSiteUrl(value: string) {
-  try {
-    const url = new URL(value);
-    return url.hostname === "localhost" || url.hostname === "127.0.0.1";
-  } catch {
-    return true;
-  }
-}
 
 const health = getSiteHealth();
 const sources = getAllSources();
@@ -54,12 +46,15 @@ if (sources.some((source) => source.requiresAuth && source.enabled && !source.au
 }
 
 if (production) {
-  if (isLocalSiteUrl(SITE_URL)) {
-    problems.push("NEXT_PUBLIC_SITE_URL must be a production URL for --production audits.");
+  const siteUrlProblem = getProductionSiteUrlProblem(SITE_URL);
+  const contactEmailProblem = getProductionContactEmailProblem(process.env.NEXT_PUBLIC_CONTACT_EMAIL);
+
+  if (siteUrlProblem) {
+    problems.push(siteUrlProblem);
   }
 
-  if (!process.env.NEXT_PUBLIC_CONTACT_EMAIL || process.env.NEXT_PUBLIC_CONTACT_EMAIL.endsWith("@example.com")) {
-    warnings.push("NEXT_PUBLIC_CONTACT_EMAIL is not configured for production.");
+  if (contactEmailProblem) {
+    problems.push(contactEmailProblem);
   }
 
   if (!process.env.NEXT_PUBLIC_NEWSLETTER_URL) {

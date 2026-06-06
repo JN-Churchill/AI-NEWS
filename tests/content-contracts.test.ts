@@ -9,6 +9,7 @@ import { GET as getHealth } from "../src/app/api/health/route";
 import { GET as getJsonFeed } from "../src/app/feed.json/route";
 import { GET as getRss } from "../src/app/rss.xml/route";
 import sitemap from "../src/app/sitemap";
+import { getProductionContactEmailProblem, getProductionSiteUrlProblem } from "../src/lib/deployment-readiness";
 import { searchSignalEntries } from "../src/lib/catalog";
 import {
   getCandidateEditorialScore,
@@ -113,6 +114,14 @@ describe("content contracts", () => {
     assert.equal(getCandidateSummaryPenalty(""), 20);
     assert.equal(getCandidateSummaryPenalty("Comments"), 18);
     assert.equal(getCandidateEditorialScore({ score: 82, summary: "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。" }), 64);
+  });
+
+  it("rejects placeholder production deployment settings", () => {
+    assert.equal(getProductionSiteUrlProblem("https://your-domain.example")?.includes("placeholder"), true);
+    assert.equal(getProductionSiteUrlProblem("http://ai-news.example.com")?.includes("https"), true);
+    assert.equal(getProductionSiteUrlProblem("https://news.ai-signal-index.com"), null);
+    assert.equal(getProductionContactEmailProblem("editor@example.com")?.includes("placeholder"), true);
+    assert.equal(getProductionContactEmailProblem("editor@ai-signal-index.com"), null);
   });
 
   it("parses candidate pools when present", () => {
