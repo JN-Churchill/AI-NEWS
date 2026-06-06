@@ -14,6 +14,7 @@
     "issue:publish": "tsx scripts/set-issue-status.ts --status published",
     "issue:unpublish": "tsx scripts/set-issue-status.ts --status draft",
     "issue:validate": "tsx scripts/validate-issue.ts",
+    "draft:summary": "tsx scripts/summarize-draft.ts",
     "site:audit": "tsx scripts/site-audit.ts",
     "test": "tsx --test tests/content-contracts.test.ts"
   },

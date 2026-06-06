@@ -42,6 +42,12 @@ npm run ingest -- --date 2026-06-06 --dry-run
 npm run issue:from-candidates -- --date 2026-06-06 --limit 8
 ```
 
+生成草稿运营摘要：
+
+```bash
+npm run draft:summary -- --date 2026-06-06
+```
+
 从候选池直接生成公开日报：
 
 ```bash
@@ -100,6 +106,7 @@ npm test
 ```bash
 npm run ingest -- --date 2026-06-06
 npm run issue:from-candidates -- --date 2026-06-06 --limit 8
+npm run draft:summary -- --date 2026-06-06
 npm run issue:publish -- 2026-06-06
 npm run issue:validate
 npm run site:audit
@@ -111,7 +118,7 @@ npm run build
 ## 自动化
 
 - `.github/workflows/ci.yml` 在 push/PR 时运行内容校验、测试、lint 和 build。
-- `.github/workflows/daily-draft.yml` 支持定时或手动生成候选池和日报草稿，并上传 artifact；默认不自动提交到仓库。
+- `.github/workflows/daily-draft.yml` 支持定时或手动生成候选池、日报草稿和 Markdown 运营摘要，并上传 artifact；默认不自动提交到仓库。
 - 需要认证的来源先在 `content/sources.json` 中通过 `requiresAuth` 和 `authEnv` 预留，例如 `X_BEARER_TOKEN`、`WECHAT_SOURCE_TOKEN`。
 
 ## 部署

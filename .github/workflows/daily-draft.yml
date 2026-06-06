@@ -43,6 +43,9 @@ jobs:
       - name: Validate draft
         run: npm run issue:validate -- "${{ steps.issue-date.outputs.date }}"
 
+      - name: Generate draft report
+        run: npm run draft:summary -- --date "${{ steps.issue-date.outputs.date }}"
+
       - name: Upload draft artifact
         uses: actions/upload-artifact@v4
         with:
@@ -50,3 +53,4 @@ jobs:
           path: |
             content/candidates/${{ steps.issue-date.outputs.date }}.json
             content/issues/${{ steps.issue-date.outputs.date }}.json
+            content/reports/${{ steps.issue-date.outputs.date }}.md
