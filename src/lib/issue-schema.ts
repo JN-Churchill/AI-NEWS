@@ -2,7 +2,7 @@ import { z } from "zod";
 
 const scoreSchema = z.number().min(0).max(100);
 
-export const issueStatusSchema = z.enum(["draft", "demo", "published"]);
+export const issueStatusSchema = z.enum(["draft", "published"]);
 
 export const issueCategorySchema = z.object({
   slug: z.string().min(1),

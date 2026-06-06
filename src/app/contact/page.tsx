@@ -4,6 +4,10 @@ import { PageHero } from "@/app/_components/page-hero";
 
 export const metadata = {
   title: "联系与投稿",
+  description: "向 AI 信号指数提交来源推荐、纠错反馈、合作沟通和内容线索。",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 const repoIssueUrl = "https://github.com/JN-Churchill/AI-NEWS/issues/new";

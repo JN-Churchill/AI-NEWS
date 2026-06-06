@@ -4,6 +4,10 @@ import { PageHero } from "@/app/_components/page-hero";
 
 export const metadata = {
   title: "评分方法",
+  description: "了解 AI 信号指数如何按可操作性、增量、影响、可信度、受众契合度和新鲜度筛选每日 AI 新闻。",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const methods = [

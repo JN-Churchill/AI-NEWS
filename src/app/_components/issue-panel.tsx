@@ -8,10 +8,6 @@ type IssuePanelProps = {
 };
 
 function statusLabel(status: DailyIssue["status"]) {
-  if (status === "demo") {
-    return "样例数据";
-  }
-
   if (status === "draft") {
     return "草稿复核中";
   }

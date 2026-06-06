@@ -6,6 +6,10 @@ import { getAllIssues, getCategoryName } from "@/lib/issues";
 
 export const metadata = {
   title: "主题",
+  description: "按模型、产品、论文、开源、商业和基础设施方向浏览 AI 信号指数的主题索引。",
+  alternates: {
+    canonical: "/topics",
+  },
 };
 
 export default function TopicsPage() {

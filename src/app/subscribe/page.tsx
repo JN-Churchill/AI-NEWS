@@ -5,6 +5,10 @@ import { SITE_NAME, SITE_URL } from "@/lib/constants";
 
 export const metadata = {
   title: "订阅",
+  description: "通过 RSS、JSON Feed 或 Newsletter 订阅 AI 信号指数的每日 AI 行业信号。",
+  alternates: {
+    canonical: "/subscribe",
+  },
 };
 
 const newsletterUrl = process.env.NEXT_PUBLIC_NEWSLETTER_URL;

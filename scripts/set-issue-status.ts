@@ -26,7 +26,7 @@ const dryRun = args.includes("--dry-run");
 if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || !rawStatus) {
   console.error("Usage: npm run issue:publish -- YYYY-MM-DD");
   console.error("   or: npm run issue:unpublish -- YYYY-MM-DD");
-  console.error("   or: tsx scripts/set-issue-status.ts --date YYYY-MM-DD --status draft|demo|published [--dry-run]");
+  console.error("   or: tsx scripts/set-issue-status.ts --date YYYY-MM-DD --status draft|published [--dry-run]");
   process.exit(1);
 }
 

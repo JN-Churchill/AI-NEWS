@@ -6,6 +6,10 @@ import { getAllIssues } from "@/lib/issues";
 
 export const metadata = {
   title: "历史归档",
+  description: "浏览 AI 信号指数已发布的每日 AI 行业信号和历史快照。",
+  alternates: {
+    canonical: "/archive",
+  },
 };
 
 type ArchivePageProps = {

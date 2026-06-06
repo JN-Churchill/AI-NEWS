@@ -3,6 +3,10 @@ import { PageHero } from "@/app/_components/page-hero";
 
 export const metadata = {
   title: "编辑政策",
+  description: "了解 AI 信号指数的来源优先、事实判断分离、人工复核和公开发布门禁。",
+  alternates: {
+    canonical: "/editorial",
+  },
 };
 
 const rules = [

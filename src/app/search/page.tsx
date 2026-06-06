@@ -5,6 +5,10 @@ import { searchSignalEntries } from "@/lib/catalog";
 
 export const metadata = {
   title: "搜索",
+  description: "按关键词搜索 AI 信号指数已发布日报中的标题、摘要、标签、来源和分类。",
+  alternates: {
+    canonical: "/search",
+  },
 };
 
 type SearchPageProps = {

@@ -6,6 +6,10 @@ import { getCategoryName } from "@/lib/issues";
 
 export const metadata = {
   title: "来源",
+  description: "查看 AI 信号指数用于采集和复核的公开来源池、来源类型、解析方式和权重。",
+  alternates: {
+    canonical: "/sources",
+  },
 };
 
 export default function SourcesPage() {
