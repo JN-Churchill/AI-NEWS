@@ -9,6 +9,7 @@ import { GET as getHealth } from "../src/app/api/health/route";
 import { GET as getJsonFeed } from "../src/app/feed.json/route";
 import { GET as getRss } from "../src/app/rss.xml/route";
 import sitemap from "../src/app/sitemap";
+import { getPublicIssueQualityErrors } from "../scripts/issue-quality";
 
 const root = process.cwd();
 
@@ -49,10 +50,7 @@ describe("content contracts", () => {
 
       if (issue.status !== "draft") {
         publicIssueCount += 1;
-        issue.items.forEach((item) => {
-          assert.doesNotThrow(() => new URL(item.sourceUrl));
-          assert.equal(/发布前|等待人工|页面抓取候选|复核/.test(`${item.summary} ${item.whyItMatters}`), false);
-        });
+        assert.deepEqual(getPublicIssueQualityErrors(issue), []);
       }
     });
 

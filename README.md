@@ -1,6 +1,6 @@
 # AI 信号指数
 
-一个基于 Next.js 的 AI 日报/指数站底座，用本地 JSON 内容源渲染首页、每日详情、历史归档、主题、来源池、搜索、RSS、JSON Feed、OG 图片和 sitemap。
+一个基于 Next.js 的 AI 日报/指数站底座，用本地 JSON 内容源渲染首页、每日详情、历史归档、主题、来源池、搜索、RSS、JSON Feed、OG 图片、sitemap 和部署健康检查。
 
 ## 本地运行
 
@@ -12,15 +12,13 @@ npm run dev
 
 ## 内容结构
 
-每日一期内容放在 `content/issues/YYYY-MM-DD.json`。
-
-当前数据已经按公开日报结构发布。`status: "draft"` 的日报不会出现在公开首页、归档、搜索、RSS 或 sitemap 中；确认可发布后再改为 `published`，或使用生成脚本的 `--publish` 参数。
+每日一期内容放在 `content/issues/YYYY-MM-DD.json`。`status: "draft"` 的日报不会出现在公开首页、归档、搜索、RSS、JSON Feed 或 sitemap 中；公开发布前应切换为 `published` 并通过校验。
 
 来源池放在 `content/sources.json`。每个来源可声明 `fetchMode`、`parser`、`feedUrl`、`requiresAuth`、`authEnv` 和 `notes`，用于区分稳定 RSS/Atom、HTML 候选、API 待接入和人工来源。
 
-## 内容生产
+## 日常生产流程
 
-从来源池抓取候选内容：
+抓取候选池：
 
 ```bash
 npm run ingest -- --date 2026-06-06 --limit 8 --concurrency 4 --retries 2
@@ -38,25 +36,36 @@ npm run ingest -- --date 2026-06-06 --source hacker-news
 npm run ingest -- --date 2026-06-06 --dry-run
 ```
 
-从候选池生成日报草稿：
+从候选池生成草稿：
 
 ```bash
 npm run issue:from-candidates -- --date 2026-06-06 --limit 8
 ```
 
-从候选池生成可公开发布的日报：
+从候选池直接生成公开日报：
 
 ```bash
 npm run issue:from-candidates -- --date 2026-06-06 --limit 8 --publish
 ```
 
-生成某一天的日报草稿：
+创建某一天的人工草稿：
 
 ```bash
 npm run issue:new -- 2026-06-06
 ```
 
-校验所有日报和来源池：
+发布或撤回某一天：
+
+```bash
+npm run issue:publish -- 2026-06-06
+npm run issue:unpublish -- 2026-06-06
+```
+
+发布脚本会先检查公开内容是否具备有效来源链接、连续排序、正确分类计数，并拦截草稿/复核类内部话术。
+
+## 验证
+
+校验所有日报、候选池和来源池：
 
 ```bash
 npm run issue:validate
@@ -78,7 +87,8 @@ npm test
 
 ```bash
 npm run ingest -- --date 2026-06-06
-npm run issue:from-candidates -- --date 2026-06-06 --publish
+npm run issue:from-candidates -- --date 2026-06-06 --limit 8
+npm run issue:publish -- 2026-06-06
 npm run issue:validate
 npm test
 npm run lint
@@ -97,9 +107,10 @@ Vercel 部署前建议配置：
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://your-domain.example
+NEXT_PUBLIC_CONTACT_EMAIL=editor@example.com
 ```
 
-本地可参考 `.env.example` 配置站点 URL 和后续来源接入所需的环境变量。不要把真实 token 提交到仓库。
+本地可参考 `.env.example` 配置站点 URL、联系邮箱和后续来源接入所需的环境变量。不要把真实 token 提交到仓库。
 
 如果使用 Vercel CLI，本机需要先登录：
 
@@ -108,7 +119,7 @@ npx vercel login
 npx vercel deploy --prod --yes
 ```
 
-## 页面
+## 页面与接口
 
 - `/` 今日指数
 - `/daily/[date]` 每日详情

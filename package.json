@@ -11,6 +11,8 @@
     "ingest": "tsx scripts/ingest-candidates.ts",
     "issue:from-candidates": "tsx scripts/build-issue.ts",
     "issue:new": "tsx scripts/new-issue.ts",
+    "issue:publish": "tsx scripts/set-issue-status.ts --status published",
+    "issue:unpublish": "tsx scripts/set-issue-status.ts --status draft",
     "issue:validate": "tsx scripts/validate-issue.ts",
     "test": "tsx --test tests/content-contracts.test.ts"
   },

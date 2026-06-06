@@ -10,7 +10,7 @@
     "parser": "html-links",
     "requiresAuth": false,
     "authEnv": "",
-    "notes": "官方新闻页；当前公开 RSS 在本地核验不稳定，默认走 HTML 候选提取。",
+    "notes": "官方新闻页；公开 RSS 稳定性有限，当前以 HTML 候选提取作为兜底。",
     "trustScore": 95,
     "enabled": true
   },
@@ -25,7 +25,7 @@
     "parser": "html-links",
     "requiresAuth": false,
     "authEnv": "",
-    "notes": "官方新闻页；未发现稳定公开 RSS。",
+    "notes": "官方新闻页；当前以 HTML 候选提取作为默认采集方式。",
     "trustScore": 95,
     "enabled": true
   },
@@ -70,7 +70,7 @@
     "parser": "html-links",
     "requiresAuth": false,
     "authEnv": "",
-    "notes": "arXiv RSS/API 在部分 Windows 证书环境可能失败；默认保留 HTML 候选，后续可切换到 API 适配器。",
+    "notes": "arXiv RSS/API 在部分 Windows 证书环境可能失败；当前以 HTML 候选作为稳定兜底，并保留 API 适配入口。",
     "trustScore": 85,
     "enabled": true
   },
@@ -85,7 +85,7 @@
     "parser": "html-links",
     "requiresAuth": false,
     "authEnv": "",
-    "notes": "无官方 RSS；HTML 候选用于发现开源项目，需人工复核摘要。",
+    "notes": "无官方 RSS；HTML 候选用于发现开源项目，公开入选前校验仓库与摘要。",
     "trustScore": 75,
     "enabled": true
   },
@@ -160,7 +160,7 @@
     "parser": "html-links",
     "requiresAuth": false,
     "authEnv": "",
-    "notes": "中文 AI 媒体来源，HTML 候选需人工复核标题和摘要。",
+    "notes": "中文 AI 媒体来源，HTML 候选用于补充中文语境，公开入选前校验标题和摘要。",
     "trustScore": 65,
     "enabled": true
   },
@@ -190,7 +190,7 @@
     "parser": "manual",
     "requiresAuth": true,
     "authEnv": "WECHAT_SOURCE_TOKEN",
-    "notes": "适合后续通过人工投递、授权数据服务或自有订阅源接入。",
+    "notes": "适合通过人工投递、授权数据服务或自有订阅源接入，默认不启用。",
     "trustScore": 60,
     "enabled": false
   },
@@ -205,7 +205,7 @@
     "parser": "manual",
     "requiresAuth": false,
     "authEnv": "",
-    "notes": "平台动态页面适合人工精选或后续接入合规搜索 API。",
+    "notes": "平台动态页面适合人工精选或合规搜索 API 接入，默认不启用。",
     "trustScore": 55,
     "enabled": false
   }
