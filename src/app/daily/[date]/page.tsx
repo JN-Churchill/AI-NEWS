@@ -128,6 +128,7 @@ export async function generateMetadata({ params }: DailyPageProps): Promise<Meta
   }
 
   const url = `${SITE_URL}/daily/${issue.date}`;
+  const imageUrl = `/daily/${issue.date}/opengraph-image`;
 
   return {
     title: `${date} ${issue.title}`,
@@ -140,7 +141,20 @@ export async function generateMetadata({ params }: DailyPageProps): Promise<Meta
       description: issue.summary,
       url,
       type: "article",
-      images: ["/opengraph-image"],
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${date} ${issue.title}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${date} ${issue.title} | ${SITE_NAME}`,
+      description: issue.summary,
+      images: [imageUrl],
     },
   };
 }
