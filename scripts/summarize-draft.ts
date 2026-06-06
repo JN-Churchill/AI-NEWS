@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { candidatePoolSchema } from "../src/lib/candidate-schema";
+import { getCandidateEditorialScore } from "../src/lib/candidate-quality";
 import { dailyIssueSchema } from "../src/lib/issue-schema";
 import { getPublicIssueQualityErrors } from "./issue-quality";
 
@@ -50,7 +51,9 @@ const sourceCounts = pool.sourceResults.reduce(
   { failed: 0, ok: 0, skipped: 0 },
 );
 const failedSources = pool.sourceResults.filter((result) => result.status !== "ok");
-const topCandidates = [...pool.items].sort((a, b) => b.score - a.score).slice(0, 10);
+const topCandidates = [...pool.items]
+  .sort((a, b) => getCandidateEditorialScore(b) - getCandidateEditorialScore(a) || b.score - a.score)
+  .slice(0, 10);
 
 function tableRow(values: Array<string | number>) {
   return `| ${values.map((value) => String(value).replace(/\|/g, "\\|")).join(" | ")} |`;
@@ -83,9 +86,11 @@ const report = [
   "",
   "## 候选池 Top 10",
   "",
-  tableRow(["分数", "来源", "分类", "标题"]),
-  tableRow(["---:", "---", "---", "---"]),
-  ...topCandidates.map((item) => tableRow([Math.round(item.score), item.sourceName, item.category, item.title])),
+  tableRow(["发布分", "原始分", "来源", "分类", "标题"]),
+  tableRow(["---:", "---:", "---", "---", "---"]),
+  ...topCandidates.map((item) =>
+    tableRow([getCandidateEditorialScore(item), Math.round(item.score), item.sourceName, item.category, item.title]),
+  ),
   "",
   "## 来源异常",
   "",

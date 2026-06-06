@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { candidatePoolSchema, type CandidateItem } from "../src/lib/candidate-schema";
+import { getCandidateEditorialScore, hasUsableCandidateSummary } from "../src/lib/candidate-quality";
 import { categoryNames } from "../src/lib/categories";
 import { dailyIssueSchema, type DailyIssue, type SignalMetrics } from "../src/lib/issue-schema";
 import { getPublicIssueQualityErrors } from "./issue-quality";
@@ -46,7 +47,7 @@ if (!dryRun && fs.existsSync(issuePath) && !force) {
 function cleanSummary(candidate: CandidateItem) {
   const summary = candidate.summary.trim();
 
-  if (summary.length >= 30 && !/页面抓取候选|等待人工复核/.test(summary)) {
+  if (hasUsableCandidateSummary(summary)) {
     return summary;
   }
 
@@ -157,14 +158,21 @@ function average(values: number[]) {
 const pool = candidatePoolSchema.parse(JSON.parse(fs.readFileSync(candidatesPath, "utf8")));
 const ranked = pool.items
   .filter((item) => item.title && item.url)
-  .sort((a, b) => b.score - a.score || new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  .sort(
+    (a, b) =>
+      getCandidateEditorialScore(b) - getCandidateEditorialScore(a) ||
+      b.score - a.score ||
+      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+  );
 
 function selectDiverseCandidates(candidates: CandidateItem[]) {
   const selected: CandidateItem[] = [];
   const sourceCounts = new Map<string, number>();
   const categoryCounts = new Map<string, number>();
+  const usableCandidates = candidates.filter((candidate) => hasUsableCandidateSummary(candidate.summary));
+  const fallbackCandidates = candidates.filter((candidate) => !hasUsableCandidateSummary(candidate.summary));
 
-  for (const candidate of candidates) {
+  for (const candidate of usableCandidates) {
     const sourceCount = sourceCounts.get(candidate.sourceId) ?? 0;
     const categoryCount = categoryCounts.get(candidate.category) ?? 0;
 
@@ -181,7 +189,17 @@ function selectDiverseCandidates(candidates: CandidateItem[]) {
     }
   }
 
-  for (const candidate of candidates) {
+  for (const candidate of usableCandidates) {
+    if (!selected.some((item) => item.id === candidate.id)) {
+      selected.push(candidate);
+    }
+
+    if (selected.length >= limit) {
+      break;
+    }
+  }
+
+  for (const candidate of fallbackCandidates) {
     if (!selected.some((item) => item.id === candidate.id)) {
       selected.push(candidate);
     }
@@ -207,7 +225,7 @@ const categories = Array.from(new Set(selected.map((item) => item.category))).ma
   return {
     slug: category,
     name: categoryNames[category] ?? category,
-    score: Math.round(average(items.map((item) => item.score))),
+    score: Math.round(average(items.map((item) => getCandidateEditorialScore(item)))),
     count: items.length,
   };
 });
@@ -218,24 +236,28 @@ const issue: DailyIssue = dailyIssueSchema.parse({
   status: publish ? "published" : "draft",
   title: "AI 信号指数日报",
   summary: `本期从 ${pool.itemCount} 条候选信号中筛出 ${selected.length} 条，覆盖 ${categories.map((category) => category.name).join("、")} 等方向，用于快速追踪今日最值得关注的 AI 行业变化。`,
-  totalScore: average(selected.map((item) => item.score)),
+  totalScore: average(selected.map((item) => getCandidateEditorialScore(item))),
   candidateCount: pool.itemCount,
   selectedCount: selected.length,
   readingMinutes: Math.max(4, Math.ceil(selected.length * 1.2)),
   categories,
-  items: selected.map((candidate, index) => ({
-    rank: index + 1,
-    title: candidate.title,
-    summary: cleanSummary(candidate),
-    whyItMatters: whyItMatters(candidate),
-    category: candidate.category,
-    tags: candidate.tags.length > 0 ? candidate.tags : [categoryNames[candidate.category] ?? "AI"],
-    source: candidate.sourceName,
-    sourceUrl: candidate.url,
-    publishedAt: candidate.publishedAt,
-    score: Math.round(candidate.score),
-    metrics: allocateMetrics(Math.round(candidate.score)),
-  })),
+  items: selected.map((candidate, index) => {
+    const score = getCandidateEditorialScore(candidate);
+
+    return {
+      rank: index + 1,
+      title: candidate.title,
+      summary: cleanSummary(candidate),
+      whyItMatters: whyItMatters(candidate),
+      category: candidate.category,
+      tags: candidate.tags.length > 0 ? candidate.tags : [categoryNames[candidate.category] ?? "AI"],
+      source: candidate.sourceName,
+      sourceUrl: candidate.url,
+      publishedAt: candidate.publishedAt,
+      score,
+      metrics: allocateMetrics(score),
+    };
+  }),
 });
 
 if (publish) {

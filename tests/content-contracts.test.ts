@@ -10,6 +10,11 @@ import { GET as getJsonFeed } from "../src/app/feed.json/route";
 import { GET as getRss } from "../src/app/rss.xml/route";
 import sitemap from "../src/app/sitemap";
 import { searchSignalEntries } from "../src/lib/catalog";
+import {
+  getCandidateEditorialScore,
+  getCandidateSummaryPenalty,
+  hasUsableCandidateSummary,
+} from "../src/lib/candidate-quality";
 import { getPublicIssueQualityErrors } from "../scripts/issue-quality";
 import { paginateItems } from "../src/lib/pagination";
 
@@ -99,6 +104,15 @@ describe("content contracts", () => {
     assert.equal(emptyPage.pageCount, 1);
     assert.equal(emptyPage.startIndex, 0);
     assert.deepEqual(emptyPage.items, []);
+  });
+
+  it("penalizes candidate summaries that are not publish-ready", () => {
+    assert.equal(hasUsableCandidateSummary("OpenAI 发布新的模型能力，重点改善长上下文记忆、用户控制和企业部署体验。"), true);
+    assert.equal(hasUsableCandidateSummary("OpenAI News 页面抓取候选，等待人工复核摘要和来源细节。"), false);
+    assert.equal(hasUsableCandidateSummary("Comments"), false);
+    assert.equal(getCandidateSummaryPenalty(""), 20);
+    assert.equal(getCandidateSummaryPenalty("Comments"), 18);
+    assert.equal(getCandidateEditorialScore({ score: 82, summary: "Anthropic News 页面抓取候选，等待人工复核摘要和来源细节。" }), 64);
   });
 
   it("parses candidate pools when present", () => {

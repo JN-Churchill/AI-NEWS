@@ -10,6 +10,7 @@ import {
   type CandidatePool,
   type CandidateSourceResult,
 } from "../src/lib/candidate-schema";
+import { getCandidateSummaryPenalty } from "../src/lib/candidate-quality";
 import { sourceConfigListSchema, type SourceConfig } from "../src/lib/source-schema";
 
 const sourcesPath = path.join(process.cwd(), "content", "sources.json");
@@ -200,7 +201,7 @@ function scoreCandidate(title: string, summary: string, source: SourceConfig, pu
     business: 3,
   };
   const titleQuality = Math.min(6, Math.max(0, Math.floor(title.length / 22)));
-  const placeholderPenalty = /页面抓取候选|等待人工复核/.test(summary) ? 8 : 0;
+  const summaryPenalty = getCandidateSummaryPenalty(summary);
 
   return Math.min(
     100,
@@ -211,7 +212,7 @@ function scoreCandidate(title: string, summary: string, source: SourceConfig, pu
         keywordScore +
         freshness +
         titleQuality -
-        placeholderPenalty,
+        summaryPenalty,
     ),
   );
 }
