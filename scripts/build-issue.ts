@@ -3,6 +3,7 @@ import path from "path";
 import { candidatePoolSchema, type CandidateItem } from "../src/lib/candidate-schema";
 import { categoryNames } from "../src/lib/categories";
 import { dailyIssueSchema, type DailyIssue, type SignalMetrics } from "../src/lib/issue-schema";
+import { getPublicIssueQualityErrors } from "./issue-quality";
 
 const args = process.argv.slice(2);
 
@@ -236,6 +237,18 @@ const issue: DailyIssue = dailyIssueSchema.parse({
     metrics: allocateMetrics(Math.round(candidate.score)),
   })),
 });
+
+if (publish) {
+  const qualityErrors = getPublicIssueQualityErrors(issue);
+
+  if (qualityErrors.length > 0) {
+    console.error("Generated issue is not publishable:");
+    qualityErrors.forEach((error) => {
+      console.error(`- ${error}`);
+    });
+    process.exit(1);
+  }
+}
 
 if (dryRun) {
   console.log(JSON.stringify(issue, null, 2));
