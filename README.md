@@ -93,6 +93,7 @@ npm run site:audit
 
 ```bash
 npm run site:audit -- --production
+npm run site:audit:production
 ```
 
 运行内容契约测试：
@@ -129,10 +130,10 @@ Vercel 部署前建议配置：
 NEXT_PUBLIC_SITE_URL=https://your-domain.example
 NEXT_PUBLIC_CONTACT_EMAIL=editor@example.com
 NEXT_PUBLIC_NEWSLETTER_URL=https://newsletter.example.com
-PUBLIC_ISSUE_MAX_AGE_DAYS=7
+PUBLIC_ISSUE_MAX_AGE_DAYS=3
 ```
 
-本地可参考 `.env.example` 配置站点 URL、联系邮箱、Newsletter URL、公开日报最大允许过期天数和后续来源接入所需的环境变量。不要把真实 token 提交到仓库。
+本地可参考 `.env.example` 配置站点 URL、联系邮箱、Newsletter URL、公开日报最大允许过期天数和后续来源接入所需的环境变量。日报站默认要求公开内容 3 天内更新一次；如果假期或低频运营，可通过 `PUBLIC_ISSUE_MAX_AGE_DAYS` 临时放宽。不要把真实 token 提交到仓库。
 
 如果使用 Vercel CLI，本机需要先登录：
 

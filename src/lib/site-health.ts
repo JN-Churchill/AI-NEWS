@@ -2,7 +2,7 @@ import type { DailyIssue } from "@/interfaces/issue";
 import { getAllIssues } from "@/lib/issues";
 import { getEnabledSources } from "@/lib/sources";
 
-const defaultMaxPublicIssueAgeDays = 7;
+const defaultMaxPublicIssueAgeDays = 3;
 
 function getMaxPublicIssueAgeDays() {
   const rawValue = process.env.PUBLIC_ISSUE_MAX_AGE_DAYS;

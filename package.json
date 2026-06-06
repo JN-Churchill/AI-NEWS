@@ -16,6 +16,7 @@
     "issue:validate": "tsx scripts/validate-issue.ts",
     "draft:summary": "tsx scripts/summarize-draft.ts",
     "site:audit": "tsx scripts/site-audit.ts",
+    "site:audit:production": "tsx scripts/site-audit.ts --production",
     "test": "tsx --test tests/content-contracts.test.ts"
   },
   "dependencies": {
