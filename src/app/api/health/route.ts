@@ -1,22 +1,10 @@
-import { getAllIssues } from "@/lib/issues";
-import { getEnabledSources } from "@/lib/sources";
+import { getSiteHealth } from "@/lib/site-health";
 
 export const dynamic = "force-dynamic";
 
 export function GET() {
-  const issues = getAllIssues();
-  const latestIssue = issues[0] ?? null;
-  const sources = getEnabledSources();
-
   return Response.json(
-    {
-      ok: latestIssue !== null && sources.length > 0,
-      generatedAt: new Date().toISOString(),
-      publicIssueCount: issues.length,
-      latestIssueDate: latestIssue?.date ?? null,
-      latestIssueStatus: latestIssue?.status ?? null,
-      enabledSourceCount: sources.length,
-    },
+    getSiteHealth(),
     {
       headers: {
         "Cache-Control": "no-store",

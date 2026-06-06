@@ -74,12 +74,21 @@ describe("content contracts", () => {
   });
 
   it("exposes deployable feed, sitemap, and health outputs", async () => {
-    const health = (await getHealth().json()) as { ok: boolean; publicIssueCount: number };
+    const health = (await getHealth().json()) as {
+      ok: boolean;
+      publicIssueCount: number;
+      contentFresh: boolean;
+      contentAgeDays: number | null;
+      maxPublicIssueAgeDays: number;
+    };
     const jsonFeed = (await getJsonFeed().json()) as { items: unknown[] };
     const rss = await getRss().text();
     const sitemapEntries = sitemap();
 
     assert.equal(health.ok, true);
+    assert.equal(health.contentFresh, true);
+    assert.equal(typeof health.maxPublicIssueAgeDays, "number");
+    assert.ok(health.contentAgeDays === null || health.contentAgeDays >= 0);
     assert.ok(health.publicIssueCount > 0);
     assert.ok(jsonFeed.items.length > 0);
     assert.match(rss, /<rss version="2.0"/);

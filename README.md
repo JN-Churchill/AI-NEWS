@@ -77,6 +77,18 @@ npm run issue:validate
 npm run issue:validate -- 2026-06-05
 ```
 
+运行站点运营体检：
+
+```bash
+npm run site:audit
+```
+
+生产部署前可增加生产 URL 校验：
+
+```bash
+npm run site:audit -- --production
+```
+
 运行内容契约测试：
 
 ```bash
@@ -90,6 +102,7 @@ npm run ingest -- --date 2026-06-06
 npm run issue:from-candidates -- --date 2026-06-06 --limit 8
 npm run issue:publish -- 2026-06-06
 npm run issue:validate
+npm run site:audit
 npm test
 npm run lint
 npm run build
@@ -108,9 +121,10 @@ Vercel 部署前建议配置：
 ```bash
 NEXT_PUBLIC_SITE_URL=https://your-domain.example
 NEXT_PUBLIC_CONTACT_EMAIL=editor@example.com
+PUBLIC_ISSUE_MAX_AGE_DAYS=7
 ```
 
-本地可参考 `.env.example` 配置站点 URL、联系邮箱和后续来源接入所需的环境变量。不要把真实 token 提交到仓库。
+本地可参考 `.env.example` 配置站点 URL、联系邮箱、公开日报最大允许过期天数和后续来源接入所需的环境变量。不要把真实 token 提交到仓库。
 
 如果使用 Vercel CLI，本机需要先登录：
 
