@@ -39,13 +39,13 @@ export function SignalCard({ item, issueDate, variant = "compact" }: SignalCardP
       id={anchorId}
       className="editorial-card group scroll-mt-24 overflow-hidden rounded-md transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-[0_24px_60px_rgba(38,38,38,0.09)]"
     >
-      <div className="grid gap-px bg-neutral-200/80 lg:grid-cols-[86px_minmax(0,1fr)_168px]">
-        <div className="flex bg-white/95 p-4 lg:flex-col lg:items-start">
-          <span className="grid h-12 w-12 shrink-0 place-items-center rounded-md bg-neutral-950 text-sm font-semibold text-white">
+      <div className="grid gap-px bg-neutral-200/80 lg:grid-cols-[72px_minmax(0,1fr)_156px]">
+        <div className="flex items-center bg-white/95 p-4 lg:flex-col lg:items-start">
+          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-md bg-neutral-950 text-sm font-semibold text-white">
             {String(item.rank).padStart(2, "0")}
           </span>
-          <div className="ml-3 min-w-0 lg:ml-0 lg:mt-5">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-400">Signal</p>
+          <div className="ml-3 min-w-0 lg:ml-0 lg:mt-4">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-400">Rank</p>
             <p className="mt-1 text-sm font-semibold text-neutral-900">{getCategoryName(item.category)}</p>
           </div>
         </div>
@@ -62,7 +62,7 @@ export function SignalCard({ item, issueDate, variant = "compact" }: SignalCardP
             ) : null}
           </div>
 
-          <h2 className="mt-3 text-balance text-xl font-semibold leading-8 tracking-tight text-neutral-950 sm:text-2xl">
+          <h2 className="mt-3 text-balance text-xl font-semibold leading-8 text-neutral-950 sm:text-[25px]">
             {item.sourceUrl ? (
               <Link href={item.sourceUrl} target="_blank" rel="noreferrer" className="transition hover:text-emerald-800">
                 {item.title}
@@ -74,7 +74,7 @@ export function SignalCard({ item, issueDate, variant = "compact" }: SignalCardP
 
           <p className={`mt-3 text-sm leading-6 text-neutral-600 ${isDetailed ? "" : "line-clamp-3"}`}>{item.summary}</p>
 
-          <div className="mt-4 rounded-md border-l-4 border-emerald-600 bg-emerald-50/80 px-4 py-3 text-sm leading-6 text-emerald-950">
+          <div className="mt-4 rounded-md border border-emerald-200 bg-emerald-50/80 px-4 py-3 text-sm leading-6 text-emerald-950">
             {item.whyItMatters}
           </div>
 
@@ -102,11 +102,11 @@ export function SignalCard({ item, issueDate, variant = "compact" }: SignalCardP
           ) : null}
         </div>
 
-        <div className="bg-[#f7f8f2] p-4">
+        <div className="bg-neutral-50 p-4">
           <div className="flex items-end justify-between gap-3 lg:block">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-400">Worth</p>
-              <p className="mt-2 text-4xl font-semibold leading-none tracking-tight text-neutral-950">{item.score}</p>
+              <p className="mt-2 text-4xl font-semibold leading-none text-neutral-950">{item.score}</p>
             </div>
             <div className="w-28 lg:mt-4 lg:w-full">
               <ScoreMeter score={item.score} />

@@ -61,11 +61,11 @@ export default async function Index({ searchParams }: HomeProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: safeJson(jsonLd) }} />
       <IssuePanel issue={issue} />
 
-      <Container className="grid gap-6 py-8 lg:grid-cols-[minmax(0,1fr)_330px]">
+      <Container className="grid gap-6 py-7 lg:grid-cols-[minmax(0,1fr)_330px]">
         <section className="min-w-0">
-          <div className="mb-5 overflow-hidden rounded-md border border-neutral-200 bg-white/85 shadow-sm">
+          <div className="mb-5 overflow-hidden rounded-md border border-neutral-200 bg-white/90 shadow-sm">
             <div className="fine-rule h-px w-full" />
-            <div className="grid gap-4 p-4 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-end">
+            <div className="grid gap-4 p-4 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
               <div className="min-w-0">
                 <div className="flex flex-wrap items-center gap-2">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Selected Signals</p>
@@ -81,9 +81,9 @@ export default async function Index({ searchParams }: HomeProps) {
                     <span className="rounded bg-neutral-950 px-2 py-1 text-[11px] font-semibold text-white">#{activeTag}</span>
                   ) : null}
                 </div>
-                <h2 className="mt-2 text-2xl font-semibold tracking-tight text-neutral-950">今日入选信号</h2>
+                <h2 className="mt-2 text-2xl font-semibold text-neutral-950">今日信号队列</h2>
                 <p className="mt-1 max-w-2xl text-sm leading-6 text-neutral-500">
-                  从候选池、来源可信度和主题价值里筛出今日队列，优先呈现对产品、研发和商业判断有影响的变化。
+                  按主题价值、来源可信度和发布时间排序，优先呈现对产品、研发和商业判断有影响的变化。
                 </p>
                 {activeCategories.length > 0 || activeTag ? (
                   <Link
@@ -94,17 +94,17 @@ export default async function Index({ searchParams }: HomeProps) {
                   </Link>
                 ) : null}
               </div>
-              <form action="/search" className="flex min-w-0 gap-2">
+              <form action="/search" className="flex min-w-0 gap-2 rounded-md border border-neutral-200 bg-neutral-50 p-1">
                 <label htmlFor="home-search" className="sr-only">
                   搜索信号
                 </label>
                 <input
                   id="home-search"
-                  className="h-10 min-w-0 flex-1 rounded-md border border-neutral-200 bg-white px-3 text-sm outline-none transition focus:border-neutral-950"
+                  className="h-10 min-w-0 flex-1 rounded bg-white px-3 text-sm outline-none ring-1 ring-transparent transition focus:ring-neutral-950"
                   name="q"
                   placeholder="Agent / 模型 / 开源"
                 />
-                <button className="h-10 shrink-0 rounded-md bg-neutral-950 px-4 text-sm font-semibold text-white transition hover:bg-emerald-800" type="submit">
+                <button className="h-10 shrink-0 rounded bg-neutral-950 px-4 text-sm font-semibold text-white transition hover:bg-emerald-800" type="submit">
                   搜索
                 </button>
               </form>

@@ -15,10 +15,10 @@
       "Microsoft YaHei",
       sans-serif;
     background:
-      linear-gradient(rgba(20, 83, 45, 0.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
-      #f4f6f3;
-    background-size: 36px 36px;
+      linear-gradient(rgba(23, 23, 23, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(23, 23, 23, 0.028) 1px, transparent 1px),
+      #f6f6f1;
+    background-size: 42px 42px;
     color: #171717;
   }
 
@@ -35,22 +35,23 @@
 
   .editorial-shell {
     background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(255, 255, 255, 0.38)),
-      #f4f6f3;
+      linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.44)),
+      #f6f6f1;
   }
 
   .ink-panel {
     background:
-      linear-gradient(135deg, rgba(16, 185, 129, 0.16), transparent 32%),
+      linear-gradient(135deg, rgba(16, 185, 129, 0.14), transparent 30%),
+      linear-gradient(225deg, rgba(245, 158, 11, 0.12), transparent 28%),
       linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
       #111111;
-    background-size: auto, 28px 28px, auto;
+    background-size: auto, auto, 28px 28px, auto;
   }
 
   .editorial-card {
     border: 1px solid rgba(38, 38, 38, 0.1);
-    background: rgba(255, 255, 255, 0.88);
-    box-shadow: 0 1px 0 rgba(38, 38, 38, 0.06), 0 18px 42px rgba(38, 38, 38, 0.06);
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 1px 0 rgba(38, 38, 38, 0.06), 0 16px 36px rgba(38, 38, 38, 0.055);
   }
 
   .fine-rule {
