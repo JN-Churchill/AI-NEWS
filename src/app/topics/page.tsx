@@ -16,7 +16,7 @@ export default function TopicsPage() {
       const current = categories.get(category.slug) ?? { count: 0, scoreTotal: 0 };
       categories.set(category.slug, {
         count: current.count + category.count,
-        scoreTotal: current.scoreTotal + category.score,
+        scoreTotal: current.scoreTotal + category.score * category.count,
       });
     });
   });
@@ -34,7 +34,7 @@ export default function TopicsPage() {
         eyebrow="Topics"
         title="主题索引"
         description="按模型、产品、论文、开源和商业方向归档每日信号，方便持续追踪同一类变化。"
-        aside={<p className="text-sm leading-6 text-neutral-300">主题页会随着日报内容自动生成，是后续 SEO 和长期检索的核心入口。</p>}
+        aside={<p className="text-sm leading-6 text-neutral-300">主题页会随着已发布日报自动更新，适合按方向回看趋势和来源变化。</p>}
       />
 
       <Container className="grid gap-4 py-8 md:grid-cols-2 xl:grid-cols-3">
