@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/ai-news-site/
 /.pnp
 .pnp.*
 .yarn/*

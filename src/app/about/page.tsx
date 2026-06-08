@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/app/_components/container";
 import { MethodCard } from "@/app/_components/method-card";
 import { PageHero } from "@/app/_components/page-hero";
@@ -64,6 +65,20 @@ export default function AboutPage() {
           {methods.map((method) => (
             <MethodCard key={method.label} {...method} />
           ))}
+        </div>
+
+        <div className="mt-8 rounded-md border border-neutral-200 bg-white/80 p-5">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Policy</p>
+          <h2 className="mt-2 text-lg font-semibold text-neutral-950">编辑政策与发布流程</h2>
+          <p className="mt-2 text-sm leading-6 text-neutral-600">
+            了解来源优先、事实与判断分离、重复降权、发布前复核等公开内容原则，以及日报从采集到发布的工作流。
+          </p>
+          <Link
+            href="/editorial"
+            className="mt-3 inline-flex text-sm font-semibold text-emerald-700 transition hover:text-emerald-900"
+          >
+            查看编辑政策
+          </Link>
         </div>
       </Container>
     </main>

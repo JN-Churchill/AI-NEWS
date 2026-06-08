@@ -28,6 +28,12 @@ export function SiteFooter() {
           <Link href="/topics" className="hover:text-neutral-950 transition">
             主题
           </Link>
+          <Link href="/editorial" className="hover:text-neutral-950 transition">
+            编辑政策
+          </Link>
+          <Link href="/contact" className="hover:text-neutral-950 transition">
+            联系
+          </Link>
           <Link href="/sitemap.xml" className="hover:text-neutral-950 transition">
             站点地图
           </Link>
