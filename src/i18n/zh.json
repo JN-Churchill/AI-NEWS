@@ -1,0 +1,116 @@
+{
+  "common": {
+    "siteName": "AI信号指数",
+    "siteDescription": "每日AI信号聚合与指数呈现",
+    "language": "语言",
+    "chinese": "中文",
+    "english": "English"
+  },
+  "navigation": {
+    "today": "今日",
+    "topics": "主题",
+    "sources": "来源",
+    "archive": "归档",
+    "search": "搜索",
+    "method": "方法",
+    "subscribe": "订阅",
+    "rss": "RSS"
+  },
+  "header": {
+    "signalDesk": "信号台"
+  },
+  "home": {
+    "selectedSignals": "精选信号",
+    "todaySignalQueue": "今日信号队列",
+    "signalQueueDescription": "按主题价值、来源可信度和发布时间排序，优先呈现对产品、研发和商业判断有影响的变化。",
+    "clearFilters": "清除筛选",
+    "searchArchive": "搜索归档",
+    "searchPlaceholder": "模型 / Agent / 开源 / 公司",
+    "searchButton": "搜索",
+    "noMatchSignals": "没有匹配的信号",
+    "noMatchDescription": "这个筛选组合暂时没有结果，可以切换主题、清除标签，或用搜索页查历史日报。",
+    "clearFiltersButton": "清除筛选",
+    "goToSearch": "去搜索",
+    "categories": "个分类"
+  },
+  "workflow": {
+    "title": "运作逻辑",
+    "description": "站点的核心不是堆新闻，而是把公开来源、评分体系、编辑复核和订阅分发串成可持续的日更流程。",
+    "steps": {
+      "01": {
+        "title": "抓取候选",
+        "description": "从公开来源池收集 RSS、公告、论文、开源项目和产品更新。"
+      },
+      "02": {
+        "title": "统一打分",
+        "description": "按可操作性、增量、影响、可信度、受众契合和新鲜度排序。"
+      },
+      "03": {
+        "title": "编辑复核",
+        "description": "保留原始链接，校对摘要口径，剔除重复传播和低信噪内容。"
+      },
+      "04": {
+        "title": "发布订阅",
+        "description": "输出网页、RSS、JSON Feed 和可纠错的日报链接。"
+      }
+    }
+  },
+  "audience": {
+    "title": "服务对象",
+    "productTeam": {
+      "title": "产品团队",
+      "description": "快速判断哪些模型、工具或平台更新值得进入路线图讨论。"
+    },
+    "engineeringTeam": {
+      "title": "研发团队",
+      "description": "用一手来源和评分维度跟踪工程实践、开源项目和基础设施变化。"
+    },
+    "foundersInvestors": {
+      "title": "创始人与投资人",
+      "description": "用每日快照观察商业化、生态站位和资本信号，不被噪音拖慢判断。"
+    }
+  },
+  "subscribe": {
+    "title": "保持更新",
+    "description": "把日报接入你的阅读流",
+    "supportDescription": "支持 RSS、JSON Feed 和邮件分发需求，适合个人阅读器、团队群发和内部聚合工具。",
+    "viewSubscribeOptions": "查看订阅方式"
+  },
+  "signalCard": {
+    "rank": "排名",
+    "whyItMatters": "重要性",
+    "worth": "价值",
+    "original": "原文",
+    "noOriginal": "无原文",
+    "correct": "纠错",
+    "locate": "定位",
+    "utility": "实用",
+    "novelty": "增量",
+    "impact": "影响",
+    "credibility": "可信",
+    "audience": "契合",
+    "freshness": "新鲜"
+  },
+  "footer": {
+    "copyright": "AI 信号台",
+    "disclaimer": "内容以公开来源、编辑复核和可纠错记录为边界，不提供投资、法律或医疗建议。",
+    "links": {
+      "subscribe": "订阅",
+      "rss": "RSS",
+      "jsonFeed": "JSON Feed",
+      "sources": "来源",
+      "topics": "主题",
+      "editorial": "编辑政策",
+      "contact": "联系",
+      "sitemap": "站点地图",
+      "method": "方法",
+      "privacy": "隐私",
+      "terms": "条款"
+    }
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "description": "您访问的页面不存在或已被移动。",
+    "backHome": "返回首页"
+  }
+}

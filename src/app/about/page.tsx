@@ -52,7 +52,7 @@ export default function AboutPage() {
         title="评分方法"
         description="这个站不追求全量新闻，而是把每天最可能影响判断的内容筛出来。机器负责初筛和摘要，人工负责最终入选、排序和标题口径。"
         aside={
-          <div className="space-y-3 text-sm leading-6">
+          <div className="space-y-3 text-[14px] leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
             <p>保留原始来源，不做无出处二次搬运。</p>
             <p>区分事实、推断和建议，避免把营销话术当结论。</p>
             <p>对重复传播内容降权，对一手信号和可复核材料加权。</p>
@@ -67,16 +67,18 @@ export default function AboutPage() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-md border border-neutral-200 bg-white/80 p-5">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Policy</p>
-          <h2 className="mt-2 text-lg font-semibold text-neutral-950">编辑政策与发布流程</h2>
-          <p className="mt-2 text-sm leading-6 text-neutral-600">
+        <div className="mt-8 surface-panel p-5">
+          <p className="section-kicker">Policy</p>
+          <h2
+            className="font-editorial mt-3 text-[1.75rem] font-normal leading-[1.15] tracking-[-0.02em] sm:text-[2rem]"
+            style={{ color: "var(--ink)" }}
+          >
+            编辑政策与发布流程
+          </h2>
+          <p className="mt-3 text-[14px] font-medium leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
             了解来源优先、事实与判断分离、重复降权、发布前复核等公开内容原则，以及日报从采集到发布的工作流。
           </p>
-          <Link
-            href="/editorial"
-            className="mt-3 inline-flex text-sm font-semibold text-emerald-700 transition hover:text-emerald-900"
-          >
+          <Link href="/editorial" className="btn-primary mt-4 inline-flex">
             查看编辑政策
           </Link>
         </div>

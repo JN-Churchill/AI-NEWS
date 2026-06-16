@@ -1,47 +1,48 @@
-import Link from "next/link";
-import { Container } from "@/app/_components/container";
-import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/constants";
+"use client";
 
-export function SiteFooter() {
+import Link from "next/link";
+import { SITE_NAME } from "@/lib/constants";
+import { useTranslation } from "@/hooks/use-translation";
+import { defaultLocale, type Locale } from "@/i18n/config";
+
+interface SiteFooterProps {
+  locale?: Locale;
+}
+
+const footerLinks = [
+  { href: "/subscribe", key: "footer.links.subscribe" },
+  { href: "/rss.xml", key: "footer.links.rss" },
+  { href: "/sources", key: "footer.links.sources" },
+  { href: "/about", key: "footer.links.method" },
+  { href: "/contact", key: "footer.links.contact" },
+];
+
+export function SiteFooter({ locale = defaultLocale }: SiteFooterProps) {
+  const { t } = useTranslation(locale);
+
   return (
-    <footer className="border-t border-neutral-200/80 bg-white/80">
-      <Container className="flex flex-col gap-5 py-8 sm:flex-row sm:items-start sm:justify-between">
+    <footer className="border-t" style={{ borderColor: "var(--line)", background: "var(--surface)" }}>
+      <div className="mx-auto flex max-w-[1200px] flex-col items-start justify-between gap-4 px-5 py-8 sm:flex-row sm:items-center sm:px-6">
         <div>
-          <p className="text-sm font-semibold text-neutral-950">{SITE_NAME}</p>
-          <p className="mt-1 max-w-md text-xs leading-5 text-neutral-500">
-            {SITE_DESCRIPTION}
+          <p className="text-[13px] font-semibold" style={{ color: "var(--ink)" }}>{SITE_NAME}</p>
+          <p className="mt-0.5 text-[11px]" style={{ color: "var(--muted)" }}>
+            &copy; {new Date().getFullYear()} {t("footer.copyright")}
           </p>
         </div>
-        <div className="flex flex-wrap gap-2 text-xs font-semibold text-neutral-500">
-          <Link href="/subscribe" className="hover:text-neutral-950 transition">
-            订阅
-          </Link>
-          <Link href="/rss.xml" className="hover:text-neutral-950 transition">
-            RSS
-          </Link>
-          <Link href="/feed.json" className="hover:text-neutral-950 transition">
-            JSON Feed
-          </Link>
-          <Link href="/sources" className="hover:text-neutral-950 transition">
-            来源
-          </Link>
-          <Link href="/topics" className="hover:text-neutral-950 transition">
-            主题
-          </Link>
-          <Link href="/editorial" className="hover:text-neutral-950 transition">
-            编辑政策
-          </Link>
-          <Link href="/contact" className="hover:text-neutral-950 transition">
-            联系
-          </Link>
-          <Link href="/sitemap.xml" className="hover:text-neutral-950 transition">
-            站点地图
-          </Link>
-          <Link href="/about" className="hover:text-neutral-950 transition">
-            方法
-          </Link>
-        </div>
-      </Container>
+
+        <nav className="flex flex-wrap gap-x-5 gap-y-1">
+          {footerLinks.map(({ href, key }) => (
+            <Link
+              key={href}
+              href={href}
+              className="footer-link text-[12px] font-medium"
+              style={{ color: "var(--muted)" }}
+            >
+              {t(key)}
+            </Link>
+          ))}
+        </nav>
+      </div>
     </footer>
   );
 }

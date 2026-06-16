@@ -33,61 +33,92 @@ export default function EditorialPage() {
         title="编辑政策"
         description="AI 信号指数不是全量搬运站，而是面向从业者的高信噪比筛选和复核流程。"
         aside={
-          <div className="space-y-3 text-sm leading-6">
-            <p className="font-semibold text-white">目标是让每条公开信号都可追溯、可判断、可纠错。</p>
+          <div className="space-y-3 text-[14px] leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
+            <p className="font-semibold" style={{ color: "var(--ink)" }}>
+              目标是让每条公开信号都可追溯、可判断、可纠错。
+            </p>
             <p>机器负责扩展候选视野，编辑流程负责压低误读、重复和营销噪音。</p>
           </div>
         }
       />
 
-      <section className="editorial-shell">
-        <Container className="grid gap-8 py-8 lg:grid-cols-[minmax(0,1fr)_360px]">
-          <div>
-            <div className="flex items-end justify-between gap-4">
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">Principles</p>
-                <h2 className="mt-2 text-2xl font-semibold text-neutral-950">公开内容原则</h2>
-              </div>
-            </div>
-            <div className="mt-4 grid gap-4 md:grid-cols-2">
-              {rules.map(([title, description]) => (
-                <section key={title} className="editorial-card rounded-md p-5">
-                  <h3 className="text-lg font-semibold text-neutral-950">{title}</h3>
-                  <p className="mt-3 text-sm leading-6 text-neutral-600">{description}</p>
-                </section>
-              ))}
+      <Container className="grid gap-8 py-8 lg:grid-cols-[minmax(0,1fr)_320px]">
+        <div>
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <p className="section-kicker">Principles</p>
+              <h2
+                className="font-editorial mt-3 text-[1.75rem] font-normal leading-[1.15] tracking-[-0.02em] sm:text-[2rem]"
+                style={{ color: "var(--ink)" }}
+              >
+                公开内容原则
+              </h2>
             </div>
           </div>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            {rules.map(([title, description]) => (
+              <section key={title} className="surface-panel card-hover p-5">
+                <h3
+                  className="font-editorial text-[1.25rem] font-normal leading-[1.2] tracking-[-0.02em]"
+                  style={{ color: "var(--ink)" }}
+                >
+                  {title}
+                </h3>
+                <p className="mt-3 text-[14px] font-medium leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
+                  {description}
+                </p>
+              </section>
+            ))}
+          </div>
+        </div>
 
-          <aside className="space-y-4">
-            <section className="editorial-card rounded-md p-5">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Workflow</p>
-              <h2 className="mt-3 text-xl font-semibold text-neutral-950">日报发布流程</h2>
-              <div className="mt-5 space-y-5">
-                {workflow.map(([step, title, description]) => (
-                  <div key={step} className="flex gap-4">
-                    <span className="grid h-9 w-9 shrink-0 place-items-center rounded-md bg-neutral-950 text-sm font-semibold text-white">
-                      {step}
-                    </span>
-                    <div>
-                      <h3 className="font-semibold text-neutral-950">{title}</h3>
-                      <p className="mt-1 text-sm leading-6 text-neutral-600">{description}</p>
-                    </div>
+        <aside className="space-y-4">
+          <section className="surface-panel p-5">
+            <p className="section-kicker">Workflow</p>
+            <h2
+              className="font-editorial mt-3 text-[1.5rem] font-normal leading-[1.15] tracking-[-0.02em]"
+              style={{ color: "var(--ink)" }}
+            >
+              日报发布流程
+            </h2>
+            <div className="mt-5 space-y-0">
+              {workflow.map(([step, title, description], i) => (
+                <div
+                  key={step}
+                  className="grid grid-cols-[44px_minmax(0,1fr)] gap-3 border-t py-3"
+                  style={{ borderColor: "var(--line)" }}
+                >
+                  <span
+                    className="flex h-8 w-8 items-center justify-center rounded-md font-mono text-[12px] font-semibold"
+                    style={{ background: "var(--surface-alt)", color: "var(--muted)" }}
+                  >
+                    {step}
+                  </span>
+                  <div>
+                    <h3 className="text-[14px] font-semibold" style={{ color: "var(--ink)" }}>{title}</h3>
+                    <p className="mt-1 text-[13px] leading-[1.6]" style={{ color: "var(--muted)" }}>{description}</p>
                   </div>
-                ))}
-              </div>
-            </section>
+                </div>
+              ))}
+            </div>
+          </section>
 
-            <section className="rounded-md border border-emerald-900 bg-neutral-950 p-5 text-white shadow-sm">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-300">Quality Gate</p>
-              <h2 className="mt-3 text-xl font-semibold">发布前门禁</h2>
-              <p className="mt-3 text-sm leading-6 text-neutral-300">
-                公开日报必须通过结构校验、来源链接校验、内部草稿话术检查、内容契约测试和生产构建检查。
-              </p>
-            </section>
-          </aside>
-        </Container>
-      </section>
+          <section className="surface-panel p-5" style={{ background: "var(--pastel-red)" }}>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.08em]" style={{ color: "var(--pastel-red-text)" }}>
+              Quality Gate
+            </p>
+            <h2
+              className="font-editorial mt-3 text-[1.5rem] font-normal leading-[1.15] tracking-[-0.02em]"
+              style={{ color: "var(--pastel-red-text)" }}
+            >
+              发布前门禁
+            </h2>
+            <p className="mt-3 text-[14px] font-medium leading-[1.65]" style={{ color: "var(--pastel-red-text)", opacity: 0.85 }}>
+              公开日报必须通过结构校验、来源链接校验、内部草稿话术检查、内容契约测试和生产构建检查。
+            </p>
+          </section>
+        </aside>
+      </Container>
     </main>
   );
 }

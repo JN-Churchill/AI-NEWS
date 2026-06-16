@@ -44,7 +44,7 @@ function getCorrectionContext(params: Awaited<ContactPageProps["searchParams"]>)
     title,
     issueUrl: buildIssueUrl(
       `纠错：${params.date} #${params.signal}`,
-      [`日期：${params.date}`, `条目：#${params.signal}`, `标题：${title}`, "", "问题描述：", "", "建议修正："].join("\n"),
+      [`日期：${params.date}`, `条目：#${params.signal}`, `标题：${title}`, "", `问题描述：`, "", `建议修正：`].join("\n"),
     ),
   };
 }
@@ -89,71 +89,86 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         title="联系与投稿"
         description="接收来源推荐、纠错反馈、合作沟通和内容线索。所有公开内容以原始来源、可复核事实和编辑判断为准。"
         aside={
-          <div className="space-y-4 text-sm leading-6">
-            <p className="font-semibold text-white">优先使用 GitHub Issue 留下可追踪记录。</p>
+          <div className="space-y-3 text-[14px] leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
+            <p className="font-semibold" style={{ color: "var(--ink)" }}>优先使用 GitHub Issue 留下可追踪记录。</p>
             <p>紧急纠错请写清日期、条目编号、问题位置和建议修正文本。</p>
           </div>
         }
       />
 
-      <section className="editorial-shell">
-        <Container className="grid gap-6 py-8 lg:grid-cols-[minmax(0,1fr)_320px]">
-          {correctionContext ? (
-            <section className="editorial-card rounded-md p-5 lg:col-span-2">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">Correction Context</p>
-              <h2 className="mt-3 text-xl font-semibold text-neutral-950">
-                {correctionContext.date} #{correctionContext.signal}
-              </h2>
-              <p className="mt-2 text-sm leading-6 text-neutral-600">{correctionContext.title}</p>
-              <Link
-                href={correctionContext.issueUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-flex h-10 w-fit items-center rounded-md bg-neutral-950 px-4 text-sm font-semibold text-white transition hover:bg-emerald-800"
+      <Container className="grid gap-6 py-8 lg:grid-cols-[minmax(0,1fr)_320px]">
+        {correctionContext ? (
+          <section className="surface-panel p-5 lg:col-span-2">
+            <p className="section-kicker">Correction Context</p>
+            <h2
+              className="font-editorial mt-3 text-[1.5rem] font-normal leading-[1.15] tracking-[-0.02em]"
+              style={{ color: "var(--ink)" }}
+            >
+              {correctionContext.date} #{correctionContext.signal}
+            </h2>
+            <p className="mt-2 text-[14px] font-medium leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
+              {correctionContext.title}
+            </p>
+            <Link
+              href={correctionContext.issueUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary mt-4 inline-flex w-fit"
+            >
+              打开预填纠错
+            </Link>
+          </section>
+        ) : null}
+
+        <div className="grid gap-4 md:grid-cols-3">
+          {cards.map((card) => (
+            <article key={card.title} className="surface-panel card-hover flex min-h-64 flex-col p-5">
+              <p className="section-kicker">{card.eyebrow}</p>
+              <h2
+                className="font-editorial mt-3 text-[1.5rem] font-normal leading-[1.15] tracking-[-0.02em]"
+                style={{ color: "var(--ink)" }}
               >
-                打开预填纠错
+                {card.title}
+              </h2>
+              <p className="mt-3 flex-1 text-[14px] font-medium leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
+                {card.description}
+              </p>
+              <Link
+                href={card.href}
+                target={card.href.startsWith("mailto:") ? undefined : "_blank"}
+                rel={card.href.startsWith("mailto:") ? undefined : "noreferrer"}
+                className="btn-primary mt-5 w-fit"
+              >
+                {card.action}
               </Link>
-            </section>
-          ) : null}
+            </article>
+          ))}
+        </div>
 
-          <div className="grid gap-4 md:grid-cols-3">
-            {cards.map((card) => (
-              <article key={card.title} className="editorial-card flex min-h-64 flex-col rounded-md p-5">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-emerald-700">{card.eyebrow}</p>
-                <h2 className="mt-3 text-2xl font-semibold text-neutral-950">{card.title}</h2>
-                <p className="mt-3 flex-1 text-sm leading-6 text-neutral-600">{card.description}</p>
-                <Link
-                  href={card.href}
-                  target={card.href.startsWith("mailto:") ? undefined : "_blank"}
-                  rel={card.href.startsWith("mailto:") ? undefined : "noreferrer"}
-                  className="mt-5 inline-flex h-10 w-fit items-center rounded-md bg-neutral-950 px-4 text-sm font-semibold text-white transition hover:bg-emerald-800"
-                >
-                  {card.action}
-                </Link>
-              </article>
-            ))}
+        <aside className="surface-panel p-5">
+          <p className="section-kicker">Submission Format</p>
+          <h2
+            className="font-editorial mt-3 text-[1.5rem] font-normal leading-[1.15] tracking-[-0.02em]"
+            style={{ color: "var(--ink)" }}
+          >
+            建议提交格式
+          </h2>
+          <div className="mt-5 space-y-4 text-[14px] font-medium leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
+            <p>
+              <span className="font-semibold" style={{ color: "var(--ink)" }}>来源链接：</span>
+              原始公告、论文、仓库、RSS 或讨论串。
+            </p>
+            <p>
+              <span className="font-semibold" style={{ color: "var(--ink)" }}>推荐理由：</span>
+              说明它影响模型、产品、开源、商业或基础设施的哪一类判断。
+            </p>
+            <p>
+              <span className="font-semibold" style={{ color: "var(--ink)" }}>时效信息：</span>
+              标注发布时间、更新日期或是否仍需继续观察。
+            </p>
           </div>
-
-          <aside className="editorial-card rounded-md p-5">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-neutral-400">Submission Format</p>
-            <h2 className="mt-3 text-xl font-semibold text-neutral-950">建议提交格式</h2>
-            <div className="mt-5 space-y-4 text-sm leading-6 text-neutral-600">
-              <p>
-                <span className="font-semibold text-neutral-950">来源链接：</span>
-                原始公告、论文、仓库、RSS 或讨论串。
-              </p>
-              <p>
-                <span className="font-semibold text-neutral-950">推荐理由：</span>
-                说明它影响模型、产品、开源、商业或基础设施的哪一类判断。
-              </p>
-              <p>
-                <span className="font-semibold text-neutral-950">时效信息：</span>
-                标注发布时间、更新日期或是否仍需继续观察。
-              </p>
-            </div>
-          </aside>
-        </Container>
-      </section>
+        </aside>
+      </Container>
     </main>
   );
 }

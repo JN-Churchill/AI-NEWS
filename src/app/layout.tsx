@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteFooter } from "@/app/_components/site-footer";
 import { SiteHeader } from "@/app/_components/site-header";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/constants";
+import { defaultLocale, type Locale } from "@/i18n/config";
 
 import "./globals.css";
 
@@ -28,13 +29,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params: paramsPromise,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale?: Locale }>;
 }>) {
+  const { locale = defaultLocale } = await paramsPromise;
   return (
-    <html lang="zh-CN">
+    <html lang={locale === "en" ? "en" : "zh-CN"}>
       <head>
         <link
           rel="apple-touch-icon"
@@ -65,14 +69,19 @@ export default function RootLayout({
           name="msapplication-config"
           content="/favicon/browserconfig.xml"
         />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#F0EBE0" />
         <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
         <link rel="alternate" type="application/feed+json" href="/feed.json" />
       </head>
-      <body className="editorial-shell text-neutral-950 antialiased">
-        <SiteHeader />
-        <div className="min-h-screen">{children}</div>
-        <SiteFooter />
+      <body className="antialiased">
+        <a className="skip-link" href="#main-content">
+          跳到正文
+        </a>
+        <SiteHeader locale={locale} />
+        <div id="main-content" className="min-h-screen">
+          {children}
+        </div>
+        <SiteFooter locale={locale} />
       </body>
     </html>
   );

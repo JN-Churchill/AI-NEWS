@@ -38,7 +38,11 @@ export default function TopicsPage() {
         eyebrow="Topics"
         title="主题索引"
         description="按模型、产品、论文、开源和商业方向归档每日信号，方便持续追踪同一类变化。"
-        aside={<p className="text-sm leading-6 text-neutral-300">主题页会随着已发布日报自动更新，适合按方向回看趋势和来源变化。</p>}
+        aside={
+          <p className="text-[14px] leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
+            主题页会随着已发布日报自动更新，适合按方向回看趋势和来源变化。
+          </p>
+        }
       />
 
       <Container className="grid gap-4 py-8 md:grid-cols-2 xl:grid-cols-3">
@@ -46,19 +50,31 @@ export default function TopicsPage() {
           <Link
             key={topic.slug}
             href={`/topics/${topic.slug}`}
-            className="editorial-card group rounded-md p-5 transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-[0_20px_48px_rgba(38,38,38,0.08)]"
+            className="surface-panel card-hover group p-5"
           >
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-400">{topic.slug}</p>
-                <h2 className="mt-2 text-3xl font-semibold text-neutral-950 group-hover:text-emerald-800">{topic.name}</h2>
+                <p className="section-kicker">{topic.slug}</p>
+                <h2
+                  className="font-editorial mt-2 text-[1.5rem] font-normal leading-[1.15] tracking-[-0.02em] transition-colors"
+                  style={{ color: "var(--ink)" }}
+                >
+                  {topic.name}
+                </h2>
               </div>
-              <span className="rounded-md bg-neutral-950 px-3 py-2 text-xl font-semibold text-white">{topic.count}</span>
+              <span
+                className="flex h-9 w-9 items-center justify-center rounded-lg font-mono text-[15px] font-semibold"
+                style={{ background: "var(--surface-alt)", color: "var(--ink)" }}
+              >
+                {topic.count}
+              </span>
             </div>
             <div className="mt-5">
               <ScoreMeter score={topic.score} />
             </div>
-            <p className="mt-4 text-sm text-neutral-500">平均热度 {topic.score}，点击查看该主题全部信号。</p>
+            <p className="mt-4 font-mono text-[11px] font-medium tracking-[0.04em]" style={{ color: "var(--muted)" }}>
+              平均热度 {topic.score}，点击查看该主题全部信号。
+            </p>
           </Link>
         ))}
       </Container>

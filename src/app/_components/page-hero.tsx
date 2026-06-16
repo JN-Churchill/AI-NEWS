@@ -1,25 +1,34 @@
-import { Container } from "@/app/_components/container";
+import type { CSSProperties, ReactNode } from "react";
 
 type PageHeroProps = {
   eyebrow: string;
   title: string;
   description: string;
-  aside?: React.ReactNode;
+  aside?: ReactNode;
 };
 
 export function PageHero({ eyebrow, title, description, aside }: PageHeroProps) {
   return (
-    <section className="ink-panel border-b border-neutral-950 text-white">
-      <Container className="grid gap-6 py-9 lg:grid-cols-[minmax(0,1fr)_360px]">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-emerald-300">{eyebrow}</p>
-          <h1 className="mt-4 text-balance text-4xl font-semibold leading-tight sm:text-5xl">{title}</h1>
-          <p className="mt-4 max-w-3xl text-base leading-7 text-neutral-300">{description}</p>
+    <section className="border-b" style={{ borderColor: "var(--line)", background: "var(--surface)" }}>
+      <div className="mx-auto grid max-w-[1200px] gap-6 px-5 py-10 sm:px-6 lg:grid-cols-[minmax(0,1fr)_280px]">
+        <div className="reveal-up">
+          <p className="section-kicker">{eyebrow}</p>
+          <h1
+            className="font-editorial mt-4 text-[2rem] font-normal leading-[1.15] tracking-[-0.02em] sm:text-[2.5rem]"
+            style={{ color: "var(--ink)" }}
+          >
+            {title}
+          </h1>
+          <p className="mt-3 max-w-[640px] text-[15px] leading-[1.65]" style={{ color: "var(--muted)" }}>
+            {description}
+          </p>
         </div>
         {aside ? (
-          <div className="rounded-md border border-white/15 bg-white/[0.06] p-5 text-neutral-300 backdrop-blur">{aside}</div>
+          <aside className="reveal-up" style={{ "--delay": "90ms" } as CSSProperties}>
+            {aside}
+          </aside>
         ) : null}
-      </Container>
+      </div>
     </section>
   );
 }

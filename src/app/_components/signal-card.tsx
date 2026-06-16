@@ -1,152 +1,163 @@
 import Link from "next/link";
 import type { SignalItem } from "@/interfaces/issue";
-import { ScoreMeter } from "@/app/_components/score-meter";
-import { ShareLinkButton } from "@/app/_components/share-link-button";
-import { SITE_URL } from "@/lib/constants";
-import { getCategoryName } from "@/lib/issues";
+import { categoryNames } from "@/lib/categories";
+import type { Locale } from "@/i18n/config";
 
 type SignalCardProps = {
   item: SignalItem;
   issueDate?: string;
   variant?: "compact" | "detailed";
+  locale?: Locale;
 };
 
-const metricLabels = [
-  ["utility", "实用"],
-  ["novelty", "增量"],
-  ["impact", "影响"],
-  ["credibility", "可信"],
-  ["audience", "契合"],
-  ["freshness", "新鲜"],
-] as const;
+function padRank(rank: number): string {
+  return String(rank).padStart(3, "0");
+}
 
 export function SignalCard({ item, issueDate, variant = "compact" }: SignalCardProps) {
   const isDetailed = variant === "detailed";
-  const anchorId = `signal-${item.rank}`;
-  const shareUrl = issueDate ? `${SITE_URL}/daily/${issueDate}#${anchorId}` : `#${anchorId}`;
-  const correctionUrl = issueDate
-    ? `/contact?type=correction&date=${encodeURIComponent(issueDate)}&signal=${item.rank}&title=${encodeURIComponent(item.title)}`
-    : "/contact";
-  const time = new Date(item.publishedAt).toLocaleString("zh-CN", {
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-  });
+  const categoryName = categoryNames[item.category] || item.category;
+  const primaryTag = item.tags[0];
+  const restTags = item.tags.slice(1);
 
   return (
     <article
-      id={anchorId}
-      className="editorial-card group scroll-mt-24 overflow-hidden rounded-md transition hover:-translate-y-0.5 hover:border-neutral-300 hover:shadow-[0_24px_60px_rgba(38,38,38,0.09)]"
+      className="group"
+      style={{
+        borderBottom: "0.8px solid var(--line)",
+        paddingBottom: "32px",
+        marginBottom: "32px",
+      }}
     >
-      <div className="grid gap-px bg-neutral-200/80 lg:grid-cols-[72px_minmax(0,1fr)_156px]">
-        <div className="flex items-center bg-white/95 p-4 lg:flex-col lg:items-start">
-          <span className="grid h-11 w-11 shrink-0 place-items-center rounded-md bg-neutral-950 text-sm font-semibold text-white">
-            {String(item.rank).padStart(2, "0")}
-          </span>
-          <div className="ml-3 min-w-0 lg:ml-0 lg:mt-4">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-400">Rank</p>
-            <p className="mt-1 text-sm font-semibold text-neutral-900">{getCategoryName(item.category)}</p>
-          </div>
-        </div>
+      {/* NO. xxx + accent bar */}
+      <div className="flex items-center gap-3" style={{ marginBottom: "12px" }}>
+        <span
+          className="font-mono-ui"
+          style={{
+            fontSize: "13px",
+            fontWeight: 300,
+            letterSpacing: "1.3px",
+            color: "var(--muted)",
+          }}
+        >
+          NO. {padRank(item.rank)}
+        </span>
+        <div className="accent-bar" />
+      </div>
 
-        <div className="min-w-0 bg-white/95 p-5">
-          <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-neutral-500">
-            <span className="rounded-md bg-neutral-100 px-2 py-1 text-neutral-700">{item.source}</span>
-            <span>{time}</span>
-            <span className="hidden h-px w-8 bg-neutral-200 sm:block" />
-            {issueDate ? (
-              <Link href={`/daily/${issueDate}#${anchorId}`} className="text-neutral-500 transition hover:text-neutral-950">
-                定位
-              </Link>
-            ) : null}
-          </div>
-
-          <h2 className="mt-3 text-balance text-xl font-semibold leading-8 text-neutral-950 sm:text-[25px]">
-            {item.sourceUrl ? (
-              <Link href={item.sourceUrl} target="_blank" rel="noreferrer" className="transition hover:text-emerald-800">
-                {item.title}
-              </Link>
-            ) : (
-              item.title
-            )}
-          </h2>
-
-          <p className={`mt-3 text-sm leading-6 text-neutral-600 ${isDetailed ? "" : "line-clamp-3"}`}>{item.summary}</p>
-
-          <div className="mt-4 rounded-md border border-emerald-200 bg-emerald-50/80 px-4 py-3 text-sm leading-6 text-emerald-950">
-            {item.whyItMatters}
-          </div>
-
-          <div className="mt-4 flex flex-wrap gap-2">
-            {item.tags.map((tag) => (
-              <Link
-                key={tag}
-                href={`/?tag=${encodeURIComponent(tag)}`}
-                className="rounded-md border border-neutral-200 bg-neutral-50 px-2.5 py-1 text-xs font-semibold text-neutral-600 transition hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-800"
-              >
-                {tag}
-              </Link>
-            ))}
-          </div>
-
-          {isDetailed ? (
-            <div className="mt-5 grid gap-2 sm:grid-cols-3 xl:grid-cols-6">
-              {metricLabels.map(([key, label]) => (
-                <div key={key} className="rounded-md border border-neutral-200 bg-neutral-50 p-3">
-                  <p className="text-[11px] font-semibold text-neutral-400">{label}</p>
-                  <p className="mt-1 text-lg font-semibold text-neutral-950">{item.metrics[key]}</p>
-                </div>
-              ))}
-            </div>
-          ) : null}
-        </div>
-
-        <div className="bg-neutral-50 p-4">
-          <div className="flex items-end justify-between gap-3 lg:block">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-400">Worth</p>
-              <p className="mt-2 text-4xl font-semibold leading-none text-neutral-950">{item.score}</p>
-            </div>
-            <div className="w-28 lg:mt-4 lg:w-full">
-              <ScoreMeter score={item.score} />
-            </div>
-          </div>
-
-          <div className="mt-4 grid grid-cols-3 gap-px overflow-hidden rounded-md border border-neutral-200 bg-neutral-200 text-center text-xs lg:grid-cols-1 lg:text-left">
-            {metricLabels.slice(0, 3).map(([key, label]) => (
-              <div key={key} className="bg-white/80 p-2 lg:flex lg:items-center lg:justify-between">
-                <span className="text-neutral-400">{label}</span>
-                <span className="font-semibold text-neutral-800">{item.metrics[key]}</span>
-              </div>
-            ))}
-          </div>
-
-          {item.sourceUrl ? (
-            <Link
-              href={item.sourceUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-4 flex h-10 items-center justify-center rounded-md bg-neutral-950 text-sm font-semibold text-white transition hover:bg-emerald-800"
-            >
-              阅读原文
-            </Link>
-          ) : (
-            <span className="mt-4 flex h-10 items-center justify-center rounded-md border border-neutral-200 bg-white text-sm font-semibold text-neutral-400">
-              暂无原文
-            </span>
-          )}
-          <div className="mt-2">
-            <ShareLinkButton url={shareUrl} />
-          </div>
+      {/* Title */}
+      <h2 className="editorial-title" style={{ fontSize: "22px", lineHeight: 1.35 }}>
+        {item.sourceUrl ? (
           <Link
-            href={correctionUrl}
-            className="mt-2 flex h-10 items-center justify-center rounded-md border border-neutral-200 bg-white text-sm font-semibold text-neutral-700 transition hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-800"
+            href={item.sourceUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="transition-colors hover-accent"
+            style={{ color: "inherit" }}
           >
-            纠错
+            {item.title}
+          </Link>
+        ) : (
+          item.title
+        )}
+      </h2>
+
+      {/* Summary */}
+      <p
+        className="font-serif-cn mt-2 line-clamp-2"
+        style={{
+          fontSize: "14px",
+          fontWeight: 400,
+          lineHeight: 1.7,
+          color: "rgba(26,22,18,0.65)",
+        }}
+      >
+        {item.summary}
+      </p>
+
+      {/* Why it matters — detailed only */}
+      {isDetailed && item.whyItMatters && (
+        <div
+          className="mt-3 px-3.5 py-2.5"
+          style={{ borderLeft: "3px solid var(--accent)", background: "var(--surface)" }}
+        >
+          <p className="mono-label" style={{ fontSize: "10px", marginBottom: "4px" }}>
+            WHY IT MATTERS
+          </p>
+          <p className="font-serif-cn" style={{ fontSize: "13px", lineHeight: 1.6, color: "var(--ink-soft)" }}>
+            {item.whyItMatters}
+          </p>
+        </div>
+      )}
+
+      {/* Meta row: tags + source + score */}
+      <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1.5">
+        {/* Primary tag — accent */}
+        <Link
+          href={`/?tag=${encodeURIComponent(primaryTag)}`}
+          className="tag-chip tag-accent"
+        >
+          {primaryTag}
+        </Link>
+
+        {/* Rest tags — muted */}
+        {restTags.map((tag) => (
+          <Link
+            key={tag}
+            href={`/?tag=${encodeURIComponent(tag)}`}
+            className="tag-chip tag-muted"
+          >
+            {tag}
+          </Link>
+        ))}
+
+        {/* Source */}
+        <span
+          className="font-mono-ui ml-auto"
+          style={{
+            fontSize: "9px",
+            letterSpacing: "1.6px",
+            textTransform: "uppercase",
+            background: "var(--tag-bg)",
+            padding: "2px 6px",
+            color: "var(--ink-soft)",
+          }}
+        >
+          {item.source}
+        </span>
+
+        {/* Score */}
+        <span
+          className="font-mono-ui"
+          style={{
+            fontSize: "15px",
+            fontWeight: 500,
+            color: "var(--ink)",
+            letterSpacing: "-0.5px",
+            minWidth: "28px",
+            textAlign: "right",
+          }}
+        >
+          {item.score}
+        </span>
+      </div>
+
+      {/* Actions — detailed only */}
+      {isDetailed && (
+        <div className="mt-3 flex items-center gap-2 pt-3" style={{ borderTop: "0.8px solid var(--line)" }}>
+          {item.sourceUrl ? (
+            <Link href={item.sourceUrl} target="_blank" rel="noreferrer" className="btn-primary h-8 text-[11px]">
+              ORIGINAL
+            </Link>
+          ) : null}
+          <Link
+            href={issueDate ? `/contact?type=correction&date=${encodeURIComponent(issueDate)}&signal=${item.rank}&title=${encodeURIComponent(item.title)}` : "/contact"}
+            className="btn-secondary h-8 text-[11px]"
+          >
+            CORRECTION
           </Link>
         </div>
-      </div>
+      )}
     </article>
   );
 }
