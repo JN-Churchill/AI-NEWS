@@ -10,43 +10,50 @@ type SignalCardProps = {
   locale?: Locale;
 };
 
-function padRank(rank: number): string {
-  return String(rank).padStart(3, "0");
-}
-
 export function SignalCard({ item, issueDate, variant = "compact" }: SignalCardProps) {
   const isDetailed = variant === "detailed";
   const categoryName = categoryNames[item.category] || item.category;
-  const primaryTag = item.tags[0];
-  const restTags = item.tags.slice(1);
 
   return (
     <article
       className="group"
       style={{
-        borderBottom: "0.8px solid var(--line)",
-        paddingBottom: "32px",
-        marginBottom: "32px",
+        borderBottom: "0.5px solid var(--line)",
+        paddingBottom: "20px",
+        marginBottom: "20px",
       }}
     >
-      {/* NO. xxx + accent bar */}
-      <div className="flex items-center gap-3" style={{ marginBottom: "12px" }}>
+      {/* Top row: category pill + score */}
+      <div className="flex items-center justify-between" style={{ marginBottom: "8px" }}>
+        <span
+          className="tag-chip"
+          style={{
+            background: "var(--accent-light)",
+            color: "var(--accent)",
+            fontSize: "11px",
+          }}
+        >
+          {categoryName}
+        </span>
         <span
           className="font-mono-ui"
           style={{
-            fontSize: "13px",
-            fontWeight: 300,
-            letterSpacing: "1.3px",
-            color: "var(--muted)",
+            fontSize: "20px",
+            fontWeight: 600,
+            color: "var(--ink)",
+            letterSpacing: "-0.5px",
+            lineHeight: 1,
           }}
         >
-          NO. {padRank(item.rank)}
+          {item.score}
         </span>
-        <div className="accent-bar" />
       </div>
 
       {/* Title */}
-      <h2 className="editorial-title" style={{ fontSize: "22px", lineHeight: 1.35 }}>
+      <h2
+        className="editorial-title line-clamp-2"
+        style={{ fontSize: "18px", lineHeight: 1.35 }}
+      >
         {item.sourceUrl ? (
           <Link
             href={item.sourceUrl}
@@ -64,95 +71,69 @@ export function SignalCard({ item, issueDate, variant = "compact" }: SignalCardP
 
       {/* Summary */}
       <p
-        className="font-serif-cn mt-2 line-clamp-2"
+        className="mt-1.5 line-clamp-2"
         style={{
           fontSize: "14px",
           fontWeight: 400,
-          lineHeight: 1.7,
-          color: "rgba(26,22,18,0.65)",
+          lineHeight: 1.65,
+          color: "var(--muted)",
         }}
       >
         {item.summary}
       </p>
 
-      {/* Why it matters — detailed only */}
+      {/* Why it matters - detailed only */}
       {isDetailed && item.whyItMatters && (
         <div
           className="mt-3 px-3.5 py-2.5"
-          style={{ borderLeft: "3px solid var(--accent)", background: "var(--surface)" }}
+          style={{ borderLeft: "2px solid var(--accent)", background: "var(--surface)" }}
         >
-          <p className="mono-label" style={{ fontSize: "10px", marginBottom: "4px" }}>
+          <p className="section-kicker" style={{ fontSize: "10px", marginBottom: "4px" }}>
             WHY IT MATTERS
           </p>
-          <p className="font-serif-cn" style={{ fontSize: "13px", lineHeight: 1.6, color: "var(--ink-soft)" }}>
+          <p style={{ fontSize: "13px", lineHeight: 1.6, color: "var(--ink-soft)" }}>
             {item.whyItMatters}
           </p>
         </div>
       )}
 
-      {/* Meta row: tags + source + score */}
-      <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1.5">
-        {/* Primary tag — accent */}
-        <Link
-          href={`/?tag=${encodeURIComponent(primaryTag)}`}
-          className="tag-chip tag-accent"
-        >
-          {primaryTag}
-        </Link>
-
-        {/* Rest tags — muted */}
-        {restTags.map((tag) => (
-          <Link
-            key={tag}
-            href={`/?tag=${encodeURIComponent(tag)}`}
-            className="tag-chip tag-muted"
-          >
-            {tag}
-          </Link>
-        ))}
-
+      {/* Meta row: source + tags */}
+      <div className="mt-2.5 flex flex-wrap items-center gap-x-2 gap-y-1.5">
         {/* Source */}
         <span
-          className="font-mono-ui ml-auto"
+          className="font-mono-ui"
           style={{
-            fontSize: "9px",
-            letterSpacing: "1.6px",
-            textTransform: "uppercase",
-            background: "var(--tag-bg)",
-            padding: "2px 6px",
-            color: "var(--ink-soft)",
+            fontSize: "11px",
+            letterSpacing: "0.3px",
+            color: "var(--muted)",
           }}
         >
           {item.source}
         </span>
 
-        {/* Score */}
-        <span
-          className="font-mono-ui"
-          style={{
-            fontSize: "15px",
-            fontWeight: 500,
-            color: "var(--ink)",
-            letterSpacing: "-0.5px",
-            minWidth: "28px",
-            textAlign: "right",
-          }}
-        >
-          {item.score}
-        </span>
+        {/* Tags */}
+        {item.tags.map((tag) => (
+          <Link
+            key={tag}
+            href={`/?tag=${encodeURIComponent(tag)}`}
+            className="tag-chip"
+          >
+            {tag}
+          </Link>
+        ))}
       </div>
 
-      {/* Actions — detailed only */}
+      {/* Actions - detailed only */}
       {isDetailed && (
-        <div className="mt-3 flex items-center gap-2 pt-3" style={{ borderTop: "0.8px solid var(--line)" }}>
+        <div className="mt-3 flex items-center gap-2 pt-3" style={{ borderTop: "0.5px solid var(--line)" }}>
           {item.sourceUrl ? (
-            <Link href={item.sourceUrl} target="_blank" rel="noreferrer" className="btn-primary h-8 text-[11px]">
+            <Link href={item.sourceUrl} target="_blank" rel="noreferrer" className="btn-primary h-8 text-[12px]">
               ORIGINAL
             </Link>
           ) : null}
           <Link
             href={issueDate ? `/contact?type=correction&date=${encodeURIComponent(issueDate)}&signal=${item.rank}&title=${encodeURIComponent(item.title)}` : "/contact"}
-            className="btn-secondary h-8 text-[11px]"
+            className="btn-secondary h-8 text-[12px]"
           >
             CORRECTION
           </Link>

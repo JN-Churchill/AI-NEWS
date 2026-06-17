@@ -69,7 +69,7 @@ export default async function RootLayout({
           name="msapplication-config"
           content="/favicon/browserconfig.xml"
         />
-        <meta name="theme-color" content="#F0EBE0" />
+        <meta name="theme-color" content="#FAFAF9" />
         <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
         <link rel="alternate" type="application/feed+json" href="/feed.json" />
       </head>

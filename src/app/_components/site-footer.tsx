@@ -21,21 +21,18 @@ export function SiteFooter({ locale = defaultLocale }: SiteFooterProps) {
   const { t } = useTranslation(locale);
 
   return (
-    <footer className="border-t" style={{ borderColor: "var(--line)", background: "var(--surface)" }}>
-      <div className="mx-auto flex max-w-[1200px] flex-col items-start justify-between gap-4 px-5 py-8 sm:flex-row sm:items-center sm:px-6">
-        <div>
-          <p className="text-[13px] font-semibold" style={{ color: "var(--ink)" }}>{SITE_NAME}</p>
-          <p className="mt-0.5 text-[11px]" style={{ color: "var(--muted)" }}>
-            &copy; {new Date().getFullYear()} {t("footer.copyright")}
-          </p>
-        </div>
+    <footer className="border-t" style={{ borderColor: "var(--line)" }}>
+      <div className="mx-auto flex max-w-[960px] flex-col items-start justify-between gap-3 px-5 py-5 sm:flex-row sm:items-center sm:px-6">
+        <p className="text-[12px]" style={{ color: "var(--muted)" }}>
+          &copy; {new Date().getFullYear()} {SITE_NAME}. {t("footer.copyright")}
+        </p>
 
-        <nav className="flex flex-wrap gap-x-5 gap-y-1">
+        <nav className="flex flex-wrap gap-x-4 gap-y-1">
           {footerLinks.map(({ href, key }) => (
             <Link
               key={href}
               href={href}
-              className="footer-link text-[12px] font-medium"
+              className="footer-link text-[12px]"
               style={{ color: "var(--muted)" }}
             >
               {t(key)}

@@ -34,22 +34,22 @@ export function HomeClient({
       <IssuePanel issue={issue} />
 
       <div
-        className="mx-auto w-full max-w-[1088px] px-5 sm:px-6"
+        className="mx-auto w-full max-w-[960px] px-5 sm:px-6"
         style={{ paddingTop: "8px", paddingBottom: "64px" }}
       >
         {/* Clear filters bar */}
         {hasFilters && (
           <div
-            className="flex items-center justify-between py-3"
-            style={{ borderBottom: "0.8px solid var(--line)" }}
+            className="flex items-center justify-between py-2.5"
+            style={{ borderBottom: "0.5px solid var(--line)" }}
           >
-            <span className="mono-label" style={{ fontSize: "10px" }}>
-              FILTERING: {activeCategories.join(", ")} {activeTag ? `· ${activeTag}` : ""}
+            <span className="text-[12px]" style={{ color: "var(--muted)" }}>
+              {activeCategories.join(", ")} {activeTag ? ` / ${activeTag}` : ""}
             </span>
             <Link
               href="/"
-              className="font-mono-ui text-[11px] tracking-[1px] uppercase transition-colors hover-accent"
-              style={{ color: "var(--muted)" }}
+              className="text-[12px] font-medium transition-colors hover-accent"
+              style={{ color: "var(--accent)" }}
             >
               {t("home.clearFilters")} &times;
             </Link>
@@ -57,7 +57,7 @@ export function HomeClient({
         )}
 
         {/* Content grid */}
-        <div className="mt-6 grid gap-8 lg:grid-cols-[minmax(0,1fr)_300px]">
+        <div className="mt-6 grid gap-12 lg:grid-cols-[minmax(0,1fr)_240px]">
           {/* Signals */}
           <section className="min-w-0">
             {items.length === 0 ? (
@@ -69,8 +69,8 @@ export function HomeClient({
                   {t("home.noMatchSignals")}
                 </h2>
                 <p
-                  className="font-serif-cn mx-auto mt-2 max-w-sm"
-                  style={{ fontSize: "14px", color: "var(--muted)" }}
+                  className="mx-auto mt-2 max-w-sm text-[14px]"
+                  style={{ color: "var(--muted)" }}
                 >
                   {t("home.noMatchDescription")}
                 </p>

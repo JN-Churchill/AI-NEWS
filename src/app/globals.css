@@ -1,44 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600;700;900&family=Geist+Sans:wght@100..900&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Geist+Sans:wght@100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ═══════════════════════════════════════════════════════
-   Editorial Design System — AmazingIndex-inspired
-   Magazine masthead + data dashboard + newsprint aesthetic
+   Clean Minimalist Design System
+   Calm, airy, content-first. Geist Sans + DM Mono.
    ═══════════════════════════════════════════════════════ */
 
 @layer base {
   :root {
-    /* Warm beige palette */
-    --canvas: #E8E3D6;
-    --surface: #F0EBE0;
+    /* Clean neutral palette (stone family) */
+    --canvas: #FAFAF9;
+    --surface: #F5F5F4;
+    --surface-alt: #EEEDEB;
     --surface-card: #FFFFFF;
-    --ink: #1A1612;
-    --ink-soft: #3D3830;
-    --muted: #888888;
-    --line: rgba(26, 22, 18, 0.12);
-    --line-heavy: rgba(26, 22, 18, 0.2);
+    --ink: #1C1917;
+    --ink-soft: #44403C;
+    --muted: #78716C;
+    --line: rgba(28, 25, 23, 0.10);
+    --line-heavy: rgba(28, 25, 23, 0.18);
 
-    /* Accent */
-    --accent: #C0392B;
-    --accent-light: rgba(192, 57, 43, 0.1);
-    --accent-soft: #9F2F2D;
+    /* Single calm accent */
+    --accent: #2563EB;
+    --accent-light: rgba(37, 99, 235, 0.08);
+    --accent-soft: #1D4ED8;
 
     /* Tags */
-    --tag-bg: #E8E0CF;
-    --tag-text: #1A1612;
+    --tag-bg: #F0EEED;
+    --tag-text: #1C1917;
 
     /* Pastels for secondary pages */
-    --pastel-red: #FDEBEC;
-    --pastel-red-text: #9F2F2D;
-    --pastel-blue: #E1F3FE;
-    --pastel-blue-text: #1F6C9F;
-    --pastel-green: #EDF3EC;
-    --pastel-green-text: #346538;
-    --pastel-yellow: #FBF3DB;
-    --pastel-yellow-text: #956400;
+    --pastel-red: #FEE2E2;
+    --pastel-red-text: #991B1B;
+    --pastel-blue: #DBEAFE;
+    --pastel-blue-text: #1E40AF;
+    --pastel-green: #DCFCE7;
+    --pastel-green-text: #166534;
+    --pastel-yellow: #FEF9C3;
+    --pastel-yellow-text: #854D0E;
   }
 
   * {
@@ -90,29 +91,25 @@
   }
 
   .font-editorial {
-    font-family: 'Instrument Serif', 'Newsreader', Georgia, 'Times New Roman', serif;
+    font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     letter-spacing: -0.02em;
-    line-height: 1.1;
-  }
-
-  .font-serif-cn {
-    font-family: 'Noto Serif SC', 'Songti SC', 'SimSun', Georgia, serif;
+    line-height: 1.15;
   }
 
   .mono-label {
     font-family: 'DM Mono', ui-monospace, monospace;
     font-size: 11px;
     font-weight: 400;
-    letter-spacing: 1.32px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     color: var(--muted);
   }
 
   .editorial-title {
-    font-family: 'Noto Serif SC', 'Songti SC', Georgia, serif;
+    font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 700;
-    letter-spacing: -0.28px;
-    line-height: 1.3;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
     color: var(--ink);
   }
 
@@ -127,31 +124,24 @@
   /* ── Structural ───────────────────────────────────── */
 
   .masthead-bar {
-    background: var(--surface);
-    border-bottom: 0.8px solid var(--line);
+    border-bottom: 0.5px solid var(--line);
+    background: var(--canvas);
   }
 
   .signal-divider {
-    border-bottom: 0.8px solid var(--line);
+    border-bottom: 0.5px solid var(--line);
   }
 
-  .accent-bar {
-    width: 3px;
-    height: 24px;
-    background: var(--accent);
-    flex-shrink: 0;
-  }
-
-  /* ── Surfaces (zero radius for editorial feel) ────── */
+  /* ── Surfaces ─────────────────────────────────────── */
 
   .surface-panel {
-    border: 0.8px solid var(--line);
+    border: 0.5px solid var(--line);
     border-radius: 0;
     background: var(--surface);
   }
 
   .editorial-card {
-    border: 0.8px solid var(--line);
+    border: 0.5px solid var(--line);
     border-radius: 0;
     background: var(--surface-card);
   }
@@ -162,7 +152,7 @@
     font-family: 'DM Mono', ui-monospace, monospace;
     font-size: 11px;
     font-weight: 500;
-    letter-spacing: 1.32px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     color: var(--muted);
   }
@@ -171,32 +161,32 @@
     font-family: 'DM Mono', ui-monospace, monospace;
     font-size: 11px;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
     color: var(--muted);
   }
 
-  /* ── Buttons (zero radius editorial) ──────────────── */
+  /* ── Buttons (pill shape) ─────────────────────────── */
 
   .btn-primary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.25rem;
-    border-radius: 0;
-    background: var(--ink);
-    padding: 0 1.25rem;
+    height: 32px;
+    border-radius: 999px;
+    background: var(--accent);
+    padding: 0 16px;
     color: white;
-    font-family: 'DM Mono', ui-monospace, monospace;
-    font-size: 11px;
+    font-family: 'Geist Sans', sans-serif;
+    font-size: 13px;
     font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: 0;
+    text-transform: none;
     transition: background-color 150ms ease, transform 100ms ease;
   }
 
   .btn-primary:hover {
-    background: var(--accent);
+    background: var(--accent-soft);
   }
 
   .btn-primary:active {
@@ -207,17 +197,17 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 2.25rem;
-    border: 0.8px solid var(--line-heavy);
-    border-radius: 0;
-    background: var(--surface-card);
-    padding: 0 1.25rem;
+    height: 32px;
+    border: 0.5px solid var(--line-heavy);
+    border-radius: 999px;
+    background: transparent;
+    padding: 0 16px;
     color: var(--ink);
-    font-family: 'DM Mono', ui-monospace, monospace;
-    font-size: 11px;
+    font-family: 'Geist Sans', sans-serif;
+    font-size: 13px;
     font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    letter-spacing: 0;
+    text-transform: none;
     transition: background-color 150ms ease, border-color 150ms ease, transform 100ms ease;
   }
 
@@ -230,26 +220,26 @@
     transform: scale(0.98);
   }
 
-  /* ── Tags (editorial style) ───────────────────────── */
+  /* ── Tags ─────────────────────────────────────────── */
 
   .tag-chip {
     display: inline-flex;
     align-items: center;
-    border-radius: 0;
+    border-radius: 4px;
     background: var(--tag-bg);
     border: none;
     padding: 2px 8px;
-    color: var(--ink);
-    font-family: 'DM Mono', ui-monospace, monospace;
-    font-size: 9px;
+    color: var(--ink-soft);
+    font-family: 'Geist Sans', sans-serif;
+    font-size: 11px;
     font-weight: 500;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
+    letter-spacing: 0;
+    text-transform: none;
     transition: background-color 150ms ease;
   }
 
   .tag-chip:hover {
-    background: #DDD5C3;
+    background: #E7E5E4;
   }
 
   .tag-accent {
@@ -258,7 +248,7 @@
   }
 
   .tag-accent:hover {
-    background: rgba(192, 57, 43, 0.15);
+    background: rgba(37, 99, 235, 0.12);
   }
 
   .tag-muted {
@@ -295,14 +285,14 @@
   /* ── Nav tab ──────────────────────────────────────── */
 
   .nav-tab {
-    font-family: 'DM Mono', ui-monospace, monospace;
-    font-size: 11px;
+    font-family: 'Geist Sans', sans-serif;
+    font-size: 14px;
     font-weight: 400;
-    letter-spacing: 1.32px;
-    text-transform: uppercase;
+    letter-spacing: 0;
+    text-transform: none;
     color: var(--muted);
     padding: 6px 0;
-    border-bottom: 1.6px solid transparent;
+    border-bottom: 1.5px solid transparent;
     transition: color 150ms ease, border-color 150ms ease;
   }
 
@@ -324,7 +314,7 @@
     top: 1rem;
     z-index: 100;
     transform: translateY(-150%);
-    border-radius: 0;
+    border-radius: 4px;
     background: var(--ink);
     padding: 0.5rem 1rem;
     color: white;
@@ -378,41 +368,7 @@
     color: var(--accent) !important;
   }
 
-  /* ── Backwards-compatible aliases ─────────────────── */
-
-  .industrial-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 2.25rem;
-    border-radius: 0;
-    background: var(--ink);
-    padding: 0 1.25rem;
-    color: white;
-    font-size: 0.8125rem;
-    font-weight: 500;
-    transition: background-color 150ms ease, transform 100ms ease;
-  }
-
-  .industrial-button:hover {
-    background: var(--accent);
-  }
-
-  .industrial-button:active {
-    transform: scale(0.98);
-  }
-
-  .industrial-button-secondary {
-    background: var(--surface-card);
-    color: var(--ink);
-    border: 0.8px solid var(--line-heavy);
-  }
-
-  .industrial-button-secondary:hover {
-    background: var(--surface);
-  }
-
-  /* Font utility kept for secondary pages */
+  /* Font utility for secondary pages */
   .font-mono {
     font-family: 'DM Mono', 'Geist Mono', 'SF Mono', 'JetBrains Mono', ui-monospace, monospace;
   }
