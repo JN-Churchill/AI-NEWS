@@ -1,83 +1,64 @@
 import Link from "next/link";
-import { Container } from "@/app/_components/container";
-import { PageHero } from "@/app/_components/page-hero";
-import { ScoreMeter } from "@/app/_components/score-meter";
-import { getAllIssues, getCategoryName } from "@/lib/issues";
+import { ArrowRight, Hash } from "lucide-react";
+
+import { Reveal } from "@/components/reveal";
+import { getAllIssues } from "@/lib/content";
+import { TOPIC_DEFS } from "@/types/schema";
 
 export const metadata = {
   title: "主题",
-  description: "按模型、产品、论文、开源、商业和基础设施方向浏览 AI 信号指数的主题索引。",
-  alternates: {
-    canonical: "/topics",
-  },
+  description: "按主题标签浏览 AI 日报热点：融资、开源、评测、Agent、多模态、基础设施、安全对齐、具身智能。",
 };
 
 export default function TopicsPage() {
-  const categories = new Map<string, { count: number; scoreTotal: number }>();
+  const issues = getAllIssues();
+  const allItems = issues.flatMap((issue) => issue.sections.flatMap((section) => section.items));
 
-  getAllIssues().forEach((issue) => {
-    issue.categories.forEach((category) => {
-      const current = categories.get(category.slug) ?? { count: 0, scoreTotal: 0 };
-      categories.set(category.slug, {
-        count: current.count + category.count,
-        scoreTotal: current.scoreTotal + category.score * category.count,
-      });
-    });
-  });
-
-  const topics = Array.from(categories.entries()).map(([slug, value]) => ({
-    slug,
-    name: getCategoryName(slug),
-    count: value.count,
-    score: Math.round(value.scoreTotal / Math.max(1, value.count)),
-  }));
+  const counts = new Map<string, number>();
+  for (const item of allItems) {
+    for (const topic of item.topics) {
+      counts.set(topic, (counts.get(topic) ?? 0) + 1);
+    }
+  }
 
   return (
-    <main>
-      <PageHero
-        eyebrow="Topics"
-        title="主题索引"
-        description="按模型、产品、论文、开源和商业方向归档每日信号，方便持续追踪同一类变化。"
-        aside={
-          <p className="text-[14px] leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
-            主题页会随着已发布日报自动更新，适合按方向回看趋势和来源变化。
-          </p>
-        }
-      />
+    <div className="pb-4">
+      <section className="pt-8">
+        <h1 className="text-[clamp(26px,4.4vw,38px)] font-extrabold leading-tight tracking-[-0.02em]">
+          主题<span className="gradient-text">浏览</span>
+        </h1>
+        <p className="mt-3 text-[14.5px] leading-relaxed text-[var(--color-ink-2)]">
+          主题标签横跨五大版块，帮你按关注方向纵向追踪，而不局限于某一天的日报。
+        </p>
+      </section>
 
-      <Container className="grid gap-4 py-8 md:grid-cols-2 xl:grid-cols-3">
-        {topics.map((topic) => (
-          <Link
-            key={topic.slug}
-            href={`/topics/${topic.slug}`}
-            className="surface-panel card-hover group p-5"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="section-kicker">{topic.slug}</p>
-                <h2
-                  className="font-editorial mt-2 text-[1.5rem] font-normal leading-[1.15] tracking-[-0.02em] transition-colors"
-                  style={{ color: "var(--ink)" }}
-                >
-                  {topic.name}
-                </h2>
-              </div>
-              <span
-                className="flex h-9 w-9 items-center justify-center rounded-lg font-mono text-[15px] font-semibold"
-                style={{ background: "var(--surface-alt)", color: "var(--ink)" }}
-              >
-                {topic.count}
-              </span>
-            </div>
-            <div className="mt-5">
-              <ScoreMeter score={topic.score} />
-            </div>
-            <p className="mt-4 font-mono text-[11px] font-medium tracking-[0.04em]" style={{ color: "var(--muted)" }}>
-              平均热度 {topic.score}，点击查看该主题全部信号。
-            </p>
-          </Link>
-        ))}
-      </Container>
-    </main>
+      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {TOPIC_DEFS.map((topic, index) => {
+          const count = counts.get(topic.slug) ?? 0;
+          return (
+            <Reveal key={topic.slug} delay={index * 50}>
+              <Link href={`/topics/${topic.slug}`} className="card h-full p-5">
+                <div className="flex items-center gap-2.5">
+                  <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-brand-1)] to-[var(--color-brand-3)] text-[#05121a]">
+                    <Hash className="h-4 w-4" />
+                  </span>
+                  <h2 className="text-[16px] font-bold">{topic.name}</h2>
+                  <span className="ml-auto chip font-mono">{count} 条</span>
+                </div>
+                <p className="mt-3.5 text-[13.5px] leading-relaxed text-[var(--color-ink-2)]">
+                  {count > 0
+                    ? `已收录 ${count} 条与该主题相关的热点信号，点击按热度浏览。`
+                    : "暂无该主题的信号，随着每日采集会自动积累。"}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[var(--color-brand-1)]">
+                  浏览 {topic.name}
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </span>
+              </Link>
+            </Reveal>
+          );
+        })}
+      </div>
+    </div>
   );
 }

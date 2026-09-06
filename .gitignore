@@ -1,44 +1,15 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# generated editorial artifacts
-/content/reports/
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
+node_modules/
+.next/
+out/
+.env
+.env.local
+*.log
 .DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-next-dev*.log
-
-# local env files
-.env*.local
-
-# vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# 鏈垎鏀殑鏈湴鏁版嵁涓庡巻鍙插浠斤紙涓嶅叆搴擄級
+.workbuddy/
+.git-outer-backup/
+.gitignore-outer-backup
+AI-NEWS/
+*.err

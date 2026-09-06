@@ -1,18 +1,31 @@
 [
   {
+    "id": "aihot",
+    "name": "AI HOT 日报",
+    "category": "model",
+    "type": "media",
+    "url": "https://aihot.virxact.com/",
+    "feedUrl": "https://aihot.virxact.com/api/v1/dailies/latest",
+    "strategy": "aihot",
+    "defaultSection": "models",
+    "topics": [],
+    "trustScore": 88,
+    "enabled": true,
+    "notes": "主内容源：已整理好的每日 AI 日报，自带摘要与五大版块分类，零成本。"
+  },
+  {
     "id": "openai-news",
     "name": "OpenAI News",
     "category": "model",
     "type": "official",
     "url": "https://openai.com/news/",
     "feedUrl": "",
-    "fetchMode": "html",
-    "parser": "html-links",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "官方新闻页；公开 RSS 稳定性有限，当前以 HTML 候选提取作为兜底。",
+    "strategy": "html",
+    "defaultSection": "models",
+    "topics": [],
     "trustScore": 95,
-    "enabled": true
+    "enabled": true,
+    "notes": "官方新闻页，无稳定 RSS，走 HTML 链接提取。"
   },
   {
     "id": "anthropic-news",
@@ -21,13 +34,12 @@
     "type": "official",
     "url": "https://www.anthropic.com/news",
     "feedUrl": "",
-    "fetchMode": "html",
-    "parser": "html-links",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "官方新闻页；当前以 HTML 候选提取作为默认采集方式。",
+    "strategy": "html",
+    "defaultSection": "models",
+    "topics": [],
     "trustScore": 95,
-    "enabled": true
+    "enabled": true,
+    "notes": "官方新闻页，走 HTML 链接提取。"
   },
   {
     "id": "google-ai-blog",
@@ -36,13 +48,12 @@
     "type": "official",
     "url": "https://blog.google/technology/ai/",
     "feedUrl": "https://blog.google/technology/ai/rss/",
-    "fetchMode": "feed",
-    "parser": "rss",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "Google 官方 AI 专题 RSS，适合稳定采集。",
+    "strategy": "feed",
+    "defaultSection": "products",
+    "topics": [],
     "trustScore": 90,
-    "enabled": true
+    "enabled": true,
+    "notes": "官方 RSS，稳定。"
   },
   {
     "id": "deepmind-blog",
@@ -51,13 +62,12 @@
     "type": "official",
     "url": "https://deepmind.google/blog/",
     "feedUrl": "https://deepmind.google/blog/rss.xml",
-    "fetchMode": "feed",
-    "parser": "rss",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "DeepMind 官方博客 RSS，覆盖模型、研究和产品化进展。",
+    "strategy": "feed",
+    "defaultSection": "papers",
+    "topics": [],
     "trustScore": 90,
-    "enabled": true
+    "enabled": true,
+    "notes": "官方 RSS，覆盖模型与研究进展。"
   },
   {
     "id": "arxiv-cs-ai",
@@ -66,28 +76,26 @@
     "type": "paper",
     "url": "https://arxiv.org/list/cs.AI/recent",
     "feedUrl": "",
-    "fetchMode": "html",
-    "parser": "html-links",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "arXiv RSS/API 在部分 Windows 证书环境可能失败；当前以 HTML 候选作为稳定兜底，并保留 API 适配入口。",
+    "strategy": "html",
+    "defaultSection": "papers",
+    "topics": ["benchmark"],
     "trustScore": 85,
-    "enabled": true
+    "enabled": true,
+    "notes": "预印本平台，HTML 提取更稳定。"
   },
   {
     "id": "github-trending",
     "name": "GitHub Trending",
     "category": "opensource",
     "type": "community",
-    "url": "https://github.com/trending?spoken_language_code=&since=daily",
+    "url": "https://github.com/trending?since=daily",
     "feedUrl": "",
-    "fetchMode": "html",
-    "parser": "html-links",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "无官方 RSS；HTML 候选用于发现开源项目，公开入选前校验仓库与摘要。",
+    "strategy": "html",
+    "defaultSection": "products",
+    "topics": ["opensource"],
     "trustScore": 75,
-    "enabled": true
+    "enabled": true,
+    "notes": "无官方 RSS，HTML 提取开源项目信号。"
   },
   {
     "id": "hacker-news",
@@ -96,13 +104,12 @@
     "type": "community",
     "url": "https://news.ycombinator.com/",
     "feedUrl": "https://news.ycombinator.com/rss",
-    "fetchMode": "feed",
-    "parser": "rss",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "社区热点 RSS，覆盖开发者和创业产品信号。",
+    "strategy": "feed",
+    "defaultSection": "industry",
+    "topics": [],
     "trustScore": 70,
-    "enabled": true
+    "enabled": true,
+    "notes": "社区热点 RSS，覆盖开发者与创业产品信号。"
   },
   {
     "id": "local-llama-reddit",
@@ -111,13 +118,12 @@
     "type": "community",
     "url": "https://www.reddit.com/r/LocalLLaMA/",
     "feedUrl": "https://www.reddit.com/r/LocalLLaMA/.rss",
-    "fetchMode": "feed",
-    "parser": "atom",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "开源模型、推理和本地部署社区信号。",
+    "strategy": "feed",
+    "defaultSection": "insights",
+    "topics": ["opensource"],
     "trustScore": 68,
-    "enabled": true
+    "enabled": true,
+    "notes": "开源模型与本地部署社区信号。"
   },
   {
     "id": "machine-learning-reddit",
@@ -126,13 +132,12 @@
     "type": "community",
     "url": "https://www.reddit.com/r/MachineLearning/",
     "feedUrl": "https://www.reddit.com/r/MachineLearning/.rss",
-    "fetchMode": "feed",
-    "parser": "atom",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "研究论文、评测和社区讨论信号。",
+    "strategy": "feed",
+    "defaultSection": "papers",
+    "topics": ["benchmark"],
     "trustScore": 66,
-    "enabled": true
+    "enabled": true,
+    "notes": "研究论文与社区讨论信号。"
   },
   {
     "id": "nvidia-genai-blog",
@@ -141,13 +146,12 @@
     "type": "official",
     "url": "https://developer.nvidia.com/blog/category/generative-ai/",
     "feedUrl": "https://developer.nvidia.com/blog/category/generative-ai/feed/",
-    "fetchMode": "feed",
-    "parser": "atom",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "推理、GPU、生成式 AI 基础设施与案例。",
+    "strategy": "feed",
+    "defaultSection": "industry",
+    "topics": ["infra"],
     "trustScore": 78,
-    "enabled": true
+    "enabled": true,
+    "notes": "推理、GPU 与生成式 AI 基础设施。"
   },
   {
     "id": "jiqizhixin",
@@ -156,13 +160,12 @@
     "type": "media",
     "url": "https://www.jiqizhixin.com/",
     "feedUrl": "",
-    "fetchMode": "html",
-    "parser": "html-links",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "中文 AI 媒体来源，HTML 候选用于补充中文语境，公开入选前校验标题和摘要。",
+    "strategy": "html",
+    "defaultSection": "industry",
+    "topics": [],
     "trustScore": 65,
-    "enabled": true
+    "enabled": true,
+    "notes": "中文 AI 媒体，补充中文语境。"
   },
   {
     "id": "x-ai-watchlist",
@@ -171,13 +174,12 @@
     "type": "community",
     "url": "https://x.com/",
     "feedUrl": "",
-    "fetchMode": "api",
-    "parser": "api",
-    "requiresAuth": true,
-    "authEnv": "X_BEARER_TOKEN",
-    "notes": "需官方 API 或合规第三方数据源；默认不启用，避免未授权抓取。",
+    "strategy": "api",
+    "defaultSection": "industry",
+    "topics": [],
     "trustScore": 60,
-    "enabled": false
+    "enabled": false,
+    "notes": "需官方 API 或合规数据源，默认关闭避免未授权抓取。"
   },
   {
     "id": "wechat-ai-media",
@@ -186,13 +188,12 @@
     "type": "media",
     "url": "https://mp.weixin.qq.com/",
     "feedUrl": "",
-    "fetchMode": "manual",
-    "parser": "manual",
-    "requiresAuth": true,
-    "authEnv": "WECHAT_SOURCE_TOKEN",
-    "notes": "适合通过人工投递、授权数据服务或自有订阅源接入，默认不启用。",
+    "strategy": "manual",
+    "defaultSection": "industry",
+    "topics": [],
     "trustScore": 60,
-    "enabled": false
+    "enabled": false,
+    "notes": "需授权数据服务或人工投递，默认关闭。"
   },
   {
     "id": "zhihu-ai",
@@ -201,12 +202,11 @@
     "type": "community",
     "url": "https://www.zhihu.com/topic/19551275",
     "feedUrl": "",
-    "fetchMode": "manual",
-    "parser": "manual",
-    "requiresAuth": false,
-    "authEnv": "",
-    "notes": "平台动态页面适合人工精选或合规搜索 API 接入，默认不启用。",
+    "strategy": "manual",
+    "defaultSection": "insights",
+    "topics": [],
     "trustScore": 55,
-    "enabled": false
+    "enabled": false,
+    "notes": "需合规搜索 API 或人工精选，默认关闭。"
   }
 ]

@@ -1,282 +1,128 @@
-import fs from "fs";
-import path from "path";
-import { candidatePoolSchema, type CandidateItem } from "../src/lib/candidate-schema";
-import { getCandidateEditorialScore, hasUsableCandidateSummary } from "../src/lib/candidate-quality";
-import { categoryNames } from "../src/lib/categories";
-import { dailyIssueSchema, type DailyIssue, type SignalMetrics } from "../src/lib/issue-schema";
-import { getPublicIssueQualityErrors } from "./issue-quality";
+import fs from "node:fs";
+import path from "node:path";
 
-const args = process.argv.slice(2);
+import {
+  candidateSchema,
+  dailyIssueSchema,
+  SECTION_DEFS,
+  type DailyIssue,
+  type UnifiedItem,
+} from "../src/types/schema";
 
-function getArg(name: string, fallback = "") {
-  const index = args.indexOf(name);
+/**
+ * 候选池 → 正式日报。
+ *
+ * 用法：
+ *   npm run issue:build                            # 构建今天
+ *   npm run issue:build -- --date 2026-09-06       # 构建指定日期
+ *   npm run issue:build -- --min-heat 40 --per-section 4
+ */
 
-  if (index >= 0) {
-    return args[index + 1] ?? fallback;
-  }
+const MIN_HEAT = 35;
+const PER_SECTION = 5;
 
-  const inline = args.find((arg) => arg.startsWith(`${name}=`));
-  return inline ? inline.slice(name.length + 1) : fallback;
+const CANDIDATES_DIR = path.join(process.cwd(), "content", "candidates");
+const ISSUES_DIR = path.join(process.cwd(), "content", "issues");
+
+function getArg(name: string): string | undefined {
+  const index = process.argv.indexOf(`--${name}`);
+  if (index === -1) return undefined;
+  const value = process.argv[index + 1];
+  return !value || value.startsWith("--") ? undefined : value;
 }
 
-const date = getArg("--date", args.find((arg) => /^\d{4}-\d{2}-\d{2}$/.test(arg)) ?? new Date().toISOString().slice(0, 10));
-const limit = Number(getArg("--limit", "8"));
-const dryRun = args.includes("--dry-run");
-const force = args.includes("--force");
-const publish = args.includes("--publish");
-
-if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
-  console.error("Usage: npm run issue:from-candidates -- --date YYYY-MM-DD [--limit 8] [--dry-run] [--force] [--publish]");
-  process.exit(1);
+function bjtToday(): string {
+  return new Date(Date.now() + 8 * 3_600_000).toISOString().slice(0, 10);
 }
 
-const candidatesPath = path.join(process.cwd(), "content", "candidates", `${date}.json`);
-const issuesDirectory = path.join(process.cwd(), "content", "issues");
-const issuePath = path.join(issuesDirectory, `${date}.json`);
-
-if (!fs.existsSync(candidatesPath)) {
-  console.error(`${path.relative(process.cwd(), candidatesPath)} does not exist. Run npm run ingest first.`);
-  process.exit(1);
-}
-
-if (!dryRun && fs.existsSync(issuePath) && !force) {
-  console.error(`${path.relative(process.cwd(), issuePath)} already exists. Use --force to overwrite.`);
-  process.exit(1);
-}
-
-function cleanSummary(candidate: CandidateItem) {
-  const summary = candidate.summary.trim();
-
-  if (hasUsableCandidateSummary(summary)) {
-    return summary;
-  }
-
-  return `来自 ${candidate.sourceName} 的公开信号，核心内容指向「${candidate.title}」。这条内容值得结合原文继续查看其具体细节、适用场景和后续影响。`;
-}
-
-function whyItMatters(candidate: CandidateItem) {
-  const haystack = `${candidate.title} ${candidate.summary} ${candidate.tags.join(" ")}`.toLowerCase();
-  const reasons = [
-    {
-      keywords: ["agent", "agents", "tool use", "workflow", "automation", "copilot"],
-      text: "它可能改变 AI 应用从问答走向可执行工作流的边界，适合产品和工程团队优先关注。",
-    },
-    {
-      keywords: ["benchmark", "eval", "sota", "state-of-the-art", "dataset"],
-      text: "它涉及评测或基准变化，可能影响模型选型、技术判断和后续实验设计。",
-    },
-    {
-      keywords: ["api", "sdk", "pricing", "launch", "release", "preview", "beta"],
-      text: "它已经接近可用产品或开发者入口，可能直接影响团队的集成成本和路线选择。",
-    },
-    {
-      keywords: ["funding", "series", "valuation", "s-1", "acquisition", "revenue"],
-      text: "它反映资本、收入或公司阶段变化，可能影响行业竞争格局和企业采购预期。",
-    },
-    {
-      keywords: ["open source", "github", "local", "self-hosted", "llama", "mistral", "qwen"],
-      text: "它可能降低自部署或二次开发门槛，值得观察社区采用速度和维护质量。",
-    },
-    {
-      keywords: ["inference", "serving", "gpu", "latency", "throughput", "quantization"],
-      text: "它触及推理成本、性能或部署可靠性，适合进入工程基础设施视野。",
-    },
-    {
-      keywords: ["safety", "security", "privacy", "policy", "regulation", "alignment"],
-      text: "它关系到安全、合规或信任边界，可能影响上线节奏和企业采购判断。",
-    },
-  ];
-  const matched = reasons.find((reason) => reason.keywords.some((keyword) => haystack.includes(keyword)));
-
-  if (matched) {
-    return matched.text;
-  }
-
-  const categoryReason: Record<string, string> = {
-    model: "模型能力变化会直接影响应用边界、成本结构和产品交互方式，值得优先关注。",
-    product: "产品更新可以反映真实用户需求和商业化方向，适合纳入今日产品观察。",
-    research: "研究信号有助于判断技术路线和评测标准的变化，需要关注是否能落到工程实践。",
-    opensource: "开源项目可能降低开发门槛或改变工具链生态，适合跟踪社区采用速度。",
-    business: "商业动作会影响市场格局、预算流向和团队选型，是判断行业阶段的重要信号。",
-    infra: "基础设施变化会影响部署、推理成本和系统可靠性，适合进入工程团队视野。",
-  };
-
-  return categoryReason[candidate.category] ?? "这条内容可能影响 AI 从业者的产品、研发或业务判断，值得结合原文继续跟踪。";
-}
-
-function allocateMetrics(score: number): SignalMetrics {
-  const weights = [
-    ["utility", 0.3, 30],
-    ["novelty", 0.2, 20],
-    ["impact", 0.2, 20],
-    ["credibility", 0.15, 15],
-    ["audience", 0.1, 10],
-    ["freshness", 0.05, 5],
-  ] as const;
-  const metrics = Object.fromEntries(
-    weights.map(([key, weight, max]) => [key, Math.min(max, Math.round(score * weight))]),
-  ) as SignalMetrics;
-  let diff = Math.round(score - Object.values(metrics).reduce((sum, value) => sum + value, 0));
-
-  while (diff !== 0) {
-    let changed = false;
-
-    for (const [key, , max] of weights) {
-      if (diff > 0 && metrics[key] < max) {
-        metrics[key] += 1;
-        diff -= 1;
-        changed = true;
-      }
-
-      if (diff < 0 && metrics[key] > 0) {
-        metrics[key] -= 1;
-        diff += 1;
-        changed = true;
-      }
-
-      if (diff === 0) {
-        break;
-      }
-    }
-
-    if (!changed) {
-      break;
-    }
-  }
-
-  return metrics;
-}
-
-function average(values: number[]) {
-  if (values.length === 0) {
-    return 0;
-  }
-
-  return Number((values.reduce((sum, value) => sum + value, 0) / values.length).toFixed(1));
-}
-
-const pool = candidatePoolSchema.parse(JSON.parse(fs.readFileSync(candidatesPath, "utf8")));
-const ranked = pool.items
-  .filter((item) => item.title && item.url)
-  .sort(
-    (a, b) =>
-      getCandidateEditorialScore(b) - getCandidateEditorialScore(a) ||
-      b.score - a.score ||
-      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-  );
-
-function selectDiverseCandidates(candidates: CandidateItem[]) {
-  const selected: CandidateItem[] = [];
-  const sourceCounts = new Map<string, number>();
-  const categoryCounts = new Map<string, number>();
-  const usableCandidates = candidates.filter((candidate) => hasUsableCandidateSummary(candidate.summary));
-  const fallbackCandidates = candidates.filter((candidate) => !hasUsableCandidateSummary(candidate.summary));
-
-  for (const candidate of usableCandidates) {
-    const sourceCount = sourceCounts.get(candidate.sourceId) ?? 0;
-    const categoryCount = categoryCounts.get(candidate.category) ?? 0;
-
-    if (sourceCount >= 2 || categoryCount >= Math.max(3, Math.ceil(limit * 0.5))) {
-      continue;
-    }
-
-    selected.push(candidate);
-    sourceCounts.set(candidate.sourceId, sourceCount + 1);
-    categoryCounts.set(candidate.category, categoryCount + 1);
-
-    if (selected.length >= limit) {
-      return selected;
-    }
-  }
-
-  for (const candidate of usableCandidates) {
-    if (!selected.some((item) => item.id === candidate.id)) {
-      selected.push(candidate);
-    }
-
-    if (selected.length >= limit) {
-      break;
-    }
-  }
-
-  for (const candidate of fallbackCandidates) {
-    if (!selected.some((item) => item.id === candidate.id)) {
-      selected.push(candidate);
-    }
-
-    if (selected.length >= limit) {
-      break;
-    }
-  }
-
-  return selected;
-}
-
-const selected = selectDiverseCandidates(ranked);
-
-if (selected.length === 0) {
-  console.error("No candidates available to build an issue.");
-  process.exit(1);
-}
-
-const categories = Array.from(new Set(selected.map((item) => item.category))).map((category) => {
-  const items = selected.filter((item) => item.category === category);
-
+function bjtWindow(date: string): { start: string; end: string } {
+  const startMs = new Date(`${date}T00:00:00+08:00`).getTime();
   return {
-    slug: category,
-    name: categoryNames[category] ?? category,
-    score: Math.round(average(items.map((item) => getCandidateEditorialScore(item)))),
-    count: items.length,
+    start: new Date(startMs).toISOString(),
+    end: new Date(startMs + 86_400_000).toISOString(),
   };
-});
+}
 
-const issue: DailyIssue = dailyIssueSchema.parse({
-  date,
-  issueNo: date.replaceAll("-", "."),
-  status: publish ? "published" : "draft",
-  title: "AI 信号指数日报",
-  summary: `本期从 ${pool.itemCount} 条候选信号中筛出 ${selected.length} 条，覆盖 ${categories.map((category) => category.name).join("、")} 等方向，用于快速追踪今日最值得关注的 AI 行业变化。`,
-  totalScore: average(selected.map((item) => getCandidateEditorialScore(item))),
-  candidateCount: pool.itemCount,
-  selectedCount: selected.length,
-  readingMinutes: Math.max(4, Math.ceil(selected.length * 1.2)),
-  categories,
-  items: selected.map((candidate, index) => {
-    const score = getCandidateEditorialScore(candidate);
+function average(values: number[]): number {
+  if (values.length === 0) return 0;
+  return Math.round((values.reduce((sum, value) => sum + value, 0) / values.length) * 10) / 10;
+}
 
-    return {
-      rank: index + 1,
-      title: candidate.title,
-      summary: cleanSummary(candidate),
-      whyItMatters: whyItMatters(candidate),
-      category: candidate.category,
-      tags: candidate.tags.length > 0 ? candidate.tags : [categoryNames[candidate.category] ?? "AI"],
-      source: candidate.sourceName,
-      sourceUrl: candidate.url,
-      publishedAt: candidate.publishedAt,
-      score,
-      metrics: allocateMetrics(score),
-    };
-  }),
-});
+function buildLead(candidateCount: number, sections: { label: string; count: number }[]): string {
+  const active = sections.filter((section) => section.count > 0).map((section) => section.label.replace(/\/.+$/, ""));
+  const total = sections.reduce((sum, section) => sum + section.count, 0);
+  const coverage = active.slice(0, 3).join("、") || "多个方向";
+  return `本期从 ${candidateCount} 条候选信号中筛出 ${total} 条，覆盖 ${coverage} 等方向，帮你五分钟掌握今日 AI 关键变化。`;
+}
 
-if (publish) {
-  const qualityErrors = getPublicIssueQualityErrors(issue);
+function main() {
+  const date = getArg("date") ?? bjtToday();
+  const minHeat = Number(getArg("min-heat") ?? MIN_HEAT);
+  const perSection = Number(getArg("per-section") ?? PER_SECTION);
 
-  if (qualityErrors.length > 0) {
-    console.error("Generated issue is not publishable:");
-    qualityErrors.forEach((error) => {
-      console.error(`- ${error}`);
-    });
+  const candidatePath = path.join(CANDIDATES_DIR, `${date}.json`);
+  if (!fs.existsSync(candidatePath)) {
+    console.error(`[issue] 候选池不存在：${candidatePath}，请先运行 npm run ingest。`);
     process.exit(1);
   }
+
+  const pool = candidateSchema.parse(JSON.parse(fs.readFileSync(candidatePath, "utf8")));
+  const qualified = pool.items.filter((item) => item.heatScore >= minHeat);
+
+  // 每版块取热度最高的若干条，保证版块均衡不偏食
+  const sections = SECTION_DEFS.map((definition) => {
+    const items = qualified
+      .filter((item) => item.section === definition.slug)
+      .sort((a, b) => b.heatScore - a.heatScore)
+      .slice(0, perSection);
+    return { slug: definition.slug, label: definition.label, items };
+  }).filter((section) => section.items.length > 0);
+
+  const allItems: UnifiedItem[] = sections.flatMap((section) => section.items);
+
+  const sourceCounts = new Map<string, number>();
+  for (const item of allItems) {
+    sourceCounts.set(item.sourceName, (sourceCounts.get(item.sourceName) ?? 0) + 1);
+  }
+
+  const issue: DailyIssue = dailyIssueSchema.parse({
+    schemaVersion: 1,
+    date,
+    issueNo: date.replace(/-/g, "."),
+    status: "published",
+    generatedAt: new Date().toISOString(),
+    window: bjtWindow(date),
+    lead: buildLead(pool.items.length, sections.map(({ label, items }) => ({ label, count: items.length }))),
+    candidateCount: pool.items.length,
+    sections,
+    stats: {
+      total: allItems.length,
+      avgHeat: average(allItems.map((item) => item.heatScore)),
+      maxHeat: allItems.length > 0 ? Math.max(...allItems.map((item) => item.heatScore)) : 0,
+      sourceCount: sourceCounts.size,
+      crossSourceCount: allItems.filter((item) => item.crossSourceCount > 1).length,
+      bySection: sections.map((section) => ({
+        slug: section.slug,
+        label: section.label,
+        count: section.items.length,
+        avgHeat: average(section.items.map((item) => item.heatScore)),
+      })),
+      topSources: [...sourceCounts.entries()]
+        .map(([name, count]) => ({ name, count }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 5),
+    },
+    attribution: { name: "AI 日报 · 自动聚合", url: "https://aihot.virxact.com/" },
+    fetchErrors: pool.fetchErrors,
+  });
+
+  fs.mkdirSync(ISSUES_DIR, { recursive: true });
+  const outPath = path.join(ISSUES_DIR, `${date}.json`);
+  fs.writeFileSync(outPath, `${JSON.stringify(issue, null, 2)}\n`);
+
+  console.log(
+    `[issue] 已生成 ${outPath}：${issue.stats.total} 条（候选 ${issue.candidateCount}），平均热度 ${issue.stats.avgHeat}，来源 ${issue.stats.sourceCount} 个。`,
+  );
 }
 
-if (dryRun) {
-  console.log(JSON.stringify(issue, null, 2));
-  process.exit(0);
-}
-
-fs.mkdirSync(issuesDirectory, { recursive: true });
-fs.writeFileSync(issuePath, `${JSON.stringify(issue, null, 2)}\n`, "utf8");
-console.log(`Created ${path.relative(process.cwd(), issuePath)} from ${path.relative(process.cwd(), candidatesPath)}`);
+main();

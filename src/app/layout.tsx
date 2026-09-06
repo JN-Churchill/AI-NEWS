@@ -1,87 +1,70 @@
 import type { Metadata } from "next";
-import { SiteFooter } from "@/app/_components/site-footer";
-import { SiteHeader } from "@/app/_components/site-header";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/constants";
-import { defaultLocale, type Locale } from "@/i18n/config";
 
 import "./globals.css";
+import { BackToTop } from "@/components/back-to-top";
+import { SiteHeader } from "@/components/site-header";
+
+const SITE_NAME = "AI 日报";
+const SITE_DESC = "每天自动抓取全网 AI 热点，去重打分后生成一份五分钟读完的 AI 日报。";
+
+const SITE_URL = process.env["SITE_URL"] ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: SITE_NAME,
-    template: `%s | ${SITE_NAME}`,
+    default: `${SITE_NAME} · 五分钟看完今日 AI`,
+    template: `%s · ${SITE_NAME}`,
   },
-  description: SITE_DESCRIPTION,
+  description: SITE_DESC,
+  keywords: ["AI", "人工智能", "日报", "大模型", "AI 新闻", "LLM"],
   openGraph: {
-    title: SITE_NAME,
-    description: SITE_DESCRIPTION,
-    url: SITE_URL,
+    title: `${SITE_NAME} · 五分钟看完今日 AI`,
+    description: SITE_DESC,
     type: "website",
-    images: ["/opengraph-image"],
     locale: "zh_CN",
+    images: ["/og.png"],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: SITE_NAME,
-    description: SITE_DESCRIPTION,
-    images: ["/opengraph-image"],
+  alternates: {
+    canonical: "/",
+    types: {
+      "application/rss+xml": "/rss.xml",
+      "application/feed+json": "/feed.json",
+    },
   },
 };
 
-export default async function RootLayout({
-  children,
-  params: paramsPromise,
-}: Readonly<{
-  children: React.ReactNode;
-  params: Promise<{ locale?: Locale }>;
-}>) {
-  const { locale = defaultLocale } = await paramsPromise;
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={locale === "en" ? "en" : "zh-CN"}>
-      <head>
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/favicon/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
-        <link
-          rel="mask-icon"
-          href="/favicon/safari-pinned-tab.svg"
-          color="#000000"
-        />
-        <link rel="shortcut icon" href="/favicon/favicon.ico" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta
-          name="msapplication-config"
-          content="/favicon/browserconfig.xml"
-        />
-        <meta name="theme-color" content="#FAFAF9" />
-        <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
-        <link rel="alternate" type="application/feed+json" href="/feed.json" />
-      </head>
-      <body className="antialiased">
-        <a className="skip-link" href="#main-content">
-          跳到正文
-        </a>
-        <SiteHeader locale={locale} />
-        <div id="main-content" className="min-h-screen">
-          {children}
-        </div>
-        <SiteFooter locale={locale} />
+    <html lang="zh-CN">
+      <body>
+        <SiteHeader />
+        <main className="mx-auto w-full max-w-[1180px] px-5 pt-[76px] pb-16">{children}</main>
+        <footer className="border-t border-white/8 px-5 py-10">
+          <div className="mx-auto flex w-full max-w-[1180px] flex-col items-center gap-3 text-center text-sm text-[var(--color-ink-3)]">
+            <p>
+              {SITE_NAME} · 每日自动聚合全网 AI 热点，经去重与热度打分后生成
+            </p>
+            <p className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+              <a className="transition-colors hover:text-[var(--color-brand-1)]" href="/rss.xml">
+                RSS
+              </a>
+              <span>·</span>
+              <a className="transition-colors hover:text-[var(--color-brand-1)]" href="/feed.json">
+                JSON Feed
+              </a>
+              <span>·</span>
+              <a className="transition-colors hover:text-[var(--color-brand-1)]" href="/archive">
+                历史归档
+              </a>
+              <span>·</span>
+              <a className="transition-colors hover:text-[var(--color-brand-1)]" href="/about">
+                评分方法
+              </a>
+            </p>
+            <p className="text-xs">内容版权归各来源作者所有 · 本站仅作聚合与索引</p>
+          </div>
+        </footer>
+        <BackToTop />
       </body>
     </html>
   );

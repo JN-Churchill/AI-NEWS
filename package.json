@@ -1,30 +1,26 @@
 {
-  "name": "ai-news-index",
+  "name": "ai-daily",
   "version": "0.1.0",
-  "description": "A daily AI signal index and news digest built with Next.js.",
   "private": true,
+  "description": "AI 日报站：每日自动抓取全网 AI 热点，统一去重打分后生成日报。",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
-    "ingest": "tsx scripts/ingest-candidates.ts",
-    "ingest:aihot": "tsx scripts/ingest-aihot.ts",
-    "issue:from-candidates": "tsx scripts/build-issue.ts",
-    "issue:new": "tsx scripts/new-issue.ts",
-    "issue:publish": "tsx scripts/set-issue-status.ts --status published",
-    "issue:unpublish": "tsx scripts/set-issue-status.ts --status draft",
-    "issue:validate": "tsx scripts/validate-issue.ts",
-    "draft:summary": "tsx scripts/summarize-draft.ts",
-    "site:audit": "tsx scripts/site-audit.ts",
-    "site:audit:production": "tsx scripts/site-audit.ts --production",
-    "test": "tsx --test tests/content-contracts.test.ts"
+    "ingest": "tsx scripts/ingest.ts",
+    "issue:build": "tsx scripts/build-issue.ts",
+    "feeds": "tsx scripts/emit-feeds.ts",
+    "index": "tsx scripts/build-index.ts",
+    "validate": "tsx scripts/validate.ts",
+    "daily": "tsx scripts/ingest.ts && tsx scripts/build-issue.ts && tsx scripts/validate.ts && tsx scripts/build-index.ts && tsx scripts/emit-feeds.ts"
   },
   "dependencies": {
     "fast-xml-parser": "^5.8.0",
+    "lucide-react": "^0.469.0",
     "next": "16.2.7",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "recharts": "^2.15.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
@@ -32,8 +28,6 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.7",
     "tailwindcss": "^4",
     "tsx": "^4.22.4",
     "typescript": "^5"

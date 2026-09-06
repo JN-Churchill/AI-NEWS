@@ -1,144 +1,80 @@
 import Link from "next/link";
-import { Container } from "@/app/_components/container";
-import { PageHero } from "@/app/_components/page-hero";
-import { ScoreMeter } from "@/app/_components/score-meter";
-import { getAllIssues } from "@/lib/issues";
-import { paginateItems } from "@/lib/pagination";
+import { ArrowRight, Flame, Layers } from "lucide-react";
+
+import { Reveal } from "@/components/reveal";
+import { formatDateCn, getAllIssues, groupIssuesByMonth, weekdayCn } from "@/lib/content";
 
 export const metadata = {
   title: "历史归档",
-  description: "浏览 AI 信号指数已发布的每日 AI 行业信号和历史快照。",
-  alternates: {
-    canonical: "/archive",
-  },
+  description: "往期 AI 日报归档，按月份回溯每日热点与热度指数。",
 };
 
-type ArchivePageProps = {
-  searchParams: Promise<{
-    page?: string;
-  }>;
-};
-
-const pageSize = 12;
-
-function getArchivePageHref(page: number) {
-  return page <= 1 ? "/archive" : `/archive?page=${page}`;
-}
-
-export default async function ArchivePage({ searchParams }: ArchivePageProps) {
-  const params = await searchParams;
+export default function ArchivePage() {
   const issues = getAllIssues();
-  const pagination = paginateItems(issues, params.page, pageSize);
+  const groups = groupIssuesByMonth(issues);
+  const totalItems = issues.reduce((sum, issue) => sum + issue.stats.total, 0);
 
   return (
-    <main>
-      <PageHero
-        eyebrow="Archive"
-        title="历史归档"
-        description="每一期日报都是一个可回溯的 AI 行业快照，可按日期浏览长期沉淀的每日信号。"
-        aside={
-          <div>
-            <p className="text-[13px]" style={{ color: "var(--muted)" }}>已收录期数</p>
-            <p className="mt-2 text-[2.5rem] font-semibold leading-none tracking-[-0.03em]" style={{ color: "var(--ink)" }}>
-              {issues.length}
-            </p>
+    <div className="pb-4">
+      <section className="pt-8">
+        <h1 className="text-[clamp(26px,4.4vw,38px)] font-extrabold leading-tight tracking-[-0.02em]">
+          历史<span className="gradient-text">归档</span>
+        </h1>
+        <p className="mt-3 text-[14.5px] leading-relaxed text-[var(--color-ink-2)]">
+          共 {issues.length} 期日报、{totalItems} 条热点信号，每天自动抓取并归档，可随时回溯任意一天的行业快照。
+        </p>
+      </section>
+
+      {issues.length === 0 && (
+        <div className="glass mt-10 p-10 text-center text-[14px] text-[var(--color-ink-2)]">
+          暂无归档内容，运行采集与生成脚本后即可看到往期日报。
+        </div>
+      )}
+
+      {groups.map((group) => (
+        <section key={group.month} className="mt-12">
+          <div className="flex items-center gap-3 pb-3.5">
+            <h2 className="text-[18px] font-bold tracking-[-0.01em]">
+              {group.month.replace("-", " 年 ")} 月
+            </h2>
+            <span className="chip font-mono">{group.items.length} 期</span>
+            <span className="section-rule ml-1 hidden flex-1 sm:block" />
           </div>
-        }
-      />
 
-      <Container className="py-8">
-        {issues.length === 0 ? (
-          <div
-            className="surface-panel py-16 text-center text-[14px] font-medium"
-            style={{ color: "var(--muted)" }}
-          >
-            暂无归档
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {group.items.map((issue, index) => (
+              <Reveal key={issue.date} delay={index * 50}>
+                <Link href={`/daily/${issue.date}`} className="card h-full p-5">
+                  <div className="flex items-baseline justify-between">
+                    <span className="font-mono text-[15px] font-bold">{issue.date}</span>
+                    <span className="text-[12px] text-[var(--color-ink-3)]">{weekdayCn(issue.date)}</span>
+                  </div>
+
+                  <p className="mt-2.5 line-clamp-2 text-[13.5px] leading-relaxed text-[var(--color-ink-2)]">
+                    {issue.lead}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-[12.5px] text-[var(--color-ink-3)]">
+                    <span className="flex items-center gap-1.5">
+                      <Layers className="h-3.5 w-3.5" />
+                      {issue.stats.total} 条
+                    </span>
+                    <span className="flex items-center gap-1.5">
+                      <Flame className="h-3.5 w-3.5 text-[var(--color-brand-1)]" />
+                      热度 {issue.stats.avgHeat.toFixed(1)}
+                    </span>
+                  </div>
+
+                  <div className="mt-4 flex items-center gap-1.5 text-[13px] font-semibold text-[var(--color-brand-1)]">
+                    {formatDateCn(issue.date)}
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
           </div>
-        ) : (
-          <>
-            <div
-              className="surface-panel mb-5 flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between"
-            >
-              <p className="font-mono text-[12px] font-medium tracking-[0.04em]" style={{ color: "var(--muted)" }}>
-                第 {pagination.currentPage} / {pagination.pageCount} 页，每页最多 {pagination.pageSize} 期
-              </p>
-              <div className="flex gap-2">
-                <Link
-                  href={pagination.hasPreviousPage ? getArchivePageHref(pagination.currentPage - 1) : getArchivePageHref(pagination.currentPage)}
-                  aria-disabled={!pagination.hasPreviousPage}
-                  tabIndex={pagination.hasPreviousPage ? undefined : -1}
-                  className={`btn-secondary h-9 text-[13px] ${
-                    !pagination.hasPreviousPage ? "pointer-events-none opacity-40" : ""
-                  }`}
-                >
-                  上一页
-                </Link>
-                <Link
-                  href={pagination.hasNextPage ? getArchivePageHref(pagination.currentPage + 1) : getArchivePageHref(pagination.currentPage)}
-                  aria-disabled={!pagination.hasNextPage}
-                  tabIndex={pagination.hasNextPage ? undefined : -1}
-                  className={`btn-secondary h-9 text-[13px] ${
-                    !pagination.hasNextPage ? "pointer-events-none opacity-40" : ""
-                  }`}
-                >
-                  下一页
-                </Link>
-              </div>
-            </div>
-            <div className="space-y-3">
-              {pagination.items.map((issue) => (
-                <Link
-                  key={issue.date}
-                  href={`/daily/${issue.date}`}
-                  className="surface-panel card-hover group grid gap-4 p-5 md:grid-cols-[150px_minmax(0,1fr)_160px]"
-                >
-                  <div>
-                    <p className="section-kicker">Issue</p>
-                    <p className="mt-2 font-mono text-[17px] font-semibold tracking-[-0.01em]" style={{ color: "var(--ink)" }}>
-                      {issue.date}
-                    </p>
-                    <p className="mt-1 font-mono text-[11px] font-medium tracking-[0.04em]" style={{ color: "var(--muted)" }}>
-                      第 {issue.issueNo} 期
-                    </p>
-                  </div>
-
-                  <div className="min-w-0">
-                    <h2
-                      className="font-editorial text-[1.35rem] font-normal leading-[1.2] tracking-[-0.02em] transition-colors sm:text-[1.5rem]"
-                      style={{ color: "var(--ink)" }}
-                    >
-                      {issue.title}
-                    </h2>
-                    <p className="mt-2 line-clamp-2 text-[14px] font-medium leading-[1.65]" style={{ color: "var(--ink-soft)" }}>
-                      {issue.summary}
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {issue.categories.map((cat) => (
-                        <span key={cat.slug} className="tag-chip">
-                          {cat.name} · {cat.count}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="md:text-right">
-                    <p className="section-kicker">Worth</p>
-                    <p className="mt-2 font-mono text-[2.25rem] font-semibold leading-none tracking-[-0.04em]" style={{ color: "var(--ink)" }}>
-                      {issue.totalScore}
-                    </p>
-                    <div className="mt-4 md:ml-auto md:w-28">
-                      <ScoreMeter score={issue.totalScore} />
-                    </div>
-                    <p className="mt-3 font-mono text-[11px] font-medium tracking-[0.04em]" style={{ color: "var(--muted)" }}>
-                      {issue.candidateCount} 候选 · {issue.selectedCount} 入选
-                    </p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </>
-        )}
-      </Container>
-    </main>
+        </section>
+      ))}
+    </div>
   );
 }
