@@ -4,6 +4,7 @@ import path from "node:path";
 import { describe, it } from "node:test";
 import { candidatePoolSchema } from "../src/lib/candidate-schema";
 import { dailyIssueSchema } from "../src/lib/issue-schema";
+import { aihotDailySchema } from "../src/lib/aihot-schema";
 import { sourceConfigListSchema } from "../src/lib/source-schema";
 import { GET as getHealth } from "../src/app/api/health/route";
 import { GET as getJsonFeed } from "../src/app/feed.json/route";
@@ -193,6 +194,33 @@ describe("content contracts", () => {
 
         assert.equal(pool.items.length, pool.itemCount);
       });
+  });
+
+  it("keeps aihot briefing data valid when present", () => {
+    const aihotPath = path.join(root, "content/aihot");
+
+    if (!fs.existsSync(aihotPath)) {
+      return;
+    }
+
+    const aihotFiles = fs.readdirSync(aihotPath).filter((fileName) => fileName.endsWith(".json"));
+
+    aihotFiles.forEach((fileName) => {
+      const daily = aihotDailySchema.parse(readJson(path.join("content/aihot", fileName)));
+      const allItems = daily.sections.flatMap((section) => section.items);
+
+      assert.equal(allItems.length, daily.itemCount, `${fileName}: itemCount mismatch`);
+      assert.equal(
+        allItems.filter((item) => item.matchSource !== "none").length,
+        daily.matchedCount,
+        `${fileName}: matchedCount mismatch`,
+      );
+      assert.equal(
+        allItems.filter((item) => item.isDiscoveryTime).length,
+        daily.discoveryCount,
+        `${fileName}: discoveryCount mismatch`,
+      );
+    });
   });
 
   it("searches published signals with multiple weighted terms", () => {

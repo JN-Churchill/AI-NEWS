@@ -8,6 +8,7 @@
   },
   "navigation": {
     "today": "今日",
+    "briefing": "日报看板",
     "topics": "主题",
     "sources": "来源",
     "archive": "归档",
@@ -97,6 +98,7 @@
     "links": {
       "subscribe": "订阅",
       "rss": "RSS",
+      "briefing": "AI HOT 日报",
       "jsonFeed": "JSON Feed",
       "sources": "来源",
       "topics": "主题",

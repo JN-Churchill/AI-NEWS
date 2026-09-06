@@ -12,6 +12,7 @@ interface SiteFooterProps {
 const footerLinks = [
   { href: "/subscribe", key: "footer.links.subscribe" },
   { href: "/rss.xml", key: "footer.links.rss" },
+  { href: "/briefing", key: "footer.links.briefing" },
   { href: "/sources", key: "footer.links.sources" },
   { href: "/about", key: "footer.links.method" },
   { href: "/contact", key: "footer.links.contact" },

@@ -10,6 +10,7 @@ import { categoryNames } from "@/lib/categories";
 
 const navItems = [
   { href: "/", translationKey: "navigation.today" },
+  { href: "/briefing", translationKey: "navigation.briefing" },
   { href: "/topics", translationKey: "navigation.topics" },
   { href: "/archive", translationKey: "navigation.archive" },
   { href: "/about", translationKey: "navigation.method" },

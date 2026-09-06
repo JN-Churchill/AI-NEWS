@@ -2,11 +2,12 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/constants";
 import { getAllTopicSlugs } from "@/lib/catalog";
 import { getAllIssues } from "@/lib/issues";
+import { getAihotDates } from "@/lib/aihot";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const issues = getAllIssues();
   const latestModified = issues[0]?.date ? new Date(`${issues[0].date}T08:00:00+08:00`) : new Date();
-  const staticRoutes = ["", "/archive", "/about", "/topics", "/sources", "/search", "/subscribe", "/editorial", "/contact", "/privacy", "/terms"].map((route) => ({
+  const staticRoutes = ["", "/archive", "/briefing", "/about", "/topics", "/sources", "/search", "/subscribe", "/editorial", "/contact", "/privacy", "/terms"].map((route) => ({
     url: `${SITE_URL}${route}`,
     lastModified: latestModified,
     changeFrequency: "daily" as const,
@@ -27,5 +28,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...issueRoutes, ...topicRoutes];
+  const briefingRoutes = getAihotDates().map((date) => ({
+    url: `${SITE_URL}/briefing/${date}`,
+    lastModified: new Date(`${date}T08:00:00+08:00`),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...issueRoutes, ...topicRoutes, ...briefingRoutes];
 }

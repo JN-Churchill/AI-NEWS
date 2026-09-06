@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/constants";
 import { getFilteredItems, getLatestIssue, getTopTags } from "@/lib/issues";
+import { getLatestAihot } from "@/lib/aihot";
+import { formatAihotDateTitle } from "@/lib/aihot-format";
 import { defaultLocale, type Locale } from "@/i18n/config";
 import { HomeClient } from "@/app/_components/home-client";
 
@@ -57,6 +59,7 @@ export default async function Index({ searchParams, params: paramsPromise }: Hom
   const items = getFilteredItems(issue, activeCategories, activeTag);
   const topTags = getTopTags(issue.items);
   const hasFilters = activeCategories.length > 0 || Boolean(activeTag);
+  const latestAihot = getLatestAihot();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -82,6 +85,25 @@ export default async function Index({ searchParams, params: paramsPromise }: Hom
         activeTag={activeTag}
         hasFilters={hasFilters}
       />
+
+      {latestAihot ? (
+        <section className="mx-auto max-w-[960px] px-5 pb-14 sm:px-6">
+          <div className="editorial-card card-hover p-6 sm:p-7">
+            <p className="section-kicker">AI HOT 日报</p>
+            <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
+              <div className="min-w-0">
+                <h2 className="editorial-title text-xl font-bold">AI 晨报看板</h2>
+                <p className="mt-1.5 text-[13px]" style={{ color: "var(--muted)" }}>
+                  最新一期 {formatAihotDateTitle(latestAihot.date)}　·　共 {latestAihot.itemCount} 条　·　五色版块速览模型、产品、行业、论文与观点动态。
+                </p>
+              </div>
+              <Link href={`/briefing/${latestAihot.date}`} className="btn-primary shrink-0">
+                查看看板
+              </Link>
+            </div>
+          </div>
+        </section>
+      ) : null}
     </main>
   );
 }

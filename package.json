@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "eslint .",
     "ingest": "tsx scripts/ingest-candidates.ts",
+    "ingest:aihot": "tsx scripts/ingest-aihot.ts",
     "issue:from-candidates": "tsx scripts/build-issue.ts",
     "issue:new": "tsx scripts/new-issue.ts",
     "issue:publish": "tsx scripts/set-issue-status.ts --status published",

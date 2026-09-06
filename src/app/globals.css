@@ -372,6 +372,24 @@
   .font-mono {
     font-family: 'DM Mono', 'Geist Mono', 'SF Mono', 'JetBrains Mono', ui-monospace, monospace;
   }
+
+  /* ── AI HOT briefing palette ──────────────────────────
+     五色版块配色值在 src/lib/aihot-format.ts 的 getSectionMeta 中以内联
+     style 提供；这里只放结构辅助类。 */
+
+  .aihot-chip-bar {
+    display: block;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--surface-alt);
+    overflow: hidden;
+  }
+
+  .aihot-chip-bar i {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+  }
 }
 
 @keyframes reveal-up {

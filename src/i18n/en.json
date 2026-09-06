@@ -8,6 +8,7 @@
   },
   "navigation": {
     "today": "Today",
+    "briefing": "Briefing",
     "topics": "Topics",
     "sources": "Sources",
     "archive": "Archive",
@@ -97,6 +98,7 @@
     "links": {
       "subscribe": "Subscribe",
       "rss": "RSS",
+      "briefing": "AI HOT Daily",
       "jsonFeed": "JSON Feed",
       "sources": "Sources",
       "topics": "Topics",
