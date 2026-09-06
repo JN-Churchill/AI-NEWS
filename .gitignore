@@ -1,15 +1,26 @@
+# 依赖
 node_modules/
+
+# Next.js 构建与缓存
 .next/
 out/
+.vercel/
+
+# 环境变量与密钥（不要提交真实 token）
 .env
 .env.local
-*.log
-.DS_Store
-.vercel
+.env*.local
 
-# 鏈垎鏀殑鏈湴鏁版嵁涓庡巻鍙插浠斤紙涓嶅叆搴擄級
-.workbuddy/
-.git-outer-backup/
-.gitignore-outer-backup
-AI-NEWS/
+# 日志与临时文件
+*.log
 *.err
+npm-debug.log*
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# IDE 工具工作数据
+.workbuddy/

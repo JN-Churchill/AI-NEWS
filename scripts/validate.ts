@@ -66,10 +66,9 @@ function validateIssue(issue: DailyIssue, date: string): string[] {
   return problems;
 }
 
-function main() {
+export function runValidate(): { problems: string[]; fileCount: number } {
   if (!fs.existsSync(ISSUES_DIR)) {
-    console.error("[validate] 没有 content/issues 目录，请先生成日报。");
-    process.exit(1);
+    return { problems: ["没有 content/issues 目录，请先生成日报"], fileCount: 0 };
   }
 
   const files = fs.readdirSync(ISSUES_DIR).filter((file) => file.endsWith(".json"));
@@ -88,6 +87,13 @@ function main() {
     problems.push(...validateIssue(parsed.data, date));
   }
 
+  return { problems, fileCount: files.length };
+}
+
+// 仅在 CLI 直接运行时执行
+const isDirectRun = (process.argv[1] ?? "").replace(/\\/g, "/").endsWith("/validate.ts");
+if (isDirectRun) {
+  const { problems, fileCount } = runValidate();
   if (problems.length > 0) {
     console.error(`[validate] 发现 ${problems.length} 个问题：`);
     for (const problem of problems) {
@@ -95,8 +101,5 @@ function main() {
     }
     process.exit(1);
   }
-
-  console.log(`[validate] 通过：${files.length} 期日报全部符合发布标准。`);
+  console.log(`[validate] 通过：${fileCount} 期日报全部符合发布标准。`);
 }
-
-main();

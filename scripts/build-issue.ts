@@ -19,7 +19,8 @@ import {
  */
 
 const MIN_HEAT = 35;
-const PER_SECTION = 5;
+// 每版块条数：与前端三列网格对齐，取 6 正好两行排满，不留空缺
+const PER_SECTION = 6;
 
 const CANDIDATES_DIR = path.join(process.cwd(), "content", "candidates");
 const ISSUES_DIR = path.join(process.cwd(), "content", "issues");
@@ -55,15 +56,14 @@ function buildLead(candidateCount: number, sections: { label: string; count: num
   return `本期从 ${candidateCount} 条候选信号中筛出 ${total} 条，覆盖 ${coverage} 等方向，帮你五分钟掌握今日 AI 关键变化。`;
 }
 
-function main() {
-  const date = getArg("date") ?? bjtToday();
-  const minHeat = Number(getArg("min-heat") ?? MIN_HEAT);
-  const perSection = Number(getArg("per-section") ?? PER_SECTION);
+export function runBuildIssue(options: { date?: string; minHeat?: number; perSection?: number } = {}) {
+  const date = options.date ?? bjtToday();
+  const minHeat = options.minHeat ?? MIN_HEAT;
+  const perSection = options.perSection ?? PER_SECTION;
 
   const candidatePath = path.join(CANDIDATES_DIR, `${date}.json`);
   if (!fs.existsSync(candidatePath)) {
-    console.error(`[issue] 候选池不存在：${candidatePath}，请先运行 npm run ingest。`);
-    process.exit(1);
+    throw new Error(`候选池不存在：${candidatePath}，请先运行采集`);
   }
 
   const pool = candidateSchema.parse(JSON.parse(fs.readFileSync(candidatePath, "utf8")));
@@ -125,4 +125,13 @@ function main() {
   );
 }
 
-main();
+// 仅在 CLI 直接运行时执行
+const isDirectRun = (process.argv[1] ?? "").replace(/\\/g, "/").endsWith("/build-issue.ts");
+if (isDirectRun) {
+  try {
+    runBuildIssue();
+  } catch (error) {
+    console.error("[issue] 执行失败：", error);
+    process.exit(1);
+  }
+}

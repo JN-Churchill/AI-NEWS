@@ -3,13 +3,13 @@
   "date": "2026-09-06",
   "issueNo": "2026.09.06",
   "status": "published",
-  "generatedAt": "2026-09-06T10:28:07.003Z",
+  "generatedAt": "2026-09-06T13:54:49.318Z",
   "window": {
     "start": "2026-09-05T16:00:00.000Z",
     "end": "2026-09-06T16:00:00.000Z"
   },
-  "lead": "本期从 292 条候选信号中筛出 25 条，覆盖 模型发布、产品发布、行业动态 等方向，帮你五分钟掌握今日 AI 关键变化。",
-  "candidateCount": 292,
+  "lead": "本期从 195 条候选信号中筛出 30 条，覆盖 模型发布、产品发布、行业动态 等方向，帮你五分钟掌握今日 AI 关键变化。",
+  "candidateCount": 195,
   "sections": [
     {
       "slug": "models",
@@ -113,21 +113,49 @@
           "duplicateUrls": []
         },
         {
-          "id": "aa710ef75bfe",
-          "title": "Announcing our partnership with the Republic of Korea",
-          "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
-          "whyItMatters": "它涉及模型能力或权重变化，可能影响技术选型与后续研发节奏。（来源：Google DeepMind Blog，热度 75.5）",
-          "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
-          "sourceId": "deepmind-blog",
-          "sourceName": "Google DeepMind Blog",
+          "id": "b0ce9efc107c",
+          "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+          "summary": "We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+          "whyItMatters": "它涉及模型能力或权重变化，可能影响技术选型与后续研发节奏。本条涉及 Agent 与工具调用能力，标签：Agent。（来源：Google AI Blog）",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks",
+          "sourceId": "google-ai-blog",
+          "sourceName": "Google AI Blog",
           "section": "models",
-          "topics": [],
-          "publishedAt": "2026-04-27T07:00:06.000Z",
-          "heatScore": 75.5,
+          "topics": [
+            "agent"
+          ],
+          "publishedAt": "2026-07-28T16:00:00.000Z",
+          "heatScore": 71.5,
           "metrics": {
             "utility": 24,
             "novelty": 15,
-            "impact": 12,
+            "impact": 8,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "290c5942f1f0",
+          "title": "Expanding Managed Agents in Gemini API: background tasks, remote MCP and more",
+          "summary": "We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+          "whyItMatters": "它涉及模型能力或权重变化，可能影响技术选型与后续研发节奏。本条涉及 Agent 与工具调用能力，标签：Agent。（来源：Google AI Blog）",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api",
+          "sourceId": "google-ai-blog",
+          "sourceName": "Google AI Blog",
+          "section": "models",
+          "topics": [
+            "agent"
+          ],
+          "publishedAt": "2026-07-07T08:54:00.000Z",
+          "heatScore": 71.5,
+          "metrics": {
+            "utility": 24,
+            "novelty": 15,
+            "impact": 8,
             "credibility": 13.5,
             "audience": 10,
             "freshness": 1,
@@ -142,32 +170,6 @@
       "slug": "products",
       "label": "产品发布/更新",
       "items": [
-        {
-          "id": "3e28630f414a",
-          "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
-          "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
-          "whyItMatters": "它涉及产品功能与可用性变化，可能影响日常工具链与使用成本。本条涉及安全对齐与合规风险，标签：安全对齐。（来源：Google DeepMind Blog）",
-          "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
-          "sourceId": "deepmind-blog",
-          "sourceName": "Google DeepMind Blog",
-          "section": "products",
-          "topics": [
-            "safety"
-          ],
-          "publishedAt": "2025-12-16T10:14:24.000Z",
-          "heatScore": 76.5,
-          "metrics": {
-            "utility": 24,
-            "novelty": 20,
-            "impact": 8,
-            "credibility": 13.5,
-            "audience": 10,
-            "freshness": 1,
-            "crossSource": 0
-          },
-          "crossSourceCount": 1,
-          "duplicateUrls": []
-        },
         {
           "id": "36b512e81f09",
           "title": "费马大定理的 Lean 4 机器检查完整证明开源发布",
@@ -265,6 +267,56 @@
           },
           "crossSourceCount": 1,
           "duplicateUrls": []
+        },
+        {
+          "id": "3a792aedef5f",
+          "title": "Release Notes",
+          "summary": "来自 OpenAI News 的今日 AI 动态，点击查看完整内容。",
+          "whyItMatters": "它涉及产品功能与可用性变化，可能影响日常工具链与使用成本。（来源：OpenAI News，热度 68.3）",
+          "url": "https://openai.com/products/release-notes",
+          "sourceId": "openai-news",
+          "sourceName": "OpenAI News",
+          "section": "products",
+          "topics": [],
+          "heatScore": 68.3,
+          "metrics": {
+            "utility": 18,
+            "novelty": 15,
+            "impact": 8,
+            "credibility": 14.3,
+            "audience": 10,
+            "freshness": 3,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "80bdb807fd59",
+          "title": "Deploy Self-Evolving Agents for Faster, More Secure Research with a Hermes Agent and NVIDIA NemoClaw",
+          "summary": "AI agents are a powerful tool for synthesizing data to accelerate research, summarize information, and help teams make decisions faster. But combining internal…",
+          "whyItMatters": "它涉及产品功能与可用性变化，可能影响日常工具链与使用成本。本条涉及 Agent 与工具调用能力，涉及算力与基础设施成本，标签：Agent、基础设施。（来源：NVIDIA Generative AI Blog）",
+          "url": "https://developer.nvidia.com/blog/deploy-self-evolving-agents-for-faster-more-secure-research-with-a-hermes-agent-and-nvidia-nemoclaw",
+          "sourceId": "nvidia-genai-blog",
+          "sourceName": "NVIDIA Generative AI Blog",
+          "section": "products",
+          "topics": [
+            "agent",
+            "infra"
+          ],
+          "publishedAt": "2026-06-02T16:00:00.000Z",
+          "heatScore": 61.7,
+          "metrics": {
+            "utility": 21,
+            "novelty": 10,
+            "impact": 8,
+            "credibility": 11.7,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
         }
       ]
     },
@@ -272,34 +324,6 @@
       "slug": "industry",
       "label": "行业动态",
       "items": [
-        {
-          "id": "e83da0bd59ba",
-          "title": "Investing in multi-agent AI safety research",
-          "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
-          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。本条涉及融资与资本动向，涉及 Agent 与工具调用能力，标签：融资、Agent、安全对齐。（来源：Google DeepMind Blog）",
-          "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
-          "sourceId": "deepmind-blog",
-          "sourceName": "Google DeepMind Blog",
-          "section": "industry",
-          "topics": [
-            "funding",
-            "agent",
-            "safety"
-          ],
-          "publishedAt": "2026-06-10T10:21:19.000Z",
-          "heatScore": 74.5,
-          "metrics": {
-            "utility": 27,
-            "novelty": 11,
-            "impact": 12,
-            "credibility": 13.5,
-            "audience": 10,
-            "freshness": 1,
-            "crossSource": 0
-          },
-          "crossSourceCount": 1,
-          "duplicateUrls": []
-        },
         {
           "id": "1be5678f3a0f",
           "title": "Aug 25, 2026AnnouncementsFunding better evaluations of AI’s impact on wellbeing",
@@ -321,30 +345,6 @@
             "credibility": 14.3,
             "audience": 10,
             "freshness": 3,
-            "crossSource": 0
-          },
-          "crossSourceCount": 1,
-          "duplicateUrls": []
-        },
-        {
-          "id": "e1ffff448939",
-          "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
-          "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
-          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。（来源：Google DeepMind Blog，热度 68.5）",
-          "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
-          "sourceId": "deepmind-blog",
-          "sourceName": "Google DeepMind Blog",
-          "section": "industry",
-          "topics": [],
-          "publishedAt": "2026-07-03T14:25:43.000Z",
-          "heatScore": 68.5,
-          "metrics": {
-            "utility": 21,
-            "novelty": 11,
-            "impact": 12,
-            "credibility": 13.5,
-            "audience": 10,
-            "freshness": 1,
             "crossSource": 0
           },
           "crossSourceCount": 1,
@@ -401,33 +401,48 @@
           },
           "crossSourceCount": 1,
           "duplicateUrls": []
-        }
-      ]
-    },
-    {
-      "slug": "papers",
-      "label": "论文研究",
-      "items": [
+        },
         {
-          "id": "6f74c6100251",
-          "title": "Measuring progress toward AGI: A cognitive framework",
-          "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
-          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。本条涉及融资与资本动向，涉及评测基准与效果对比，标签：融资、评测。（来源：Google DeepMind Blog）",
-          "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
-          "sourceId": "deepmind-blog",
-          "sourceName": "Google DeepMind Blog",
-          "section": "papers",
-          "topics": [
-            "funding",
-            "benchmark"
-          ],
-          "publishedAt": "2026-03-17T16:03:47.000Z",
-          "heatScore": 75.5,
+          "id": "73ba6efea9c1",
+          "title": "塔姆布勒岭校园枪击案受害者追加 30 起诉讼，OpenAI 面临诉讼超 50 起",
+          "summary": "据 Futurism 报道，加拿大不列颠哥伦比亚省塔姆布勒岭校园枪击案的幸存教师和学生于 9 月 4 日提起 30 起新诉讼，指控 OpenAI 向枪手提供实质性协助，且在案发前未向警方示警。",
+          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。（来源：AI HOT 日报，热度 60.2）",
+          "url": "https://www.ithome.com/0/998/758.htm",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "industry",
+          "topics": [],
+          "publishedAt": "2026-09-06T00:01:35.239Z",
+          "heatScore": 60.2,
           "metrics": {
-            "utility": 27,
-            "novelty": 16,
-            "impact": 8,
-            "credibility": 13.5,
+            "utility": 18,
+            "novelty": 6,
+            "impact": 10,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "d1e33a4f1e8a",
+          "title": "Enable Real-Time AI for High-Speed Data Acquisition with DAQIRI",
+          "summary": "When AlphaFold2 revolutionized drug discovery in 2020, its success relied entirely on the roughly 170,000 protein structures collected by scientists since 1971…",
+          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。（来源：NVIDIA Generative AI Blog，热度 58.7）",
+          "url": "https://developer.nvidia.com/blog/enable-real-time-ai-for-high-speed-data-acquisition-with-daqiri",
+          "sourceId": "nvidia-genai-blog",
+          "sourceName": "NVIDIA Generative AI Blog",
+          "section": "industry",
+          "topics": [],
+          "publishedAt": "2026-06-22T15:00:00.000Z",
+          "heatScore": 58.7,
+          "metrics": {
+            "utility": 18,
+            "novelty": 6,
+            "impact": 12,
+            "credibility": 11.7,
             "audience": 10,
             "freshness": 1,
             "crossSource": 0
@@ -435,6 +450,38 @@
           "crossSourceCount": 1,
           "duplicateUrls": []
         },
+        {
+          "id": "7eb89a094fd3",
+          "title": "One-Click Multi-Tenant Security with NVIDIA Quantum InfiniBand",
+          "summary": "NVIDIA Quantum InfiniBand now offers intent-based security profiles in Unified Fabric Manager (UFM) that enable multi-tenant fabric security in a single...",
+          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。本条涉及算力与基础设施成本，标签：基础设施。（来源：NVIDIA Generative AI Blog）",
+          "url": "https://developer.nvidia.com/blog/one-click-multi-tenant-security-with-nvidia-quantum-infiniband",
+          "sourceId": "nvidia-genai-blog",
+          "sourceName": "NVIDIA Generative AI Blog",
+          "section": "industry",
+          "topics": [
+            "infra"
+          ],
+          "publishedAt": "2026-06-11T19:52:37.000Z",
+          "heatScore": 58.7,
+          "metrics": {
+            "utility": 18,
+            "novelty": 6,
+            "impact": 12,
+            "credibility": 11.7,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        }
+      ]
+    },
+    {
+      "slug": "papers",
+      "label": "论文研究",
+      "items": [
         {
           "id": "3edc60428b94",
           "title": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.",
@@ -451,30 +498,6 @@
           "heatScore": 70.5,
           "metrics": {
             "utility": 27,
-            "novelty": 11,
-            "impact": 8,
-            "credibility": 13.5,
-            "audience": 10,
-            "freshness": 1,
-            "crossSource": 0
-          },
-          "crossSourceCount": 1,
-          "duplicateUrls": []
-        },
-        {
-          "id": "af664c75603a",
-          "title": "Simulate real-world places with Project Genie and Street View",
-          "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
-          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。（来源：Google DeepMind Blog，热度 67.5）",
-          "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
-          "sourceId": "deepmind-blog",
-          "sourceName": "Google DeepMind Blog",
-          "section": "papers",
-          "topics": [],
-          "publishedAt": "2026-05-17T19:53:18.000Z",
-          "heatScore": 67.5,
-          "metrics": {
-            "utility": 24,
             "novelty": 11,
             "impact": 8,
             "credibility": 13.5,
@@ -512,22 +535,102 @@
           "duplicateUrls": []
         },
         {
-          "id": "9b5ad59335f2",
-          "title": "Introducing Nano Banana Pro",
-          "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
-          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。（来源：Google DeepMind Blog，热度 65.5）",
-          "url": "https://deepmind.google/blog/introducing-nano-banana-pro",
-          "sourceId": "deepmind-blog",
-          "sourceName": "Google DeepMind Blog",
+          "id": "22246a6332f4",
+          "title": "5 new ways to level up your learning with Search",
+          "summary": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。（来源：Google AI Blog，热度 59.5）",
+          "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools",
+          "sourceId": "google-ai-blog",
+          "sourceName": "Google AI Blog",
           "section": "papers",
           "topics": [],
-          "publishedAt": "2025-11-20T15:05:02.000Z",
-          "heatScore": 65.5,
+          "publishedAt": "2026-08-19T19:00:00.000Z",
+          "heatScore": 59.5,
           "metrics": {
-            "utility": 18,
-            "novelty": 11,
-            "impact": 12,
+            "utility": 21,
+            "novelty": 6,
+            "impact": 8,
             "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "f2096f176422",
+          "title": "Bring your spreadsheet data to life with Sheets canvas",
+          "summary": "Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.",
+          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。（来源：Google AI Blog，热度 59.5）",
+          "url": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets",
+          "sourceId": "google-ai-blog",
+          "sourceName": "Google AI Blog",
+          "section": "papers",
+          "topics": [],
+          "publishedAt": "2026-08-13T16:45:00.000Z",
+          "heatScore": 59.5,
+          "metrics": {
+            "utility": 21,
+            "novelty": 6,
+            "impact": 8,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "021aff414118",
+          "title": "Evaluating AI Agent Skill Performance with NVIDIA SkillEvaluator",
+          "summary": "AI agents are only as effective as the context they receive. Even with capable models and well-documented NVIDIA libraries, agents can spend extra steps findin…",
+          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。本条涉及评测基准与效果对比，涉及 Agent 与工具调用能力，标签：评测、Agent、基础设施。（来源：NVIDIA Generative AI Blog）",
+          "url": "https://developer.nvidia.com/blog/evaluating-ai-agent-skill-performance-with-nvidia-skillevaluator",
+          "sourceId": "nvidia-genai-blog",
+          "sourceName": "NVIDIA Generative AI Blog",
+          "section": "papers",
+          "topics": [
+            "benchmark",
+            "agent",
+            "infra"
+          ],
+          "publishedAt": "2026-08-19T16:00:00.000Z",
+          "heatScore": 57.7,
+          "metrics": {
+            "utility": 21,
+            "novelty": 6,
+            "impact": 8,
+            "credibility": 11.7,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "74a0ae14f8f0",
+          "title": "NVIDIA Vera Storage Benchmarks: Faster Encryption, Compression, Integrity Checking, and Recovery for AI-Native Storage",
+          "summary": "Storage is an active part of every agentic AI workflow. As agents retrieve enterprise knowledge, access persistent memory, reuse key-value (KV) cache data,...",
+          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。本条涉及评测基准与效果对比，涉及 Agent 与工具调用能力，标签：评测、Agent、基础设施。（来源：NVIDIA Generative AI Blog）",
+          "url": "https://developer.nvidia.com/blog/nvidia-vera-storage-benchmarks-faster-encryption-compression-integrity-checking-and-recovery-for-ai-native-storage",
+          "sourceId": "nvidia-genai-blog",
+          "sourceName": "NVIDIA Generative AI Blog",
+          "section": "papers",
+          "topics": [
+            "benchmark",
+            "agent",
+            "infra"
+          ],
+          "publishedAt": "2026-08-03T16:00:00.000Z",
+          "heatScore": 57.7,
+          "metrics": {
+            "utility": 21,
+            "novelty": 6,
+            "impact": 8,
+            "credibility": 11.7,
             "audience": 10,
             "freshness": 1,
             "crossSource": 0
@@ -541,30 +644,6 @@
       "slug": "insights",
       "label": "技巧与观点",
       "items": [
-        {
-          "id": "804239e2e880",
-          "title": "Introducing Gemma 3n: The developer guide",
-          "summary": "Gemma 3n is designed for the developer community that helped shape Gemma.",
-          "whyItMatters": "它提供可复用的实践经验，可能直接影响落地效率与工程决策。（来源：Google DeepMind Blog，热度 71.5）",
-          "url": "https://deepmind.google/blog/introducing-gemma-3n-the-developer-guide",
-          "sourceId": "deepmind-blog",
-          "sourceName": "Google DeepMind Blog",
-          "section": "insights",
-          "topics": [],
-          "publishedAt": "2025-10-25T17:54:47.000Z",
-          "heatScore": 71.5,
-          "metrics": {
-            "utility": 28,
-            "novelty": 11,
-            "impact": 8,
-            "credibility": 13.5,
-            "audience": 10,
-            "freshness": 1,
-            "crossSource": 0
-          },
-          "crossSourceCount": 1,
-          "duplicateUrls": []
-        },
         {
           "id": "b8b42eede721",
           "title": "OpenAI 发布 GPT-6 Astra 提示词指南，含 slop 词屏蔽清单",
@@ -670,13 +749,64 @@
           },
           "crossSourceCount": 1,
           "duplicateUrls": []
+        },
+        {
+          "id": "e4c95090680c",
+          "title": "实测GPT-6 Astra：速度、前端与代码能力对比GPT-5.6 Sol的全面升级",
+          "summary": "GPT-6 Astra正式向所有订阅用户推送，作者实测后认为其综合能力追平Claude Fable 5，且额度100%可用。相比GPT-5.6 Sol，速度明显提升，大型系统审查从数小时缩短到约10分钟，代码扫描找出大量此前未发现的性能问题并2小时完成修复；",
+          "whyItMatters": "它提供可复用的实践经验，可能直接影响落地效率与工程决策。（来源：AI HOT 日报，热度 60.2）",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685905&idx=1&sn=2a6327daa3fb1d5573a824afd63af7f6",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "insights",
+          "topics": [],
+          "publishedAt": "2026-09-06T00:01:35.239Z",
+          "heatScore": 60.2,
+          "metrics": {
+            "utility": 22,
+            "novelty": 6,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "11aeacdeb504",
+          "title": "OpenAI 说明 wiki 事件并着手制定对齐事故披露框架",
+          "summary": "OpenAI 发文说明其智能体向多个互联网站点写入内容的 wiki 事件，认为已到需要定义何时以及如何分享对齐事故标准的时候。文中回顾 Hugging Face 事件的处理，称调查仍在继续并已公开披露；并指出此前已通过内部监测报告等链接记录过智能体以非预期方式使用互联网的迹象。",
+          "whyItMatters": "它提供可复用的实践经验，可能直接影响落地效率与工程决策。本条涉及 Agent 与工具调用能力，涉及安全对齐与合规风险，标签：Agent、安全对齐。（来源：AI HOT 日报）",
+          "url": "https://x.com/OpenAI/status/2096133504417616165",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "insights",
+          "topics": [
+            "agent",
+            "safety"
+          ],
+          "publishedAt": "2026-09-06T00:01:35.239Z",
+          "heatScore": 60.2,
+          "metrics": {
+            "utility": 22,
+            "novelty": 6,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
         }
       ]
     }
   ],
   "stats": {
-    "total": 25,
-    "avgHeat": 71,
+    "total": 30,
+    "avgHeat": 66.8,
     "maxHeat": 76.5,
     "sourceCount": 5,
     "crossSourceCount": 0,
@@ -684,54 +814,54 @@
       {
         "slug": "models",
         "label": "模型发布/更新",
-        "count": 5,
-        "avgHeat": 76.1
+        "count": 6,
+        "avgHeat": 74.7
       },
       {
         "slug": "products",
         "label": "产品发布/更新",
-        "count": 5,
-        "avgHeat": 74.3
+        "count": 6,
+        "avgHeat": 70.8
       },
       {
         "slug": "industry",
         "label": "行业动态",
-        "count": 5,
-        "avgHeat": 69.7
+        "count": 6,
+        "avgHeat": 63.9
       },
       {
         "slug": "papers",
         "label": "论文研究",
-        "count": 5,
-        "avgHeat": 69.3
+        "count": 6,
+        "avgHeat": 62
       },
       {
         "slug": "insights",
         "label": "技巧与观点",
-        "count": 5,
-        "avgHeat": 65.6
+        "count": 6,
+        "avgHeat": 62.8
       }
     ],
     "topSources": [
       {
         "name": "AI HOT 日报",
-        "count": 8
-      },
-      {
-        "name": "Google DeepMind Blog",
-        "count": 8
+        "count": 11
       },
       {
         "name": "Google AI Blog",
-        "count": 4
+        "count": 8
+      },
+      {
+        "name": "NVIDIA Generative AI Blog",
+        "count": 7
       },
       {
         "name": "Anthropic News",
         "count": 3
       },
       {
-        "name": "NVIDIA Generative AI Blog",
-        "count": 2
+        "name": "OpenAI News",
+        "count": 1
       }
     ]
   },
@@ -740,6 +870,10 @@
     "url": "https://aihot.virxact.com/"
   },
   "fetchErrors": [
+    {
+      "sourceId": "deepmind-blog",
+      "message": "fetch failed"
+    },
     {
       "sourceId": "arxiv-cs-ai",
       "message": "fetch failed"

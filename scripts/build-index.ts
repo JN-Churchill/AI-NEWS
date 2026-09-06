@@ -10,10 +10,9 @@ import { dailyIssueSchema, searchIndexSchema, type SearchEntry } from "../src/ty
 const ISSUES_DIR = path.join(process.cwd(), "content", "issues");
 const OUT_DIR = path.join(process.cwd(), "content", "index");
 
-function main() {
+export function runBuildIndex() {
   if (!fs.existsSync(ISSUES_DIR)) {
-    console.error("[index] 没有 content/issues 目录，请先生成日报。");
-    process.exit(1);
+    throw new Error("没有 content/issues 目录，请先生成日报");
   }
 
   const files = fs
@@ -66,4 +65,13 @@ function main() {
   console.log(`[index] 已生成 ${outPath}：${index.total} 条条目，覆盖 ${index.dates.length} 期日报。`);
 }
 
-main();
+// 仅在 CLI 直接运行时执行
+const isDirectRun = (process.argv[1] ?? "").replace(/\\/g, "/").endsWith("/build-index.ts");
+if (isDirectRun) {
+  try {
+    runBuildIndex();
+  } catch (error) {
+    console.error("[index] 执行失败：", error);
+    process.exit(1);
+  }
+}

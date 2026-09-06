@@ -115,7 +115,7 @@ ${urls
 `;
 }
 
-function main() {
+export function runEmitFeeds() {
   const issues = loadIssues();
 
   fs.mkdirSync(PUBLIC_DIR, { recursive: true });
@@ -126,4 +126,8 @@ function main() {
   console.log(`[feeds] 已生成 rss.xml / feed.json / sitemap.xml，共 ${issues.length} 期日报。`);
 }
 
-main();
+// 仅在 CLI 直接运行时执行
+const isDirectRun = (process.argv[1] ?? "").replace(/\\/g, "/").endsWith("/emit-feeds.ts");
+if (isDirectRun) {
+  runEmitFeeds();
+}

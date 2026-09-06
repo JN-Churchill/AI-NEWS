@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T10:28:46.347Z",
+  "generatedAt": "2026-09-06T13:00:10.915Z",
   "total": 25,
   "dates": [
     "2026-09-06"
@@ -52,28 +52,17 @@
       "heatScore": 76.2
     },
     {
-      "id": "aa710ef75bfe",
+      "id": "b0ce9efc107c",
       "date": "2026-09-06",
-      "title": "Announcing our partnership with the Republic of Korea",
-      "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
-      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
-      "sourceName": "Google DeepMind Blog",
+      "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+      "summary": "We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks",
+      "sourceName": "Google AI Blog",
       "section": "models",
-      "topics": [],
-      "heatScore": 75.5
-    },
-    {
-      "id": "3e28630f414a",
-      "date": "2026-09-06",
-      "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
-      "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
-      "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
-      "sourceName": "Google DeepMind Blog",
-      "section": "products",
       "topics": [
-        "safety"
+        "agent"
       ],
-      "heatScore": 76.5
+      "heatScore": 71.5
     },
     {
       "id": "36b512e81f09",
@@ -122,19 +111,15 @@
       "heatScore": 71.5
     },
     {
-      "id": "e83da0bd59ba",
+      "id": "3a792aedef5f",
       "date": "2026-09-06",
-      "title": "Investing in multi-agent AI safety research",
-      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
-      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
-      "sourceName": "Google DeepMind Blog",
-      "section": "industry",
-      "topics": [
-        "funding",
-        "agent",
-        "safety"
-      ],
-      "heatScore": 74.5
+      "title": "Release Notes",
+      "summary": "来自 OpenAI News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://openai.com/products/release-notes",
+      "sourceName": "OpenAI News",
+      "section": "products",
+      "topics": [],
+      "heatScore": 68.3
     },
     {
       "id": "1be5678f3a0f",
@@ -149,17 +134,6 @@
         "benchmark"
       ],
       "heatScore": 71.3
-    },
-    {
-      "id": "e1ffff448939",
-      "date": "2026-09-06",
-      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
-      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
-      "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
-      "sourceName": "Google DeepMind Blog",
-      "section": "industry",
-      "topics": [],
-      "heatScore": 68.5
     },
     {
       "id": "8e2d65aa6bf4",
@@ -188,18 +162,26 @@
       "heatScore": 67.2
     },
     {
-      "id": "6f74c6100251",
+      "id": "73ba6efea9c1",
       "date": "2026-09-06",
-      "title": "Measuring progress toward AGI: A cognitive framework",
-      "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
-      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
-      "sourceName": "Google DeepMind Blog",
-      "section": "papers",
-      "topics": [
-        "funding",
-        "benchmark"
-      ],
-      "heatScore": 75.5
+      "title": "塔姆布勒岭校园枪击案受害者追加 30 起诉讼，OpenAI 面临诉讼超 50 起",
+      "summary": "据 Futurism 报道，加拿大不列颠哥伦比亚省塔姆布勒岭校园枪击案的幸存教师和学生于 9 月 4 日提起 30 起新诉讼，指控 OpenAI 向枪手提供实质性协助，且在案发前未向警方示警。",
+      "url": "https://www.ithome.com/0/998/758.htm",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 60.2
+    },
+    {
+      "id": "d1e33a4f1e8a",
+      "date": "2026-09-06",
+      "title": "Enable Real-Time AI for High-Speed Data Acquisition with DAQIRI",
+      "summary": "When AlphaFold2 revolutionized drug discovery in 2020, its success relied entirely on the roughly 170,000 protein structures collected by scientists since 1971…",
+      "url": "https://developer.nvidia.com/blog/enable-real-time-ai-for-high-speed-data-acquisition-with-daqiri",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 58.7
     },
     {
       "id": "3edc60428b94",
@@ -213,17 +195,6 @@
         "multimodal"
       ],
       "heatScore": 70.5
-    },
-    {
-      "id": "af664c75603a",
-      "date": "2026-09-06",
-      "title": "Simulate real-world places with Project Genie and Street View",
-      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
-      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
-      "sourceName": "Google DeepMind Blog",
-      "section": "papers",
-      "topics": [],
-      "heatScore": 67.5
     },
     {
       "id": "9d26e1a098d7",
@@ -240,26 +211,41 @@
       "heatScore": 67.3
     },
     {
-      "id": "9b5ad59335f2",
+      "id": "22246a6332f4",
       "date": "2026-09-06",
-      "title": "Introducing Nano Banana Pro",
-      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
-      "url": "https://deepmind.google/blog/introducing-nano-banana-pro",
-      "sourceName": "Google DeepMind Blog",
+      "title": "5 new ways to level up your learning with Search",
+      "summary": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+      "url": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools",
+      "sourceName": "Google AI Blog",
       "section": "papers",
       "topics": [],
-      "heatScore": 65.5
+      "heatScore": 59.5
     },
     {
-      "id": "804239e2e880",
+      "id": "f2096f176422",
       "date": "2026-09-06",
-      "title": "Introducing Gemma 3n: The developer guide",
-      "summary": "Gemma 3n is designed for the developer community that helped shape Gemma.",
-      "url": "https://deepmind.google/blog/introducing-gemma-3n-the-developer-guide",
-      "sourceName": "Google DeepMind Blog",
-      "section": "insights",
+      "title": "Bring your spreadsheet data to life with Sheets canvas",
+      "summary": "Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets",
+      "sourceName": "Google AI Blog",
+      "section": "papers",
       "topics": [],
-      "heatScore": 71.5
+      "heatScore": 59.5
+    },
+    {
+      "id": "021aff414118",
+      "date": "2026-09-06",
+      "title": "Evaluating AI Agent Skill Performance with NVIDIA SkillEvaluator",
+      "summary": "AI agents are only as effective as the context they receive. Even with capable models and well-documented NVIDIA libraries, agents can spend extra steps findin…",
+      "url": "https://developer.nvidia.com/blog/evaluating-ai-agent-skill-performance-with-nvidia-skillevaluator",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "papers",
+      "topics": [
+        "benchmark",
+        "agent",
+        "infra"
+      ],
+      "heatScore": 57.7
     },
     {
       "id": "b8b42eede721",
@@ -313,6 +299,17 @@
       "topics": [
         "agent"
       ],
+      "heatScore": 60.2
+    },
+    {
+      "id": "e4c95090680c",
+      "date": "2026-09-06",
+      "title": "实测GPT-6 Astra：速度、前端与代码能力对比GPT-5.6 Sol的全面升级",
+      "summary": "GPT-6 Astra正式向所有订阅用户推送，作者实测后认为其综合能力追平Claude Fable 5，且额度100%可用。相比GPT-5.6 Sol，速度明显提升，大型系统审查从数小时缩短到约10分钟，代码扫描找出大量此前未发现的性能问题并2小时完成修复；",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647685905&idx=1&sn=2a6327daa3fb1d5573a824afd63af7f6",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [],
       "heatScore": 60.2
     }
   ]

@@ -131,9 +131,9 @@ function toUnifiedItem(
   };
 }
 
-async function main() {
-  const date = getArg("date") ?? bjtToday();
-  const onlySource = getArg("source");
+export async function runIngest(options: { date?: string; onlySource?: string } = {}) {
+  const date = options.date ?? bjtToday();
+  const onlySource = options.onlySource;
   const sources = loadSources(onlySource);
 
   console.log(`[ingest] 目标日期 ${date}，启用来源 ${sources.length} 个。`);
@@ -183,7 +183,11 @@ async function main() {
   );
 }
 
-main().catch((error) => {
-  console.error("[ingest] 执行失败：", error);
-  process.exit(1);
-});
+// 仅在 CLI 直接运行时执行；被 pipeline / instrumentation 导入时只暴露函数
+const isDirectRun = (process.argv[1] ?? "").replace(/\\/g, "/").endsWith("/ingest.ts");
+if (isDirectRun) {
+  runIngest().catch((error) => {
+    console.error("[ingest] 执行失败：", error);
+    process.exit(1);
+  });
+}
