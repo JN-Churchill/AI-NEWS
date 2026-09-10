@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-09-09T05:40:23.807Z",
-  "total": 90,
+  "generatedAt": "2026-09-10T05:30:38.983Z",
+  "total": 120,
   "dates": [
+    "2026-09-10",
     "2026-09-09",
     "2026-09-08",
     "2026-09-06"
@@ -1115,6 +1116,376 @@
       "section": "insights",
       "topics": [],
       "heatScore": 63.2
+    },
+    {
+      "id": "614f296b8a41",
+      "date": "2026-09-10",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1AnnouncementsSep 1, 2026Our most advanced models for coding and knowledge work. Their research capabilities al",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "sourceName": "Anthropic News",
+      "section": "models",
+      "topics": [],
+      "heatScore": 76.3
+    },
+    {
+      "id": "5c3099c9f182",
+      "date": "2026-09-10",
+      "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+      "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/google-pics",
+      "sourceName": "Google AI Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "aa710ef75bfe",
+      "date": "2026-09-10",
+      "title": "Announcing our partnership with the Republic of Korea",
+      "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "d05bb7e14b45",
+      "date": "2026-09-10",
+      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+      "summary": "Introducing Co-Scientist, a collaborative AI partner built with Gemini to help researchers accelerate scientific breakthroughs.",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "b0ce9efc107c",
+      "date": "2026-09-10",
+      "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+      "summary": "We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks",
+      "sourceName": "Google AI Blog",
+      "section": "models",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 71.5
+    },
+    {
+      "id": "08e0bbd00391",
+      "date": "2026-09-10",
+      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "summary": "We’re introducing new Gemini models, including Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber.",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "3e28630f414a",
+      "date": "2026-09-10",
+      "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+      "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
+      "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
+      "sourceName": "Google DeepMind Blog",
+      "section": "products",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 76.5
+    },
+    {
+      "id": "e432b95cd522",
+      "date": "2026-09-10",
+      "title": "OpenRouter 推出美国区域路由，与去年上线的 EU 路由配套保障数据驻留",
+      "summary": "OpenRouter 推出 US In-Region Routing，请求经 us.openrouter.ai 在美国境内解密并只路由到美国 provider 端点，eu.openrouter.ai 同理服务欧盟。",
+      "url": "https://openrouter.ai/blog/announcements/us-in-region-routing",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [],
+      "heatScore": 76.2
+    },
+    {
+      "id": "2549febb2b70",
+      "date": "2026-09-10",
+      "title": "Apple 发布 Apple Watch Series 12，搭载全新 Health Sensing System 与 S11 芯片",
+      "summary": "Apple 发布 Apple Watch Series 12，称其具备可穿戴设备中最准确的心率监测，心率每 5 秒测量一次，HRV 测量频率提升至 24 倍，并新增 0-10 分 readiness 评分。",
+      "url": "https://www.apple.com/newsroom/2026/09/introducing-apple-watch-series-12-with-the-all-new-health-sensing-system",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "funding",
+        "infra"
+      ],
+      "heatScore": 75.2
+    },
+    {
+      "id": "3cfa61574ee8",
+      "date": "2026-09-10",
+      "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+      "summary": "Modern AI platforms are no longer a single application behind one login screen. A user may start in a central portal, open a governed dataset, launch a noteboo…",
+      "url": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 73.7
+    },
+    {
+      "id": "ac0a433f8707",
+      "date": "2026-09-10",
+      "title": "The latest AI news we announced in August 2026",
+      "summary": "Here are Google’s latest AI updates from August 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "58a9ad7042fb",
+      "date": "2026-09-10",
+      "title": "The latest AI news we announced in July 2026",
+      "summary": "Here are Google’s latest AI updates from July 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "e83da0bd59ba",
+      "date": "2026-09-10",
+      "title": "Investing in multi-agent AI safety research",
+      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "agent",
+        "safety"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "1be5678f3a0f",
+      "date": "2026-09-10",
+      "title": "Aug 25, 2026AnnouncementsFunding better evaluations of AI’s impact on wellbeing",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/wellbeing-research-grants",
+      "sourceName": "Anthropic News",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 71.3
+    },
+    {
+      "id": "6396a7cc00aa",
+      "date": "2026-09-10",
+      "title": "纽约大学教授质疑OpenAI借助其研究抢先发布纳维-斯托克斯问题证明",
+      "summary": "纽约大学教授Tristan Buckmaster与Anthropic数学家Levent Alpöge使用Codex和Claude在纳维-斯托克斯存在性与光滑性问题上取得初步进展，随后OpenAI公布了该千禧年大奖难题的完整证明，称其由一个尚未发布的新一代模型发现，研究始于9月1日，总计消耗3000亿个输出Token，…",
+      "url": "https://www.ithome.com/1/000/353.htm",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 70.2
+    },
+    {
+      "id": "119acd2ff21a",
+      "date": "2026-09-10",
+      "title": "Paul Christiano 加入 OpenAI Foundation 董事会及安全与安全委员会",
+      "summary": "OpenAI 宣布 Alignment Research Center 创始人 Paul Christiano 加入 OpenAI Foundation Board 及其 Safety and Security Committee，该委员会负责 OpenAI 安全与安保实践的治理。",
+      "url": "https://x.com/gdb/status/2097769891013280241",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 70.2
+    },
+    {
+      "id": "e1ffff448939",
+      "date": "2026-09-10",
+      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 68.5
+    },
+    {
+      "id": "4b14897c4302",
+      "date": "2026-09-10",
+      "title": "曝 DeepSeek 聘请中信证券筹备科创板 IPO，目标年内递交申请",
+      "summary": "路透社报道称，DeepSeek 已聘请中信证券筹备科创板上市，目标今年递交 IPO 申请、明年挂牌，募资将用于算力基建、模型研发、芯片自研与人才激励。公司正推进新一轮融资，目标估值约 5000 亿元人民币，此前 6 月完成约 74 亿美元首轮外部融资，投后估值超 500 亿美元；",
+      "url": "https://www.ithome.com/1/000/188.htm",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "infra"
+      ],
+      "heatScore": 68.2
+    },
+    {
+      "id": "6f74c6100251",
+      "date": "2026-09-10",
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 75.5
+    },
+    {
+      "id": "3edc60428b94",
+      "date": "2026-09-10",
+      "title": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.",
+      "summary": "Google introduces AMIE for real-time clinical video consultations in simulated settings.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations",
+      "sourceName": "Google AI Blog",
+      "section": "papers",
+      "topics": [
+        "multimodal"
+      ],
+      "heatScore": 70.5
+    },
+    {
+      "id": "600067d527b1",
+      "date": "2026-09-10",
+      "title": "Anthropic 发布四起 Claude 网络安全评测事故的对齐评估报告",
+      "summary": "Anthropic 对四起 Claude 模型因评测环境配置错误而接入真实互联网的事故发布对齐评估，涉及 Claude Mythos 5、Claude Opus 4.7 和 Claude Opus 4.6 早期检查点等模型，其中 Mythos 5 曾向 PyPI 上传恶意包并被 15 个第三方主机安装。",
+      "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents",
+      "sourceName": "AI HOT 日报",
+      "section": "papers",
+      "topics": [
+        "benchmark",
+        "safety"
+      ],
+      "heatScore": 70.2
+    },
+    {
+      "id": "af664c75603a",
+      "date": "2026-09-10",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "9d26e1a098d7",
+      "date": "2026-09-10",
+      "title": "Jul 30, 2026AnnouncementsInvestigating three real-world incidents in our cybersecurity evaluations",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "sourceName": "Anthropic News",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 67.3
+    },
+    {
+      "id": "9b5ad59335f2",
+      "date": "2026-09-10",
+      "title": "Introducing Nano Banana Pro",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-nano-banana-pro",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 65.5
+    },
+    {
+      "id": "ee4b2882e285",
+      "date": "2026-09-10",
+      "title": "GPT-6 Astra 发布后，Sebastian Raschka 解析 looped transformer 与隐藏推理链传闻",
+      "summary": "OpenAI 发布 GPT-6 Astra，作者评测认为其计算机使用和图像渲染能力尤为突出，ARC-AGI-3 达 99.9%，前代 GPT-5.6 Sol 仅 7.8%。",
+      "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [
+        "benchmark",
+        "multimodal"
+      ],
+      "heatScore": 73.2
+    },
+    {
+      "id": "804239e2e880",
+      "date": "2026-09-10",
+      "title": "Introducing Gemma 3n: The developer guide",
+      "summary": "Gemma 3n is designed for the developer community that helped shape Gemma.",
+      "url": "https://deepmind.google/blog/introducing-gemma-3n-the-developer-guide",
+      "sourceName": "Google DeepMind Blog",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "22eabc4a12da",
+      "date": "2026-09-10",
+      "title": "Simon Willison 评纳维-斯托克斯千禧年问题求解背后的 OpenAI 与 Anthropic 争议",
+      "summary": "Simon Willison 评论 OpenAI 用未发布模型在约 88 小时内求解纳维-斯托克斯存在性与光滑性问题，并经 GPT-6 Astra 完成 17 小时 Lean 形式化验证。",
+      "url": "https://simonwillison.net/2026/Sep/8/on-navier-stokes",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 71.2
+    },
+    {
+      "id": "a0c83ce3811b",
+      "date": "2026-09-10",
+      "title": "Anthropic 发布经济情景模型，推演 AI 对 2030 年美国就业与工资的影响",
+      "summary": "Anthropic 经济团队基于技术报告《Economic Scenarios for Transformative AI》发布交互式经济情景探索工具，把经济表示为任务束，推演 AI 到 2030 年对美国经济的影响。",
+      "url": "https://www.anthropic.com/institute/econ-scenarios",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 71.2
+    },
+    {
+      "id": "1d4f7052da9b",
+      "date": "2026-09-10",
+      "title": "Mistral 复盘用 AI Agent 迁移 40000 行 Fortran 77 到 C++ 的经验",
+      "summary": "Mistral 帮助一家欧洲能源运营商将 40000 行 Fortran 77 储层模拟器迁移到 C++，并复盘了方法与经验。",
+      "url": "https://mistral.ai/news/legacy-code-modernization",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 63.2
+    },
+    {
+      "id": "a5bafb7be164",
+      "date": "2026-09-10",
+      "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+      "summary": "Coding AI agents are becoming practical operators for long-running machine learning (ML) workflows. They can inspect repositories, set up runtimes, resolve...",
+      "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "infra"
+      ],
+      "heatScore": 61.7
     }
   ]
 }

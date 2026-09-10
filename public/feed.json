@@ -7,6 +7,13 @@
   "language": "zh-CN",
   "items": [
     {
+      "id": "http://localhost:3000/daily/2026-09-10/",
+      "url": "http://localhost:3000/daily/2026-09-10/",
+      "title": "2026-09-10 AI 日报 · 30 条热点",
+      "summary": "本期从 335 条候选信号中筛出 30 条，覆盖 模型发布、产品发布、行业动态 等方向，帮你五分钟掌握今日 AI 关键变化。",
+      "date_published": "2026-09-10T05:30:37.877Z"
+    },
+    {
       "id": "http://localhost:3000/daily/2026-09-09/",
       "url": "http://localhost:3000/daily/2026-09-09/",
       "title": "2026-09-09 AI 日报 · 30 条热点",
