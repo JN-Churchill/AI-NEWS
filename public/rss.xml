@@ -5,8 +5,15 @@
     <link>http://localhost:3000/</link>
     <description>每天自动抓取全网 AI 热点，去重打分后生成一份五分钟读完的 AI 日报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 12 Sep 2026 05:19:45 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 05:36:03 GMT</lastBuildDate>
     <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>2026-09-13 AI 日报 · 30 条热点</title>
+      <link>http://localhost:3000/daily/2026-09-13/</link>
+      <guid isPermaLink="true">http://localhost:3000/daily/2026-09-13/</guid>
+      <pubDate>Sun, 13 Sep 2026 05:36:02 GMT</pubDate>
+      <description>本期从 349 条候选信号中筛出 30 条，覆盖 模型发布、产品发布、行业动态 等方向，帮你五分钟掌握今日 AI 关键变化。</description>
+    </item>
     <item>
       <title>2026-09-12 AI 日报 · 30 条热点</title>
       <link>http://localhost:3000/daily/2026-09-12/</link>
