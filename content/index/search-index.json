@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-09-15T05:42:39.553Z",
-  "total": 270,
+  "generatedAt": "2026-09-16T05:35:08.191Z",
+  "total": 300,
   "dates": [
+    "2026-09-16",
     "2026-09-15",
     "2026-09-14",
     "2026-09-13",
@@ -3339,6 +3340,376 @@
         "benchmark"
       ],
       "heatScore": 63.2
+    },
+    {
+      "id": "614f296b8a41",
+      "date": "2026-09-16",
+      "title": "Introducing Claude Fable 5.1 and Claude Mythos 5.1AnnouncementsSep 1, 2026Our most advanced models for coding and knowledge work. Their research capabilities al",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "sourceName": "Anthropic News",
+      "section": "models",
+      "topics": [],
+      "heatScore": 76.3
+    },
+    {
+      "id": "80f4bb6e723f",
+      "date": "2026-09-16",
+      "title": "阶跃星辰发布 StepAudio 3 系列语音大模型，多款在 Artificial Analysis 榜单全球第一",
+      "summary": "阶跃星辰发布 StepAudio 3 系列，包含 Realtime、ASR、TTS、Gen 和 Music 五款模型，已在阶跃星辰开放平台上线。",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzkyNTYxNzg5Mg%3D%3D&mid=2247488074&idx=1&sn=7d92ce0f0098ec0c53b243df4709b522",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "benchmark",
+        "multimodal"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "5c3099c9f182",
+      "date": "2026-09-16",
+      "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+      "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/google-pics",
+      "sourceName": "Google AI Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "aa710ef75bfe",
+      "date": "2026-09-16",
+      "title": "Announcing our partnership with the Republic of Korea",
+      "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "d05bb7e14b45",
+      "date": "2026-09-16",
+      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+      "summary": "Introducing Co-Scientist, a collaborative AI partner built with Gemini to help researchers accelerate scientific breakthroughs.",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "08e0bbd00391",
+      "date": "2026-09-16",
+      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "summary": "We’re introducing new Gemini models, including Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber.",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "3e28630f414a",
+      "date": "2026-09-16",
+      "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+      "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
+      "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
+      "sourceName": "Google DeepMind Blog",
+      "section": "products",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 76.5
+    },
+    {
+      "id": "ce91e1374326",
+      "date": "2026-09-16",
+      "title": "Google 发布 TranslateGemma 等多语言 AI 成果，语言技术覆盖 300 多种语言",
+      "summary": "Google 宣布其语言技术已支持超过 300 种语言、覆盖全球 86% 人口，并发布 TranslateGemma 轻量开源翻译模型（基于 Gemini 训练、支持 55 种语言、可离线运行）。",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "opensource"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "d46163b94ef0",
+      "date": "2026-09-16",
+      "title": "Claude for Small Business 新增 43 个工作流和 27 个集成，并推出免费培训计划",
+      "summary": "Anthropic 为 Claude for Small Business 新增 43 个工作流和 27 个集成，覆盖 Shopify、Salesforce、Stripe、Gusto 等，该产品自 5 月上线以来安装量超过 90 万次。工作流默认处于审批模式，所有发送、发布或付款需用户确认；",
+      "url": "https://claude.com/blog/claude-for-small-business-launches-new-workflows-integrations-and-training-programs",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [],
+      "heatScore": 76.2
+    },
+    {
+      "id": "3cfa61574ee8",
+      "date": "2026-09-16",
+      "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+      "summary": "Modern AI platforms are no longer a single application behind one login screen. A user may start in a central portal, open a governed dataset, launch a noteboo…",
+      "url": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 72.7
+    },
+    {
+      "id": "ac0a433f8707",
+      "date": "2026-09-16",
+      "title": "The latest AI news we announced in August 2026",
+      "summary": "Here are Google’s latest AI updates from August 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "58a9ad7042fb",
+      "date": "2026-09-16",
+      "title": "The latest AI news we announced in July 2026",
+      "summary": "Here are Google’s latest AI updates from July 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "e83da0bd59ba",
+      "date": "2026-09-16",
+      "title": "Investing in multi-agent AI safety research",
+      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "agent",
+        "safety"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "1be5678f3a0f",
+      "date": "2026-09-16",
+      "title": "Aug 25, 2026AnnouncementsFunding better evaluations of AI’s impact on wellbeing",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/wellbeing-research-grants",
+      "sourceName": "Anthropic News",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 71.3
+    },
+    {
+      "id": "e1ffff448939",
+      "date": "2026-09-16",
+      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 68.5
+    },
+    {
+      "id": "290123722f69",
+      "date": "2026-09-16",
+      "title": "Perplexity 自研 CobbleDB 替代 AWS DynamoDB，每年最多可节省一亿美元",
+      "summary": "Perplexity CEO Aravind Srinivas 宣布自研键值数据库 CobbleDB，替代 AWS DynamoDB 用于快速网页内容抓取，迁移后每年最多可节省一亿美元。",
+      "url": "https://x.com/AravSrinivas/status/2099957318935028173",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 67.2
+    },
+    {
+      "id": "57c78f2fa0dc",
+      "date": "2026-09-16",
+      "title": "Deepening our partnership with the UK AI Security Institute",
+      "summary": "Google DeepMind and UK AI Security Institute (AISI) strengthen collaboration on critical AI safety and security research",
+      "url": "https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 63.5
+    },
+    {
+      "id": "578f4c00edbe",
+      "date": "2026-09-16",
+      "title": "Accelerating discovery in India through AI-powered science and education",
+      "summary": "Google DeepMind brings National Partnerships for AI initiative to India, scaling AI for science and education",
+      "url": "https://deepmind.google/blog/accelerating-discovery-in-india-through-ai-powered-science-and-education",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 60.5
+    },
+    {
+      "id": "6f74c6100251",
+      "date": "2026-09-16",
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 75.5
+    },
+    {
+      "id": "3edc60428b94",
+      "date": "2026-09-16",
+      "title": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.",
+      "summary": "Google introduces AMIE for real-time clinical video consultations in simulated settings.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations",
+      "sourceName": "Google AI Blog",
+      "section": "papers",
+      "topics": [
+        "multimodal"
+      ],
+      "heatScore": 70.5
+    },
+    {
+      "id": "af664c75603a",
+      "date": "2026-09-16",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "9d26e1a098d7",
+      "date": "2026-09-16",
+      "title": "Jul 30, 2026AnnouncementsInvestigating three real-world incidents in our cybersecurity evaluations",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+      "sourceName": "Anthropic News",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 67.3
+    },
+    {
+      "id": "9b5ad59335f2",
+      "date": "2026-09-16",
+      "title": "Introducing Nano Banana Pro",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-nano-banana-pro",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 65.5
+    },
+    {
+      "id": "c8362a71e189",
+      "date": "2026-09-16",
+      "title": "Introducing Google Antigravity 2.0",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-google-antigravity-2-0",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 61.5
+    },
+    {
+      "id": "21e7dd18d7f4",
+      "date": "2026-09-16",
+      "title": "Artificial Analysis 评测：GPT-Live-1 以 81.5 分登顶 Speech to Speech Index",
+      "summary": "Artificial Analysis 发布 Speech to Speech Index，OpenAI 的 GPT-Live-1 以 81.5 分（Astra 后端，medium 推理强度）排名第一，超过 Grok Voice Think Fast 2.0 High 的 81.3；",
+      "url": "https://x.com/ArtificialAnlys/status/2099698254414029207",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [
+        "benchmark",
+        "multimodal"
+      ],
+      "heatScore": 73.2
+    },
+    {
+      "id": "94d820da5384",
+      "date": "2026-09-16",
+      "title": "Trail of Bits 批评 1Password 的 AI 补丁基准存在误导，并发布两个补丁验证 Agent 技能",
+      "summary": "Trail of Bits 发文批评 1Password 8月6日发布的 FLAWED 报告，称其 26% 的 AI 干净修复率受四项实验设计选择影响而失真，包括刻意指示智能体应用错误修复的提示词占 22% 数据、36% 的试验禁止编译测试，以及不同推理档位设置。",
+      "url": "https://blog.trailofbits.com/2026/09/15/1passwords-ai-patching-benchmark-is-misleading",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [
+        "benchmark",
+        "agent"
+      ],
+      "heatScore": 73.2
+    },
+    {
+      "id": "804239e2e880",
+      "date": "2026-09-16",
+      "title": "Introducing Gemma 3n: The developer guide",
+      "summary": "Gemma 3n is designed for the developer community that helped shape Gemma.",
+      "url": "https://deepmind.google/blog/introducing-gemma-3n-the-developer-guide",
+      "sourceName": "Google DeepMind Blog",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "6a26a1c741b8",
+      "date": "2026-09-16",
+      "title": "Voodoo Dynamic Quant - Now MIT Licensed",
+      "summary": "Two months ago I announced I had found a new dynamic quant method called Voodoo Quant which was SOTA for the most aggressive quant levels on some smaller Qwen3…",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wgszma/voodoo_dynamic_quant_now_mit_licensed",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "insights",
+      "topics": [
+        "opensource",
+        "benchmark"
+      ],
+      "heatScore": 66.2
+    },
+    {
+      "id": "9b09913aa74d",
+      "date": "2026-09-16",
+      "title": "Arena 更新 Image-to-WebDev 榜单：GPT-6 Astra 以 1733 分登顶",
+      "summary": "Arena 更新 Image-to-WebDev 排行榜，纳入四个新评测模型。GPT-6 Astra (Max) 以 1733 分居第一，领先 GPT-5.6 Sol (xHigh) 129 分；",
+      "url": "https://x.com/arena/status/2099971741993050236",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [
+        "benchmark"
+      ],
+      "heatScore": 63.2
+    },
+    {
+      "id": "a5bafb7be164",
+      "date": "2026-09-16",
+      "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+      "summary": "Coding AI agents are becoming practical operators for long-running machine learning (ML) workflows. They can inspect repositories, set up runtimes, resolve...",
+      "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "infra"
+      ],
+      "heatScore": 61.7
     }
   ]
 }
