@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-09-22T05:46:26.227Z",
-  "total": 480,
+  "generatedAt": "2026-09-23T05:26:58.194Z",
+  "total": 510,
   "dates": [
+    "2026-09-23",
     "2026-09-22",
     "2026-09-21",
     "2026-09-20",
@@ -5936,6 +5937,372 @@
       "section": "insights",
       "topics": [],
       "heatScore": 60.2
+    },
+    {
+      "id": "614f296b8a41",
+      "date": "2026-09-23",
+      "title": "AnnouncementsSep 1, 2026Introducing Claude Fable 5.1 and Claude Mythos 5.1Our most advanced models for coding and knowledge work. Their research capabilities al",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "sourceName": "Anthropic News",
+      "section": "models",
+      "topics": [],
+      "heatScore": 76.3
+    },
+    {
+      "id": "9b2b7d7b52b0",
+      "date": "2026-09-23",
+      "title": "Qwen-Image-2.1 开源发布，登顶 Arena 图像编辑榜开源第一",
+      "summary": "通义千问发布 Qwen-Image-2.1，开放权重，在 Arena Image Edit Arena 以 1367 分位列开源第一、总榜第 16，距第 15 名 GPT-Image-1.5-high-fidelity 仅 3 分，同时登上 Text-to-Image Arena 开源第一。",
+      "url": "https://x.com/arena/status/2102416020678008986",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "opensource",
+        "multimodal"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "5c3099c9f182",
+      "date": "2026-09-23",
+      "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+      "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/google-pics",
+      "sourceName": "Google AI Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "aa710ef75bfe",
+      "date": "2026-09-23",
+      "title": "Announcing our partnership with the Republic of Korea",
+      "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "d05bb7e14b45",
+      "date": "2026-09-23",
+      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+      "summary": "Introducing Co-Scientist, a collaborative AI partner built with Gemini to help researchers accelerate scientific breakthroughs.",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "603ba9b33876",
+      "date": "2026-09-23",
+      "title": "OpenAI 发布 GPT-6 Sol 和 GPT-6 Luna，API 价格较 GPT-5.6 降 50%",
+      "summary": "OpenAI 发布 GPT-6 Sol 和 GPT-6 Luna，将 GPT-6 Astra 的训练方法用于更快更便宜的模型，API 价格较 GPT-5.6 促销价下调 50%（Sol 输入 $4→$2、输出 $20→$10；Luna 输入 $0.20→$0.10、输出 $1.20→$0.50，每百万 token）。",
+      "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [],
+      "heatScore": 74.2
+    },
+    {
+      "id": "3e28630f414a",
+      "date": "2026-09-23",
+      "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+      "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
+      "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
+      "sourceName": "Google DeepMind Blog",
+      "section": "products",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 76.5
+    },
+    {
+      "id": "76152f3c56d5",
+      "date": "2026-09-23",
+      "title": "transformers 支持直接加载 GGUF 量化模型，本地推理性能接近 llama.cpp",
+      "summary": "Hugging Face 宣布 transformers 支持直接运行 GGUF 量化模型，通过 from_pretrained 传入 gguf_file 即可加载 Hub 上的 GGUF checkpoint，并复用 ggml 的 Metal 内核。",
+      "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [],
+      "heatScore": 76.2
+    },
+    {
+      "id": "c65c98703a72",
+      "date": "2026-09-23",
+      "title": "OpenRouter 推出 Batch API，批量推理可享半价",
+      "summary": "OpenRouter 发布 Batch API，异步批量请求由供应商在 24 小时窗口内完成，通常按正常 per-token 价格的 50% 或更低收费，目前已支持 70 多个模型。",
+      "url": "https://openrouter.ai/blog/announcements/batch-api",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [],
+      "heatScore": 76.2
+    },
+    {
+      "id": "3795fe07980b",
+      "date": "2026-09-23",
+      "title": "Claude Code v2.1.280 发布，新增 Claude Opus 5.5 为默认 Opus 模型",
+      "summary": "Claude Code 发布 v2.1.280，新增 Claude Opus 5.5（claude-opus-5-5）为默认 Opus 模型，支持 1M 上下文，价格为 $4/$20 per Mtok、缓存读取 $0.20/Mtok；",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.280",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [],
+      "heatScore": 76.2
+    },
+    {
+      "id": "3cfa61574ee8",
+      "date": "2026-09-23",
+      "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+      "summary": "Modern AI platforms are no longer a single application behind one login screen. A user may start in a central portal, open a governed dataset, launch a noteboo…",
+      "url": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 72.7
+    },
+    {
+      "id": "1f9e75f2c0e4",
+      "date": "2026-09-23",
+      "title": "Making global data easier to explore",
+      "summary": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessible and easy to search.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 72.5
+    },
+    {
+      "id": "e83da0bd59ba",
+      "date": "2026-09-23",
+      "title": "Investing in multi-agent AI safety research",
+      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "agent",
+        "safety"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "1be5678f3a0f",
+      "date": "2026-09-23",
+      "title": "Aug 25, 2026AnnouncementsFunding better evaluations of AI’s impact on wellbeing",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/wellbeing-research-grants",
+      "sourceName": "Anthropic News",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 71.3
+    },
+    {
+      "id": "90ec4d0bec3d",
+      "date": "2026-09-23",
+      "title": "Claude Opus 5.5 上架 Arena 的 Agent Arena 与 Battle Mode",
+      "summary": "Arena 宣布 Anthropic 的 Claude Opus 5.5 已进入 Agent Arena，用户可通过投票驱动排行榜。Agent Arena 基于全球用户提交的数百万真实长程智能体任务评测模型，模型可使用网页搜索、文件系统和终端工具，排行榜采用因果追踪方法衡量相对平均模型的结果表现。",
+      "url": "https://x.com/arena/status/2102454952576868638",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "benchmark",
+        "agent"
+      ],
+      "heatScore": 70.2
+    },
+    {
+      "id": "e1ffff448939",
+      "date": "2026-09-23",
+      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 68.5
+    },
+    {
+      "id": "81ec491c9bd7",
+      "date": "2026-09-23",
+      "title": "Meta Muse 助手曝出严重 0-day 漏洞，Amazon 已开始封禁 Muse",
+      "summary": "Meta 的 AI 助手 Muse 存在一个 0-day 漏洞，任何本地应用或终端命令都可获取用户 Muse 账户的认证 token，获得对智能体的完全控制。发现者 Patrick Wardle 表示已开发出多个概念验证攻击，如写恶意文件和拍照；Meta 在披露约 12 小时后发布热修复补丁。",
+      "url": "https://arstechnica.com/security/2026/09/muse-metas-extraordinarily-privileged-ai-assistant-has-a-serious-0-day",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 67.2
+    },
+    {
+      "id": "57c78f2fa0dc",
+      "date": "2026-09-23",
+      "title": "Deepening our partnership with the UK AI Security Institute",
+      "summary": "Google DeepMind and UK AI Security Institute (AISI) strengthen collaboration on critical AI safety and security research",
+      "url": "https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 63.5
+    },
+    {
+      "id": "6f74c6100251",
+      "date": "2026-09-23",
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 75.5
+    },
+    {
+      "id": "813993f148ba",
+      "date": "2026-09-23",
+      "title": "Epoch AI 研究报告：达到同等 AI 性能的成本每季度下降约 47%",
+      "summary": "Epoch AI 发布报告，估算过去三年内达到同等 AI 性能的成本平均每季度下降约 47%，即每年约 13 倍，并认为这一速度可能自 2021 年 11 月商业 LLM 推理开始以来持续至今。分析覆盖数学、硬科学和技能游戏类五个基准；刚达到 SOTA 的性能成本每季度下降 66%，两年后放缓至每季度 32%；",
+      "url": "https://epoch.ai/publications/the-plunging-price-of-thought",
+      "sourceName": "AI HOT 日报",
+      "section": "papers",
+      "topics": [
+        "benchmark"
+      ],
+      "heatScore": 70.2
+    },
+    {
+      "id": "af664c75603a",
+      "date": "2026-09-23",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "b5a66e1409cf",
+      "date": "2026-09-23",
+      "title": "Sep 18, 2026Announcements Partnering with Accenture on embedded evaluation",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "sourceName": "Anthropic News",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 67.3
+    },
+    {
+      "id": "9b5ad59335f2",
+      "date": "2026-09-23",
+      "title": "Introducing Nano Banana Pro",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-nano-banana-pro",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 65.5
+    },
+    {
+      "id": "c8362a71e189",
+      "date": "2026-09-23",
+      "title": "Introducing Google Antigravity 2.0",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-google-antigravity-2-0",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 61.5
+    },
+    {
+      "id": "804239e2e880",
+      "date": "2026-09-23",
+      "title": "Introducing Gemma 3n: The developer guide",
+      "summary": "Gemma 3n is designed for the developer community that helped shape Gemma.",
+      "url": "https://deepmind.google/blog/introducing-gemma-3n-the-developer-guide",
+      "sourceName": "Google DeepMind Blog",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "7059d210234c",
+      "date": "2026-09-23",
+      "title": "卡兹克实测对比 Grok 4.7 与小米 MiMo V2.6：后者成不可能三角版本答案",
+      "summary": "作者实测同日凌晨发布的 Grok 4.7 与小米 MiMo V2.6，认为 Grok 4.7 低于预期，MiMo V2.6 成为性能、价格、速度三角的当前版本答案。",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686569&idx=1&sn=f716d3dd70259240800a67b9fabd53fd",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 71.2
+    },
+    {
+      "id": "5b922e3d9fc2",
+      "date": "2026-09-23",
+      "title": "OpenRouter 解读 NVIDIA Nemotron 3.5 Lightning 如何承担 Agent 高频执行调用",
+      "summary": "OpenRouter 发文解读 NVIDIA 的 Nemotron 3.5 Lightning，这是一款 30B 总参数、约 3B 激活参数的混合专家开源权重模型，定位于工具调用、编码等高频、边界清晰的 Agent 执行步骤，与负责复杂推理的 Nemotron 3 Ultra（550B 总参数、55B 激活）形成分工。",
+      "url": "https://openrouter.ai/blog/insights/nemotron-3-5-lightning",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [
+        "opensource",
+        "agent",
+        "infra"
+      ],
+      "heatScore": 71.2
+    },
+    {
+      "id": "50f2f695af40",
+      "date": "2026-09-23",
+      "title": "AntLing open sourced the Ming-Image-0.1-Design family",
+      "summary": "AntLing open sourced the Ming-Image-0.1-Design family: • Ming-Image-0.1-Design, 6B • Ming-Image-0.1-Design-Layer, 6B • Two open-source Agent Skills: the Ling U…",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnh7tk/antling_open_sourced_the_mingimage01design_family",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "insights",
+      "topics": [
+        "opensource",
+        "agent"
+      ],
+      "heatScore": 66.2
+    },
+    {
+      "id": "9b75b4bfaf6a",
+      "date": "2026-09-23",
+      "title": "quants for K2-Horizon are now available",
+      "summary": "You can finally downloads quants from: https://huggingface.co/IFM/K2-Horizon-MoVA-36B-A4B-GGUF https://preview.redd.it/cfhl43pps4rh1.png?width=2800&format=png&…",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wnky7x/quants_for_k2horizon_are_now_available",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 66.2
+    },
+    {
+      "id": "cdf09a354b19",
+      "date": "2026-09-23",
+      "title": "OpenRouter 实测 Jev 1.13 与 Claude Opus 5 在 Banking77 分类任务上的准确率、延迟与成本",
+      "summary": "OpenRouter 用 Banking77 测试集的 3,080 条客服语料对比 Jev 1.13 与 Claude Opus 5 的意图分类表现。Jev 准确率 81.0% 比 Opus 的 84.4% 低 3.3 个百分点，但中位延迟 175 ms 约为 Opus（2,266 ms）的 1/13，每千次请求成本…",
+      "url": "https://openrouter.ai/blog/insights/jev-vs-claude-opus-5-classification",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 64.2
     }
   ]
 }
