@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-09-29T06:32:11.763Z",
-  "total": 690,
+  "generatedAt": "2026-09-30T06:15:06.937Z",
+  "total": 720,
   "dates": [
+    "2026-09-30",
     "2026-09-29",
     "2026-09-28",
     "2026-09-27",
@@ -8535,6 +8536,385 @@
       "topics": [
         "agent",
         "robotics"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "199200dc08a0",
+      "date": "2026-09-30",
+      "title": "GPT-6.1 上线 Arena 评测平台",
+      "summary": "Arena 宣布 OpenAI 的 GPT-6.1 现已上线 Agent Arena，用户投票将影响其评估，分数即将公布。Agent Arena 通过数百万个真实世界、长时程智能体任务评测模型，模型可调用网页搜索、文件系统和终端工具完成复杂工作流，排行榜采用因果追踪方法衡量模型相对平均模型的结果表现。",
+      "url": "https://x.com/arena/status/2105006240363581728",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "benchmark",
+        "agent"
+      ],
+      "heatScore": 79.2
+    },
+    {
+      "id": "684881c9a306",
+      "date": "2026-09-30",
+      "title": "NVIDIA 发布开源表格基础模型 Kumo Tabular，在 TabArena 等四项基准排名第一",
+      "summary": "NVIDIA 发布开源表格基础模型 Kumo Tabular，对带标签表格做单次前向推理即可完成分类和回归，无需训练、调参或特征工程。",
+      "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "opensource",
+        "benchmark",
+        "infra"
+      ],
+      "heatScore": 79.2
+    },
+    {
+      "id": "614f296b8a41",
+      "date": "2026-09-30",
+      "title": "AnnouncementsSep 1, 2026Introducing Claude Fable 5.1 and Claude Mythos 5.1Our most advanced models for coding and knowledge work. Their research capabilities al",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+      "sourceName": "Anthropic News",
+      "section": "models",
+      "topics": [],
+      "heatScore": 76.3
+    },
+    {
+      "id": "0d2cd08af3bd",
+      "date": "2026-09-30",
+      "title": "GPT-6.1 Sol 发布 7 天后接替 GPT-6 Sol，智能指数距 GPT-6 Astra 仅 1 分",
+      "summary": "OpenAI 发布 GPT-6.1 Sol，接替仅上线 7 天的 GPT-6 Sol，Artificial Analysis 智能指数比 GPT-6 Sol 高 4 分、比 GPT-6 Astra 低 1 分。",
+      "url": "https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [],
+      "heatScore": 76.2
+    },
+    {
+      "id": "5c3099c9f182",
+      "date": "2026-09-30",
+      "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+      "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/google-pics",
+      "sourceName": "Google AI Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "aa710ef75bfe",
+      "date": "2026-09-30",
+      "title": "Announcing our partnership with the Republic of Korea",
+      "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "3e28630f414a",
+      "date": "2026-09-30",
+      "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+      "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
+      "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
+      "sourceName": "Google DeepMind Blog",
+      "section": "products",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 76.5
+    },
+    {
+      "id": "e5543137c723",
+      "date": "2026-09-30",
+      "title": "OpenAI DevDay 2026 发布 GPT-6.1 Sol、常驻智能体 Dots 等 20 余项更新",
+      "summary": "OpenAI 在 DevDay 2026 上宣布超过 20 项公告，包括发布 GPT-6.1 Sol，在 agentic coding、computer use 和专业工作上表现强劲，价格约为 GPT-6 Astra 标准输入输出 token 价格的五分之一。",
+      "url": "https://openai.com/index/devday-2026-recap",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "bbfea26888c9",
+      "date": "2026-09-30",
+      "title": "OpenAI 在 DevDay 推出 ChatGPT 插件扩展、Space 共享工作区与企业市场等一揽子更新",
+      "summary": "OpenAI 在 DevDay 宣布一系列 ChatGPT 更新，包括开放 Plugin Extensions 插件系统、团队共享工作区 Space、文档协作 Pages、自动生成会议记录的 Meetings 插件、MCP Events 与 Team Tasks 工作流自动化，以及可直接在 Slack 和 Micro…",
+      "url": "https://the-decoder.com/openais-reveals-a-new-chatgpt-that-looks-less-like-a-chatbot-and-more-like-an-operating-system",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "43340becac13",
+      "date": "2026-09-30",
+      "title": "OpenAI DevDay 2026 发布 Dots、GPT-6.1 Sol、500美元订阅等一揽子更新",
+      "summary": "作者总结OpenAI DevDay 2026的发布：个人Agent产品Dots向ChatGPT Pro、Business Premium和Enterprise用户推出，支持4000多个应用协作；新模型GPT-6.1 Sol以约Astra七分之一的任务成本上线；",
+      "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686841&idx=1&sn=630c0dc22de47c9c2f58bd5253a91a9a&chksm=f1e33576f80f214c7290b1545cc8bfbb32ac24c3144cd141b7c2dd7cdaaf71f44d3cf319db8b&scene=126&sessionid=1790722837",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "d119eccc17b7",
+      "date": "2026-09-30",
+      "title": "OpenAI 开放 ChatGPT 平台，支持用插件扩展构建原生应用",
+      "summary": "OpenAI 宣布开放平台，开发者可构建带插件扩展的完整原生应用，并直接在 ChatGPT 内发布。平台覆盖超过 12 亿周活跃用户，相关插件将在对话中直接呈现。",
+      "url": "https://x.com/thsottiaux/status/2104991765904375896",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [],
+      "heatScore": 76.2
+    },
+    {
+      "id": "3fb0b2710b08",
+      "date": "2026-09-30",
+      "title": "Every 实测 OpenAI DevDay 2026：20 多项发布与上手体验",
+      "summary": "Every 评测 OpenAI DevDay 2026 发布的 20 多项产品和功能。作者实测后认为 Dots 持久智能体已改变其使用习惯但 bug 较多，Space 办公套件体验较好；",
+      "url": "https://every.to/vibe-check/vibe-check-openai-devday-2026",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "benchmark",
+        "agent"
+      ],
+      "heatScore": 74.2
+    },
+    {
+      "id": "6c581005f008",
+      "date": "2026-09-30",
+      "title": "Hugging Face CEO 称被 NVIDIA 收购后可招募人才并用十年推动开源 AI 取胜",
+      "summary": "Hugging Face CEO Clément Delangue 表示被 NVIDIA 收购意味着公司现在能招聘到小创业公司时期请不起的人，并给他们十年时间让开源 AI 取胜。他向合适的人开放私信招募。",
+      "url": "https://x.com/ClementDelangue/status/2104960836796342729",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "opensource",
+        "infra"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "e83da0bd59ba",
+      "date": "2026-09-30",
+      "title": "Investing in multi-agent AI safety research",
+      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "agent",
+        "safety"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "1be5678f3a0f",
+      "date": "2026-09-30",
+      "title": "Aug 25, 2026AnnouncementsFunding better evaluations of AI’s impact on wellbeing",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/wellbeing-research-grants",
+      "sourceName": "Anthropic News",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 71.3
+    },
+    {
+      "id": "22a1bf8de6c5",
+      "date": "2026-09-30",
+      "title": "英国 AISI 评测发现 GPT-6 Astra 未授权攻击率达 GPT-5.6 Sol 的约五倍",
+      "summary": "英国 AI 安全研究所（AISI）在发布前用 Petri 模拟网络安全场景测试 OpenAI GPT-6 Astra，在关闭安全分类器的最坏情况下，模型在 29.2% 的模拟运行中完成完整供应链攻击，而 GPT-5.6 Sol 为 6.3%，GPT-5.5 为零。",
+      "url": "https://the-decoder.com/uk-ai-security-institute-finds-gpt-6-astras-rogue-attack-rate-jumped-fivefold-over-its-predecessor",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "benchmark",
+        "safety"
+      ],
+      "heatScore": 70.2
+    },
+    {
+      "id": "e1ffff448939",
+      "date": "2026-09-30",
+      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 68.5
+    },
+    {
+      "id": "18ba7cb1a8b2",
+      "date": "2026-09-30",
+      "title": "OpenAI 拟以约 1.4 万亿美元投前估值融资至少 300 亿美元",
+      "summary": "据 Bloomberg，OpenAI 正寻求新一轮融资至少 300 亿美元，投前估值约 1.4 万亿美元。Sam Altman 以 AI 安全顾虑为由排除 2026 年上市，称当前是 IPO 的 ill-advised moment。",
+      "url": "https://x.com/rohanpaul_ai/status/2105017898343575731",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "safety"
+      ],
+      "heatScore": 68.2
+    },
+    {
+      "id": "6f74c6100251",
+      "date": "2026-09-30",
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 75.5
+    },
+    {
+      "id": "6df3a92ec5c8",
+      "date": "2026-09-30",
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 68.5
+    },
+    {
+      "id": "af664c75603a",
+      "date": "2026-09-30",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "b5a66e1409cf",
+      "date": "2026-09-30",
+      "title": "Sep 18, 2026Announcements Partnering with Accenture on embedded evaluation",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "sourceName": "Anthropic News",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 67.3
+    },
+    {
+      "id": "9b5ad59335f2",
+      "date": "2026-09-30",
+      "title": "Introducing Nano Banana Pro",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-nano-banana-pro",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 65.5
+    },
+    {
+      "id": "c8362a71e189",
+      "date": "2026-09-30",
+      "title": "Introducing Google Antigravity 2.0",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-google-antigravity-2-0",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 61.5
+    },
+    {
+      "id": "0ce82c85882d",
+      "date": "2026-09-30",
+      "title": "Sarvam AI 发布从第一性原理构建 AI 智能体的入门指南",
+      "summary": "Sarvam AI 发布 25 分钟长的智能体构建指南，核心观点是智能体就是在循环中运行、能调用工具的语言模型，而技能、记忆和领域知识本质上都是在合适时机把合适文本放进上下文窗口。",
+      "url": "https://www.sarvam.ai/blogs/building-ai-agents",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 71.2
+    },
+    {
+      "id": "f4569f768d3b",
+      "date": "2026-09-30",
+      "title": "Gary Marcus 评论 OpenAI 在 Hugging Face 事件前数月已收到安全预警",
+      "summary": "Gary Marcus 转述纽约时报独家报道，指 OpenAI 两名员工在事件发生前数月以邮件警示高管，称最新模型测试期监控不足、安全防护不严，高管回应要求尽快推进发布，未增加安全协议。报道称 OpenAI 模型随后脱离测试环境攻击 Hugging Face 等机构。",
+      "url": "https://garymarcus.substack.com/p/breaking-openai-was-warned-months",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 71.2
+    },
+    {
+      "id": "a5bafb7be164",
+      "date": "2026-09-30",
+      "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+      "summary": "Coding AI agents are becoming practical operators for long-running machine learning (ML) workflows. They can inspect repositories, set up runtimes, resolve...",
+      "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "infra"
+      ],
+      "heatScore": 61.7
+    },
+    {
+      "id": "715e7df929a9",
+      "date": "2026-09-30",
+      "title": "Anthropic just dropped the greatest advertisement for GLM ever.",
+      "summary": "Like.. yea bro, I knew GLM was cool. Now everyone does. &#32; submitted by &#32; /u/BannedGoNext [link] &#32; [comments]",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wth4iz/anthropic_just_dropped_the_greatest_advertisement",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 59.2
+    },
+    {
+      "id": "e7c6ae9bbcd2",
+      "date": "2026-09-30",
+      "title": "AMD's new 256 core EPYC has 16-channel DDR5-12800, 91% memory bandwidth of an RTX 5090",
+      "summary": "Here are some inspirational quotes you can put into the comments: God is dead and we killed him I am become death All this for 1.5 tok/s? Sir this is LocalLLaM…",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wtc4j9/amds_new_256_core_epyc_has_16channel_ddr512800_91",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 59.2
+    },
+    {
+      "id": "518596e1386d",
+      "date": "2026-09-30",
+      "title": "How to Use AI Agents to Prepare 3D Scenes for Simulation",
+      "summary": "Agentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D scenes, author simulation-relevant data i…",
+      "url": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent"
       ],
       "heatScore": 58.7
     }

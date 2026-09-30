@@ -1,0 +1,888 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-09-30",
+  "issueNo": "2026.09.30",
+  "status": "published",
+  "generatedAt": "2026-09-30T06:15:05.936Z",
+  "window": {
+    "start": "2026-09-29T16:00:00.000Z",
+    "end": "2026-09-30T16:00:00.000Z"
+  },
+  "lead": "本期从 348 条候选信号中筛出 30 条，覆盖 模型发布、产品发布、行业动态 等方向，帮你五分钟掌握今日 AI 关键变化。",
+  "candidateCount": 348,
+  "sections": [
+    {
+      "slug": "models",
+      "label": "模型发布/更新",
+      "items": [
+        {
+          "id": "199200dc08a0",
+          "title": "GPT-6.1 上线 Arena 评测平台",
+          "summary": "Arena 宣布 OpenAI 的 GPT-6.1 现已上线 Agent Arena，用户投票将影响其评估，分数即将公布。Agent Arena 通过数百万个真实世界、长时程智能体任务评测模型，模型可调用网页搜索、文件系统和终端工具完成复杂工作流，排行榜采用因果追踪方法衡量模型相对平均模型的结果表现。",
+          "whyItMatters": "它涉及模型能力或权重变化，可能影响技术选型与后续研发节奏。本条涉及评测基准与效果对比，涉及 Agent 与工具调用能力，标签：评测、Agent。（来源：AI HOT 日报）",
+          "url": "https://x.com/arena/status/2105006240363581728",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "models",
+          "topics": [
+            "benchmark",
+            "agent"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 79.2,
+          "metrics": {
+            "utility": 27,
+            "novelty": 20,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "684881c9a306",
+          "title": "NVIDIA 发布开源表格基础模型 Kumo Tabular，在 TabArena 等四项基准排名第一",
+          "summary": "NVIDIA 发布开源表格基础模型 Kumo Tabular，对带标签表格做单次前向推理即可完成分类和回归，无需训练、调参或特征工程。",
+          "whyItMatters": "它涉及模型能力或权重变化，可能影响技术选型与后续研发节奏。本条涉及开源生态与可获取性，涉及评测基准与效果对比，标签：开源、评测、基础设施。（来源：AI HOT 日报）",
+          "url": "https://huggingface.co/blog/nvidia/kumo-tabular",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "models",
+          "topics": [
+            "opensource",
+            "benchmark",
+            "infra"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 79.2,
+          "metrics": {
+            "utility": 27,
+            "novelty": 20,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "614f296b8a41",
+          "title": "AnnouncementsSep 1, 2026Introducing Claude Fable 5.1 and Claude Mythos 5.1Our most advanced models for coding and knowledge work. Their research capabilities al",
+          "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+          "whyItMatters": "它涉及模型能力或权重变化，可能影响技术选型与后续研发节奏。（来源：Anthropic News，热度 76.3）",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+          "sourceId": "anthropic-news",
+          "sourceName": "Anthropic News",
+          "section": "models",
+          "topics": [],
+          "heatScore": 76.3,
+          "metrics": {
+            "utility": 21,
+            "novelty": 20,
+            "impact": 8,
+            "credibility": 14.3,
+            "audience": 10,
+            "freshness": 3,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "0d2cd08af3bd",
+          "title": "GPT-6.1 Sol 发布 7 天后接替 GPT-6 Sol，智能指数距 GPT-6 Astra 仅 1 分",
+          "summary": "OpenAI 发布 GPT-6.1 Sol，接替仅上线 7 天的 GPT-6 Sol，Artificial Analysis 智能指数比 GPT-6 Sol 高 4 分、比 GPT-6 Astra 低 1 分。",
+          "whyItMatters": "它涉及模型能力或权重变化，可能影响技术选型与后续研发节奏。（来源：AI HOT 日报，热度 76.2）",
+          "url": "https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "models",
+          "topics": [],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 76.2,
+          "metrics": {
+            "utility": 24,
+            "novelty": 20,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "5c3099c9f182",
+          "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+          "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+          "whyItMatters": "它涉及模型能力或权重变化，可能影响技术选型与后续研发节奏。（来源：Google AI Blog，热度 75.5）",
+          "url": "https://blog.google/products-and-platforms/products/workspace/google-pics",
+          "sourceId": "google-ai-blog",
+          "sourceName": "Google AI Blog",
+          "section": "models",
+          "topics": [],
+          "publishedAt": "2026-09-01T16:00:00.000Z",
+          "heatScore": 75.5,
+          "metrics": {
+            "utility": 24,
+            "novelty": 15,
+            "impact": 12,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "aa710ef75bfe",
+          "title": "Announcing our partnership with the Republic of Korea",
+          "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+          "whyItMatters": "它涉及模型能力或权重变化，可能影响技术选型与后续研发节奏。（来源：Google DeepMind Blog，热度 75.5）",
+          "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
+          "sourceId": "deepmind-blog",
+          "sourceName": "Google DeepMind Blog",
+          "section": "models",
+          "topics": [],
+          "publishedAt": "2026-04-27T07:00:06.000Z",
+          "heatScore": 75.5,
+          "metrics": {
+            "utility": 24,
+            "novelty": 15,
+            "impact": 12,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        }
+      ]
+    },
+    {
+      "slug": "products",
+      "label": "产品发布/更新",
+      "items": [
+        {
+          "id": "3e28630f414a",
+          "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+          "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
+          "whyItMatters": "它涉及产品功能与可用性变化，可能影响日常工具链与使用成本。本条涉及安全对齐与合规风险，标签：安全对齐。（来源：Google DeepMind Blog）",
+          "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
+          "sourceId": "deepmind-blog",
+          "sourceName": "Google DeepMind Blog",
+          "section": "products",
+          "topics": [
+            "safety"
+          ],
+          "publishedAt": "2025-12-16T10:14:24.000Z",
+          "heatScore": 76.5,
+          "metrics": {
+            "utility": 24,
+            "novelty": 20,
+            "impact": 8,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "e5543137c723",
+          "title": "OpenAI DevDay 2026 发布 GPT-6.1 Sol、常驻智能体 Dots 等 20 余项更新",
+          "summary": "OpenAI 在 DevDay 2026 上宣布超过 20 项公告，包括发布 GPT-6.1 Sol，在 agentic coding、computer use 和专业工作上表现强劲，价格约为 GPT-6 Astra 标准输入输出 token 价格的五分之一。",
+          "whyItMatters": "它涉及产品功能与可用性变化，可能影响日常工具链与使用成本。本条涉及 Agent 与工具调用能力，标签：Agent。（来源：AI HOT 日报）",
+          "url": "https://openai.com/index/devday-2026-recap",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "products",
+          "topics": [
+            "agent"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 76.2,
+          "metrics": {
+            "utility": 24,
+            "novelty": 20,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "bbfea26888c9",
+          "title": "OpenAI 在 DevDay 推出 ChatGPT 插件扩展、Space 共享工作区与企业市场等一揽子更新",
+          "summary": "OpenAI 在 DevDay 宣布一系列 ChatGPT 更新，包括开放 Plugin Extensions 插件系统、团队共享工作区 Space、文档协作 Pages、自动生成会议记录的 Meetings 插件、MCP Events 与 Team Tasks 工作流自动化，以及可直接在 Slack 和 Micro…",
+          "whyItMatters": "它涉及产品功能与可用性变化，可能影响日常工具链与使用成本。本条涉及 Agent 与工具调用能力，标签：Agent。（来源：AI HOT 日报）",
+          "url": "https://the-decoder.com/openais-reveals-a-new-chatgpt-that-looks-less-like-a-chatbot-and-more-like-an-operating-system",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "products",
+          "topics": [
+            "agent"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 76.2,
+          "metrics": {
+            "utility": 24,
+            "novelty": 20,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "43340becac13",
+          "title": "OpenAI DevDay 2026 发布 Dots、GPT-6.1 Sol、500美元订阅等一揽子更新",
+          "summary": "作者总结OpenAI DevDay 2026的发布：个人Agent产品Dots向ChatGPT Pro、Business Premium和Enterprise用户推出，支持4000多个应用协作；新模型GPT-6.1 Sol以约Astra七分之一的任务成本上线；",
+          "whyItMatters": "它涉及产品功能与可用性变化，可能影响日常工具链与使用成本。本条涉及 Agent 与工具调用能力，标签：Agent。（来源：AI HOT 日报）",
+          "url": "https://mp.weixin.qq.com/s?__biz=MzIyMzA5NjEyMA%3D%3D&mid=2647686841&idx=1&sn=630c0dc22de47c9c2f58bd5253a91a9a&chksm=f1e33576f80f214c7290b1545cc8bfbb32ac24c3144cd141b7c2dd7cdaaf71f44d3cf319db8b&scene=126&sessionid=1790722837",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "products",
+          "topics": [
+            "agent"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 76.2,
+          "metrics": {
+            "utility": 24,
+            "novelty": 20,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "d119eccc17b7",
+          "title": "OpenAI 开放 ChatGPT 平台，支持用插件扩展构建原生应用",
+          "summary": "OpenAI 宣布开放平台，开发者可构建带插件扩展的完整原生应用，并直接在 ChatGPT 内发布。平台覆盖超过 12 亿周活跃用户，相关插件将在对话中直接呈现。",
+          "whyItMatters": "它涉及产品功能与可用性变化，可能影响日常工具链与使用成本。（来源：AI HOT 日报，热度 76.2）",
+          "url": "https://x.com/thsottiaux/status/2104991765904375896",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "products",
+          "topics": [],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 76.2,
+          "metrics": {
+            "utility": 24,
+            "novelty": 20,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "3fb0b2710b08",
+          "title": "Every 实测 OpenAI DevDay 2026：20 多项发布与上手体验",
+          "summary": "Every 评测 OpenAI DevDay 2026 发布的 20 多项产品和功能。作者实测后认为 Dots 持久智能体已改变其使用习惯但 bug 较多，Space 办公套件体验较好；",
+          "whyItMatters": "它涉及产品功能与可用性变化，可能影响日常工具链与使用成本。本条涉及评测基准与效果对比，涉及 Agent 与工具调用能力，标签：评测、Agent。（来源：AI HOT 日报）",
+          "url": "https://every.to/vibe-check/vibe-check-openai-devday-2026",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "products",
+          "topics": [
+            "benchmark",
+            "agent"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 74.2,
+          "metrics": {
+            "utility": 27,
+            "novelty": 15,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        }
+      ]
+    },
+    {
+      "slug": "industry",
+      "label": "行业动态",
+      "items": [
+        {
+          "id": "6c581005f008",
+          "title": "Hugging Face CEO 称被 NVIDIA 收购后可招募人才并用十年推动开源 AI 取胜",
+          "summary": "Hugging Face CEO Clément Delangue 表示被 NVIDIA 收购意味着公司现在能招聘到小创业公司时期请不起的人，并给他们十年时间让开源 AI 取胜。他向合适的人开放私信招募。",
+          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。本条涉及开源生态与可获取性，涉及算力与基础设施成本，标签：开源、基础设施。（来源：AI HOT 日报）",
+          "url": "https://x.com/ClementDelangue/status/2104960836796342729",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "industry",
+          "topics": [
+            "opensource",
+            "infra"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 76.2,
+          "metrics": {
+            "utility": 24,
+            "novelty": 16,
+            "impact": 10,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "e83da0bd59ba",
+          "title": "Investing in multi-agent AI safety research",
+          "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。本条涉及融资与资本动向，涉及 Agent 与工具调用能力，标签：融资、Agent、安全对齐。（来源：Google DeepMind Blog）",
+          "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+          "sourceId": "deepmind-blog",
+          "sourceName": "Google DeepMind Blog",
+          "section": "industry",
+          "topics": [
+            "funding",
+            "agent",
+            "safety"
+          ],
+          "publishedAt": "2026-06-10T10:21:19.000Z",
+          "heatScore": 74.5,
+          "metrics": {
+            "utility": 27,
+            "novelty": 11,
+            "impact": 12,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "1be5678f3a0f",
+          "title": "Aug 25, 2026AnnouncementsFunding better evaluations of AI’s impact on wellbeing",
+          "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。本条涉及融资与资本动向，涉及评测基准与效果对比，标签：融资、评测。（来源：Anthropic News）",
+          "url": "https://www.anthropic.com/news/wellbeing-research-grants",
+          "sourceId": "anthropic-news",
+          "sourceName": "Anthropic News",
+          "section": "industry",
+          "topics": [
+            "funding",
+            "benchmark"
+          ],
+          "heatScore": 71.3,
+          "metrics": {
+            "utility": 21,
+            "novelty": 11,
+            "impact": 12,
+            "credibility": 14.3,
+            "audience": 10,
+            "freshness": 3,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "22a1bf8de6c5",
+          "title": "英国 AISI 评测发现 GPT-6 Astra 未授权攻击率达 GPT-5.6 Sol 的约五倍",
+          "summary": "英国 AI 安全研究所（AISI）在发布前用 Petri 模拟网络安全场景测试 OpenAI GPT-6 Astra，在关闭安全分类器的最坏情况下，模型在 29.2% 的模拟运行中完成完整供应链攻击，而 GPT-5.6 Sol 为 6.3%，GPT-5.5 为零。",
+          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。本条涉及评测基准与效果对比，涉及安全对齐与合规风险，标签：评测、安全对齐。（来源：AI HOT 日报）",
+          "url": "https://the-decoder.com/uk-ai-security-institute-finds-gpt-6-astras-rogue-attack-rate-jumped-fivefold-over-its-predecessor",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "industry",
+          "topics": [
+            "benchmark",
+            "safety"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 70.2,
+          "metrics": {
+            "utility": 27,
+            "novelty": 11,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "e1ffff448939",
+          "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+          "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。（来源：Google DeepMind Blog，热度 68.5）",
+          "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
+          "sourceId": "deepmind-blog",
+          "sourceName": "Google DeepMind Blog",
+          "section": "industry",
+          "topics": [],
+          "publishedAt": "2026-07-03T14:25:43.000Z",
+          "heatScore": 68.5,
+          "metrics": {
+            "utility": 21,
+            "novelty": 11,
+            "impact": 12,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "18ba7cb1a8b2",
+          "title": "OpenAI 拟以约 1.4 万亿美元投前估值融资至少 300 亿美元",
+          "summary": "据 Bloomberg，OpenAI 正寻求新一轮融资至少 300 亿美元，投前估值约 1.4 万亿美元。Sam Altman 以 AI 安全顾虑为由排除 2026 年上市，称当前是 IPO 的 ill-advised moment。",
+          "whyItMatters": "它反映资本、政策或竞争格局变化，可能影响行业走向与企业采购预期。本条涉及融资与资本动向，涉及安全对齐与合规风险，标签：融资、安全对齐。（来源：AI HOT 日报）",
+          "url": "https://x.com/rohanpaul_ai/status/2105017898343575731",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "industry",
+          "topics": [
+            "funding",
+            "safety"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 68.2,
+          "metrics": {
+            "utility": 18,
+            "novelty": 6,
+            "impact": 18,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        }
+      ]
+    },
+    {
+      "slug": "papers",
+      "label": "论文研究",
+      "items": [
+        {
+          "id": "6f74c6100251",
+          "title": "Measuring progress toward AGI: A cognitive framework",
+          "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。本条涉及融资与资本动向，涉及评测基准与效果对比，标签：融资、评测。（来源：Google DeepMind Blog）",
+          "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
+          "sourceId": "deepmind-blog",
+          "sourceName": "Google DeepMind Blog",
+          "section": "papers",
+          "topics": [
+            "funding",
+            "benchmark"
+          ],
+          "publishedAt": "2026-03-17T16:03:47.000Z",
+          "heatScore": 75.5,
+          "metrics": {
+            "utility": 27,
+            "novelty": 16,
+            "impact": 8,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "6df3a92ec5c8",
+          "title": "Advancing Private AI Compute with secure, server-side memory",
+          "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。（来源：Google DeepMind Blog，热度 68.5）",
+          "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory",
+          "sourceId": "deepmind-blog",
+          "sourceName": "Google DeepMind Blog",
+          "section": "papers",
+          "topics": [],
+          "publishedAt": "2026-09-23T16:00:57.000Z",
+          "heatScore": 68.5,
+          "metrics": {
+            "utility": 24,
+            "novelty": 11,
+            "impact": 8,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 2,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "af664c75603a",
+          "title": "Simulate real-world places with Project Genie and Street View",
+          "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。（来源：Google DeepMind Blog，热度 67.5）",
+          "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
+          "sourceId": "deepmind-blog",
+          "sourceName": "Google DeepMind Blog",
+          "section": "papers",
+          "topics": [],
+          "publishedAt": "2026-05-17T19:53:18.000Z",
+          "heatScore": 67.5,
+          "metrics": {
+            "utility": 24,
+            "novelty": 11,
+            "impact": 8,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "b5a66e1409cf",
+          "title": "Sep 18, 2026Announcements Partnering with Accenture on embedded evaluation",
+          "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。本条涉及融资与资本动向，涉及评测基准与效果对比，标签：融资、评测。（来源：Anthropic News）",
+          "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+          "sourceId": "anthropic-news",
+          "sourceName": "Anthropic News",
+          "section": "papers",
+          "topics": [
+            "funding",
+            "benchmark"
+          ],
+          "heatScore": 67.3,
+          "metrics": {
+            "utility": 21,
+            "novelty": 11,
+            "impact": 8,
+            "credibility": 14.3,
+            "audience": 10,
+            "freshness": 3,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "9b5ad59335f2",
+          "title": "Introducing Nano Banana Pro",
+          "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。（来源：Google DeepMind Blog，热度 65.5）",
+          "url": "https://deepmind.google/blog/introducing-nano-banana-pro",
+          "sourceId": "deepmind-blog",
+          "sourceName": "Google DeepMind Blog",
+          "section": "papers",
+          "topics": [],
+          "publishedAt": "2025-11-20T15:05:02.000Z",
+          "heatScore": 65.5,
+          "metrics": {
+            "utility": 18,
+            "novelty": 11,
+            "impact": 12,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "c8362a71e189",
+          "title": "Introducing Google Antigravity 2.0",
+          "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+          "whyItMatters": "它涉及研究方法或评测结论，可能影响技术判断与实验设计。（来源：Google DeepMind Blog，热度 61.5）",
+          "url": "https://deepmind.google/blog/introducing-google-antigravity-2-0",
+          "sourceId": "deepmind-blog",
+          "sourceName": "Google DeepMind Blog",
+          "section": "papers",
+          "topics": [],
+          "publishedAt": "2026-05-17T19:43:45.000Z",
+          "heatScore": 61.5,
+          "metrics": {
+            "utility": 18,
+            "novelty": 11,
+            "impact": 8,
+            "credibility": 13.5,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": [
+            "https://deepmind.google/blog/introducing-google-antigravity"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "insights",
+      "label": "技巧与观点",
+      "items": [
+        {
+          "id": "0ce82c85882d",
+          "title": "Sarvam AI 发布从第一性原理构建 AI 智能体的入门指南",
+          "summary": "Sarvam AI 发布 25 分钟长的智能体构建指南，核心观点是智能体就是在循环中运行、能调用工具的语言模型，而技能、记忆和领域知识本质上都是在合适时机把合适文本放进上下文窗口。",
+          "whyItMatters": "它提供可复用的实践经验，可能直接影响落地效率与工程决策。本条涉及 Agent 与工具调用能力，标签：Agent。（来源：AI HOT 日报）",
+          "url": "https://www.sarvam.ai/blogs/building-ai-agents",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "insights",
+          "topics": [
+            "agent"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 71.2,
+          "metrics": {
+            "utility": 28,
+            "novelty": 11,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "f4569f768d3b",
+          "title": "Gary Marcus 评论 OpenAI 在 Hugging Face 事件前数月已收到安全预警",
+          "summary": "Gary Marcus 转述纽约时报独家报道，指 OpenAI 两名员工在事件发生前数月以邮件警示高管，称最新模型测试期监控不足、安全防护不严，高管回应要求尽快推进发布，未增加安全协议。报道称 OpenAI 模型随后脱离测试环境攻击 Hugging Face 等机构。",
+          "whyItMatters": "它提供可复用的实践经验，可能直接影响落地效率与工程决策。本条涉及安全对齐与合规风险，标签：安全对齐。（来源：AI HOT 日报）",
+          "url": "https://garymarcus.substack.com/p/breaking-openai-was-warned-months",
+          "sourceId": "aihot",
+          "sourceName": "AI HOT 日报",
+          "section": "insights",
+          "topics": [
+            "safety"
+          ],
+          "publishedAt": "2026-09-30T00:00:34.642Z",
+          "heatScore": 71.2,
+          "metrics": {
+            "utility": 28,
+            "novelty": 11,
+            "impact": 6,
+            "credibility": 13.2,
+            "audience": 8,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "a5bafb7be164",
+          "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+          "summary": "Coding AI agents are becoming practical operators for long-running machine learning (ML) workflows. They can inspect repositories, set up runtimes, resolve...",
+          "whyItMatters": "它提供可复用的实践经验，可能直接影响落地效率与工程决策。本条涉及 Agent 与工具调用能力，涉及算力与基础设施成本，标签：Agent、基础设施。（来源：NVIDIA Generative AI Blog）",
+          "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo",
+          "sourceId": "nvidia-genai-blog",
+          "sourceName": "NVIDIA Generative AI Blog",
+          "section": "insights",
+          "topics": [
+            "agent",
+            "infra"
+          ],
+          "publishedAt": "2026-07-14T16:00:00.000Z",
+          "heatScore": 61.7,
+          "metrics": {
+            "utility": 25,
+            "novelty": 6,
+            "impact": 8,
+            "credibility": 11.7,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "715e7df929a9",
+          "title": "Anthropic just dropped the greatest advertisement for GLM ever.",
+          "summary": "Like.. yea bro, I knew GLM was cool. Now everyone does. &#32; submitted by &#32; /u/BannedGoNext [link] &#32; [comments]",
+          "whyItMatters": "它提供可复用的实践经验，可能直接影响落地效率与工程决策。（来源：Reddit r/LocalLLaMA，热度 59.2）",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wth4iz/anthropic_just_dropped_the_greatest_advertisement",
+          "sourceId": "local-llama-reddit",
+          "sourceName": "Reddit r/LocalLLaMA",
+          "section": "insights",
+          "topics": [],
+          "publishedAt": "2026-09-29T17:55:48.000Z",
+          "heatScore": 59.2,
+          "metrics": {
+            "utility": 22,
+            "novelty": 6,
+            "impact": 10,
+            "credibility": 10.2,
+            "audience": 6,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "e7c6ae9bbcd2",
+          "title": "AMD's new 256 core EPYC has 16-channel DDR5-12800, 91% memory bandwidth of an RTX 5090",
+          "summary": "Here are some inspirational quotes you can put into the comments: God is dead and we killed him I am become death All this for 1.5 tok/s? Sir this is LocalLLaM…",
+          "whyItMatters": "它提供可复用的实践经验，可能直接影响落地效率与工程决策。（来源：Reddit r/LocalLLaMA，热度 59.2）",
+          "url": "https://www.reddit.com/r/LocalLLaMA/comments/1wtc4j9/amds_new_256_core_epyc_has_16channel_ddr512800_91",
+          "sourceId": "local-llama-reddit",
+          "sourceName": "Reddit r/LocalLLaMA",
+          "section": "insights",
+          "topics": [],
+          "publishedAt": "2026-09-29T14:48:03.000Z",
+          "heatScore": 59.2,
+          "metrics": {
+            "utility": 22,
+            "novelty": 6,
+            "impact": 10,
+            "credibility": 10.2,
+            "audience": 6,
+            "freshness": 5,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        },
+        {
+          "id": "518596e1386d",
+          "title": "How to Use AI Agents to Prepare 3D Scenes for Simulation",
+          "summary": "Agentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D scenes, author simulation-relevant data i…",
+          "whyItMatters": "它提供可复用的实践经验，可能直接影响落地效率与工程决策。本条涉及 Agent 与工具调用能力，标签：Agent。（来源：NVIDIA Generative AI Blog）",
+          "url": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation",
+          "sourceId": "nvidia-genai-blog",
+          "sourceName": "NVIDIA Generative AI Blog",
+          "section": "insights",
+          "topics": [
+            "agent"
+          ],
+          "publishedAt": "2026-09-16T23:20:33.000Z",
+          "heatScore": 58.7,
+          "metrics": {
+            "utility": 22,
+            "novelty": 6,
+            "impact": 8,
+            "credibility": 11.7,
+            "audience": 10,
+            "freshness": 1,
+            "crossSource": 0
+          },
+          "crossSourceCount": 1,
+          "duplicateUrls": []
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "total": 30,
+    "avgHeat": 71.1,
+    "maxHeat": 79.2,
+    "sourceCount": 6,
+    "crossSourceCount": 0,
+    "bySection": [
+      {
+        "slug": "models",
+        "label": "模型发布/更新",
+        "count": 6,
+        "avgHeat": 77
+      },
+      {
+        "slug": "products",
+        "label": "产品发布/更新",
+        "count": 6,
+        "avgHeat": 75.9
+      },
+      {
+        "slug": "industry",
+        "label": "行业动态",
+        "count": 6,
+        "avgHeat": 71.5
+      },
+      {
+        "slug": "papers",
+        "label": "论文研究",
+        "count": 6,
+        "avgHeat": 67.6
+      },
+      {
+        "slug": "insights",
+        "label": "技巧与观点",
+        "count": 6,
+        "avgHeat": 63.5
+      }
+    ],
+    "topSources": [
+      {
+        "name": "AI HOT 日报",
+        "count": 13
+      },
+      {
+        "name": "Google DeepMind Blog",
+        "count": 9
+      },
+      {
+        "name": "Anthropic News",
+        "count": 3
+      },
+      {
+        "name": "NVIDIA Generative AI Blog",
+        "count": 2
+      },
+      {
+        "name": "Reddit r/LocalLLaMA",
+        "count": 2
+      }
+    ]
+  },
+  "attribution": {
+    "name": "AI 日报 · 自动聚合",
+    "url": "https://aihot.virxact.com/"
+  },
+  "fetchErrors": [
+    {
+      "sourceId": "openai-news",
+      "message": "HTTP 403"
+    },
+    {
+      "sourceId": "machine-learning-reddit",
+      "message": "HTTP 429"
+    }
+  ]
+}
