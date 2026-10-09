@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-10-08T06:57:08.060Z",
-  "total": 960,
+  "generatedAt": "2026-10-09T07:05:39.172Z",
+  "total": 990,
   "dates": [
+    "2026-10-09",
     "2026-10-08",
     "2026-10-07",
     "2026-10-06",
@@ -11879,6 +11880,373 @@
       "topics": [
         "infra",
         "safety"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "5c3099c9f182",
+      "date": "2026-10-09",
+      "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+      "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/google-pics",
+      "sourceName": "Google AI Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "aa710ef75bfe",
+      "date": "2026-10-09",
+      "title": "Announcing our partnership with the Republic of Korea",
+      "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "d05bb7e14b45",
+      "date": "2026-10-09",
+      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+      "summary": "Introducing Co-Scientist, a collaborative AI partner built with Gemini to help researchers accelerate scientific breakthroughs.",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "bd83040a692a",
+      "date": "2026-10-09",
+      "title": "Introducing Claude Haiku 5.5AnnouncementsOct 7, 2026Our fastest, cheapest, and most capable small model yet. It’s designed for high-volume, cost-sensitive work.",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "sourceName": "Anthropic News",
+      "section": "models",
+      "topics": [],
+      "heatScore": 73.3
+    },
+    {
+      "id": "09fd15eb4fc5",
+      "date": "2026-10-09",
+      "title": "AnnouncementsSep 28, 2026Introducing Claude Sonnet 5.5A clear upgrade over Sonnet 5 that runs 30% faster and costs up to 30% less for most work.",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/claude-sonnet-5-5",
+      "sourceName": "Anthropic News",
+      "section": "models",
+      "topics": [],
+      "heatScore": 73.3
+    },
+    {
+      "id": "635ffb01bc28",
+      "date": "2026-10-09",
+      "title": "AnnouncementsSep 22, 2026Introducing Claude Opus 5.5Opus 5.5 performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5.",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "sourceName": "Anthropic News",
+      "section": "models",
+      "topics": [],
+      "heatScore": 73.3
+    },
+    {
+      "id": "3e28630f414a",
+      "date": "2026-10-09",
+      "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+      "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
+      "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
+      "sourceName": "Google DeepMind Blog",
+      "section": "products",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 76.5
+    },
+    {
+      "id": "2b0ed8556350",
+      "date": "2026-10-09",
+      "title": "Claude 推出 Dashboards 实时仪表盘与 Motion 动画讲解功能",
+      "summary": "Anthropic 发布 Claude Dashboards 和 Claude Motion 两项 beta 功能。",
+      "url": "https://claude.com/blog/dashboards-and-motion",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [],
+      "heatScore": 76.2
+    },
+    {
+      "id": "d9e655a14c34",
+      "date": "2026-10-09",
+      "title": "Anthropic 推出开源漏洞扫描服务 OSS Scanner，免费面向开源项目",
+      "summary": "Anthropic 发布 OSS Scanner，一个可选加入的开源漏洞扫描服务，用其最强模型（包括 Claude Mythos）定期免费扫描开源项目，输出为全模型生成、无人工复核的报告。",
+      "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "opensource"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "b4c9a995db01",
+      "date": "2026-10-09",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 73.5
+    },
+    {
+      "id": "d759f13f1cd8",
+      "date": "2026-10-09",
+      "title": "AnnouncementsOct 6, 2026Expanding the Cyber Verification ProgramWe’re launching a new, expanded version of our Cyber Verification Program, which makes advanced ",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/cyber-verification-program",
+      "sourceName": "Anthropic News",
+      "section": "products",
+      "topics": [],
+      "heatScore": 73.3
+    },
+    {
+      "id": "3cfa61574ee8",
+      "date": "2026-10-09",
+      "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+      "summary": "Modern AI platforms are no longer a single application behind one login screen. A user may start in a central portal, open a governed dataset, launch a noteboo…",
+      "url": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 72.7
+    },
+    {
+      "id": "e83da0bd59ba",
+      "date": "2026-10-09",
+      "title": "Investing in multi-agent AI safety research",
+      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "agent",
+        "safety"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "623cec4a3876",
+      "date": "2026-10-09",
+      "title": "部分数学家呼吁抵制 OpenAI，AI 生成的数学证明涌入数学领域",
+      "summary": "AHM 组织在 Terence Tao 主持下发表声明，呼吁抵制 OpenAI，称其一次性发布 700 多个 AI 生成证明文件是展示力量而非学术行为。此前 OpenAI 宣称内部模型一个月内解决逾 100 个开放数学问题，约 8000 个测试问题成功率约 5%，平均每个耗时 3 小时 GPT-Pro 级算力。",
+      "url": "https://the-decoder.com/some-mathematicians-call-for-openai-boycott-after-ai-generated-proofs-flood-their-field",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "infra"
+      ],
+      "heatScore": 72.2
+    },
+    {
+      "id": "d8b79e887086",
+      "date": "2026-10-09",
+      "title": "Crowdstrike 报告疑似单人使用 AI 渗透工具攻击多家韩国银行",
+      "summary": "Crowdstrike 报告称，一名疑似中文使用者于2026年9月底至10月初利用 AI 驱动的开源渗透测试工具 ARTEX 攻击多家韩国金融机构，窃取大量数据，其中 Shinhan Bank 超过 25,000 条包含姓名、联系方式、收入和信用额度的记录泄露。",
+      "url": "https://the-decoder.com/ai-powered-hacking-tools-enabled-a-likely-single-attacker-to-breach-multiple-south-korean-banks",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "opensource"
+      ],
+      "heatScore": 71.2
+    },
+    {
+      "id": "7b88cc7ff33d",
+      "date": "2026-10-09",
+      "title": "Anthropic 发布 2026 年使用政策更新，11 月 12 日生效",
+      "summary": "Anthropic 发布新版使用政策，将于 11 月 12 日生效，多数变化是对既有规则的澄清。更新包括新设禁止欺骗性活动章节、收窄选举条款、明确武器软件与无人机武装禁令、更精确的监控与执法限制、补充高风险用例及自主物理操作的 human in the loop 要求，并新增禁止对模型的持续无端虐待行为。",
+      "url": "https://www.anthropic.com/news/2026-usage-policy-update",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 71.2
+    },
+    {
+      "id": "885a8d9537f6",
+      "date": "2026-10-09",
+      "title": "Codex 与 ChatGPT Work 活跃用户达 4000 万新高，付费账户重置已全部到账",
+      "summary": "作者确认 banked reset 已到账所有账户，并转引 Day 3 动态称 Codex 与 ChatGPT Work 合计活跃用户达到 4000 万新高，其中提到 GPT-6 已在 Chat 中上线。",
+      "url": "https://x.com/thsottiaux/status/2108040921044639779",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 71.2
+    },
+    {
+      "id": "08ef7aa7570a",
+      "date": "2026-10-09",
+      "title": "Waymo 完成 50 亿美元债务融资，加速业务扩张",
+      "summary": "Waymo 宣布完成 50 亿美元定期贷款，这是其首次债务融资。PIMCO、Blackstone 和 Sixth Street 担任牵头银团贷方，Goldman Sachs 担任独家主账簿管理人；资金将用于加速其全自动驾驶打车服务在美国及国际市场的扩张。",
+      "url": "https://waymo.com/blog/2026/10/waymo-closes-5-billion-debt-financing",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "funding"
+      ],
+      "heatScore": 71.2
+    },
+    {
+      "id": "6f74c6100251",
+      "date": "2026-10-09",
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 75.5
+    },
+    {
+      "id": "10c341ded467",
+      "date": "2026-10-09",
+      "title": "Introducing SynthID Bio",
+      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+      "url": "https://deepmind.google/blog/introducing-synthid-bio",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "6df3a92ec5c8",
+      "date": "2026-10-09",
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "af664c75603a",
+      "date": "2026-10-09",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "b5a66e1409cf",
+      "date": "2026-10-09",
+      "title": "Sep 18, 2026Announcements Partnering with Accenture on embedded evaluation",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/accenture-embedded-evaluation",
+      "sourceName": "Anthropic News",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 67.3
+    },
+    {
+      "id": "9b5ad59335f2",
+      "date": "2026-10-09",
+      "title": "Introducing Nano Banana Pro",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-nano-banana-pro",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 65.5
+    },
+    {
+      "id": "a5bafb7be164",
+      "date": "2026-10-09",
+      "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+      "summary": "Coding AI agents are becoming practical operators for long-running machine learning (ML) workflows. They can inspect repositories, set up runtimes, resolve...",
+      "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "infra"
+      ],
+      "heatScore": 61.7
+    },
+    {
+      "id": "66311811b336",
+      "date": "2026-10-09",
+      "title": "Hugging Face 工程师用 ML Intern 以约 103 美元自制 7 个小模型",
+      "summary": "Hugging Face 工程师 yuvraj sharma 用 HuggingChat 的 ML Intern 模式在几天内做出 7 个模型，包括可在 CPU 运行、99.7% 有效输出的 0.8B 提示词重写器，以及将柑橘病害识别准确率从 14.9% 提升到 52.8% 的 Qwen3.5-2B 微调模型等，全部…",
+      "url": "https://huggingface.co/blog/building-with-ml-intern",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 60.2
+    },
+    {
+      "id": "518596e1386d",
+      "date": "2026-10-09",
+      "title": "How to Use AI Agents to Prepare 3D Scenes for Simulation",
+      "summary": "Agentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D scenes, author simulation-relevant data i…",
+      "url": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "932a0b1719be",
+      "date": "2026-10-09",
+      "title": "How to Train a Cross-Embodiment Robot Navigation Policy with AI Agents",
+      "summary": "Navigation enables a robot to turn perception and motion into purposeful autonomy. Unlike locomotion, which produces stable movement, navigation must be used t…",
+      "url": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "robotics"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "da5f27fe7540",
+      "date": "2026-10-09",
+      "title": "How to Self-Host a Validated AI Coding Assistant with NVIDIA NeMo Guardrails",
+      "summary": "Deploying an AI coding assistant in a regulated, sovereign, or source-sensitive environment, often comes with challenges. Three common issues are: the source...",
+      "url": "https://developer.nvidia.com/blog/how-to-self-host-a-validated-ai-coding-assistant-with-nvidia-nemo-guardrails",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "infra",
+        "safety"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "2b7f6443d609",
+      "date": "2026-10-09",
+      "title": "How to Govern Autonomous Agents in Enterprise AI Factories",
+      "summary": "AI agents are quickly moving beyond chat. They inspect code, run tests, read documents, search knowledge bases, query internal systems, and operate for hours o…",
+      "url": "https://developer.nvidia.com/blog/how-to-govern-autonomous-agents-in-enterprise-ai-factories",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent"
       ],
       "heatScore": 58.7
     }
