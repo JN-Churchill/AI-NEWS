@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-10-15T05:30:09.296Z",
-  "total": 1170,
+  "generatedAt": "2026-10-16T05:21:17.369Z",
+  "total": 1200,
   "dates": [
+    "2026-10-16",
     "2026-10-15",
     "2026-10-14",
     "2026-10-13",
@@ -14425,6 +14426,386 @@
       "section": "insights",
       "topics": [],
       "heatScore": 60.2
+    },
+    {
+      "id": "995df49212f0",
+      "date": "2026-10-16",
+      "title": "Meta 发布开源权重模型 Muse Spark Open，816B 参数、1M 上下文",
+      "summary": "Meta 发布开源权重模型 Muse Spark Open，已在 Hugging Face 以 Muse Model License 提供。模型总参数 816B、激活 42B，上下文窗口 1M token，面向编码与智能体工作流，原生多模态（图像、音频、文档），并相比 8 月发布的 Muse Spark 增加了安全后…",
+      "url": "https://pytorch.org/blog/muse-spark-open",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "opensource",
+        "agent",
+        "multimodal",
+        "safety"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "a2040a2a16bf",
+      "date": "2026-10-16",
+      "title": "NVIDIA 发布开源 Nemotron 3.5 Super VL 及 Bolt 两款端侧模型",
+      "summary": "NVIDIA 发布开源 1200 亿参数的 Nemotron 3.5 Super VL 多模态模型，称在其类别中任务完成最快、比同类次优快 5x，并推出两款端侧模型 Bolt 74B-A9B 24GB 与 Bolt E4B 4GB，后者 10 月 23 日上线。",
+      "url": "https://blogs.nvidia.com/blog/nemotron-3-5-super-vl",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "opensource",
+        "multimodal",
+        "infra"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "199c8f638198",
+      "date": "2026-10-16",
+      "title": "Black Forest Labs 发布开源文生图模型 FLUX 3 Image Klein（5.6B）",
+      "summary": "Black Forest Labs 发布 5.6B 参数开源权重模型 FLUX 3 Image Klein，支持文生图、图像编辑和最多 10 张参考图的多参考生成，采用 FLUX Kommunity License。",
+      "url": "https://bfl.ai/blog/flux-3-image-klein",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "opensource",
+        "multimodal"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "9df83bf7d1f1",
+      "date": "2026-10-16",
+      "title": "阶跃星辰开放 Step 5 Preview 权重",
+      "summary": "阶跃星辰（StepFun）宣布 Step 5 Preview 开放权重，BF16 和 FP8 权重已上线 Hugging Face 和 ModelScope，并附技术博客。",
+      "url": "https://x.com/StepFun_ai/status/2110717330657616092",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "opensource"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "5c3099c9f182",
+      "date": "2026-10-16",
+      "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+      "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/google-pics",
+      "sourceName": "Google AI Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "aa710ef75bfe",
+      "date": "2026-10-16",
+      "title": "Announcing our partnership with the Republic of Korea",
+      "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "3e28630f414a",
+      "date": "2026-10-16",
+      "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+      "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
+      "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
+      "sourceName": "Google DeepMind Blog",
+      "section": "products",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 76.5
+    },
+    {
+      "id": "18a02304239e",
+      "date": "2026-10-16",
+      "title": "可灵 Kling 4.0 正式全量开放，新增 MCP 和 CLI 接入",
+      "summary": "可灵（Kling AI）宣布 Kling 4.0 正式全量开放，用户可通过 kling.ai 全新创作界面使用，并新增 MCP 和 CLI 接入以融入视频创作工作流。即将推出 4K 和 1080p 的 10-bit HDR 视频输出，以及面向企业客户和开发者的 API 访问。",
+      "url": "https://x.com/Kling_ai/status/2110747537187709424",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "agent",
+        "multimodal"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "f7b8270297c6",
+      "date": "2026-10-16",
+      "title": "Krea 3 图像模型通过 ComfyUI Partner Nodes 上线",
+      "summary": "Krea 3 图像模型现已在 ComfyUI 通过 Partner Nodes 提供，主打基于参考图的生成与编辑。模型强调更快的迭代速度和更低的单张成本，支持按上传顺序引用多张参考图、保持产品标签形状材质不变的前提下修改环境光影构图，并可将生成结果作为新输入继续编辑。",
+      "url": "https://blog.comfy.org/p/krea-3-is-now-available-via-partner",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "multimodal"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "d759f13f1cd8",
+      "date": "2026-10-16",
+      "title": "Expanding the Cyber Verification ProgramAnnouncementsOct 6, 2026We’re launching a new, expanded version of our Cyber Verification Program, which makes advanced ",
+      "summary": "来自 Anthropic News 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://www.anthropic.com/news/cyber-verification-program",
+      "sourceName": "Anthropic News",
+      "section": "products",
+      "topics": [],
+      "heatScore": 73.3
+    },
+    {
+      "id": "3cfa61574ee8",
+      "date": "2026-10-16",
+      "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+      "summary": "Modern AI platforms are no longer a single application behind one login screen. A user may start in a central portal, open a governed dataset, launch a noteboo…",
+      "url": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 72.7
+    },
+    {
+      "id": "b4c9a995db01",
+      "date": "2026-10-16",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "e83da0bd59ba",
+      "date": "2026-10-16",
+      "title": "Investing in multi-agent AI safety research",
+      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "agent",
+        "safety"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "a359bce1913d",
+      "date": "2026-10-16",
+      "title": "Anthropic 公布独立评估机制细节，METR 团队获类员工访问权限",
+      "summary": "Anthropic 宣布已向评估前沿 AI 模型的非营利机构 METR 的六名员工提供类员工访问权限，包括公司硬件、办公空间和与内部风险评估团队相当的内部系统访问，METR 将公开发布风险评估结果，Anthropic 不得否决发布但可要求删减少数预定义类别的信息。",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 72.2
+    },
+    {
+      "id": "e1ffff448939",
+      "date": "2026-10-16",
+      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 68.5
+    },
+    {
+      "id": "025818354759",
+      "date": "2026-10-16",
+      "title": "Introducing NV-Reason-CT Open 3D CT VLM for Radiologist Chain-of-Thought Reasoning",
+      "summary": "Radiology AI has made remarkable strides in detecting abnormalities across chest X-rays, pathology slides, and 2D scans. Yet one of the most clinically rich an…",
+      "url": "https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 65.7
+    },
+    {
+      "id": "57c78f2fa0dc",
+      "date": "2026-10-16",
+      "title": "Deepening our partnership with the UK AI Security Institute",
+      "summary": "Google DeepMind and UK AI Security Institute (AISI) strengthen collaboration on critical AI safety and security research",
+      "url": "https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 63.5
+    },
+    {
+      "id": "578f4c00edbe",
+      "date": "2026-10-16",
+      "title": "Accelerating discovery in India through AI-powered science and education",
+      "summary": "Google DeepMind brings National Partnerships for AI initiative to India, scaling AI for science and education",
+      "url": "https://deepmind.google/blog/accelerating-discovery-in-india-through-ai-powered-science-and-education",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 60.5
+    },
+    {
+      "id": "6f74c6100251",
+      "date": "2026-10-16",
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 75.5
+    },
+    {
+      "id": "10c341ded467",
+      "date": "2026-10-16",
+      "title": "Introducing SynthID Bio",
+      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+      "url": "https://deepmind.google/blog/introducing-synthid-bio",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "6df3a92ec5c8",
+      "date": "2026-10-16",
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "af664c75603a",
+      "date": "2026-10-16",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "9b5ad59335f2",
+      "date": "2026-10-16",
+      "title": "Introducing Nano Banana Pro",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-nano-banana-pro",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 65.5
+    },
+    {
+      "id": "7766b84b21d0",
+      "date": "2026-10-16",
+      "title": "BlenderWorld Benchmark from Alibaba",
+      "summary": "Alibaba&#39;s Qwen team released a new repository on Wednesday, October 14, 2026. Its goal is to measure how well visual agents can create 3D scenes in Blender…",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x76d8l/blenderworld_benchmark_from_alibaba",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "papers",
+      "topics": [
+        "benchmark",
+        "agent"
+      ],
+      "heatScore": 65.2
+    },
+    {
+      "id": "012137e576db",
+      "date": "2026-10-16",
+      "title": "卡兹克实测开源Skill Anatomy，一句话让AI生成原理科普视频",
+      "summary": "作者卡兹克分享实测开源Skill Anatomy（GitHub：https://github.com/wheresryan22/anatomy/tree/main），它能把抽象原理做成可交互的机械模型动画，在其基础上还能让AI一轮直出带讲解配音的科普视频。",
+      "url": "https://x.com/Khazix0918/status/2110587546271191166",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [
+        "funding",
+        "opensource",
+        "multimodal"
+      ],
+      "heatScore": 71.2
+    },
+    {
+      "id": "b4804413ea37",
+      "date": "2026-10-16",
+      "title": "128GB RTX Spark laptop for $3832.",
+      "summary": "To all those who are bemoaning missing getting DGX Sparks for under $4000. Here&#39;s your chance. The brand new just announced RTX Spark laptop is on sale at …",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1x6trqq/128gb_rtx_spark_laptop_for_3832",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 66.2
+    },
+    {
+      "id": "a5bafb7be164",
+      "date": "2026-10-16",
+      "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+      "summary": "Coding AI agents are becoming practical operators for long-running machine learning (ML) workflows. They can inspect repositories, set up runtimes, resolve...",
+      "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "infra"
+      ],
+      "heatScore": 61.7
+    },
+    {
+      "id": "518596e1386d",
+      "date": "2026-10-16",
+      "title": "How to Use AI Agents to Prepare 3D Scenes for Simulation",
+      "summary": "Agentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D scenes, author simulation-relevant data i…",
+      "url": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "932a0b1719be",
+      "date": "2026-10-16",
+      "title": "How to Train a Cross-Embodiment Robot Navigation Policy with AI Agents",
+      "summary": "Navigation enables a robot to turn perception and motion into purposeful autonomy. Unlike locomotion, which produces stable movement, navigation must be used t…",
+      "url": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "robotics"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "da5f27fe7540",
+      "date": "2026-10-16",
+      "title": "How to Self-Host a Validated AI Coding Assistant with NVIDIA NeMo Guardrails",
+      "summary": "Deploying an AI coding assistant in a regulated, sovereign, or source-sensitive environment, often comes with challenges. Three common issues are: the source...",
+      "url": "https://developer.nvidia.com/blog/how-to-self-host-a-validated-ai-coding-assistant-with-nvidia-nemo-guardrails",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "infra",
+        "safety"
+      ],
+      "heatScore": 58.7
     }
   ]
 }
