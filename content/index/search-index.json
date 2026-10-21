@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-10-20T05:38:13.377Z",
-  "total": 1320,
+  "generatedAt": "2026-10-21T05:40:03.587Z",
+  "total": 1350,
   "dates": [
+    "2026-10-21",
     "2026-10-20",
     "2026-10-19",
     "2026-10-18",
@@ -16268,6 +16269,381 @@
       "topics": [
         "agent",
         "robotics"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "aa710ef75bfe",
+      "date": "2026-10-21",
+      "title": "Announcing our partnership with the Republic of Korea",
+      "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "d05bb7e14b45",
+      "date": "2026-10-21",
+      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+      "summary": "Introducing Co-Scientist, a collaborative AI partner built with Gemini to help researchers accelerate scientific breakthroughs.",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "0ee10c9fdc13",
+      "date": "2026-10-21",
+      "title": "Inception Labs 发布扩散大语言模型 Mercury 3，速度达 1068 tokens/秒",
+      "summary": "Inception Labs 发布扩散式大语言模型 Mercury 3，称其在多项基准上超过 GPT-6 Luna 和 Claude Haiku 5.5，速度达 1068 tokens/秒，参数量较 Mercury 1 扩大 40 倍以上。",
+      "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "benchmark"
+      ],
+      "heatScore": 74.2
+    },
+    {
+      "id": "08e0bbd00391",
+      "date": "2026-10-21",
+      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "summary": "We’re introducing new Gemini models, including Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber.",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "c38a63c190f9",
+      "date": "2026-10-21",
+      "title": "Putting sign language AI into users’ hands",
+      "summary": "Introducing sign-language-to-text (SL2T), our breakthrough model powering new sign language features for Deaf and hard of hearing users.",
+      "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "556a91dc0458",
+      "date": "2026-10-21",
+      "title": "Introducing Gemini 3.5 Flash Cyber",
+      "summary": "Google introduces Gemini 3.5 Flash Cyber, a lightweight cybersecurity model to find and patch vulnerabilities.",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "063fb23d1ace",
+      "date": "2026-10-21",
+      "title": "Google 发布 vLLM 与 SGLang 的 TorchTPU 原生推理引擎",
+      "summary": "Google 在 PyTorch 相关公告中推出基于 TorchTPU 的 vLLM 和 SGLang 原生 PyTorch 推理引擎，分别与 Inferact、RadixArk 合作开发，让开发者用熟悉的 PyTorch 工具在 TPU 上部署模型。",
+      "url": "https://developers.googleblog.com/announcing-new-vllm-and-sglang-inference-engines-on-tpu",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "infra"
+      ],
+      "heatScore": 80.2
+    },
+    {
+      "id": "3e28630f414a",
+      "date": "2026-10-21",
+      "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+      "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
+      "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
+      "sourceName": "Google DeepMind Blog",
+      "section": "products",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 76.5
+    },
+    {
+      "id": "4e09fcfdb3c3",
+      "date": "2026-10-21",
+      "title": "DeepSeek 全面开源内部推理框架 DeepInfer",
+      "summary": "DeepSeek 宣布将内部推理框架 DeepInfer 全面开源，并同步开源生产级 Token 编解码组件 deepseek-recipe。",
+      "url": "https://mp.weixin.qq.com/s?__biz=Mzk0OTYwNzc3NQ%3D%3D&mid=2247485884&idx=1&sn=d457981abe7db1f1b5d600fc109dc836",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "opensource"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "290fbf14c074",
+      "date": "2026-10-21",
+      "title": "Google 与 Meta 发布 TorchTPU：PyTorch 原生 TPU 后端",
+      "summary": "Google 与 Meta 发布开源项目 TorchTPU，为 Google TPU 提供原生 PyTorch 后端，模型迁移只需把 .to(\"cuda\") 改为 .to(\"tpu\")。",
+      "url": "https://pytorch.org/blog/introducing-torchtpu",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "opensource",
+        "infra"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "c4d3cb190e5b",
+      "date": "2026-10-21",
+      "title": "ChatGPT 推出 Locked Chats，可用 PIN 或生物识别锁定敏感对话",
+      "summary": "ChatGPT 推出 Locked Chats 功能，把敏感对话从常规历史记录和搜索中移入受保护空间。用户在网页端和桌面端可用 PIN 解锁，支持的移动设备上可用 PIN、Face ID、Touch ID 或设备解锁；锁定会话中的新消息不会更新常规对话使用的记忆。",
+      "url": "https://x.com/ChatGPT/status/2112597766333673624",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [],
+      "heatScore": 76.2
+    },
+    {
+      "id": "3cfa61574ee8",
+      "date": "2026-10-21",
+      "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+      "summary": "Modern AI platforms are no longer a single application behind one login screen. A user may start in a central portal, open a governed dataset, launch a noteboo…",
+      "url": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 72.7
+    },
+    {
+      "id": "e83da0bd59ba",
+      "date": "2026-10-21",
+      "title": "Investing in multi-agent AI safety research",
+      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "agent",
+        "safety"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "f9ab30fe9c39",
+      "date": "2026-10-21",
+      "title": "OpenAI 收购药物研发平台 Orchestra Bio 并入 Rosalind 生命科学体系",
+      "summary": "OpenAI 宣布收购 Orchestra Bio，一个帮助生物制药团队协调药物研发复杂流程的平台，其团队和技术将与 Rosalind 整合。Orchestra 的智能体可帮助团队追踪研究和项目进展，分析如生产批次失败对临床试验时间线的影响并提出应对方案。",
+      "url": "https://openai.com/index/openai-to-acquire-orchestra-bio",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 74.2
+    },
+    {
+      "id": "f6cb3bb1a24a",
+      "date": "2026-10-21",
+      "title": "SpaceX 财报显示 AI 业务超预期，占收入 52%",
+      "summary": "SpaceX 发布第三季度监管文件，披露营收 146 亿美元、净利润 44 亿美元，扭转去年同期 10 亿美元亏损。其更名的“Super Intelligence”业务线（含 Cursor、Grok 和 neocloud 算力业务）表现好于投资者预期，AI 目前占公司收入 52%，算力规模达 1.7 GW。",
+      "url": "https://techcrunch.com/2026/10/20/spacexs-ai-business-is-beating-expectations",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "infra"
+      ],
+      "heatScore": 71.2
+    },
+    {
+      "id": "b6b695b135f7",
+      "date": "2026-10-21",
+      "title": "Redact 调查：WhatsApp 帮助页面隐藏 LLM 指令，让 AI 不推荐监管机构、不提 GDPR",
+      "summary": "Redact 发现 WhatsApp 帮助中心页面向 LLM 发送用户看不到的隐藏指令，指示其支持聊天机器人不推荐数据保护监管机构，并在用户提到律师或法律行动后不引用 GDPR、LGPD 或 CCPA。",
+      "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "robotics"
+      ],
+      "heatScore": 71.2
+    },
+    {
+      "id": "e1ffff448939",
+      "date": "2026-10-21",
+      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 68.5
+    },
+    {
+      "id": "025818354759",
+      "date": "2026-10-21",
+      "title": "Introducing NV-Reason-CT Open 3D CT VLM for Radiologist Chain-of-Thought Reasoning",
+      "summary": "Radiology AI has made remarkable strides in detecting abnormalities across chest X-rays, pathology slides, and 2D scans. Yet one of the most clinically rich an…",
+      "url": "https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 65.7
+    },
+    {
+      "id": "6f74c6100251",
+      "date": "2026-10-21",
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 75.5
+    },
+    {
+      "id": "10c341ded467",
+      "date": "2026-10-21",
+      "title": "Introducing SynthID Bio",
+      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+      "url": "https://deepmind.google/blog/introducing-synthid-bio",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "6df3a92ec5c8",
+      "date": "2026-10-21",
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "af664c75603a",
+      "date": "2026-10-21",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "9b5ad59335f2",
+      "date": "2026-10-21",
+      "title": "Introducing Nano Banana Pro",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-nano-banana-pro",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 65.5
+    },
+    {
+      "id": "91103816b035",
+      "date": "2026-10-21",
+      "title": "Proof Before Reuse: showing agents only what later sessions reproduced keeps a poisoned skill out of procedural memory [R]",
+      "summary": "Small case study on poisoning in agent procedural memory, with all data released. Setup: a coding agent learns skills from sessions whose tests passed. One lea…",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1x975ea/proof_before_reuse_showing_agents_only_what_later",
+      "sourceName": "Reddit r/MachineLearning",
+      "section": "papers",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 62.9
+    },
+    {
+      "id": "2333b757e859",
+      "date": "2026-10-21",
+      "title": "XHToken/Spark-X2.6-4B · Hugging Face",
+      "summary": "https://huggingface.co/XHToken/Spark-X2.6-4B-GGUF Introduction A little over a month has passed since Spark-X2.5. In the rapidly evolving world of AI agents, t…",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xb0nr9/xhtokensparkx264b_hugging_face",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "insights",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 66.2
+    },
+    {
+      "id": "a5bafb7be164",
+      "date": "2026-10-21",
+      "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+      "summary": "Coding AI agents are becoming practical operators for long-running machine learning (ML) workflows. They can inspect repositories, set up runtimes, resolve...",
+      "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "infra"
+      ],
+      "heatScore": 61.7
+    },
+    {
+      "id": "fb16a9eed7f8",
+      "date": "2026-10-21",
+      "title": "Agnes-AI/Agnes-3.0-Qwen (QFN finetune)",
+      "summary": "https://huggingface.co/bartowski/Agnes-AI_Agnes-3.0-Qwen-GGUF Strong agentic performance: agnes-3.0-qwen scores highest in its comparison set on τ³-Banking, an…",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xaxz80/agnesaiagnes30qwen_qfn_finetune",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "insights",
+      "topics": [
+        "benchmark",
+        "agent"
+      ],
+      "heatScore": 59.2
+    },
+    {
+      "id": "518596e1386d",
+      "date": "2026-10-21",
+      "title": "How to Use AI Agents to Prepare 3D Scenes for Simulation",
+      "summary": "Agentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D scenes, author simulation-relevant data i…",
+      "url": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "932a0b1719be",
+      "date": "2026-10-21",
+      "title": "How to Train a Cross-Embodiment Robot Navigation Policy with AI Agents",
+      "summary": "Navigation enables a robot to turn perception and motion into purposeful autonomy. Unlike locomotion, which produces stable movement, navigation must be used t…",
+      "url": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "robotics"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "da5f27fe7540",
+      "date": "2026-10-21",
+      "title": "How to Self-Host a Validated AI Coding Assistant with NVIDIA NeMo Guardrails",
+      "summary": "Deploying an AI coding assistant in a regulated, sovereign, or source-sensitive environment, often comes with challenges. Three common issues are: the source...",
+      "url": "https://developer.nvidia.com/blog/how-to-self-host-a-validated-ai-coding-assistant-with-nvidia-nemo-guardrails",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "infra",
+        "safety"
       ],
       "heatScore": 58.7
     }
