@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-11-08T06:53:32.351Z",
-  "total": 1890,
+  "generatedAt": "2026-11-09T07:34:14.705Z",
+  "total": 1920,
   "dates": [
+    "2026-11-09",
     "2026-11-08",
     "2026-11-07",
     "2026-11-06",
@@ -23217,6 +23218,369 @@
       "title": "Effects of KV Cache Quantization on Qwen3.8 27B",
       "summary": "KV cache quantization has been a hotly-debated topic for this community for some time, with opinions ranging from \"never quantize\" to \"4 bit is fine\". Since th…",
       "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xqbesv/effects_of_kv_cache_quantization_on_qwen38_27b",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 55.2
+    },
+    {
+      "id": "aa710ef75bfe",
+      "date": "2026-11-09",
+      "title": "Announcing our partnership with the Republic of Korea",
+      "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "d05bb7e14b45",
+      "date": "2026-11-09",
+      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+      "summary": "Introducing Co-Scientist, a collaborative AI partner built with Gemini to help researchers accelerate scientific breakthroughs.",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "08e0bbd00391",
+      "date": "2026-11-09",
+      "title": "Introducing Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "summary": "We’re introducing new Gemini models, including Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber.",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-6-flash-3-5-flash-lite-and-3-5-flash-cyber",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "c38a63c190f9",
+      "date": "2026-11-09",
+      "title": "Putting sign language AI into users’ hands",
+      "summary": "Introducing sign-language-to-text (SL2T), our breakthrough model powering new sign language features for Deaf and hard of hearing users.",
+      "url": "https://deepmind.google/blog/putting-sign-language-ai-into-users-hands",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "556a91dc0458",
+      "date": "2026-11-09",
+      "title": "Introducing Gemini 3.5 Flash Cyber",
+      "summary": "Google introduces Gemini 3.5 Flash Cyber, a lightweight cybersecurity model to find and patch vulnerabilities.",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-5-flash-cyber",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "67dd8f2fde3e",
+      "date": "2026-11-09",
+      "title": "Gemini 3.1 Flash TTS: the next generation of expressive AI speech",
+      "summary": "Our newest audio model introduces granular audio tags that give you precise control to direct AI speech for expressive audio generation.",
+      "url": "https://deepmind.google/blog/gemini-3-1-flash-tts-the-next-generation-of-expressive-ai-speech",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [
+        "multimodal"
+      ],
+      "heatScore": 71.5
+    },
+    {
+      "id": "3e28630f414a",
+      "date": "2026-11-09",
+      "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+      "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
+      "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
+      "sourceName": "Google DeepMind Blog",
+      "section": "products",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 76.5
+    },
+    {
+      "id": "3cfa61574ee8",
+      "date": "2026-11-09",
+      "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+      "summary": "Modern AI platforms are no longer a single application behind one login screen. A user may start in a central portal, open a governed dataset, launch a noteboo…",
+      "url": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 72.7
+    },
+    {
+      "id": "87ddedc07d12",
+      "date": "2026-11-09",
+      "title": "The latest AI news we announced in October 2026",
+      "summary": "Here are Google’s latest AI updates from October 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 72.5
+    },
+    {
+      "id": "b4c9a995db01",
+      "date": "2026-11-09",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "b8e9399f0e0e",
+      "date": "2026-11-09",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "1f9e75f2c0e4",
+      "date": "2026-11-09",
+      "title": "Making global data easier to explore",
+      "summary": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessible and easy to search.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "e83da0bd59ba",
+      "date": "2026-11-09",
+      "title": "Investing in multi-agent AI safety research",
+      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "agent",
+        "safety"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "4876e0e63895",
+      "date": "2026-11-09",
+      "title": "NVIDIA 董事会宣布就 CEO 黄仁勋遭外国情报行动瞄准一事启动独立调查",
+      "summary": "NVIDIA 董事会于 11 月 8 日发布声明，就近期有关创始人兼 CEO 黄仁勋成为外国情报行动目标的报道启动独立调查。调查由独立董事组成的委员会在外部独立律师协助下监督，黄仁勋全力配合。董事会表示没有理由认为国家安全或 NVIDIA 机密已受损，但调查将审视所有可用信息，并表示对黄仁勋及其领导团队有信心。",
+      "url": "https://x.com/rohanpaul_ai/status/2119540787147059491",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "infra",
+        "safety"
+      ],
+      "heatScore": 72.2
+    },
+    {
+      "id": "e1ffff448939",
+      "date": "2026-11-09",
+      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 68.5
+    },
+    {
+      "id": "025818354759",
+      "date": "2026-11-09",
+      "title": "Introducing NV-Reason-CT Open 3D CT VLM for Radiologist Chain-of-Thought Reasoning",
+      "summary": "Radiology AI has made remarkable strides in detecting abnormalities across chest X-rays, pathology slides, and 2D scans. Yet one of the most clinically rich an…",
+      "url": "https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 65.7
+    },
+    {
+      "id": "57c78f2fa0dc",
+      "date": "2026-11-09",
+      "title": "Deepening our partnership with the UK AI Security Institute",
+      "summary": "Google DeepMind and UK AI Security Institute (AISI) strengthen collaboration on critical AI safety and security research",
+      "url": "https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 63.5
+    },
+    {
+      "id": "578f4c00edbe",
+      "date": "2026-11-09",
+      "title": "Accelerating discovery in India through AI-powered science and education",
+      "summary": "Google DeepMind brings National Partnerships for AI initiative to India, scaling AI for science and education",
+      "url": "https://deepmind.google/blog/accelerating-discovery-in-india-through-ai-powered-science-and-education",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 60.5
+    },
+    {
+      "id": "6f74c6100251",
+      "date": "2026-11-09",
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 75.5
+    },
+    {
+      "id": "10c341ded467",
+      "date": "2026-11-09",
+      "title": "Introducing SynthID Bio",
+      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+      "url": "https://deepmind.google/blog/introducing-synthid-bio",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "6df3a92ec5c8",
+      "date": "2026-11-09",
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "af664c75603a",
+      "date": "2026-11-09",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "507ad0c5fb1a",
+      "date": "2026-11-09",
+      "title": "How much code do AI models and harnesses add? I made an open-source benchmark to measure code complexity.",
+      "summary": "Existing benchmarks measure the solve rate and token output/cost, but don&#39;t punish excess code or overengineering, which increases technical debt in the lo…",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xrathc/how_much_code_do_ai_models_and_harnesses_add_i",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "papers",
+      "topics": [
+        "opensource",
+        "benchmark",
+        "infra"
+      ],
+      "heatScore": 65.2
+    },
+    {
+      "id": "c8362a71e189",
+      "date": "2026-11-09",
+      "title": "Introducing Google Antigravity 2.0",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/introducing-google-antigravity-2-0",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 61.5
+    },
+    {
+      "id": "d38af08203e8",
+      "date": "2026-11-09",
+      "title": "How NVIDIA Uses AI Agents to Streamline AI Factory Operations",
+      "summary": "As GPU clusters scale, operations span compute, network, hardware, and scheduling. Site reliability engineers (SREs) often have to examine multiple dashboards.…",
+      "url": "https://developer.nvidia.com/blog/how-nvidia-uses-ai-agents-to-streamline-ai-factory-operations",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "infra"
+      ],
+      "heatScore": 59.7
+    },
+    {
+      "id": "518596e1386d",
+      "date": "2026-11-09",
+      "title": "How to Use AI Agents to Prepare 3D Scenes for Simulation",
+      "summary": "Agentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D scenes, author simulation-relevant data i…",
+      "url": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "932a0b1719be",
+      "date": "2026-11-09",
+      "title": "How to Train a Cross-Embodiment Robot Navigation Policy with AI Agents",
+      "summary": "Navigation enables a robot to turn perception and motion into purposeful autonomy. Unlike locomotion, which produces stable movement, navigation must be used t…",
+      "url": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "robotics"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "da5f27fe7540",
+      "date": "2026-11-09",
+      "title": "How to Self-Host a Validated AI Coding Assistant with NVIDIA NeMo Guardrails",
+      "summary": "Deploying an AI coding assistant in a regulated, sovereign, or source-sensitive environment, often comes with challenges. Three common issues are: the source...",
+      "url": "https://developer.nvidia.com/blog/how-to-self-host-a-validated-ai-coding-assistant-with-nvidia-nemo-guardrails",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "infra",
+        "safety"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "b4ef42d21380",
+      "date": "2026-11-09",
+      "title": "Nous Research Arete-27B GGUF quants",
+      "summary": "&#32; submitted by &#32; /u/gladkos [link] &#32; [comments]",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xrarta/nous_research_arete27b_gguf_quants",
+      "sourceName": "Reddit r/LocalLLaMA",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 58.2
+    },
+    {
+      "id": "b106d18c298d",
+      "date": "2026-11-09",
+      "title": "Users have started buying RTX 5060 Ti 16GB graphics cards en masse for the sake of AI.",
+      "summary": "Oh look, thats us! &#32; submitted by &#32; /u/ab2377 [link] &#32; [comments]",
+      "url": "https://www.reddit.com/r/LocalLLaMA/comments/1xr01bj/users_have_started_buying_rtx_5060_ti_16gb",
       "sourceName": "Reddit r/LocalLLaMA",
       "section": "insights",
       "topics": [],
