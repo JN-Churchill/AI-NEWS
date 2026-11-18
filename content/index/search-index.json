@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-11-17T08:45:16.430Z",
-  "total": 2160,
+  "generatedAt": "2026-11-18T08:09:05.072Z",
+  "total": 2190,
   "dates": [
+    "2026-11-18",
     "2026-11-17",
     "2026-11-16",
     "2026-11-15",
@@ -26550,6 +26551,378 @@
         "safety"
       ],
       "heatScore": 58.7
+    },
+    {
+      "id": "73d0ab36ac37",
+      "date": "2026-11-18",
+      "title": "Perplexity 上线 GPT-6.2 Astra 和 GPT-6.2 Sol，并公布 WANDR 基准成绩",
+      "summary": "Perplexity 宣布 GPT-6.2 Astra 和 GPT-6.2 Sol 已在 Perplexity Search 和 Computer 中可用。在其 WANDR 基准上，GPT-6.2 Astra 得分 0.783、单任务约 $12.54，较 GPT-6 Astra 提升 0.095；",
+      "url": "https://x.com/perplexity_ai/status/2122814545639223348",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "benchmark"
+      ],
+      "heatScore": 79.2
+    },
+    {
+      "id": "aa710ef75bfe",
+      "date": "2026-11-18",
+      "title": "Announcing our partnership with the Republic of Korea",
+      "summary": "Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models",
+      "url": "https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 75.5
+    },
+    {
+      "id": "d05bb7e14b45",
+      "date": "2026-11-18",
+      "title": "Co-Scientist: A multi-agent AI partner to accelerate research",
+      "summary": "Introducing Co-Scientist, a collaborative AI partner built with Gemini to help researchers accelerate scientific breakthroughs.",
+      "url": "https://deepmind.google/blog/co-scientist-a-multi-agent-ai-partner-to-accelerate-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "models",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "8f9890da28b7",
+      "date": "2026-11-18",
+      "title": "Microsoft MAI 发布七款新模型，主打极致性价比",
+      "summary": "Microsoft MAI 在 Ignite 2026 发布七款新模型。MAI Code 2 在四个编码基准平均达到 GPT-6.1 Sol 98% 的性能、价格约 40%，达到 Claude Opus 5.5 的 96% 性能、价格仅 5%；",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "benchmark"
+      ],
+      "heatScore": 74.2
+    },
+    {
+      "id": "526a29e62049",
+      "date": "2026-11-18",
+      "title": "Microsoft AI 发布 MAI Code 2 与 MAI Code 2 Flash 编码模型",
+      "summary": "Microsoft AI 发布 MAI Code 2 和 MAI Code 2 Flash 两款编码模型，面向日常企业编码任务，定价远低于竞品。MAI Code 2 在四项基准平均下达到 GPT 6.1 Sol 98% 的性能但成本仅 40%，达到 Claude Opus 5.5 96% 的性能而成本仅 5%；",
+      "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash",
+      "sourceName": "AI HOT 日报",
+      "section": "models",
+      "topics": [
+        "benchmark"
+      ],
+      "heatScore": 74.2
+    },
+    {
+      "id": "f3f35a8575e8",
+      "date": "2026-11-18",
+      "title": "Google Cloud launches Gemini for healthcare.",
+      "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare",
+      "sourceName": "Google AI Blog",
+      "section": "models",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "3e28630f414a",
+      "date": "2026-11-18",
+      "title": "Gemma Scope 2: helping the AI safety community deepen understanding of complex language model behavior",
+      "summary": "Open interpretability tools for language models are now available across the entire Gemma 3 family with the release of Gemma Scope 2.",
+      "url": "https://deepmind.google/blog/gemma-scope-2-helping-the-ai-safety-community-deepen-understanding-of-complex-language-model-behavior",
+      "sourceName": "Google DeepMind Blog",
+      "section": "products",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 76.5
+    },
+    {
+      "id": "c97b7d738331",
+      "date": "2026-11-18",
+      "title": "Gemini 向美国等六国用户免费开放任务功能，可打电话、付款并接入 60 多款应用",
+      "summary": "Google 宣布 Gemini 任务功能免费向美、日、韩、加、澳、印数亿用户推出，基于新的 Gemini 4 Hydrogen 模型，可自动打电话预约、查询账单、购物下单和管理日程。",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [],
+      "heatScore": 76.2
+    },
+    {
+      "id": "0a5c3e618aff",
+      "date": "2026-11-18",
+      "title": "Suno 发布 Visuals：为歌曲生成视频与图像",
+      "summary": "Suno 发布新工具 Visuals，可基于库中的歌曲生成最长 15 秒的视频和图像，包括跟随歌曲节拍的歌词视频、专辑封面和照片改写的视频片段，模型会跟随歌曲结构、识别歌词并配合对口型，支持延展、编辑和文本重新提示。",
+      "url": "https://suno.com/blog/introducing-visuals",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "multimodal"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "6b163fa8a759",
+      "date": "2026-11-18",
+      "title": "Replit 发布 Missions，用智能体集群按目标完成复杂工作并开源 DataCat",
+      "summary": "Replit 发布 Replit Missions，用户设定目标、预算和边界后，由智能体集群并行规划、构建、测试并迭代，独立 AI 裁判按约定标准验收。",
+      "url": "https://replit.com/blog/introducing-replit-missions",
+      "sourceName": "AI HOT 日报",
+      "section": "products",
+      "topics": [
+        "opensource",
+        "agent"
+      ],
+      "heatScore": 76.2
+    },
+    {
+      "id": "3cfa61574ee8",
+      "date": "2026-11-18",
+      "title": "How to Carry User Identity Across Federated Kubernetes and AI Platforms",
+      "summary": "Modern AI platforms are no longer a single application behind one login screen. A user may start in a central portal, open a governed dataset, launch a noteboo…",
+      "url": "https://developer.nvidia.com/blog/how-to-carry-user-identity-across-federated-kubernetes-and-ai-platforms",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 72.7
+    },
+    {
+      "id": "87ddedc07d12",
+      "date": "2026-11-18",
+      "title": "The latest AI news we announced in October 2026",
+      "summary": "Here are Google’s latest AI updates from October 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-october-2026",
+      "sourceName": "Google AI Blog",
+      "section": "products",
+      "topics": [],
+      "heatScore": 71.5
+    },
+    {
+      "id": "e83da0bd59ba",
+      "date": "2026-11-18",
+      "title": "Investing in multi-agent AI safety research",
+      "summary": "Google DeepMind and partners announce a $10M funding call for multi-agent safety research.",
+      "url": "https://deepmind.google/blog/investing-in-multi-agent-ai-safety-research",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "funding",
+        "agent",
+        "safety"
+      ],
+      "heatScore": 74.5
+    },
+    {
+      "id": "e1ffff448939",
+      "date": "2026-11-18",
+      "title": "Google DeepMind and A24 announce first-of-its-kind research partnership",
+      "summary": "来自 Google DeepMind Blog 的今日 AI 动态，点击查看完整内容。",
+      "url": "https://deepmind.google/blog/google-deepmind-and-a24-announce-first-of-its-kind-research-partnership",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 68.5
+    },
+    {
+      "id": "01b6218d60fb",
+      "date": "2026-11-18",
+      "title": "Microsoft agent-framework 1.26.1/1.26.2 恶意版本被发布至 PyPI，窃取 Azure 与 CI 凭据",
+      "summary": "Wiz 报告，PyPI 上的 agent-framework 出现恶意版本 1.26.1 和 1.26.2（上传于 2026-11-17，约 21:30 UTC 后已下架），植入 .pth 文件在 Python 启动时运行凭据窃取器，收集环境变量、凭据文件及 Azure 与 Azure DevOps 托管标识和 OI…",
+      "url": "https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi",
+      "sourceName": "AI HOT 日报",
+      "section": "industry",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 67.2
+    },
+    {
+      "id": "025818354759",
+      "date": "2026-11-18",
+      "title": "Introducing NV-Reason-CT Open 3D CT VLM for Radiologist Chain-of-Thought Reasoning",
+      "summary": "Radiology AI has made remarkable strides in detecting abnormalities across chest X-rays, pathology slides, and 2D scans. Yet one of the most clinically rich an…",
+      "url": "https://developer.nvidia.com/blog/introducing-nv-reason-ct-open-3d-ct-vlm-for-radiologist-chain-of-thought-reasoning",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 65.7
+    },
+    {
+      "id": "57c78f2fa0dc",
+      "date": "2026-11-18",
+      "title": "Deepening our partnership with the UK AI Security Institute",
+      "summary": "Google DeepMind and UK AI Security Institute (AISI) strengthen collaboration on critical AI safety and security research",
+      "url": "https://deepmind.google/blog/deepening-our-partnership-with-the-uk-ai-security-institute",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [
+        "safety"
+      ],
+      "heatScore": 63.5
+    },
+    {
+      "id": "578f4c00edbe",
+      "date": "2026-11-18",
+      "title": "Accelerating discovery in India through AI-powered science and education",
+      "summary": "Google DeepMind brings National Partnerships for AI initiative to India, scaling AI for science and education",
+      "url": "https://deepmind.google/blog/accelerating-discovery-in-india-through-ai-powered-science-and-education",
+      "sourceName": "Google DeepMind Blog",
+      "section": "industry",
+      "topics": [],
+      "heatScore": 60.5
+    },
+    {
+      "id": "6f74c6100251",
+      "date": "2026-11-18",
+      "title": "Measuring progress toward AGI: A cognitive framework",
+      "summary": "We’re introducing a framework to measure progress toward AGI, and launching a Kaggle hackathon to build the relevant evaluations.",
+      "url": "https://deepmind.google/blog/measuring-progress-toward-agi-a-cognitive-framework",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [
+        "funding",
+        "benchmark"
+      ],
+      "heatScore": 75.5
+    },
+    {
+      "id": "b7ac53bdf19d",
+      "date": "2026-11-18",
+      "title": "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 系统卡",
+      "summary": "OpenAI 发布 GPT-6.2 Astra 与 GPT-6.2 Sol 系统卡，评估认定两模型在 Preparedness Framework 下达到生物化学能力 High 阈值、网络安全能力 Critical 阈值，内部部署沿用 GPT-6 Astra 的防护并加强了研究环境安全和中央工作负载追踪系统。",
+      "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+      "sourceName": "AI HOT 日报",
+      "section": "papers",
+      "topics": [
+        "infra",
+        "safety"
+      ],
+      "heatScore": 70.2
+    },
+    {
+      "id": "0443cac45840",
+      "date": "2026-11-18",
+      "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+      "summary": "AlphaProof Code agents wrote three million lines of proofs in Lean to verify Signal’s core encryption.",
+      "url": "https://deepmind.google/blog/introducing-alphaproof-code",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 67.5
+    },
+    {
+      "id": "10c341ded467",
+      "date": "2026-11-18",
+      "title": "Introducing SynthID Bio",
+      "summary": "Proof of concept for watermarking AI-generated proteins while preserving biological function.",
+      "url": "https://deepmind.google/blog/introducing-synthid-bio",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "6df3a92ec5c8",
+      "date": "2026-11-18",
+      "title": "Advancing Private AI Compute with secure, server-side memory",
+      "summary": "Introducing private, server-side memory to Private AI Compute for personal AI.",
+      "url": "https://deepmind.google/blog/advancing-private-ai-compute-with-secure-server-side-memory",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "af664c75603a",
+      "date": "2026-11-18",
+      "title": "Simulate real-world places with Project Genie and Street View",
+      "summary": "We’re expanding access to Google AI Ultra subscribers globally and introducing a new capability powered by Street View.",
+      "url": "https://deepmind.google/blog/simulate-real-world-places-with-project-genie-and-street-view",
+      "sourceName": "Google DeepMind Blog",
+      "section": "papers",
+      "topics": [],
+      "heatScore": 67.5
+    },
+    {
+      "id": "d9ce07e88bb2",
+      "date": "2026-11-18",
+      "title": "奥尔特曼谈黄仁勋离职：同情其处境，相信 AI 行业能平稳度过",
+      "summary": "据彭博社报道，OpenAI CEO 奥尔特曼表示，即使黄仁勋不再掌舵英伟达，AI 行业依然会运转良好，并将黄仁勋比作会有缺点的英雄。他称自己 2023 年曾被 OpenAI 董事会罢免，对黄的处境表示同情；",
+      "url": "https://www.ithome.com/1/028/052.htm",
+      "sourceName": "AI HOT 日报",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 60.2
+    },
+    {
+      "id": "d38af08203e8",
+      "date": "2026-11-18",
+      "title": "How NVIDIA Uses AI Agents to Streamline AI Factory Operations",
+      "summary": "As GPU clusters scale, operations span compute, network, hardware, and scheduling. Site reliability engineers (SREs) often have to examine multiple dashboards.…",
+      "url": "https://developer.nvidia.com/blog/how-nvidia-uses-ai-agents-to-streamline-ai-factory-operations",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "infra"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "518596e1386d",
+      "date": "2026-11-18",
+      "title": "How to Use AI Agents to Prepare 3D Scenes for Simulation",
+      "summary": "Agentic AI workflows can be used to prepare and validate digital twins for physical AI systems. Agents can inspect 3D scenes, author simulation-relevant data i…",
+      "url": "https://developer.nvidia.com/blog/how-to-use-ai-agents-to-prepare-3d-scenes-for-simulation",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "932a0b1719be",
+      "date": "2026-11-18",
+      "title": "How to Train a Cross-Embodiment Robot Navigation Policy with AI Agents",
+      "summary": "Navigation enables a robot to turn perception and motion into purposeful autonomy. Unlike locomotion, which produces stable movement, navigation must be used t…",
+      "url": "https://developer.nvidia.com/blog/how-to-train-a-cross-embodiment-robot-navigation-policy-with-ai-agents",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "agent",
+        "robotics"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "da5f27fe7540",
+      "date": "2026-11-18",
+      "title": "How to Self-Host a Validated AI Coding Assistant with NVIDIA NeMo Guardrails",
+      "summary": "Deploying an AI coding assistant in a regulated, sovereign, or source-sensitive environment, often comes with challenges. Three common issues are: the source...",
+      "url": "https://developer.nvidia.com/blog/how-to-self-host-a-validated-ai-coding-assistant-with-nvidia-nemo-guardrails",
+      "sourceName": "NVIDIA Generative AI Blog",
+      "section": "insights",
+      "topics": [
+        "infra",
+        "safety"
+      ],
+      "heatScore": 58.7
+    },
+    {
+      "id": "da58d0ef68ee",
+      "date": "2026-11-18",
+      "title": "Australia&#x27;s full national topographic library at your fingertips",
+      "summary": "Comments",
+      "url": "https://www.ga.gov.au/news/australias-full-national-topographic-library-at-your-fingertips",
+      "sourceName": "Hacker News",
+      "section": "insights",
+      "topics": [],
+      "heatScore": 49.5
     }
   ]
 }
