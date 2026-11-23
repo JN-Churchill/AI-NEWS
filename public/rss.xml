@@ -5,8 +5,15 @@
     <link>http://localhost:3000/</link>
     <description>每天自动抓取全网 AI 热点，去重打分后生成一份五分钟读完的 AI 日报。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 21 Nov 2026 07:55:57 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 08:31:14 GMT</lastBuildDate>
     <atom:link href="http://localhost:3000/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>2026-11-23 AI 日报 · 30 条热点</title>
+      <link>http://localhost:3000/daily/2026-11-23/</link>
+      <guid isPermaLink="true">http://localhost:3000/daily/2026-11-23/</guid>
+      <pubDate>Mon, 23 Nov 2026 08:31:13 GMT</pubDate>
+      <description>本期从 326 条候选信号中筛出 30 条，覆盖 模型发布、产品发布、行业动态 等方向，帮你五分钟掌握今日 AI 关键变化。</description>
+    </item>
     <item>
       <title>2026-11-21 AI 日报 · 30 条热点</title>
       <link>http://localhost:3000/daily/2026-11-21/</link>
@@ -209,13 +216,6 @@
       <guid isPermaLink="true">http://localhost:3000/daily/2026-10-24/</guid>
       <pubDate>Sat, 24 Oct 2026 05:18:44 GMT</pubDate>
       <description>本期从 337 条候选信号中筛出 30 条，覆盖 模型发布、产品发布、行业动态 等方向，帮你五分钟掌握今日 AI 关键变化。</description>
-    </item>
-    <item>
-      <title>2026-10-23 AI 日报 · 30 条热点</title>
-      <link>http://localhost:3000/daily/2026-10-23/</link>
-      <guid isPermaLink="true">http://localhost:3000/daily/2026-10-23/</guid>
-      <pubDate>Fri, 23 Oct 2026 05:41:05 GMT</pubDate>
-      <description>本期从 336 条候选信号中筛出 30 条，覆盖 模型发布、产品发布、行业动态 等方向，帮你五分钟掌握今日 AI 关键变化。</description>
     </item>
   </channel>
 </rss>
